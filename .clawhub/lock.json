@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "skills": {
+    "agent-browser": {
+      "version": "0.2.0",
+      "installedAt": 1770629689165
+    },
+    "xiaohongshu": {
+      "version": "1.0.1",
+      "installedAt": 1770646044162
+    },
+    "youtube-transcript": {
+      "version": "1.0.1",
+      "installedAt": 1770646049080
+    },
+    "docker-essentials": {
+      "version": "1.0.0",
+      "installedAt": 1770646050576
+    },
+    "tldr": {
+      "version": "1.0.1",
+      "installedAt": 1770646052383
+    }
+  }
+}

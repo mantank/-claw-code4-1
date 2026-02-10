@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #333; line-height: 1.8; max-width: 677px; margin: 0 auto; padding: 20px; font-size: 16px;">
+
+<h1 style="font-size: 22px; font-weight: bold; text-align: center; margin-bottom: 10px;">折腾了一晚上，终于在服务器上把 AI 助手跑起来了</h1>
+
+<p style="text-align: center; color: #888; font-size: 14px; margin-bottom: 30px;">一个非程序员的 OpenClaw 部署踩坑实录</p>
+
+<hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+
+<p>我不是程序员。</p>
+
+<p>但昨晚花了大概三个小时，把自己的 AI 助手部署到了 Telegram 上。中间踩了不少坑，全记下来了，希望能帮到后来人。</p>
+
+<p style="background: #f7f7f7; padding: 15px 20px; border-left: 4px solid #07c160; border-radius: 4px; margin: 20px 0;">
+<strong>OpenClaw 是什么？</strong><br>
+一个开源框架，把 Claude、GPT 这些大模型接到 Telegram、WhatsApp 上。装好之后，你就有了一个 24 小时在线的私人 AI 助手，手机上随时随地跟它聊。
+</p>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">📋 部署前准备</h2>
+
+<p>我用的是腾讯云 OpenCloudOS 服务器。你需要提前准备：</p>
+
+<ul style="padding-left: 20px;">
+<li><strong>一台 Linux 服务器</strong>（CentOS / Ubuntu / OpenCloudOS 都行）</li>
+<li><strong>Anthropic API Key</strong>（去 console.anthropic.com 申请）</li>
+<li><strong>Telegram Bot Token</strong>（通过 @BotFather 创建）</li>
+<li><strong>你的 Telegram 用户 ID</strong>（用 @userinfobot 查）</li>
+</ul>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">🕳️ 坑 1：Node.js 装不上</h2>
+
+<p>OpenClaw 跑在 Node.js 上，得先装。</p>
+
+<p>官方脚本跑到一半直接报错了，说不支持当前系统。我的 OpenCloudOS 明明是 RPM 系的，但它就是不认。</p>
+
+<p><strong>解决：</strong>别用官方脚本，手动来。</p>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 14px; line-height: 1.6;">
+<span style="color: #608b4e;"># 方法一：直接装</span>
+dnf install -y nodejs npm
+
+<span style="color: #608b4e;"># 方法二：用 nvm（推荐，兼容性更好）</span>
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.1/install.sh | bash
+source ~/.bashrc
+nvm install --lts</pre>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">🕳️ 坑 2：缺 Git</h2>
+
+<p>npm 装 OpenClaw 时报错：<code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 14px;">npm error path git errno -2</code></p>
+
+<p>系统没自带 git，一行搞定：</p>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-size: 14px;">dnf install -y git</pre>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">⚙️ 安装和配置</h2>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-size: 14px;">
+<span style="color: #608b4e;"># 安装</span>
+npm install -g openclaw@latest
+
+<span style="color: #608b4e;"># 初始化配置</span>
+openclaw onboard</pre>
+
+<p>会弹出交互式菜单，主要填四个东西：</p>
+
+<ol style="padding-left: 20px;">
+<li><strong>模型和 API Key</strong> — 选模型，填 Anthropic 的 Key</li>
+<li><strong>Telegram Bot Token</strong> — BotFather 给你的那串</li>
+<li><strong>Telegram 用户 ID</strong> — @userinfobot 查到的数字</li>
+<li><strong>工作目录</strong> — 默认就行</li>
+</ol>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">💡 模型怎么选？</h2>
+
+<p style="background: #fff8e1; padding: 15px 20px; border-left: 4px solid #ff9800; border-radius: 4px;">
+<strong>建议：</strong>先拿 Sonnet 4.5 跑通流程，确认没问题再换 Opus。不是所有 API Key 都有权限用 Opus。
+</p>
+
+<table style="width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 15px;">
+<tr style="background: #f5f5f5;">
+<th style="padding: 10px; text-align: left; border-bottom: 2px solid #ddd;">模型</th>
+<th style="padding: 10px; text-align: left; border-bottom: 2px solid #ddd;">价格（每百万token）</th>
+<th style="padding: 10px; text-align: left; border-bottom: 2px solid #ddd;">体验</th>
+</tr>
+<tr>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">Opus 4.6</td>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">$5 / $25</td>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">最强，需高等级账户</td>
+</tr>
+<tr>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">Opus 4.5</td>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">$5 / $25</td>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">旗舰，性价比最高</td>
+</tr>
+<tr>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">Sonnet 4.5</td>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">$3 / $15</td>
+<td style="padding: 10px; border-bottom: 1px solid #eee;">日常够用，推荐起步</td>
+</tr>
+</table>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">🕳️ 坑 3：API Key 404</h2>
+
+<p>配好之后给 Bot 发消息，回了个 <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px; font-size: 14px;">HTTP 404: not_found_error</code>。</p>
+
+<p>折腾了半天，发现是 Key 的问题。<strong>用 curl 直接测最快：</strong></p>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; overflow-x: auto; font-size: 13px; line-height: 1.6;">
+curl -X POST https://api.anthropic.com/v1/messages \
+  -H "x-api-key: 你的KEY" \
+  -H "content-type: application/json" \
+  -H "anthropic-version: 2023-06-01" \
+  -d '{"model":"claude-sonnet-4-5-20250929",
+       "max_tokens":100,
+       "messages":[{"role":"user","content":"hello"}]}'</pre>
+
+<p>返回 <code style="background: #f0f0f0; padding: 2px 6px; border-radius: 3px;">authentication_error</code> 就是 Key 有问题，去 console.anthropic.com 重新生成。</p>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">🔗 配对 Telegram</h2>
+
+<p>第一次给 Bot 发消息，它会回一串配对码：</p>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-size: 14px;">Pairing code: KW39NZUZ</pre>
+
+<p>回到服务器上跑：</p>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-size: 14px;">openclaw pairing approve telegram KW39NZUZ</pre>
+
+<p>搞定。之后就能正常对话了。</p>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">📌 常用命令速查</h2>
+
+<pre style="background: #1e1e1e; color: #d4d4d4; padding: 15px; border-radius: 8px; font-size: 14px; line-height: 2;">
+openclaw status          <span style="color: #608b4e;"># 看运行状态</span>
+openclaw gateway restart <span style="color: #608b4e;"># 重启</span>
+openclaw logs --follow   <span style="color: #608b4e;"># 实时日志</span>
+openclaw doctor          <span style="color: #608b4e;"># 出问题先跑这个</span>
+npm update -g openclaw   <span style="color: #608b4e;"># 更新版本</span></pre>
+
+<h2 style="font-size: 18px; color: #07c160; margin-top: 35px; padding-bottom: 8px; border-bottom: 2px solid #07c160;">⚠️ 已知限制</h2>
+
+<p><strong>微信公众号文章读不了。</strong>AI 用浏览器访问会被微信拦截。目前只能手动复制内容给它处理。</p>
+
+<p><strong>Telegram 默认英文。</strong>一键换中文 👉 <a href="https://t.me/setlanguage/zh-hans-raw" style="color: #07c160;">点这里切换简体中文</a></p>
+
+<hr style="border: none; border-top: 1px solid #eee; margin: 35px 0;">
+
+<h2 style="font-size: 18px; color: #333; margin-top: 20px;">总结</h2>
+
+<p>整个过程顺利的话 30 分钟，算上踩坑两三个小时。</p>
+
+<p>主要卡在四个地方：</p>
+<ol style="padding-left: 20px;">
+<li><strong>系统兼容</strong> — OpenCloudOS 得手动装 Node.js 和 Git</li>
+<li><strong>API Key</strong> — 先用 curl 测一下，别瞎猜</li>
+<li><strong>模型权限</strong> — 不是所有 Key 都能用 Opus，先拿 Sonnet 试</li>
+<li><strong>配对</strong> — 别忘了在服务器上跑 approve 命令</li>
+</ol>
+
+<p>部署好之后，你就有了一个 24 小时在线、随叫随到的 AI 助手。</p>
+
+<p><strong>值得折腾。</strong></p>
+
+<hr style="border: none; border-top: 1px solid #eee; margin: 30px 0;">
+
+<p style="color: #888; font-size: 14px; text-align: center;">如果你也在折腾 AI，欢迎留言交流 👇</p>
+
+</body>
+</html>
