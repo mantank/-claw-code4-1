@@ -26,6 +26,15 @@
 - 图片生成用最好的模型（Gemini 3 Pro），不省钱
 - 公众号无开放API，方案A：AI打包成品→用户复制粘贴发布
 
+## 品牌与形象
+
+- 公众号名称：深夜开发者LND
+- 知识库名称：深夜开发者的知识库（飞书）
+- 零零壹形象：大白(Baymax)风格像素机器人，白色圆胖，胸口蓝光，手握扳手，肚子写001
+- 老大数字形象：深色乱发、青色卫衣、耳机挂脖子（ChatGPT生成的卡通形象）
+- 视觉风格：泰拉瑞亚像素风（知识库） / 卡通插画风（公众号）
+- 称呼：叫"老大"，不叫名字
+
 ## 偏好与习惯
 
 - 中文沟通为主
@@ -45,6 +54,7 @@
 
 ## 工具配置
 
+- Evolink Z-Image: `sk-rkjDLqIIsfbvyHzFi9qpuaVODdO8xm3BtUAJF373D5yX4ulO`（图片生成，便宜快速）
 - Gemini API: `AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU`（付费项目，~$378额度）
 - Notion API: `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`
 - 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
