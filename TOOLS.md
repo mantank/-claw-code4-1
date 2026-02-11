@@ -58,3 +58,9 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ---
 
 Add whatever helps you do your job. This is your cheat sheet.
+
+### 飞书
+- App ID: cli_a908765086b85bc6
+- App Secret: 4HZ5OiOueIU1PYCy59T48fpYvomTWELl
+- OPENA知识库 space_id: 7603748469693484257 (读写权限✅)
+- 10个飞书Skills已安装（im/bitable/doc-writer/drive/task/calendar/approval/contact/wiki/card）
