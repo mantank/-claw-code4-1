@@ -38,9 +38,9 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 ### Google Gemini API
 
 - API Key: AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU
-- 图片生成模型: gemini-2.0-flash-exp-image-generation
+- 图片生成模型: gemini-2.0-flash-exp-image-generation（备用）
 - 对话模型: gemini-2.5-flash / gemini-2.5-pro
-- 用途: 图片生成、备用对话模型
+- 用途: 备用对话模型（赠送额度已用完，3 Pro不可用）
 
 ### Notion
 
