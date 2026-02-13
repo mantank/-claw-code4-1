@@ -60,6 +60,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 Add whatever helps you do your job. This is your cheat sheet.
 
+### 生财有术（知识星球）
+- Group ID: 1824528822
+- API: https://api.zsxq.com/v2/groups/1824528822/topics
+- Cookie: zsxq_access_token=5902DC7A-7001-4CA7-B8B5-55BD1C00884B_B12E75520B50E663
+- 精华帖: scope=digests
+- 最新帖: scope=all
+- Cookie过期: 2026年底
+
 ### 飞书
 - App ID: cli_a908765086b85bc6
 - App Secret: 4HZ5OiOueIU1PYCy59T48fpYvomTWELl
