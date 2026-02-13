@@ -20,6 +20,26 @@
     "tldr": {
       "version": "1.0.1",
       "installedAt": 1770646052383
+    },
+    "miniflux-news": {
+      "version": "0.1.0",
+      "installedAt": 1770936855803
+    },
+    "openclaw-github-assistant": {
+      "version": "2.0.1",
+      "installedAt": 1770936858246
+    },
+    "cursor-agent": {
+      "version": "2.1.0",
+      "installedAt": 1770936860481
+    },
+    "git-sync": {
+      "version": "1.0.1",
+      "installedAt": 1770936872858
+    },
+    "skill-vetting": {
+      "version": "1.0.1",
+      "installedAt": 1770936874631
     }
   }
 }

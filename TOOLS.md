@@ -54,6 +54,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - 项目看板数据库: 303453f1-8074-8162-98be-d2bf7b2dcc03
 - 知识库数据库: 303453f1-8074-81ab-ba5c-d4101f22c310
 - 📋 待办任务数据库: 304453f1-8074-81f9-8c9f-d28cb59a7f68
+- 📝 公众号文章库: 306453f1-8074-8107-b53a-e2dc0cece51b
 
 ---
 
