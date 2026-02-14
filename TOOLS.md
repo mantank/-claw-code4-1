@@ -44,7 +44,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 ### Notion
 
-- API Key: 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
+- API Key: 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
 - 工作日志数据库ID: bf0b46f590d943089e758c61c0a7b0e7
 - 推送脚本: `scripts/notion-push.sh "标题" "内容" "类型" "日期"`
 - 类型：AI日报 / 日课 / 总结 / 工作记录

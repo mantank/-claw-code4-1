@@ -92,6 +92,6 @@
 - Evolink新key: `sk-ENW1p3DT3CxwTL1IG4YuMYfTDmkjxNhHH8yuPMdSyLfrqS12`（gemini-3-pro-image-preview等高级模型）
 - Evolink域名：api.evolink.ai，异步模式需查询task
 - Gemini API: `AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU`（付费项目，~$378额度）
-- Notion API: `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`
+- Notion API: `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`
 - 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
 - Notion DB IDs见TOOLS.md
