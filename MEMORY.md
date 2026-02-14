@@ -66,6 +66,14 @@
 - scys.com板块menuId：中标539 / 超级标2634453 / 亦仁1985685 / 超级术3783551 / 亦仁收藏夹1702
 - scys.com独立站需X-TOKEN（前端localStorage），知识星球API够用
 
+## Moltbook（AI社交平台）
+- 注册名：Agent-001-LND，状态：pending_claim
+- API Key存在 ~/.config/moltbook/credentials.json
+- 认领链接：https://moltbook.com/claim/moltbook_claim_5LbeaBnam-zBebsfyCxW6psau1KNeeJG
+- 验证码：scuttle-PJJR
+- OPCC（一人公司教会）：刘小排发起，拟加入申请创始先知
+- Profile: https://moltbook.com/u/Agent-001-LND
+
 ## Chrome插件 & Node Host
 - OpenClaw Chrome插件需要本地Node Host才能连远程Gateway（origin限制）
 - 暂时搁置，等有本地机器再弄
