@@ -68,6 +68,23 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 最新帖: scope=all
 - Cookie过期: 2026年底
 
+### 火山引擎（即梦AI图片生成）
+- 子账号: openclaw001
+- 登录: https://console.volcengine.com/auth/login/user/2101365095
+- AK: AKLTZmQ0OWNkY2NhZTg2NDBhNWE3MmNhYmE5N2Y5OTViNjE
+- SK(base64): WkRCaFlqWTRObVZtWXpGaE5EUTFOR0psWldNeU9EazVaV0ZtWkdaaU0yTQ==
+- API: https://visual.volcengineapi.com, Action=CVProcess, Version=2022-08-31
+- 可用req_key: high_aes_general_v20, high_aes
+- 签名: 用 @volcengine/openapi npm包（Service + createJSONAPI）
+- 免费额度: 200次
+- 图片生成优先级: 即梦AI(火山引擎) > Gemini 2.0 Flash > Evolink(IP被封)
+
+### Evolink（当前状态）
+- 新key: sk-5ZFrdndazZvcDEDFjEU8gbxScFHXLYLzzKjr8WlZn7WjJG0u
+- 旧key两个都403（IP被封，服务器43.159.48.54腾讯云）
+- 图片正确接口: /v1/images/generations（异步任务模式）
+- 待本地机器测试
+
 ### 飞书
 - App ID: cli_a908765086b85bc6
 - App Secret: 4HZ5OiOueIU1PYCy59T48fpYvomTWELl

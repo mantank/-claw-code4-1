@@ -21,12 +21,14 @@
 - **2026-02-11** — 飞书全面打通（10个Skills+37权限）、心跳提醒上线、Evolink图片生成接入
 - **2026-02-12** — 第六篇公众号写完+发布（首次有转化：3-5新关注+6-7分享）、公众号基建（合集+欢迎语）、AI日报优化方案+SOP完成、3篇文章入飞书知识库、Evolink域名更新、小红书图文生成方案验证通过、第七篇选题确定（Notion接管）
 - **2026-02-13** — 第八篇公众号发布《别瞎装！Skills安全避坑》🎉、生财有术API打通+每日19:00精华帖自动推送、Chrome插件需本地Node Host（暂搁置）、公众号引流钩子模块待定
+- **2026-02-15** — 日报cron大升级（大佬动态追踪+Skills资源汇总）、002号装机指南写完、一人公司方向确定（教程先行用数据定方向）、小红书图文5张完成、公众号第9篇选题确定（AI工具箱）、即梦AI火山引擎API打通🎉、Evolink确认IP被封
 
 ## 经验与教训
 
 - 文章要用真实经历，不编造（第3篇从虚构改为真实事件，效果好很多）
 - 工具够用就停，开始产出（"Ship over configure"）
-- 图片生成优先级：gemini-3-pro-image-preview（Evolink新key）> z-image-turbo（Evolink旧key）> Gemini 2.0 Flash（Google API直连）
+- 图片生成优先级：即梦AI（火山引擎API）> Gemini 2.0 Flash（Google API直连）> Evolink（IP被封待修复）
+- AI生图通病：中文字体渲染都不行，最佳方案是AI出底图+Canva叠清晰文字
 - 公众号无开放API，方案A：AI打包成品→用户复制粘贴发布
 - 公众号标题是生死线：第二篇技术标题只有2阅读 vs 第一篇通俗标题63阅读
 - 标题原则：让完全不懂技术的人也想点进来，有画面感+好奇心+利益点
@@ -96,9 +98,11 @@
 
 ## 工具配置
 
-- Evolink旧key: `sk-rkjDLqIIsfbvyHzFi9qpuaVODdO8xm3BtUAJF373D5yX4ulO`（z-image-turbo / nano-banana-2-lite）
-- Evolink新key: `sk-ENW1p3DT3CxwTL1IG4YuMYfTDmkjxNhHH8yuPMdSyLfrqS12`（gemini-3-pro-image-preview等高级模型）
-- Evolink域名：api.evolink.ai，异步模式需查询task
+- Evolink旧key两个都失效（IP被封 43.159.48.54）
+- Evolink最新key: `sk-5ZFrdndazZvcDEDFjEU8gbxScFHXLYLzzKjr8WlZn7WjJG0u`（待本地机器测试）
+- Evolink图片正确接口: /v1/images/generations（异步任务+轮询）
+- 火山引擎即梦AI: AK/SK签名，req_key=high_aes_general_v20，200次免费额度
+- 阿里云百炼Coding Plan: 首月10元/18000次，支持OpenClaw（备选给002号）
 - Gemini API: `AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU`（付费项目，~$378额度）
 - Notion API: `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`
 - 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
