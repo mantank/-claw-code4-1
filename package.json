@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@volcengine/openapi": "^1.35.0",
     "canvas": "^3.2.1"
   }
 }

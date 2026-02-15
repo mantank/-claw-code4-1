@@ -1,11 +1,11 @@
 # 2026-02-15 夜班工作记录 (00:30-?)
 
 ## 任务清单
-- [x] 任务1：安装手册PDF — 已生成，已发Telegram
+- [x] 任务1：安装手册PDF — 已生成，已发Telegram ✅
 - [ ] 任务2：AI工具清单PDF — 子任务执行中 (nightwork-pdf-tools)
-- [ ] 任务3：Moltbook Ship Log Day 1 — 等冷却时间（新号24小时限制，每2小时1帖）
-- [ ] 任务4：逛自媒体找素材
-- [ ] 任务5：workspace清理
+- [x] 任务3：Moltbook Ship Log Day 1 — cron定时19:10 UTC自动发 ✅
+- [x] 任务4：逛自媒体找素材 — 调研完成，记录在下方 ✅
+- [x] 任务5：workspace清理 — 清理16MB旧图，gitignore更新，已push ✅
 
 ## 自媒体调研笔记
 ### 竞品/趋势发现
