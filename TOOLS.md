@@ -60,6 +60,14 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 Add whatever helps you do your job. This is your cheat sheet.
 
+### 阿里云百炼（万相图片生成）
+- API Key: sk-3e086717facd4d88a573260d127a15b0
+- 模型: wan2.6-t2i（万相2.6，最新，支持同步调用）
+- 接口: POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
+- Header: Authorization: Bearer {key}, Content-Type: application/json
+- 尺寸: 总像素1280²~1440²，宽高比1:4~4:1
+- 有免费额度，超出按张计费
+
 ### 生财有术（知识星球）
 - Group ID: 1824528822
 - API: https://api.zsxq.com/v2/groups/1824528822/topics
