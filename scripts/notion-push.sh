@@ -2,7 +2,7 @@
 # Notion 推送脚本
 # 用法: notion-push.sh "标题" "内容" "类型(日报/日课/总结)" ["日期 YYYY-MM-DD"]
 
-NOTION_KEY="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"
+NOTION_KEY="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"
 DATABASE_ID="bf0b46f590d943089e758c61c0a7b0e7"
 
 TITLE="${1:-无标题}"
