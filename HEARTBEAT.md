@@ -1,5 +1,13 @@
 # HEARTBEAT.md
 
+## 任务0：OpenClaw版本监控（每次心跳都检查）
+
+运行 `bash ~/.openclaw/workspace/scripts/version-check.sh`，根据输出：
+- `STATUS:NO_UPDATE` → 无需通知，继续下一个任务
+- `STATUS:NEW_VERSION` 或 `STATUS:UPDATED` → 通知老大：更新了什么版本，检查changelog（web_search "OpenClaw changelog {新版本号}"），简要说明新功能
+- `STATUS:VERSION_CHANGED` → 记录到memory，不通知
+- 如果AUTH:FAILED → 立刻通知老大认证出问题，需要重新配置
+
 ## 任务1：时间表提醒
 
 读取 `schedule.md` 和当前时间（GMT+8），找到老大现在应该在做什么，发一条简短提醒。
