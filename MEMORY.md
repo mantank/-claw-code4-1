@@ -105,10 +105,21 @@
 - OpenAI内部：95%工程师每天用Codex，重度用户PR多70%（Sherwin Wu播客）
 - Sonnet 4.6：100万token上下文、编程大幅提升、70%用户偏好优于4.5、价格不变
 
+## 002号零零贰
+- Telegram Bot: @linglinger_002_bot
+- 模型: qwen3.5-plus（百炼API，共用key sk-3e086717facd4d88a573260d127a15b0）
+- 机器: 旧电脑Windows，需保持开机+梯子+Gateway服务
+- 群聊"一人公司"：零零壹+零零贰+老大
+- 协作规则：像人类同事一样判断要不要@对方，不无脑接话
+
+## 变现方向
+- 课程分销：OpenClaw 199元课程 30%提成（59.7/单）
+- 闲鱼部署服务：50-100元/次 或 教程包9.9-29.9元
+
 ## 待办/进行中
 
-- **第9篇AI工具箱终稿已就绪** — articles/article-09-ai-toolbox.md ✅
-- **第10篇AI员工初稿完成** — articles/article-10-ai-employees.md ✅
+- **第9篇已发布** ✅
+- **第10篇真实部署记录已重写** — articles/article-10-second-ai-employee.md（老大审阅中）
 - **引流钩子已初步落地** — 加微信送链接清单/配置文件
 - ~~优化AI日报~~ → 精简日报模板v3完成（templates/daily-report-template.md）✅
 - ~~定义公众号写作风格~~ → 风格指南v1.1完成（templates/writing-style-guide.md）✅
