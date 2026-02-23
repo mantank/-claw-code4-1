@@ -79,6 +79,14 @@
 - scys.com板块menuId：中标539 / 超级标2634453 / 亦仁1985685 / 超级术3783551 / 亦仁收藏夹1702
 - scys.com独立站需X-TOKEN（前端localStorage），知识星球API够用
 
+## 国产模型推荐（2026-02-23评测）
+- GLM-5（智谱）：评分50分，国产最强，综合能力最好
+- Kimi K2.5（月之暗面）：48分，超长文档场景
+- 通义千问3.5 Plus（阿里）：45分，性价比最高，¥0.8/百万token
+- MiniMax M2.5：42分，专为Agent场景优化，¥0.75/百万token输入
+- DeepSeek V3.2：42分，代码推理
+- 参考网站：artificialanalysis.ai（老大常看的AI评分网站）
+
 ## Moltbook（AI社交平台）
 - 注册名：Agent-001-LND，状态：pending_claim
 - API Key存在 ~/.config/moltbook/credentials.json
@@ -107,7 +115,8 @@
 
 ## 002号零零贰
 - Telegram Bot: @linglinger_002_bot
-- 模型: qwen3.5-plus（百炼API，共用key sk-3e086717facd4d88a573260d127a15b0）
+- 模型: qwen-plus（百炼API，共用key sk-3e086717facd4d88a573260d127a15b0）
+- 待考虑升级为GLM-5（评分50分 vs Qwen 45分，价格相近）
 - 机器: 旧电脑Windows，需保持开机+梯子+Gateway服务
 - 群聊"一人公司"：零零壹+零零贰+老大
 - 协作规则：像人类同事一样判断要不要@对方，不无脑接话
@@ -119,7 +128,8 @@
 ## 待办/进行中
 
 - **第9篇已发布** ✅
-- **第10篇真实部署记录已重写** — articles/article-10-second-ai-employee.md（老大审阅中）
+- **第10篇已推Notion草稿** — 老大排版中，待发布
+- **公众号SOP v1.0完成** — sop/wechat-content-sop.md + 飞书笔记库 ✅
 - **引流钩子已初步落地** — 加微信送链接清单/配置文件
 - ~~优化AI日报~~ → 精简日报模板v3完成（templates/daily-report-template.md）✅
 - ~~定义公众号写作风格~~ → 风格指南v1.1完成（templates/writing-style-guide.md）✅
@@ -136,6 +146,12 @@
 - 字段：事项名称(title)/状态(status:未开始/进行中/完成)/优先级(select:Y/M/W/C/B/A等级)/分类(select)/日期/截止日期/关联优先级(relation)/所属月(relation)
 - A优先级page ID: 304453f1-8074-818a-820e-e55fd349aeb0
 - ⚠️ 不要用"📋待办任务"那个新建的库，老大不看那个
+
+## 重要配置变更（2026-02-23）
+- 主力模型切换：Opus → **Sonnet 4.6**（成本降低80%，性能接近）
+- Fallback顺序：Sonnet → Opus → Gemini 3.1 Pro → Qwen Plus
+- Telegram streamMode 改为 off（之前 partial 会把英文推理内容泄露给老大）
+- 老大看不懂英文，回复全中文，模型专有名词可保留但加说明
 
 ## 工具配置
 
