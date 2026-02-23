@@ -89,16 +89,4 @@ def push_review(date_str, plan_items, summary_review, summary_reflect, summary_i
     return result
 
 if __name__ == "__main__":
-    # 可以命令行调用测试
-    # python3 notion-review-push.py
-    gmt8 = timezone(timedelta(hours=8))
-    today = datetime.now(gmt8).strftime("%Y-%m-%d")
-    
-    push_review(
-        date_str=today,
-        plan_items=["测试项1", "测试项2"],
-        summary_review="测试复盘内容",
-        summary_reflect="测试反省内容",
-        summary_insight="测试思考内容",
-        tomorrow="测试明日计划"
-    )
+    print("请通过 push_review() 函数调用，不要直接运行")
