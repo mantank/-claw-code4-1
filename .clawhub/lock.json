@@ -40,6 +40,10 @@
     "skill-vetting": {
       "version": "1.0.1",
       "installedAt": 1770936874631
+    },
+    "clawrouter": {
+      "version": "0.10.5",
+      "installedAt": 1771953549691
     }
   }
 }
