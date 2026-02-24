@@ -128,6 +128,14 @@
 - 课程分销：OpenClaw 199元课程 30%提成（59.7/单）
 - 闲鱼部署服务：50-100元/次 或 教程包9.9-29.9元
 
+## 写作经验教训（2026-02-24 旭反馈）
+- 第11篇旭评价"没有灵魂，像白开水"——有骨架没血肉
+- 缺的三样东西：①态度和判断 ②情绪起伏 ③只有你才能写的细节
+- 002（qwen-plus）写作能力到顶——只能"照规则填空"，不能讲故事
+- 002新定位：信息采集+结构化输出，写作归001或旭自己
+- 下一篇尝试新方法：旭语音说→001整理成文字（可能更有灵魂）
+- 封面图：AI生图目前到不了"直接当封面"水平，万相2.6/Qwen-Image-Max都试了
+
 ## 待办/进行中
 
 - **第9篇已发布** ✅
@@ -172,6 +180,17 @@
 - 每次运行约$0.01-0.05，$5够用数月
 - 选题推送cron已升级：第一步用Grok搜X热点，比Brave Search准确得多
 - ⚠️ WgetCloud订阅到期日：2026-03-07（11天后需续费）
+
+## OpenRouter（待配置）
+- 002计划切换到 Gemini 3.1 Pro（走OpenRouter）
+- 配置方式：openclaw.json 里设 env.OPENROUTER_API_KEY + model.primary = "openrouter/google/gemini-3.1-pro-preview"
+- 旭需要注册OpenRouter账号+充值+提供API key
+- MiniMax M2.5 也可以走OpenRouter（日常任务用，便宜）
+- OpenRouter LLM排行榜：MiniMax M2.5第1（2.29T tokens）> Kimi K2.5 > Gemini 3 Flash > GLM 5 > DeepSeek V3.2
+
+## Gemini API（已废弃）
+- API Key: AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU — 额度用完，不再可用
+- 图片生成仍用万相2.6 / Qwen-Image-Max（阿里云百炼API）
 
 ## 工具配置
 
