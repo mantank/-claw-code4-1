@@ -7,7 +7,7 @@ GROK_API_KEY="xai-4YPImuiPnmESoKUHoKBbX7Mp1yX1IojfdBpSghrrA9ApexIkIaHgBZBFrhhnns
 PROXY="http://127.0.0.1:7890"
 
 RESPONSE=$(HTTPS_PROXY="$PROXY" HTTP_PROXY="$PROXY" \
-  curl -s --connect-timeout 30 --max-time 90 https://api.x.ai/v1/responses \
+  curl -s --connect-timeout 30 --max-time 150 https://api.x.ai/v1/responses \
   -H "Content-Type: application/json" \
   -H "Authorization: Bearer $GROK_API_KEY" \
   -d '{
