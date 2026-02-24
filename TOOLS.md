@@ -93,6 +93,24 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 图片正确接口: /v1/images/generations（异步任务模式）
 - 待本地机器测试
 
+### Grok API (xAI)
+- API Key: xai-4YPImuiPnmESoKUHoKBbX7Mp1yX1IojfdBpSghrrA9ApexIkIaHgBZBFrhhnnsDFn5xQPPnEBQ9HObuG
+- Endpoint: https://api.x.ai/v1/responses（tools版）/ https://api.x.ai/v1/chat/completions（普通版）
+- 模型: grok-4-1-fast-reasoning（支持x_search工具）/ grok-3-mini（普通对话）
+- x_search工具: 仅grok-4系列支持，需要Mihomo代理
+- 定价: $0.20/$0.50 per million tokens（grok-4-1-fast）
+- Credits: $5 预充，约可跑数月选题任务
+- 脚本: scripts/grok-x-trends.sh
+
+### Mihomo 代理（服务器本地）
+- 安装路径: /usr/local/bin/mihomo
+- 配置目录: /etc/mihomo/
+- 订阅: WgetCloud（到期2026-03-07，需续费）
+- 本地代理端口: 127.0.0.1:7890（混合HTTP/SOCKS5）
+- systemd服务: mihomo.service（已enable，开机自启）
+- 用途: 绕过Cloudflare/xAI对机房IP的封锁
+- 续订链接: https://bava8u2znaj6bdzzjnfb.wgetcloud.online/link/1600b449-67c9-365f-916d-eedf0ab4dbe3
+
 ### 飞书
 - App ID: cli_a908765086b85bc6
 - App Secret: 4HZ5OiOueIU1PYCy59T48fpYvomTWELl

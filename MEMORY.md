@@ -156,6 +156,15 @@
 - Telegram streamMode 改为 off（之前 partial 会把英文推理内容泄露给老大）
 - 老大看不懂英文，回复全中文，模型专有名词可保留但加说明
 
+## Grok API + Mihomo 代理（2026-02-24）
+- Grok API key已激活（充了$5），xAI x_search工具打通
+- 服务器装了Mihomo v1.19.20，用WgetCloud订阅，本地代理7890端口
+- grok-x-trends.sh脚本：调用grok-4-1-fast-reasoning + x_search，搜X实时热点
+- 每次运行搜7次X，返回5个带帖子链接的真实热点
+- 每次运行约$0.01-0.05，$5够用数月
+- 选题推送cron已升级：第一步用Grok搜X热点，比Brave Search准确得多
+- ⚠️ WgetCloud订阅到期日：2026-03-07（11天后需续费）
+
 ## 工具配置
 
 - Evolink旧key两个都失效（IP被封 43.159.48.54）
