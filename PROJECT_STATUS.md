@@ -16,9 +16,14 @@
 - 下一个里程碑：200粉建群
 
 ### 002号零零贰调校
-- 状态：安装完成，基础配置OK，**已接入通义千问万相图片生成** ✅
-- 待做：写作规则写入SOUL.md，样本文章同步，试跑一次完整流水线
-- 截止：2/24（A优先级）
+- 状态：**80%完成** ✅（2026-02-24凌晨001完成）
+- 已完成：
+  - ✅ SOUL.md写作规则强化（详细的深夜开发者LND写作规范）
+  - ✅ templates/writing-style-guide.md 同步到002 workspace
+  - ✅ sop/wechat-content-sop.md 同步到002 workspace
+  - ✅ 范文article-09/10 同步到002 workspace
+  - ✅ TOOLS.md 补充图片生成配置和Notion API信息
+- 待做：**试跑一次完整流水线**（旭需要让002写一篇真实初稿，验证效果）
 - 内容链路：热词→选题→大纲→初稿→标题→**首图（002自己生成）**→@001润色→旭发布
 
 ### AI日报 cron
@@ -37,6 +42,8 @@
 - 写作风格指南 v1.1（templates/writing-style-guide.md）
 - OpenClaw 升级到 2026.2.22-2
 - 主力模型切换：Opus → Sonnet 4.6
+- **002调校80%完成：写作规则+范文+SOP全部同步（2026-02-24 001夜班）**
+- **第11篇 Seedance 2.0 初稿完成（2026-02-24 001夜班）** → articles/article-11-seedance-draft.md
 
 ---
 
