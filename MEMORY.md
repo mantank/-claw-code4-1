@@ -156,6 +156,14 @@
 - Telegram streamMode 改为 off（之前 partial 会把英文推理内容泄露给老大）
 - 老大看不懂英文，回复全中文，模型专有名词可保留但加说明
 
+## 2026-02-24 重要更新
+- Brave Search升级付费版，新key: BSAU5ZtdDdeNlW3_EiKVFpuASTqiHiE，50次/秒无限流
+- VSCode Remote SSH连服务器会吃1.1GB内存，用完必须断开
+- ⚠️ WgetCloud订阅2026-03-07到期，需提醒旭续费
+- 卡兹克方法论已入写作指南：HKR框架+活人感+选题三元模型
+- 002调校95%完成，已同步所有写作工具和API key
+- 工具篇大纲完成，等002出初稿，目标2/26发布
+
 ## Grok API + Mihomo 代理（2026-02-24）
 - Grok API key已激活（充了$5），xAI x_search工具打通
 - 服务器装了Mihomo v1.19.20，用WgetCloud订阅，本地代理7890端口
