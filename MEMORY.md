@@ -167,3 +167,14 @@
 - Notion API: `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`
 - 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
 - Notion DB IDs见TOOLS.md
+
+## 002号零零贰 - 服务器迁移完成（2026-02-24）
+- 已从Windows本地迁移到云服务器 ✅
+- 服务：systemd `openclaw-002-gateway.service`（用户级，自启动）
+- 配置目录：`~/.openclaw-002/`
+- Gateway端口：18790（001是18789）
+- 模型：`dashscope/qwen-plus`（阿里云百炼）
+- Bot：`@linglinger_002_bot`（Token: 8579867010:AAH...）
+- 状态目录由 `OPENCLAW_STATE_DIR=/root/.openclaw-002` 指定
+- 关键配置：需要 `plugins.entries.telegram.enabled: true` 才能启动Telegram频道
+- Windows上的002服务需手动关闭，同一Token不能两端同跑
