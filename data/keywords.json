@@ -26,5 +26,35 @@
     "OpenClaw 小红书",
     "AI 自媒体 工具"
   ],
-  "last_updated": "2026-02-23"
+  "trending_keywords": [
+    "Vibe Coding",
+    "Vibe Coding 普通人",
+    "Cursor AI 入门",
+    "Cursor AI 免费 教程",
+    "AI编程 不会写代码",
+    "不会写代码 做产品",
+    "Agentic Engineering",
+    "Andrej Karpathy Vibe Coding",
+    "AI做产品 零基础",
+    "零代码 AI工具 2026",
+    "Cursor 估值 融资",
+    "AI自动写代码",
+    "普通人 AI做APP",
+    "DeepSeek Cursor 搭配",
+    "Claude Code 入门"
+  ],
+  "long_tail_keywords": [
+    "OpenClaw 怎么用 新手",
+    "AI助手 部署到云服务器",
+    "公众号涨粉 AI工具",
+    "Telegram Bot 搭建 教程",
+    "飞书机器人 自动推送",
+    "AI写公众号 自动发布",
+    "Vibe Coding 第一个产品",
+    "Cursor AI 报错 怎么修",
+    "AI agent 协作 工作流",
+    "普通人做独立产品 AI帮忙"
+  ],
+  "last_updated": "2026-02-24",
+  "update_notes": "2026-02-24: 新增 trending_keywords（Vibe Coding相关热词）+ long_tail_keywords板块，来源：搜索调研+article-12选题准备"
 }
