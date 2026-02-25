@@ -1,7 +1,7 @@
 # PROJECT_STATUS.md — 当前项目状态
 
 > 所有Agent共享。每次重要进展后更新。
-> 最后更新：2026-02-25（001夜班收工）
+> 最后更新：2026-02-25（001夜班第二次，凌晨2点）
 
 ---
 
@@ -12,7 +12,8 @@
 - 第12篇：Seedance 2.0视频教程，**草稿完成** ✅ → articles/article-11-seedance-draft.md（等旭补真实体验）
 - 第13篇：Vibe Coding入门，**草稿完成** ✅ → articles/article-12-vibe-coding-draft.md
 - 第14篇（OpenClaw命令大全）：**终稿完成** ✅ → articles/article-13-commands-final.md → **已推Notion（2/25）**
-- 下一步选题：普通人怎么用Gemini 3.1 Pro（热点）
+- 第14篇（Gemini 3.1 Pro普通人用法）：**草稿完成** ✅ → articles/article-14-gemini31pro-draft.md → 已推Notion（2/25夜班）
+- 下一步选题：Vibe Coding入门（已有article-12草稿待旭审核）
 - 本周目标：发布12+13篇
 - 当前粉丝：~30（估算）
 - 下一个里程碑：200粉建群
