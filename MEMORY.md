@@ -23,6 +23,7 @@
 - **2026-02-13** — 第八篇公众号发布《别瞎装！Skills安全避坑》🎉、生财有术API打通+每日19:00精华帖自动推送、Chrome插件需本地Node Host（暂搁置）、公众号引流钩子模块待定
 - **2026-02-15** — 日报cron大升级、002号装机指南、一人公司方向确定、小红书图文5张、公众号第9篇写完（外链被审核卡住）、即梦AI+万相2.6 API打通🎉、第10篇大纲完成、加入OpenClaw付费课程社群
 - **2026-02-23** — 第10篇公众号发布✅、GOALS.md+PROJECT_STATUS.md创建、目标驱动Agent体系上线、002接入通义千问万相图片生成、制定本周行动计划（002调校/闲鱼开号/11+12篇/课程分销）
+- **2026-02-25** — 002模型升级（qwen-plus→Claude Sonnet 4.6 via OpenRouter）✅、002群聊修复（groupPolicy: open + requireMention）✅、AI日报3发问题修复（prompt去掉"发送给旭"）✅、早安简报cron修复（channel: last→telegram）✅、AI日报板块全面改版（财经→模型速报/工具/博主精读/GitHub/选题灵感）✅、第13篇大纲存入Notion（日报系统搭建教程）✅
 - **2026-02-17** — 春节假期Day1，AI前沿研究报告完成（Seedance 2.0/Pomelli/Vibe Coding/一人公司趋势）、4篇选题规划（第9-12篇）、ClawHub Skills汇总23个
 - **2026-02-18** — 零零壹夜班：第9篇终稿+第10篇初稿+日报模板v3+风格指南v1.1+Notion验证通过+Memory维护
 - **2026-02-18** — 充电日：Jeff Dean访谈、刘小排奇点论、Sherwin Wu播客、Sonnet 4.6、7篇AGI文章
@@ -34,7 +35,7 @@
 
 - 文章要用真实经历，不编造（第3篇从虚构改为真实事件，效果好很多）
 - 工具够用就停，开始产出（"Ship over configure"）
-- 图片生成优先级：即梦AI（火山引擎API）> Gemini 2.0 Flash（Google API直连）> Evolink（IP被封待修复）
+- 图片生成：**统一用万相2.6（wan2.6-t2i）**，其他模型全废弃（2026-02-25旭指令）
 - AI生图通病：中文字体渲染都不行，最佳方案是AI出底图+Canva叠清晰文字
 - 公众号无开放API，方案A：AI打包成品→用户复制粘贴发布
 - 公众号标题是生死线：第二篇技术标题只有2阅读 vs 第一篇通俗标题63阅读
@@ -116,9 +117,9 @@
 
 ## 002号零零贰
 - Telegram Bot: @linglinger_002_bot
-- 模型: qwen-plus（百炼API，共用key sk-3e086717facd4d88a573260d127a15b0）
+- 模型: Claude Sonnet 4.6 via OpenRouter（2026-02-25升级）✅，Fallback: qwen-plus
 - 已接入通义千问万相图片生成 ✅（能出公众号首图）
-- 待考虑升级为GLM-5（评分50分 vs Qwen 45分，价格相近）
+- 群聊响应已修复：groupPolicy: open + requireMention: true ✅
 - 机器: 旧电脑Windows，需保持开机+梯子+Gateway服务
 - 群聊"一人公司"：零零壹+零零贰+老大
 - 协作规则：像人类同事一样判断要不要@对方，不无脑接话
@@ -142,14 +143,13 @@
 - **第10篇已推Notion草稿** — 老大排版中，待发布
 - **公众号SOP v1.0完成** — sop/wechat-content-sop.md + 飞书笔记库 ✅
 - **引流钩子已初步落地** — 加微信送链接清单/配置文件
-- ~~优化AI日报~~ → 精简日报模板v3完成（templates/daily-report-template.md）✅
-- ~~定义公众号写作风格~~ → 风格指南v1.1完成（templates/writing-style-guide.md）✅
-- Notion推送脚本key已更新，验证通过 ✅
-- 第11篇选题：Seedance 2.0视频教程（2/24）
-- 第12篇选题：Vibe Coding入门（2/27）
-- Notion数据清理（~100条旧记录补日期+标签）
+- **第11篇草稿完成** — Seedance 2.0，等老大补真实体验，目标2/26发布
+- **第12篇草稿完成** — Vibe Coding入门，目标2/27发布
+- **第13篇大纲已存Notion** — 日报系统搭建教程，老大选完标题再动笔
+- AI日报板块改版完成 ✅（新版：模型速报/工具/博主精读/GitHub/今日选题）
+- 002模型升级完成 ✅（Sonnet 4.6 via OpenRouter，试跑一天）
 - 每周2篇内容目标（周二+周五）
-- 超级个人主页+知识库（4周内容输出后启动）
+- Notion数据清理（~100条旧记录补日期+标签）
 - 公众号文章库已建（Notion DB: 306453f1-8074-8107-b53a-e2dc0cece51b），第2-5篇标题待补
 
 ## Notion待办数据库
@@ -181,12 +181,12 @@
 - 选题推送cron已升级：第一步用Grok搜X热点，比Brave Search准确得多
 - ⚠️ WgetCloud订阅到期日：2026-03-07（11天后需续费）
 
-## OpenRouter（待配置）
-- 002计划切换到 Gemini 3.1 Pro（走OpenRouter）
-- 配置方式：openclaw.json 里设 env.OPENROUTER_API_KEY + model.primary = "openrouter/google/gemini-3.1-pro-preview"
-- 旭需要注册OpenRouter账号+充值+提供API key
-- MiniMax M2.5 也可以走OpenRouter（日常任务用，便宜）
-- OpenRouter LLM排行榜：MiniMax M2.5第1（2.29T tokens）> Kimi K2.5 > Gemini 3 Flash > GLM 5 > DeepSeek V3.2
+## OpenRouter（已配置 ✅ 2026-02-25）
+- API Key: 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
+- 002主力模型已切换：dashscope/qwen-plus → openrouter/anthropic/claude-sonnet-4-6
+- Fallback: dashscope/qwen-plus
+- 用量查看: https://openrouter.ai/activity
+- 试跑一天评估效果和消耗再决定是否长期用
 
 ## Gemini API（已废弃）
 - API Key: AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU — 额度用完，不再可用
@@ -197,9 +197,10 @@
 - Evolink旧key两个都失效（IP被封 43.159.48.54）
 - Evolink最新key: `sk-5ZFrdndazZvcDEDFjEU8gbxScFHXLYLzzKjr8WlZn7WjJG0u`（待本地机器测试）
 - Evolink图片正确接口: /v1/images/generations（异步任务+轮询）
-- 火山引擎即梦AI: AK/SK签名，req_key=high_aes_general_v20，200次免费额度
+- **图片生成主力**: 万相2.6 `wan2.6-t2i`，API Key: sk-3e086717facd4d88a573260d127a15b0（2026-02-25统一）
 - 阿里云百炼Coding Plan: 首月10元/18000次，支持OpenClaw（备选给002号）
-- Gemini API: `AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU`（付费项目，~$378额度）
+- Gemini API: `AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU`（对话用，图片生成已废弃）
+- 即梦AI/Evolink: 已废弃
 - Notion API: `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`
 - 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
 - Notion DB IDs见TOOLS.md

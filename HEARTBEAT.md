@@ -3,10 +3,12 @@
 ## 任务0：OpenClaw版本监控（每次心跳都检查）
 
 运行 `bash ~/.openclaw/workspace/scripts/version-check.sh`，根据输出：
-- `STATUS:NO_UPDATE` → 无需通知，继续下一个任务
-- `STATUS:NEW_VERSION` 或 `STATUS:UPDATED` → 通知老大：更新了什么版本，检查changelog（web_search "OpenClaw changelog {新版本号}"），简要说明新功能
+- `STATUS:NO_UPDATE` 或 `STATUS:ALREADY_NOTIFIED` → 无需通知，继续下一个任务
+- `STATUS:NEW_VERSION` → **只通知，不要自动更新！** 做以下三件事：
+  1. web_search "OpenClaw {新版本号} changelog" 查更新内容
+  2. 整理：新功能是什么、有没有破坏性变更、是否值得现在更新
+  3. 发消息给旭，等他确认后再说"帮你升级"
 - `STATUS:VERSION_CHANGED` → 记录到memory，不通知
-- 如果AUTH:FAILED → 立刻通知老大认证出问题，需要重新配置
 
 ## 任务1：主动任务推进
 

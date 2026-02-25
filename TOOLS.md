@@ -60,13 +60,13 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 Add whatever helps you do your job. This is your cheat sheet.
 
-### 阿里云百炼（万相图片生成）
+### 图片生成（主力：万相2.6）
+- **唯一模型**: `wan2.6-t2i`（阿里云百炼，最新，同步调用）
 - API Key: sk-3e086717facd4d88a573260d127a15b0
-- 模型: wan2.6-t2i（万相2.6，最新，支持同步调用）
 - 接口: POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
 - Header: Authorization: Bearer {key}, Content-Type: application/json
 - 尺寸: 总像素1280²~1440²，宽高比1:4~4:1
-- 有免费额度，超出按张计费
+- ⚠️ 其他所有图片生成模型已废弃（Gemini/即梦AI/Evolink），统一用万相2.6
 
 ### 生财有术（知识星球）
 - Group ID: 1824528822
@@ -76,16 +76,7 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 最新帖: scope=all
 - Cookie过期: 2026年底
 
-### 火山引擎（即梦AI图片生成）
-- 子账号: openclaw001
-- 登录: https://console.volcengine.com/auth/login/user/2101365095
-- AK: AKLTZmQ0OWNkY2NhZTg2NDBhNWE3MmNhYmE5N2Y5OTViNjE
-- SK(base64): WkRCaFlqWTRObVZtWXpGaE5EUTFOR0psWldNeU9EazVaV0ZtWkdaaU0yTQ==
-- API: https://visual.volcengineapi.com, Action=CVProcess, Version=2022-08-31
-- 可用req_key: high_aes_general_v20, high_aes
-- 签名: 用 @volcengine/openapi npm包（Service + createJSONAPI）
-- 免费额度: 200次
-- 图片生成优先级: 即梦AI(火山引擎) > Gemini 2.0 Flash > Evolink(IP被封)
+### 火山引擎（即梦AI）— ⚠️ 已废弃，不再使用
 
 ### Evolink（当前状态）
 - 新key: sk-5ZFrdndazZvcDEDFjEU8gbxScFHXLYLzzKjr8WlZn7WjJG0u
@@ -110,6 +101,13 @@ Add whatever helps you do your job. This is your cheat sheet.
 - systemd服务: mihomo.service（已enable，开机自启）
 - 用途: 绕过Cloudflare/xAI对机房IP的封锁
 - 续订链接: https://bava8u2znaj6bdzzjnfb.wgetcloud.online/link/1600b449-67c9-365f-916d-eedf0ab4dbe3
+
+### OpenRouter
+- API Key: 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
+- Endpoint: https://openrouter.ai/api/v1
+- 当前用途: 002号模型（Claude Sonnet 4.6）
+- 计费: 按实际 token 用量，Sonnet 4.6 约 $3/$15 per M token (in/out)
+- 用量查看: https://openrouter.ai/activity
 
 ### 飞书
 - App ID: cli_a908765086b85bc6

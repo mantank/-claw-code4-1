@@ -8,11 +8,12 @@
 ## 🏃 进行中
 
 ### 公众号「深夜开发者LND」
-- 已发布：第1-10篇 ✅（第10篇2/23发布）
-- 第11篇：Seedance 2.0视频教程，**草稿完成** ✅ 等旭补真实体验 → 目标2/26发布
-- 第12篇：Vibe Coding入门，**草稿完成** ✅ → 目标2/27发布
-- 第13/14篇候选：「普通人怎么用Gemini 3.1 Pro」（热点，2/24搜索发现）
-- 本周目标：11+12两篇发布
+- 已发布：第1-11篇 ✅（第11篇2/24发布：《我让Openclaw帮我雇了第二个AI员工，全程30分钟》）
+- 第12篇：Seedance 2.0视频教程，**草稿完成** ✅ → articles/article-11-seedance-draft.md（等旭补真实体验）
+- 第13篇：Vibe Coding入门，**草稿完成** ✅ → articles/article-12-vibe-coding-draft.md
+- 第14篇（OpenClaw命令大全）：**终稿完成** ✅ → articles/article-13-commands-final.md → **已推Notion（2/25）**
+- 下一步选题：普通人怎么用Gemini 3.1 Pro（热点）
+- 本周目标：发布12+13篇
 - 当前粉丝：~30（估算）
 - 下一个里程碑：200粉建群
 
