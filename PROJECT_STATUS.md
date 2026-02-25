@@ -1,7 +1,7 @@
 # PROJECT_STATUS.md — 当前项目状态
 
 > 所有Agent共享。每次重要进展后更新。
-> 最后更新：2026-02-25（001夜班第二次，凌晨2点）
+> 最后更新：2026-02-25（001夜班第三次，凌晨4点）
 
 ---
 
@@ -13,6 +13,7 @@
 - 第13篇：Vibe Coding入门，**草稿完成** ✅ → articles/article-12-vibe-coding-draft.md
 - 第14篇（OpenClaw命令大全）：**终稿完成** ✅ → articles/article-13-commands-final.md → **已推Notion（2/25）**
 - 第14篇（Gemini 3.1 Pro普通人用法）：**草稿完成** ✅ → articles/article-14-gemini31pro-draft.md → 已推Notion（2/25夜班）
+- 第15篇（2026年AI模型对比，普通人选购指南）：**草稿完成** ✅ → articles/article-15-ai-models-comparison-draft.md（2/25 4AM夜班）
 - 下一步选题：Vibe Coding入门（已有article-12草稿待旭审核）
 - 本周目标：发布12+13篇
 - 当前粉丝：~30（估算）

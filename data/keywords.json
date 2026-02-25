@@ -41,7 +41,15 @@
     "AI自动写代码",
     "普通人 AI做APP",
     "DeepSeek Cursor 搭配",
-    "Claude Code 入门"
+    "Claude Code 入门",
+    "GPT-5 vs Claude 哪个好",
+    "Gemini 3.1 Pro 免费 教程",
+    "Claude Opus 4.6 值不值",
+    "GPT-5.2 Claude Opus Gemini 对比",
+    "2026 AI模型 普通人选购",
+    "Gemini 3.1 Pro ARC-AGI",
+    "AI模型对比 2026年",
+    "最强AI 2026 排名"
   ],
   "long_tail_keywords": [
     "OpenClaw 怎么用 新手",
@@ -55,6 +63,6 @@
     "AI agent 协作 工作流",
     "普通人做独立产品 AI帮忙"
   ],
-  "last_updated": "2026-02-24",
-  "update_notes": "2026-02-24: 新增 trending_keywords（Vibe Coding相关热词）+ long_tail_keywords板块，来源：搜索调研+article-12选题准备"
+  "last_updated": "2026-02-25",
+  "update_notes": "2026-02-25: 新增 AI大模型对比相关热词（GPT-5.2/Claude Opus 4.6/Gemini 3.1 Pro），来源：搜索调研+article-15选题准备。2026-02-24: 新增 trending_keywords（Vibe Coding相关热词）+ long_tail_keywords板块，来源：搜索调研+article-12选题准备"
 }
