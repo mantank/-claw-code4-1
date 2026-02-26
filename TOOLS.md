@@ -60,6 +60,13 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 Add whatever helps you do your job. This is your cheat sheet.
 
+### Lovart.ai（白板风/手绘风配图）
+- 网址: https://www.lovart.ai/zh/home
+- 内置 Nano Banana Pro 模型，中文渲染清晰
+- 免费账号有赠送积分
+- 适合：白板风、信息图、公众号配图
+- 效果远超万相2.6的中文文字渲染
+
 ### 图片生成（主力：万相2.6）
 - **唯一模型**: `wan2.6-t2i`（阿里云百炼，最新，同步调用）
 - API Key: sk-3e086717facd4d88a573260d127a15b0

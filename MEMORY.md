@@ -23,7 +23,8 @@
 - **2026-02-13** — 第八篇公众号发布《别瞎装！Skills安全避坑》🎉、生财有术API打通+每日19:00精华帖自动推送、Chrome插件需本地Node Host（暂搁置）、公众号引流钩子模块待定
 - **2026-02-15** — 日报cron大升级、002号装机指南、一人公司方向确定、小红书图文5张、公众号第9篇写完（外链被审核卡住）、即梦AI+万相2.6 API打通🎉、第10篇大纲完成、加入OpenClaw付费课程社群
 - **2026-02-23** — 第10篇公众号发布✅、GOALS.md+PROJECT_STATUS.md创建、目标驱动Agent体系上线、002接入通义千问万相图片生成、制定本周行动计划（002调校/闲鱼开号/11+12篇/课程分销）
-- **2026-02-25** — 002模型升级（qwen-plus→Claude Sonnet 4.6 via OpenRouter）✅、002群聊修复（groupPolicy: open + requireMention）✅、AI日报3发问题修复（prompt去掉"发送给旭"）✅、早安简报cron修复（channel: last→telegram）✅、AI日报板块全面改版（财经→模型速报/工具/博主精读/GitHub/选题灵感）✅、第13篇大纲存入Notion（日报系统搭建教程）✅
+- **2026-02-25** — 002模型升级（qwen-plus→Claude Sonnet 4.6 via OpenRouter）✅、002群聊修复✅、AI日报修复✅、日报板块改版✅、第13篇大纲存Notion✅；晚间：002切换Grok 4.1 Fast✅、BrowserWing安装成功（服务器自己装headless浏览器）✅、服务器升级2C8G✅
+- **2026-02-26** — Claude Code安装成功（服务器+VSCode插件，Sonnet 4.6）✅、旭首次独立用Claude Code修复streaming配置问题 🎉、AI日报prompt升级（多轮搜索+3-5条/板块+行业价值分析）✅
 - **2026-02-17** — 春节假期Day1，AI前沿研究报告完成（Seedance 2.0/Pomelli/Vibe Coding/一人公司趋势）、4篇选题规划（第9-12篇）、ClawHub Skills汇总23个
 - **2026-02-18** — 零零壹夜班：第9篇终稿+第10篇初稿+日报模板v3+风格指南v1.1+Notion验证通过+Memory维护
 - **2026-02-18** — 充电日：Jeff Dean访谈、刘小排奇点论、Sherwin Wu播客、Sonnet 4.6、7篇AGI文章
@@ -161,7 +162,7 @@
 ## 重要配置变更（2026-02-23）
 - 主力模型切换：Opus → **Sonnet 4.6**（成本降低80%，性能接近）
 - Fallback顺序：Sonnet → Opus → Gemini 3.1 Pro → Qwen Plus
-- Telegram streamMode 改为 off（之前 partial 会把英文推理内容泄露给老大）
+- Telegram streaming: partial（2026-02-26 旭用 Claude Code 修复，reasoning已关闭所以不会泄露推理内容）
 - 老大看不懂英文，回复全中文，模型专有名词可保留但加说明
 
 ## 2026-02-24 重要更新
@@ -204,6 +205,13 @@
 - Notion API: `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`
 - 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
 - Notion DB IDs见TOOLS.md
+
+## 服务器配置（2026-02-25升级）
+- 规格：2 vCPU (AMD EPYC 7K62), 7.5GB RAM（从3.6G升级），8GB Swap
+- 升级原因：装了BrowserWing后内存吃紧，升级到2C8G够用
+- 升级后baseline：~1.3GB used，6.2GB available
+- BrowserWing已安装：http://localhost:8080，systemd服务browserwing.service（开机自启）
+- Chromium wrapper：/root/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome（加了--no-sandbox）
 
 ## 002号零零贰 - 服务器迁移完成（2026-02-24）
 - 已从Windows本地迁移到云服务器 ✅
