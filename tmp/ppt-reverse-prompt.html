@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI图片提示词反推指南</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;700;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --text-primary: #ffffff;
+            --text-secondary: #8b8b9e;
+            --accent: #00e5ff;
+            --accent-warm: #ff6b35;
+            --accent-green: #00ff88;
+            --accent-glow: rgba(0, 229, 255, 0.2);
+            --font-main: 'Noto Sans SC', -apple-system, sans-serif;
+            --slide-padding: clamp(2rem, 6vw, 5rem);
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-snap-type: y mandatory;
+        }
+
+        body {
+            font-family: var(--font-main);
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        .slide {
+            min-height: 100vh;
+            padding: var(--slide-padding);
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Progress bar */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-green));
+            z-index: 100;
+            transition: width 0.3s ease;
+        }
+
+        /* Nav dots */
+        .nav-dots {
+            position: fixed;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 100;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .nav-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.2);
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .nav-dot.active {
+            background: var(--accent);
+            box-shadow: 0 0 12px var(--accent-glow);
+            transform: scale(1.4);
+        }
+
+        /* Slide counter */
+        .slide-counter {
+            position: fixed;
+            bottom: 2rem;
+            right: 2rem;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            z-index: 100;
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s var(--ease-out-expo), transform 0.8s var(--ease-out-expo);
+        }
+        .slide.visible .reveal { opacity: 1; transform: translateY(0); }
+        .reveal:nth-child(1) { transition-delay: 0.1s; }
+        .reveal:nth-child(2) { transition-delay: 0.25s; }
+        .reveal:nth-child(3) { transition-delay: 0.4s; }
+        .reveal:nth-child(4) { transition-delay: 0.55s; }
+        .reveal:nth-child(5) { transition-delay: 0.7s; }
+
+        /* ============ SLIDE STYLES ============ */
+
+        /* Title slide */
+        .title-slide {
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 30% 70%, rgba(0,229,255,0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 70% 30%, rgba(255,107,53,0.06) 0%, transparent 50%),
+                var(--bg-primary);
+        }
+        .title-slide h1 {
+            font-size: clamp(2.5rem, 7vw, 5rem);
+            font-weight: 900;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+        }
+        .title-slide .highlight {
+            background: linear-gradient(135deg, var(--accent), var(--accent-green));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .title-slide .subtitle {
+            font-size: clamp(1rem, 2.5vw, 1.4rem);
+            color: var(--text-secondary);
+            margin-top: 1.5rem;
+        }
+        .title-slide .tag {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            border: 1px solid rgba(0,229,255,0.3);
+            border-radius: 100px;
+            font-size: 0.85rem;
+            color: var(--accent);
+            margin-top: 2rem;
+        }
+
+        /* Section header */
+        .section-slide {
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 50% 50%, rgba(0,229,255,0.06) 0%, transparent 60%),
+                var(--bg-primary);
+        }
+        .section-slide .section-num {
+            font-size: clamp(4rem, 12vw, 10rem);
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--accent), transparent);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0.15;
+            line-height: 1;
+        }
+        .section-slide h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 700;
+            margin-top: -1rem;
+        }
+
+        /* Content slide */
+        .content-slide h2 {
+            font-size: clamp(1.6rem, 4vw, 2.8rem);
+            font-weight: 700;
+            margin-bottom: 2rem;
+        }
+        .content-slide .accent-line {
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+            margin-bottom: 2rem;
+        }
+
+        /* Big number */
+        .big-number {
+            font-size: clamp(4rem, 15vw, 12rem);
+            font-weight: 900;
+            line-height: 1;
+            background: linear-gradient(135deg, var(--accent-warm), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Card grid */
+        .card-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 2rem;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: rgba(0,229,255,0.2);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        .card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        .card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Steps */
+        .step-list {
+            list-style: none;
+            margin-top: 1.5rem;
+        }
+        .step-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.2rem;
+            margin-bottom: 1.5rem;
+            padding: 1.2rem;
+            background: rgba(255,255,255,0.02);
+            border-radius: 12px;
+            border-left: 3px solid var(--accent);
+        }
+        .step-num {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--accent);
+            min-width: 2rem;
+        }
+        .step-content h3 {
+            font-weight: 700;
+            margin-bottom: 0.3rem;
+        }
+        .step-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Code block */
+        .code-block {
+            background: rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-top: 1.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem;
+            line-height: 1.8;
+            color: var(--accent);
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+
+        /* Comparison */
+        .vs-grid {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 2rem;
+            align-items: center;
+            margin-top: 2rem;
+        }
+        .vs-badge {
+            font-size: 1.5rem;
+            font-weight: 900;
+            color: var(--accent-warm);
+        }
+        .vs-card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 2rem;
+            text-align: center;
+        }
+        .vs-card.bad { border-color: rgba(255,60,60,0.2); }
+        .vs-card.good { border-color: rgba(0,255,136,0.2); }
+        .vs-card .price {
+            font-size: 2.5rem;
+            font-weight: 900;
+            margin: 0.5rem 0;
+        }
+        .vs-card.bad .price { color: #ff3c3c; }
+        .vs-card.good .price { color: var(--accent-green); }
+
+        /* Table */
+        .tool-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        .tool-table th, .tool-table td {
+            padding: 0.8rem 1.2rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .tool-table th {
+            color: var(--accent);
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .tool-table td {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        .tool-table tr:hover td { color: var(--text-primary); }
+
+        /* Keywords */
+        .keyword-tag {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(0,229,255,0.1);
+            border: 1px solid rgba(0,229,255,0.2);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            color: var(--accent);
+            margin: 0.3rem;
+            font-family: 'Courier New', monospace;
+        }
+
+        /* Quote */
+        .big-quote {
+            font-size: clamp(1.5rem, 4vw, 2.5rem);
+            font-weight: 300;
+            line-height: 1.5;
+            border-left: 3px solid var(--accent);
+            padding-left: 2rem;
+        }
+        .big-quote .em { color: var(--accent); font-weight: 700; }
+
+        /* Final CTA */
+        .cta-slide {
+            text-align: center;
+            background:
+                radial-gradient(ellipse at 50% 60%, rgba(0,229,255,0.1) 0%, transparent 50%),
+                var(--bg-primary);
+        }
+        .cta-slide h2 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 900;
+        }
+        .cta-slide .formula {
+            font-size: clamp(1.2rem, 3vw, 2rem);
+            color: var(--accent);
+            margin: 2rem 0;
+            font-weight: 700;
+        }
+        .author-tag {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-dots { display: none; }
+            .vs-grid { grid-template-columns: 1fr; gap: 1rem; }
+            .vs-badge { text-align: center; }
+            .card-grid { grid-template-columns: 1fr; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .reveal { transition: opacity 0.3s ease; transform: none; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progressBar"></div>
+    <nav class="nav-dots" id="navDots"></nav>
+    <div class="slide-counter" id="slideCounter"></div>
+
+    <!-- Slide 1: Title -->
+    <section class="slide title-slide">
+        <h1 class="reveal">提示词要卖<span class="highlight">¥30</span><br>我用1招免费拿到了</h1>
+        <p class="subtitle reveal">AI图片提示词反推完全指南</p>
+        <span class="tag reveal">🔧 深夜开发者LND</span>
+    </section>
+
+    <!-- Slide 2: The Problem -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">你一定遇到过这种情况</h2>
+        <div class="big-quote reveal">
+            刷到一张AI图，好看到想截屏当壁纸<br>
+            脑子蹦出一个问题：<span class="em">"提示词是什么？？？"</span>
+        </div>
+        <div style="margin-top:2rem">
+            <p class="reveal" style="color:var(--text-secondary);font-size:1.1rem;">去搜——搜不到。去问——没人理你。</p>
+            <p class="reveal" style="color:var(--text-secondary);font-size:1.1rem;margin-top:0.5rem;">最后发现：有人在<strong style="color:var(--text-primary)">卖</strong>这些提示词。</p>
+        </div>
+    </section>
+
+    <!-- Slide 3: Price Comparison -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">PromptBase：提示词交易市场</h2>
+        <div class="vs-grid reveal">
+            <div class="vs-card bad">
+                <p>一条提示词</p>
+                <div class="price">$2.99~$4.99</div>
+                <p style="color:var(--text-secondary)">折合 ¥20~35</p>
+            </div>
+            <div class="vs-badge">VS</div>
+            <div class="vs-card good">
+                <p>我的方法</p>
+                <div class="price">¥0</div>
+                <p style="color:var(--text-secondary)">2分钟搞定</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 4: Core Idea -->
+    <section class="slide section-slide">
+        <div class="section-num reveal">💡</div>
+        <h2 class="reveal">核心思路</h2>
+        <p class="reveal" style="font-size:1.3rem;color:var(--text-secondary);margin-top:1rem;">
+            AI能生成图片 → AI就能<span style="color:var(--accent);font-weight:700;">反向分析</span>图片<br>
+            把图丢给AI，让它把提示词"看"出来
+        </p>
+    </section>
+
+    <!-- Slide 5: 3 Steps -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">3步反推提示词</h2>
+        <ul class="step-list">
+            <li class="reveal">
+                <span class="step-num">1</span>
+                <div class="step-content">
+                    <h3>选一个能看图的AI</h3>
+                    <p>ChatGPT / Claude / 通义千问 / 豆包，任选一个</p>
+                </div>
+            </li>
+            <li class="reveal">
+                <span class="step-num">2</span>
+                <div class="step-content">
+                    <h3>发图 + 发反推提示词</h3>
+                    <p>让AI从6个维度拆解：风格、主体、构图、配色、光影、细节</p>
+                </div>
+            </li>
+            <li class="reveal">
+                <span class="step-num">3</span>
+                <div class="step-content">
+                    <h3>复制提示词 → 丢进生图工具</h3>
+                    <p>Nano Banana 2 / 通义万相 / Midjourney，10-30秒出图</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Slide 6: The Prompt Template -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">反推模板（直接复制）</h2>
+        <div class="code-block reveal">请反向分析这张图片，帮我还原它的AI生成提示词。
+
+请从以下6个维度逐一拆解：
+1.【风格】属于什么艺术风格？
+2.【主体】核心内容是什么？什么视角？
+3.【构图】画面布局方式？
+4.【配色】主色调和辅助色？
+5.【光影】光源方向和类型？
+6.【细节】材质、纹理、文字、特殊效果？
+
+最后输出100词以内的英文提示词，
+并标注5个"风格关键词"。</div>
+    </section>
+
+    <!-- Slide 7: Tools -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">工具推荐</h2>
+        <div class="card-grid">
+            <div class="card reveal">
+                <div class="icon">🔍</div>
+                <h3>反推用（看图说话）</h3>
+                <table class="tool-table">
+                    <tr><td>ChatGPT</td><td>付费 | 需梯子</td></tr>
+                    <tr><td>通义千问</td><td>免费 | 国内直连</td></tr>
+                    <tr><td>豆包</td><td>免费 | 国内直连</td></tr>
+                </table>
+            </div>
+            <div class="card reveal">
+                <div class="icon">🎨</div>
+                <h3>生图用</h3>
+                <table class="tool-table">
+                    <tr><td>Nano Banana 2</td><td>免费 | 需梯子</td></tr>
+                    <tr><td>通义万相</td><td>免费 | 国内直连</td></tr>
+                    <tr><td>Midjourney</td><td>付费 | 质感最好</td></tr>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 8: 5 Styles -->
+    <section class="slide section-slide">
+        <div class="section-num reveal">5</div>
+        <h2 class="reveal">种风格实测</h2>
+        <p class="reveal" style="font-size:1.1rem;color:var(--text-secondary);margin-top:1rem;">
+            全部来自PromptBase付费图 → 免费反推 → Nano Banana 2生成同款
+        </p>
+    </section>
+
+    <!-- Slide 9: Style showcase -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">反推出的风格关键词</h2>
+        <div class="card-grid">
+            <div class="card reveal">
+                <h3>🎨 萌系贴纸风</h3>
+                <div style="margin-top:0.8rem">
+                    <span class="keyword-tag">kawaii</span>
+                    <span class="keyword-tag">chibi</span>
+                    <span class="keyword-tag">sticker</span>
+                    <span class="keyword-tag">die-cut border</span>
+                    <span class="keyword-tag">flat shadow</span>
+                </div>
+                <p style="margin-top:0.8rem;color:var(--text-secondary);font-size:0.85rem;">适合：表情包、手账素材</p>
+            </div>
+            <div class="card reveal">
+                <h3>🎮 游戏封面风</h3>
+                <div style="margin-top:0.8rem">
+                    <span class="keyword-tag">GTA-inspired</span>
+                    <span class="keyword-tag">cinematic</span>
+                    <span class="keyword-tag">neon-lit</span>
+                    <span class="keyword-tag">3D block letter</span>
+                </div>
+                <p style="margin-top:0.8rem;color:var(--text-secondary);font-size:0.85rem;">适合：课程封面、活动海报</p>
+            </div>
+            <div class="card reveal">
+                <h3>🧸 3D皮克斯风</h3>
+                <div style="margin-top:0.8rem">
+                    <span class="keyword-tag">Pixar-style</span>
+                    <span class="keyword-tag">steampunk</span>
+                    <span class="keyword-tag">hyper-detailed</span>
+                    <span class="keyword-tag">depth of field</span>
+                </div>
+                <p style="margin-top:0.8rem;color:var(--text-secondary);font-size:0.85rem;">适合：产品展示、品牌IP</p>
+            </div>
+            <div class="card reveal">
+                <h3>📸 商业食品摄影</h3>
+                <div style="margin-top:0.8rem">
+                    <span class="keyword-tag">food photography</span>
+                    <span class="keyword-tag">hyper-realistic</span>
+                    <span class="keyword-tag">studio lighting</span>
+                    <span class="keyword-tag">motion blur</span>
+                </div>
+                <p style="margin-top:0.8rem;color:var(--text-secondary);font-size:0.85rem;">适合：餐饮海报、外卖封面</p>
+            </div>
+            <div class="card reveal">
+                <h3>🌿 植物科学图鉴</h3>
+                <div style="margin-top:0.8rem">
+                    <span class="keyword-tag">botanical</span>
+                    <span class="keyword-tag">vintage textbook</span>
+                    <span class="keyword-tag">watercolor</span>
+                    <span class="keyword-tag">parchment</span>
+                </div>
+                <p style="margin-top:0.8rem;color:var(--text-secondary);font-size:0.85rem;">适合：科普内容、知识类小红书</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slide 10: Pro Tips -->
+    <section class="slide content-slide">
+        <div class="accent-line reveal"></div>
+        <h2 class="reveal">效果不够像？3招提升还原度</h2>
+        <ul class="step-list">
+            <li class="reveal">
+                <span class="step-num">①</span>
+                <div class="step-content">
+                    <h3>手动加细节词</h3>
+                    <p>材质词 <code style="color:var(--accent)">matte</code> <code style="color:var(--accent)">glossy</code> · 光影词 <code style="color:var(--accent)">rim lighting</code> · 镜头词 <code style="color:var(--accent)">close-up</code> <code style="color:var(--accent)">macro</code></p>
+                </div>
+            </li>
+            <li class="reveal">
+                <span class="step-num">②</span>
+                <div class="step-content">
+                    <h3>指定画面比例</h3>
+                    <p>正方形 <code style="color:var(--accent)">1:1</code> · 竖版手机 <code style="color:var(--accent)">2:3</code> · 横版封面 <code style="color:var(--accent)">16:9</code></p>
+                </div>
+            </li>
+            <li class="reveal">
+                <span class="step-num">③</span>
+                <div class="step-content">
+                    <h3>换模型试试</h3>
+                    <p>贴纸卡通→Nano Banana · 写实摄影→Midjourney · 国风水墨→通义万相</p>
+                </div>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Slide 11: Summary -->
+    <section class="slide cta-slide">
+        <h2 class="reveal">以后再也不用<br>问"提示词是什么"了</h2>
+        <div class="formula reveal">找图 → 发给AI反推 → 复制提示词 → 生成同款</div>
+        <p class="reveal" style="font-size:1.2rem;color:var(--text-secondary);">
+            整个过程不超过 <span style="color:var(--accent);font-weight:700;">2分钟</span>
+        </p>
+        <div class="author-tag reveal">深夜开发者LND · 2026</div>
+    </section>
+
+    <script>
+    class SlidePresentation {
+        constructor() {
+            this.slides = document.querySelectorAll('.slide');
+            this.progressBar = document.getElementById('progressBar');
+            this.navDots = document.getElementById('navDots');
+            this.counter = document.getElementById('slideCounter');
+            this.currentSlide = 0;
+
+            this.createNavDots();
+            this.setupObserver();
+            this.setupKeyboard();
+            this.updateCounter();
+        }
+
+        createNavDots() {
+            this.slides.forEach((_, i) => {
+                const dot = document.createElement('div');
+                dot.className = 'nav-dot' + (i === 0 ? ' active' : '');
+                dot.addEventListener('click', () => {
+                    this.slides[i].scrollIntoView({ behavior: 'smooth' });
+                });
+                this.navDots.appendChild(dot);
+            });
+        }
+
+        setupObserver() {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                        const idx = [...this.slides].indexOf(entry.target);
+                        this.currentSlide = idx;
+                        this.updateProgress();
+                        this.updateDots();
+                        this.updateCounter();
+                    }
+                });
+            }, { threshold: 0.3 });
+
+            this.slides.forEach(s => observer.observe(s));
+        }
+
+        setupKeyboard() {
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'ArrowDown' || e.key === ' ' || e.key === 'ArrowRight') {
+                    e.preventDefault();
+                    const next = Math.min(this.currentSlide + 1, this.slides.length - 1);
+                    this.slides[next].scrollIntoView({ behavior: 'smooth' });
+                } else if (e.key === 'ArrowUp' || e.key === 'ArrowLeft') {
+                    e.preventDefault();
+                    const prev = Math.max(this.currentSlide - 1, 0);
+                    this.slides[prev].scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        }
+
+        updateProgress() {
+            const pct = ((this.currentSlide + 1) / this.slides.length) * 100;
+            this.progressBar.style.width = pct + '%';
+        }
+
+        updateDots() {
+            this.navDots.querySelectorAll('.nav-dot').forEach((d, i) => {
+                d.classList.toggle('active', i === this.currentSlide);
+            });
+        }
+
+        updateCounter() {
+            this.counter.textContent = `${this.currentSlide + 1} / ${this.slides.length}`;
+        }
+    }
+
+    new SlidePresentation();
+    </script>
+</body>
+</html>
