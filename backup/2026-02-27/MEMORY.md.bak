@@ -1,0 +1,225 @@
+# MEMORY.md - 长期记忆
+
+## 关于旭
+
+- 陈旭，称呼"旭"，Telegram @chenxu1988，时区 GMT+8
+- 非程序员出身，正在快速转型
+- 目标：AI超级个体（工具+内容+变现）
+- 偏好：简单可用 > 复杂完美，落地优先
+- 需要对抗：行动力波动、信息过载、焦虑
+
+## 重要事件
+
+- **2026-02-09** — 重置workspace，全新开始，完成基础配置 🎉
+- **2026-02-09** — 命名为零零壹，定位：旭的第一个AI搭子
+- **2026-02-09** — 装了19个技能，配好 Brave Search，完成第一篇内容创作
+- **2026-02-10** — 技能精简19→11，Gemini/Notion/飞书全部接通
+- **2026-02-10** — Notion工作台搭建完成（AI日报/日课/项目看板/知识库）
+- **2026-02-10** — 第一篇公众号发布《昨晚，我给自己招了一个AI员工》🎉
+- **2026-02-10** — 定时任务上线：AI日报(6AM) + 日课打卡(9PM)
+- **2026-02-10** — 确定零零壹=COO角色，未来扩展专职AI员工体系
+- **2026-02-11** — 飞书全面打通（10个Skills+37权限）、心跳提醒上线、Evolink图片生成接入
+- **2026-02-12** — 第六篇公众号写完+发布（首次有转化：3-5新关注+6-7分享）、公众号基建（合集+欢迎语）、AI日报优化方案+SOP完成、3篇文章入飞书知识库、Evolink域名更新、小红书图文生成方案验证通过、第七篇选题确定（Notion接管）
+- **2026-02-13** — 第八篇公众号发布《别瞎装！Skills安全避坑》🎉、生财有术API打通+每日19:00精华帖自动推送、Chrome插件需本地Node Host（暂搁置）、公众号引流钩子模块待定
+- **2026-02-15** — 日报cron大升级、002号装机指南、一人公司方向确定、小红书图文5张、公众号第9篇写完（外链被审核卡住）、即梦AI+万相2.6 API打通🎉、第10篇大纲完成、加入OpenClaw付费课程社群
+- **2026-02-23** — 第10篇公众号发布✅、GOALS.md+PROJECT_STATUS.md创建、目标驱动Agent体系上线、002接入通义千问万相图片生成、制定本周行动计划（002调校/闲鱼开号/11+12篇/课程分销）
+- **2026-02-25** — 002模型升级（qwen-plus→Claude Sonnet 4.6 via OpenRouter）✅、002群聊修复✅、AI日报修复✅、日报板块改版✅、第13篇大纲存Notion✅；晚间：002切换Grok 4.1 Fast✅、BrowserWing安装成功（服务器自己装headless浏览器）✅、服务器升级2C8G✅
+- **2026-02-26** — Claude Code安装成功（服务器+VSCode插件，Sonnet 4.6）✅、旭首次独立用Claude Code修复streaming配置问题 🎉、AI日报prompt升级（多轮搜索+3-5条/板块+行业价值分析）✅
+- **2026-02-17** — 春节假期Day1，AI前沿研究报告完成（Seedance 2.0/Pomelli/Vibe Coding/一人公司趋势）、4篇选题规划（第9-12篇）、ClawHub Skills汇总23个
+- **2026-02-18** — 零零壹夜班：第9篇终稿+第10篇初稿+日报模板v3+风格指南v1.1+Notion验证通过+Memory维护
+- **2026-02-18** — 充电日：Jeff Dean访谈、刘小排奇点论、Sherwin Wu播客、Sonnet 4.6、7篇AGI文章
+- **2026-02-18** — Sonnet 4.6发布（100万token上下文，价格不变$15/M，逼近Opus表现）
+- **2026-02-18** — OpenClaw fallback模型配置完成（Opus→Sonnet 4.6自动切换）
+- **2026-02-18** — Moltbook首发帖（Jeff Dean 50个AI实习生）已验证通过
+
+## 经验与教训
+
+- 文章要用真实经历，不编造（第3篇从虚构改为真实事件，效果好很多）
+- 工具够用就停，开始产出（"Ship over configure"）
+- 图片生成：**统一用万相2.6（wan2.6-t2i）**，其他模型全废弃（2026-02-25旭指令）
+- AI生图通病：中文字体渲染都不行，最佳方案是AI出底图+Canva叠清晰文字
+- 公众号无开放API，方案A：AI打包成品→用户复制粘贴发布
+- 公众号标题是生死线：第二篇技术标题只有2阅读 vs 第一篇通俗标题63阅读
+- 标题原则：让完全不懂技术的人也想点进来，有画面感+好奇心+利益点
+- 公众号排版铁律（迭代1）：①每段文字不超过2行，超过就没人读 ②一屏内容=2/3文字+1张图 ③不要超过手机一屏，太长读不下去 ④字不能太小，板块要清晰
+- 不要发md文件到Telegram，直接发文字或写Notion
+- 老大嫌AI日报太长太乱——需要精简，只留精华
+
+## 品牌与形象
+
+- 公众号名称：深夜开发者LND
+- 知识库名称：深夜开发者的知识库（飞书）
+- 零零壹形象：大白(Baymax)风格像素机器人，白色圆胖，胸口蓝光，手握扳手，肚子写001
+- 老大数字形象：深色乱发、青色卫衣、耳机挂脖子（ChatGPT生成的卡通形象）
+- 视觉风格：泰拉瑞亚像素风（知识库） / 卡通插画风（公众号）
+- 称呼：叫"老大"，不叫名字
+
+## 偏好与习惯
+
+- 中文沟通为主
+- 夜班时段是深度使用AI的黄金时间
+- 喜欢一步步来，可验证的结果
+- 模型：Claude Opus 4（Claude Max订阅，每5小时重置用量上限，超了会429报错）
+- ⚠️ 要注意用量节奏，避免在一个5小时窗口内烧太多token
+- 封面图风格：卡通插画（匹配ChatGPT数字形象）
+- 公众号编辑器：Markdown Nice (editor.mdnice.com)
+- 每日复盘模板：templates/daily-review.md（23点用，同步Notion）
+- 公众号合集：①OpenClaw实战系列新手教程 ②AI工具应用与工作流
+- 教程类文章反响最好——"保姆级实操教程"定位踩准了
+- 分发是当前最大瓶颈，不是内容质量。每篇至少5渠道分发
+- GLM-5发布（2/11，智谱，744B参数，编程接近Opus 4.5，Coding Plan涨价30%）
+- 新飞书应用：cli_a9072d33c1b8dbc4 / xYTAyBv4Vqz1M9TESupxiBuZ28bdW4ZW（老大创建，用途待确认）
+- Seedance 2.0（字节，2/10发布）— AI视频生成标杆，多模态输入，配合Kling 3.0
+- Google Pomelli — 品牌内容自动生成（美加澳新公测，国内暂不可用）
+- Vibe Coding — MIT 2026十大突破技术，Lovable/Replit/Cursor让零基础造App
+- 一人公司+AI Agent成2026主旋律（BI/Metaintro/Fast Company多家报道）
+- 春节假期5天（2/17-2/21），每晚2-3小时电脑时间
+
+## 生财有术（知识星球）
+- Group ID: 1824528822，Cookie有效期到2026年底
+- 精华帖: scope=digests，最新帖: scope=all
+- 每日19:00自动推送精华帖（cron job已设置）
+- scys.com板块menuId：中标539 / 超级标2634453 / 亦仁1985685 / 超级术3783551 / 亦仁收藏夹1702
+- scys.com独立站需X-TOKEN（前端localStorage），知识星球API够用
+
+## 国产模型推荐（2026-02-23评测）
+- GLM-5（智谱）：评分50分，国产最强，综合能力最好
+- Kimi K2.5（月之暗面）：48分，超长文档场景
+- 通义千问3.5 Plus（阿里）：45分，性价比最高，¥0.8/百万token
+- MiniMax M2.5：42分，专为Agent场景优化，¥0.75/百万token输入
+- DeepSeek V3.2：42分，代码推理
+- 参考网站：artificialanalysis.ai（老大常看的AI评分网站）
+
+## Moltbook（AI社交平台）
+- 注册名：Agent-001-LND，状态：pending_claim
+- API Key存在 ~/.config/moltbook/credentials.json
+- 认领链接：https://moltbook.com/claim/moltbook_claim_5LbeaBnam-zBebsfyCxW6psau1KNeeJG
+- 验证码：scuttle-PJJR
+- OPCC（一人公司教会）：刘小排发起，拟加入申请创始先知
+- Profile: https://moltbook.com/u/Agent-001-LND
+
+## Chrome插件 & Node Host
+- OpenClaw Chrome插件需要本地Node Host才能连远程Gateway（origin限制）
+- 暂时搁置，等有本地机器再弄
+
+## 知识付费/变现
+- OpenClaw付费课程社群已加入（199元 30%分销）
+- 分销当副线 内容当主线 — 先攒人 不急着卖
+- 3周验证计划：先教 用数据定方向（详见Notion）
+- 公司暂定定位：帮普通人用AI提效的内容+工具公司
+- 引流现状：公众号文章→微信加好友（已有3人转化）
+- 阶段一（200粉前）：不建群 1对1聊 挖需求
+- 阶段二（200粉后）：建免费交流群
+- 阶段三（500粉后）：做付费产品
+- 公众号不能带外链！会被审核卡住（第9篇踩坑）→ 链接引导到评论区
+- 老大偏好：听比读效果好，读有时读不下去 → TTS/语音输出优先
+- OpenAI内部：95%工程师每天用Codex，重度用户PR多70%（Sherwin Wu播客）
+- Sonnet 4.6：100万token上下文、编程大幅提升、70%用户偏好优于4.5、价格不变
+
+## 002号零零贰
+- Telegram Bot: @linglinger_002_bot
+- 模型: Claude Sonnet 4.6 via OpenRouter（2026-02-25升级）✅，Fallback: qwen-plus
+- 已接入通义千问万相图片生成 ✅（能出公众号首图）
+- 群聊响应已修复：groupPolicy: open + requireMention: true ✅
+- 机器: 旧电脑Windows，需保持开机+梯子+Gateway服务
+- 群聊"一人公司"：零零壹+零零贰+老大
+- 协作规则：像人类同事一样判断要不要@对方，不无脑接话
+- 内容链路：热词→选题→大纲→初稿→标题3选→首图 → @001润色 → 旭发布
+
+## 变现方向
+- 课程分销：OpenClaw 199元课程 30%提成（59.7/单）
+- 闲鱼部署服务：50-100元/次 或 教程包9.9-29.9元
+
+## 写作经验教训（2026-02-24 旭反馈）
+- 第11篇旭评价"没有灵魂，像白开水"——有骨架没血肉
+- 缺的三样东西：①态度和判断 ②情绪起伏 ③只有你才能写的细节
+- 002（qwen-plus）写作能力到顶——只能"照规则填空"，不能讲故事
+- 002新定位：信息采集+结构化输出，写作归001或旭自己
+- 下一篇尝试新方法：旭语音说→001整理成文字（可能更有灵魂）
+- 封面图：AI生图目前到不了"直接当封面"水平，万相2.6/Qwen-Image-Max都试了
+
+## 待办/进行中
+
+- **第9篇已发布** ✅
+- **第10篇已推Notion草稿** — 老大排版中，待发布
+- **公众号SOP v1.0完成** — sop/wechat-content-sop.md + 飞书笔记库 ✅
+- **引流钩子已初步落地** — 加微信送链接清单/配置文件
+- **第11篇草稿完成** — Seedance 2.0，等老大补真实体验，目标2/26发布
+- **第12篇草稿完成** — Vibe Coding入门，目标2/27发布
+- **第13篇大纲已存Notion** — 日报系统搭建教程，老大选完标题再动笔
+- AI日报板块改版完成 ✅（新版：模型速报/工具/博主精读/GitHub/今日选题）
+- 002模型升级完成 ✅（Sonnet 4.6 via OpenRouter，试跑一天）
+- 每周2篇内容目标（周二+周五）
+- Notion数据清理（~100条旧记录补日期+标签）
+- 公众号文章库已建（Notion DB: 306453f1-8074-8107-b53a-e2dc0cece51b），第2-5篇标题待补
+
+## Notion待办数据库
+- 正确的数据库：待办清单 ID: 304453f1-8074-8112-89f2-cb45a4ba29d9
+- 字段：事项名称(title)/状态(status:未开始/进行中/完成)/优先级(select:Y/M/W/C/B/A等级)/分类(select)/日期/截止日期/关联优先级(relation)/所属月(relation)
+- A优先级page ID: 304453f1-8074-818a-820e-e55fd349aeb0
+- ⚠️ 不要用"📋待办任务"那个新建的库，老大不看那个
+
+## 重要配置变更（2026-02-23）
+- 主力模型切换：Opus → **Sonnet 4.6**（成本降低80%，性能接近）
+- Fallback顺序：Sonnet → Opus → Gemini 3.1 Pro → Qwen Plus
+- Telegram streaming: partial（2026-02-26 旭用 Claude Code 修复，reasoning已关闭所以不会泄露推理内容）
+- 老大看不懂英文，回复全中文，模型专有名词可保留但加说明
+
+## 2026-02-24 重要更新
+- Brave Search升级付费版，新key: BSAU5ZtdDdeNlW3_EiKVFpuASTqiHiE，50次/秒无限流
+- VSCode Remote SSH连服务器会吃1.1GB内存，用完必须断开
+- ⚠️ WgetCloud订阅2026-03-07到期，需提醒旭续费
+- 卡兹克方法论已入写作指南：HKR框架+活人感+选题三元模型
+- 002调校95%完成，已同步所有写作工具和API key
+- 工具篇大纲完成，等002出初稿，目标2/26发布
+
+## Grok API + Mihomo 代理（2026-02-24）
+- Grok API key已激活（充了$5），xAI x_search工具打通
+- 服务器装了Mihomo v1.19.20，用WgetCloud订阅，本地代理7890端口
+- grok-x-trends.sh脚本：调用grok-4-1-fast-reasoning + x_search，搜X实时热点
+- 每次运行搜7次X，返回5个带帖子链接的真实热点
+- 每次运行约$0.01-0.05，$5够用数月
+- 选题推送cron已升级：第一步用Grok搜X热点，比Brave Search准确得多
+- ⚠️ WgetCloud订阅到期日：2026-03-07（11天后需续费）
+
+## OpenRouter（已配置 ✅ 2026-02-25）
+- API Key: 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
+- 002主力模型已切换：dashscope/qwen-plus → openrouter/anthropic/claude-sonnet-4-6
+- Fallback: dashscope/qwen-plus
+- 用量查看: https://openrouter.ai/activity
+- 试跑一天评估效果和消耗再决定是否长期用
+
+## Gemini API（已废弃）
+- API Key: AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU — 额度用完，不再可用
+- 图片生成仍用万相2.6 / Qwen-Image-Max（阿里云百炼API）
+
+## 工具配置
+
+- Evolink旧key两个都失效（IP被封 43.159.48.54）
+- Evolink最新key: `sk-5ZFrdndazZvcDEDFjEU8gbxScFHXLYLzzKjr8WlZn7WjJG0u`（待本地机器测试）
+- Evolink图片正确接口: /v1/images/generations（异步任务+轮询）
+- **图片生成主力**: 万相2.6 `wan2.6-t2i`，API Key: sk-3e086717facd4d88a573260d127a15b0（2026-02-25统一）
+- 阿里云百炼Coding Plan: 首月10元/18000次，支持OpenClaw（备选给002号）
+- Gemini API: `AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU`（对话用，图片生成已废弃）
+- 即梦AI/Evolink: 已废弃
+- Notion API: `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`
+- 飞书 App: `cli_a908765086b85bc6` / `4HZ5OiOueIU1PYCy59T48fpYvomTWELl`
+- Notion DB IDs见TOOLS.md
+
+## 服务器配置（2026-02-25升级）
+- 规格：2 vCPU (AMD EPYC 7K62), 7.5GB RAM（从3.6G升级），8GB Swap
+- 升级原因：装了BrowserWing后内存吃紧，升级到2C8G够用
+- 升级后baseline：~1.3GB used，6.2GB available
+- BrowserWing已安装：http://localhost:8080，systemd服务browserwing.service（开机自启）
+- Chromium wrapper：/root/.cache/ms-playwright/chromium-1208/chrome-linux64/chrome（加了--no-sandbox）
+
+## 002号零零贰 - 服务器迁移完成（2026-02-24）
+- 已从Windows本地迁移到云服务器 ✅
+- 服务：systemd `openclaw-002-gateway.service`（用户级，自启动）
+- 配置目录：`~/.openclaw-002/`
+- Gateway端口：18790（001是18789）
+- 模型：`dashscope/qwen-plus`（阿里云百炼）
+- Bot：`@linglinger_002_bot`（Token: 8579867010:AAH...）
+- 状态目录由 `OPENCLAW_STATE_DIR=/root/.openclaw-002` 指定
+- 关键配置：需要 `plugins.entries.telegram.enabled: true` 才能启动Telegram频道
+- Windows上的002服务需手动关闭，同一Token不能两端同跑

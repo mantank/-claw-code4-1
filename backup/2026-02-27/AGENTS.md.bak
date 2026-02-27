@@ -45,12 +45,6 @@ Capture what matters. Decisions, context, things to remember. Skip the secrets u
 - When you make a mistake → document it so future-you doesn't repeat it
 - **Text > Brain** 📝
 
-## 时间感知
-
-- 涉及时间的回复（提醒、计划、问候）前，**必须先看消息里的 timestamp**
-- 不要凭"感觉"说时间，你没有时钟
-- 不确定就用 session_status 查当前时间
-
 ## Safety
 
 - Don't exfiltrate private data. Ever.

@@ -1,0 +1,42 @@
+{
+  "children": [
+    {"object":"block","type":"heading_2","heading_2":{"rich_text":[{"type":"text","text":{"content":"📱 小红书日更计划（本周 2/27-3/5）"}}]}},
+    {"object":"block","type":"paragraph","paragraph":{"rich_text":[{"type":"text","text":{"content":"目标：连续7天日更，拿满新号流量扶持窗口\n策略：公众号存量文章改编 + 热点快评\n发布时间：每天 20:00-21:00（晚高峰）"},"annotations":{"bold":false}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 1（2/27 今天）✅ 已发布"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"《我让AI每天6点发行业日报，任何行业能用》— 5张图文，已发布"}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 2（2/28）"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"热点快评：Nano Banana 2 实测 — 蹭今天最大热点，图解风格"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"改编自：今日日报内容 + 实际体验截图"}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 3（3/1）"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"改编自 article-16：《所有人都在学AI，我却想劝你反AI》— 观点型，容易引发讨论"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"小红书最爱争议性标题，互动率会高"}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 4（3/2）"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"改编自 article-15：《三个AI打架了，普通人该怎么选？》— 模型对比横评"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"图解：3个模型优劣对比表，一张图说清楚"}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 5（3/3）"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"改编自 article-09：《2026年了还在一个个试AI工具？工具箱帮你全省了》— 收藏型"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"小红书工具合集类帖子收藏率极高"}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 6（3/4）"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"改编自 article-12：《不会写代码的我，用AI做出了第一个产品》— Vibe Coding"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"故事型，小红书用户爱看个人经历"}}]}},
+
+    {"object":"block","type":"heading_3","heading_3":{"rich_text":[{"type":"text","text":{"content":"Day 7（3/5）"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"改编自 article-10：《我让AI当了15个员工》— 爆款潜力最大的一篇"}}]}},
+    {"object":"block","type":"bulleted_list_item","bulleted_list_item":{"rich_text":[{"type":"text","text":{"content":"数字+结果导向标题，放在第7天做收尾爆发"}}]}},
+
+    {"object":"block","type":"divider","divider":{}},
+
+    {"object":"block","type":"heading_2","heading_2":{"rich_text":[{"type":"text","text":{"content":"📋 今日下午任务计划（14:30-17:00）"}}]}},
+
+    {"object":"block","type":"numbered_list_item","numbered_list_item":{"rich_text":[{"type":"text","text":{"content":"【14:30-15:00】检查小红书第1篇审核状态 + 数据反馈"}}]}},
+    {"object":"block","type":"numbered_list_item","numbered_list_item":{"rich_text":[{"type":"text","text":{"content":"【15:00-16:00】准备明天小红书Day2内容：Nano Banana 2实测（文字+图片提示词）"}}]}},
+    {"object":"block","type":"numbered_list_item","numbered_list_item":{"rich_text":[{"type":"text","text":{"content":"【16:00-16:30】知乎开号/找高热度AI问题，写1-2个回答（蹭热点）"}}]}},
+    {"object":"block","type":"numbered_list_item","numbered_list_item":{"rich_text":[{"type":"text","text":{"content":"【16:30-17:00】小红书评论区运营：找同赛道大号评论互动"}}]}}
+  ]
+}
