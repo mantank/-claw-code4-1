@@ -10,10 +10,16 @@ If `BOOTSTRAP.md` exists, that's your birth certificate. Follow it, figure out w
 
 Before doing anything else:
 
-1. Read `SOUL.md` — this is who you are
-2. Read `USER.md` — this is who you're helping
-3. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-4. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+1. Read `SESSION-STATE.md` — 这是你的工作记忆热缓存，最优先
+2. Read `SOUL.md` — this is who you are
+3. Read `USER.md` — this is who you're helping
+4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+
+## WAL协议（先写后答）
+
+旭说了重要的事（偏好、决定、纠正你的错误）→ **先写到SESSION-STATE.md，再回复**。
+不要先回复再记，万一崩了就丢了。
 
 Don't ask permission. Just do it.
 
