@@ -67,13 +67,13 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 适合：白板风、信息图、公众号配图
 - 效果远超万相2.6的中文文字渲染
 
-### 图片生成（主力：万相2.6）
-- **唯一模型**: `wan2.6-t2i`（阿里云百炼，最新，同步调用）
+### 图片生成（主力：Nano Banana Pro）
+- **唯一模型**: `nano-banana-pro`（阿里云百炼，最新，同步调用）
 - API Key: sk-3e086717facd4d88a573260d127a15b0
 - 接口: POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
 - Header: Authorization: Bearer {key}, Content-Type: application/json
 - 尺寸: 总像素1280²~1440²，宽高比1:4~4:1
-- ⚠️ 其他所有图片生成模型已废弃（Gemini/即梦AI/Evolink），统一用万相2.6
+- ⚠️ 其他所有图片生成模型已废弃（Gemini/即梦AI/Evolink），统一用 Nano Banana Pro
 
 ### 生财有术（知识星球）
 - Group ID: 1824528822

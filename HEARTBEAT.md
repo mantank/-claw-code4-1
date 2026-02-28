@@ -54,3 +54,21 @@
 2. 检查各主题文件大小，超过3KB的清理过期内容
 3. 检查 `MEMORY.md` 索引是否需要更新（新主题文件/当前重点变化）
 4. 完成后在当日日记记录：「记忆卫生完成，归档X个文件」
+
+## 任务4：技能分配（每次心跳检查）
+读取 `/root/.openclaw/workspace/team-inbox/new-skills.json`
+找出 status="pending" 的技能，根据以下规则分配：
+- category="content" → 复制到 /root/.openclaw-002/workspace/skills/，用message通知002
+- category="system" → 留在001 workspace
+- category="general" → 001+002都复制一份
+
+分配完把该条目 status 改为 "done"，并记录分配时间和去向。
+无pending条目跳过。
+
+## 任务5：读避坑记录（每次新任务前）
+涉及以下操作前，先查 `/root/.openclaw/workspace/team-inbox/pitfalls.md`：
+- 安装新技能
+- 触发003/002任务
+- 调用外部API
+
+避免重复踩已知的坑。

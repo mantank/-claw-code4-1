@@ -44,6 +44,14 @@
     "clawrouter": {
       "version": "0.10.5",
       "installedAt": 1771953549691
+    },
+    "xiaohongshu-mcp": {
+      "version": "1.0.0",
+      "installedAt": 1772200803212
+    },
+    "social-media-scheduler": {
+      "version": "1.0.0",
+      "installedAt": 1772256003369
     }
   }
 }
