@@ -39,6 +39,36 @@
 - Telegram streaming: partial（reasoning关闭）
 - Grok：grok-4-1-fast-reasoning + x_search，$5够用数月
 
+## 飞书公开文档读取方法（2026-03-01 验证）
+
+**适用场景**：读任何公开的飞书wiki/docx链接，包括第三方组织（如WaytoAGI），无需对方授权，用自己的飞书App Token即可。
+
+**方法**：直接调用 docx raw_content API，传入URL中的token
+
+```bash
+APP_ID="cli_a908765086b85bc6"
+APP_SECRET="4HZ5OiOueIU1PYCy59T48fpYvomTWELl"
+
+# 1. 获取 tenant_access_token
+TOKEN=$(curl -s -X POST "https://open.feishu.cn/open-apis/auth/v3/tenant_access_token/internal" \
+  -H "Content-Type: application/json" \
+  -d "{\"app_id\":\"$APP_ID\",\"app_secret\":\"$APP_SECRET\"}" \
+  | python3 -c "import json,sys; d=json.load(sys.stdin); print(d.get('tenant_access_token',''))")
+
+# 2. 从URL提取doc_token：https://xxx.feishu.cn/wiki/UES2wWk... → UES2wWk...
+DOC_TOKEN="从URL最后一段提取"
+
+# 3. 读取全文
+curl -s "https://open.feishu.cn/open-apis/docx/v1/documents/${DOC_TOKEN}/raw_content" \
+  -H "Authorization: Bearer $TOKEN"
+```
+
+**注意**：
+- wiki链接和docx链接都用同一个API（raw_content）
+- 返回的 `data.content` 就是纯文本全文
+- 图片会显示为文件名（如 `xxx.png`），正文文字都在
+- BrowserWing/浏览器截图方法对飞书**无效**（JS动态渲染 + 登录墙）
+
 ## 废弃工具
 - Gemini图片生成：额度用完
 - 即梦AI/Evolink：已废弃
