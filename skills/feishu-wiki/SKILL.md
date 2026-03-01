@@ -71,6 +71,11 @@ POST /open-apis/wiki/v2/spaces/{space_id}/nodes
 - 创建后可通过 `feishu-doc-writer` Skill 向文档写入内容
 - `parent_node_token` 为空则创建在根目录
 
+**⚠️ 写入内容的正确流程（踩坑记录 2026-02-28）：**
+1. **先**调用 `POST /wiki/v2/spaces/{space_id}/nodes` 创建节点，拿到返回的 `obj_token`
+2. **再**用这个 `obj_token` 调用 `POST /docx/v1/documents/{obj_token}/blocks/{obj_token}/children` 写入内容
+3. **错误做法**：先创建独立文档写内容，再移入知识库 → 知识库会生成新的空文档，原内容丢失！
+
 ### 4. 获取节点信息
 
 ```

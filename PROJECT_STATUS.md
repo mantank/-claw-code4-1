@@ -1,53 +1,58 @@
 # PROJECT_STATUS.md — 当前项目状态
 
 > 所有Agent共享。每次重要进展后更新。
-> 最后更新：2026-02-25（001夜班第三次，凌晨4点）
+> 最后更新：2026-03-01（001主动更新）
 
 ---
 
 ## 🏃 进行中
 
 ### 公众号「深夜开发者LND」
-- 已发布：第1-11篇 ✅（第11篇2/24发布：《我让Openclaw帮我雇了第二个AI员工，全程30分钟》）
-- 第12篇：Seedance 2.0视频教程，**草稿完成** ✅ → articles/article-11-seedance-draft.md（等旭补真实体验）
-- 第13篇：Vibe Coding入门，**草稿完成** ✅ → articles/article-12-vibe-coding-draft.md
-- 第14篇（OpenClaw命令大全）：**终稿完成** ✅ → articles/article-13-commands-final.md → **已推Notion（2/25）**
-- 第14篇（Gemini 3.1 Pro普通人用法）：**草稿完成** ✅ → articles/article-14-gemini31pro-draft.md → 已推Notion（2/25夜班）
-- 第15篇（2026年AI模型对比，普通人选购指南）：**草稿完成** ✅ → articles/article-15-ai-models-comparison-draft.md（2/25 4AM夜班）
-- 下一步选题：Vibe Coding入门（已有article-12草稿待旭审核）
-- 本周目标：发布12+13篇
 - 当前粉丝：~30（估算）
-- 下一个里程碑：200粉建群
+- 发布节奏：不稳定，需要固定为每周二+周五
+- 下一篇目标：Claude被封禁→冲上App Store第2，普通人视角（今日热点）
+- 待发草稿：
+  - article-12（Vibe Coding入门）✅
+  - article-13（OpenClaw命令大全）✅
+  - article-14（Gemini 3.1 Pro普通人用法）✅
+  - article-15（2026年AI模型对比）✅
+- 冷启动路径：做事→故事→内容（傅盛模式），目标200粉建群
+- 缺失：关注后钩子（需要设计）、引流入口（需要知识星球联动）
 
-### 002号零零贰调校
-- 状态：**80%完成** ✅（2026-02-24凌晨001完成）
-- 已完成：
-  - ✅ SOUL.md写作规则强化（详细的深夜开发者LND写作规范）
-  - ✅ templates/writing-style-guide.md 同步到002 workspace
-  - ✅ sop/wechat-content-sop.md 同步到002 workspace
-  - ✅ 范文article-09/10 同步到002 workspace
-  - ✅ TOOLS.md 补充图片生成配置和Notion API信息
-- 待做：**试跑一次完整流水线**（旭需要让002写一篇真实初稿，验证效果）
-- 内容链路：热词→选题→大纲→初稿→标题→**首图（002自己生成）**→@001润色→旭发布
+### AI团队现状
 
-### AI日报 cron
-- 状态：⚠️ fallback机制有问题（isolated session没有custom provider）
-- 临时方案：人工触发
-- 待修：切换模型为Sonnet 4.6，不依赖custom/qwen-plus
+| 编号 | 角色 | 状态 | 当前任务 |
+|------|------|------|---------|
+| 001 | 总指挥 | ✅活跃 | 主动推进自媒体流水线、维护系统 |
+| 002 | 内容官 | ⚠️待激活 | 等待001推选题，需要跑通完整流水线 |
+| 003 | 进化官 | ⚠️暂停 | Cron已删除，按需手动激活 |
+| 004 | 数据官 | 📋规划中 | 未开始 |
+
+### Cron自动化体系
+
+| 任务 | 状态 | 备注 |
+|------|------|------|
+| AI日报（8:00 GMT+8）| ✅已修复 | 已修/tmp路径bug，Notion全内容+H1/H2/H3+可点击链接 |
+| 生财有术推送（19:00）| ✅正常 | - |
+| 公众号选题推送（9:00）| ✅正常 | 每天推1条给旭 |
+| 001夜间自检（每小时）| ✅正常 | 需要更新检查项（003已暂停） |
+| 每日复盘（23:00）| ✅正常 | - |
+| X大佬动态-午间 | ⚠️超时error | 待排查 |
+
+### 小红书
+- 计划：日更，由002生产内容
+- 技术：xiaohongshu-mcp已安装，需要验证能否在服务器上运行
+- 风险：小红书反自动化检测强，可能需要半自动（AI写+人工发）
 
 ---
 
-## ✅ 最近完成
+## ✅ 最近完成（本周）
 
-- GOALS.md 创建（2026-02-23）
-- PROJECT_STATUS.md 创建（2026-02-23）
-- 日报模板加入"今日我能帮你做"模块（2026-02-23）
-- 公众号SOP v1.0（sop/wechat-content-sop.md）
-- 写作风格指南 v1.1（templates/writing-style-guide.md）
-- OpenClaw 升级到 2026.2.22-2
-- 主力模型切换：Opus → Sonnet 4.6
-- **002调校80%完成：写作规则+范文+SOP全部同步（2026-02-24 001夜班）**
-- **第11篇 Seedance 2.0 初稿完成（2026-02-24 001夜班）** → articles/article-11-seedance-draft.md
+- AI日报/tmp路径bug修复（2026-03-01）
+- Notion日报格式升级：H1/H2/H3层级 + 可点击链接（2026-03-01）
+- 001-KPI.md建立：明确职责、目标、日常KPI（2026-03-01）
+- 公众号冷启动研究笔记（2026-03-01）
+- 小红书自动发布方案调研（2026-03-01）
 
 ---
 
@@ -55,24 +60,27 @@
 
 | 资源 | 位置 |
 |-----|-----|
-| 公众号SOP | sop/wechat-content-sop.md |
+| 公众号SOP | skills/wechat-publish-sop/ |
 | 写作风格指南 | templates/writing-style-guide.md |
-| 日报模板 | templates/daily-report-template.md |
-| 每日复盘模板 | templates/daily-review.md |
+| 日报搜索策略 | skills/daily-report-search/ |
+| 001职责KPI | 001-KPI.md |
+| 冷启动研究 | memory/research-wechat-coldstart.md |
 | 时间表 | schedule.md |
 | 长期目标 | GOALS.md |
-| 长期记忆 | MEMORY.md |
 
 ---
 
-## 🔑 关键账号/配置
+## 🔴 当前最大卡点
 
-| 工具 | 状态 |
-|-----|-----|
-| Claude Sonnet 4.6 | ✅ 主力模型 |
-| 百炼 qwen-plus | ✅ 002号用 |
-| Notion | ✅ 工作台+文章库 |
-| 飞书知识库 | ✅ 已打通 |
-| 生财有术API | ✅ 每日19:00推送 |
-| 即梦AI（火山引擎） | ✅ 图片生成 |
-| Evolink | ⚠️ IP被封，待修 |
+1. **002从未跑过完整任务**：选题→大纲→初稿→图片→发布这个链路从未端到端验证过
+2. **公众号没有引流入口**：内容质量OK，但没有渠道把人带进来
+3. **X大佬动态cron超时**：待排查（可能是xAI/Grok API问题）
+
+---
+
+## 📅 本周优先级（3/1-3/7）
+
+**P0**：让002跑通一篇完整文章（今天就推选题）
+**P1**：设计公众号关注钩子（旭确认后执行）
+**P2**：排查X大佬动态cron超时问题
+**P3**：xiaohongshu-mcp服务器环境验证

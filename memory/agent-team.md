@@ -32,3 +32,10 @@
 - 每日复盘：23点
 - 夜班自动推进：2AM + 4AM
 - 公众号选题：每日凌晨1点
+
+## ⚠️ Isolated Cron 环境限制（2026-03-01）
+- **isolated cron 没有 /tmp 写权限**
+- 所有 cron prompt 里的文件操作必须用 `/root/.openclaw/workspace/` 下的路径
+- 禁止在 cron prompt 里写 `/tmp/` 任何路径
+- 已修复：AI日报 `/tmp/daily-morning.json` → `/root/.openclaw/workspace/tmp/daily-morning.json`
+- 新建/修改 cron 时必须检查这一条
