@@ -42,3 +42,28 @@
 - 影响：浪费了安装和配置时间
 
 ---
+
+### 2026-03-01 cron delivery channel: last 不稳定
+- 现象：X大佬动态推送隔一次成功隔一次失败，错误"Message failed"
+- 根因：delivery channel="last" 绑到最近活跃频道，该频道有时不可用
+- 解决：创建cron时必须指定 `--channel telegram`，不用"last"
+- 命令：`openclaw cron edit <id> --channel telegram`
+- 影响：所有announce类cron任务
+
+### 2026-03-01 cron job跑在dev profile下无API Key
+- 现象：cron报错 "No API key found for anthropic"，路径指向 /root/.openclaw-dev/
+- 根因：某些cron在dev profile环境下创建，该profile无auth配置
+- 解决：`cp /root/.openclaw/agents/main/agent/auth-profiles.json /root/.openclaw-dev/agents/dev/agent/auth-profiles.json`
+- 影响：午间X大佬动态任务（已修复）
+
+### 2026-03-01 小红书发布不能无图
+- 现象：publish命令不带图片参数时，进程卡住不返回
+- 根因：小红书MCP服务端要求至少1张图片
+- 解决：发布时必须带图片路径或URL，本地路径和网络URL均可
+- 影响：所有小红书发布操作
+
+### 2026-03-01 小红书测试往真账号发帖
+- 现象：测试发布时连发了3篇测试帖到真实账号
+- 根因：测试时直接调用publish命令，没有沙箱
+- 解决：①发布前必须旭确认 ②测试只用status/search命令，绝不publish ③一次只发一篇
+- 影响：账号权重，已手动删帖

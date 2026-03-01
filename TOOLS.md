@@ -60,6 +60,13 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 Add whatever helps you do your job. This is your cheat sheet.
 
+### 微信公众号（深夜开发者LND）
+- AppID: wx9080b64592f215f7
+- AppSecret: 0b0c21cabe702238f8c0e96f5d42bd0a
+- 原始ID: gh_dc50059db0d3
+- IP白名单: 43.159.48.54（已添加）
+- wenyan-cli: 已全局安装
+
 ### Lovart.ai（白板风/手绘风配图）
 - 网址: https://www.lovart.ai/zh/home
 - 内置 Nano Banana Pro 模型，中文渲染清晰

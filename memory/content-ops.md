@@ -55,3 +55,48 @@
 - 002新定位：信息采集+结构化输出
 - 写作归001或旭自己
 - 内容链路：热词→选题→大纲→初稿→标题3选→首图→@001润色→旭发布
+
+## 选题储备
+
+### 【待写】普通人用 OpenClaw 做行业调研
+- 灵感来源：激波之影《用OpenClaw做行业调研，效率甩开同行10倍》
+- 角度：他写的是技术派玩法，我们写普通人版——不懂代码、不懂爬虫，照样能用
+- 核心差异化：真实踩坑过程（日报bug、cron路径问题、A2A折腾）才是内容，不是教程
+- 参考原文：https://mp.weixin.qq.com/s/l8No9UB7iZhA5hzH7-5Tyw
+- 记录时间：2026-03-01
+
+## 小红书自动发布（已验证可用）
+
+### 核心方案：xiaohongshu-mcp（服务器本地运行）
+- 二进制路径：`/root/xiaohongshu-mcp/xiaohongshu-mcp-linux-amd64`
+- 服务地址：`http://localhost:18060`
+- systemd服务：开机自启（已验证 2026-03-01）
+- 登录状态：已登录（扫码一次永久有效，失效需重新登录）
+
+### 发布接口
+```bash
+curl -X POST http://localhost:18060/api/v1/publish \
+  -H 'Content-Type: application/json' \
+  -d '{"title":"标题","content":"正文 #话题标签","images":["图片URL1","图片URL2"]}'
+```
+
+### 关键注意事项
+- ⚠️ images 字段必须有值（不能空数组），且必须是**公开可访问的URL**，不能用本地路径
+- 图片流程：渲染 card_*.png → 上传图床拿URL → 填入images数组发布
+- 发布成功返回：`{"success":true,"data":{"status":"发布完成"}}`
+- 接口超时120秒，正常发布耗时约30-60秒
+
+### 登录状态检查
+```bash
+python3 ~/.openclaw/workspace/skills/xiaohongshu-mcp/scripts/xhs_client.py status
+```
+返回 `✅ Logged in as: xxx` 即正常
+
+### 完整发布链路
+1. 用 Auto-Redbook-Skills 渲染 Markdown → card_*.png
+2. 上传图片到图床（如 sm.ms 或阿里云OSS）拿 URL
+3. 调 publish 接口发布
+
+### 验证记录
+- 2026-03-01 测试成功，帖子已发布到小红书
+- 链接：https://www.xiaohongshu.com/explore/699e8edd000000001a029dab
