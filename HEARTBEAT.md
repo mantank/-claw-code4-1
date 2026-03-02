@@ -72,20 +72,27 @@
 分配完把该条目 status 改为 "done"，并记录分配时间和去向。
 无pending条目跳过。
 
-## 任务5：003健康监控（每次心跳检查）
+## 任务5：003健康监控（每次心跳检查，重要！）
 
 检查003（@linglingsan_003_bot）是否在正常工作：
-1. 用 `sessions_list(kinds=["agent"], activeMinutes=60)` 查003的session
-2. 如果003有活跃session → 跳过
-3. 如果003无活跃session且有未完成任务 → 发消息唤醒003（通过Telegram直接@它）并通知旭
-4. 如果003报错 → 记录错误到 `team-inbox/pitfalls.md`，通知旭
+1. 用 `sessions_list(kinds=["agent"], activeMinutes=30)` 查003的session
+2. 如果003有活跃session → 检查最新消息，记录进度到当日日记
+3. 如果003无活跃session → 立刻用 `sessions_send(sessionKey="agent:003:main")` 唤醒003，让它继续下一个未完成的分类
+4. 如果003报错 → 记录错误到 `team-inbox/pitfalls.md`
 
-003当前长期任务：见 `/root/.openclaw-003/workspace/STANDING-ORDERS.md`
+003当前长期任务：OpenClaw生态玩法情报库（8个分类采集）
+- 已完成：money ✅、content ✅
+- 进行中：coding
+- 未开始：agents、enterprise、tutorials、ecosystem、creative
 
-## 任务6：读避坑记录（每次新任务前）
-涉及以下操作前，先查 `/root/.openclaw/workspace/team-inbox/pitfalls.md`：
-- 安装新技能
-- 触发003/002任务
-- 调用外部API
+**不要让003闲着，今晚跑一整夜。**
 
-避免重复踩已知的坑。
+## 任务6：踩坑→铁律转化（每次心跳检查）
+
+1. 读 `team-inbox/pitfalls.md`，检查有没有新增条目（对比上次检查）
+2. 新条目判断：出现2次以上 或 跨Agent通用 → 追加到对应Agent的 `rules.md`
+3. 只追加001的rules.md到 `/root/.openclaw/workspace/rules.md`
+4. 002/003的rules.md通过exec写入各自workspace
+5. 完成后在当日日记记录："铁律更新：新增X条到rules.md"
+
+无新条目跳过。
