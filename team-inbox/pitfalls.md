@@ -84,3 +84,10 @@
   1. 先用BrowserWing读原链接
   2. 读不完整 → 直接告诉旭"需要登录才能看全文"，不找替代
   3. 不许自行搜转载版替代原文
+
+## 坑12：OpenClaw provider配置不支持proxy字段（2026-03-02）
+- **现象**：Gateway启动失败，3个bot全挂
+- **原因**：在 `models.providers.xai` 里加了 `"proxy": "http://127.0.0.1:7890"`，这个字段不合法
+- **修复**：删掉proxy字段，用doctor修复后重启
+- **Grok走代理的正确方式**：Mihomo是系统级代理，不需要在provider里配，全局流量自动走
+- **教训**：改provider配置只能改 baseUrl / apiKey / api / models 这几个字段，不能随便加字段

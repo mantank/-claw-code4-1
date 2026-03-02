@@ -74,13 +74,37 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 适合：白板风、信息图、公众号配图
 - 效果远超万相2.6的中文文字渲染
 
-### 图片生成（主力：Nano Banana Pro）
-- **唯一模型**: `nano-banana-pro`（阿里云百炼，最新，同步调用）
-- API Key: sk-3e086717facd4d88a573260d127a15b0
-- 接口: POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
-- Header: Authorization: Bearer {key}, Content-Type: application/json
-- 尺寸: 总像素1280²~1440²，宽高比1:4~4:1
-- ⚠️ 其他所有图片生成模型已废弃（Gemini/即梦AI/Evolink），统一用 Nano Banana Pro
+### 图片生成（双轨制，2026-03-01 更新）
+
+#### 主力1：Qwen-Image-Max（有中文文字需求时首选）
+- **模型**: `qwen-image-max`
+- **优势**: 中文文字渲染清晰、多行排版、真实感强、AI痕迹低
+- **API Key**: sk-3e086717facd4d88a573260d127a15b0
+- **接口**: POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
+- **价格**: ¥0.04/张（qwen-image-plus），Max价格待确认
+- **调用示例**:
+```bash
+curl -X POST "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation" \
+  -H "Authorization: Bearer sk-3e086717facd4d88a573260d127a15b0" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "qwen-image-max",
+    "input": {"messages": [{"role": "user", "content": [{"text": "你的prompt"}]}]},
+    "parameters": {
+      "negative_prompt": "低分辨率，低画质，文字模糊，扭曲",
+      "watermark": false,
+      "size": "1104*1472"
+    }
+  }'
+```
+- **尺寸选项**: 1664\*928（16:9）/ 1472\*1104（4:3）/ 1328\*1328（1:1）/ 1104\*1472（3:4）
+- **小红书封面**: size用 `1104*1472`（3:4竖版）
+- **公众号封面**: size用 `1664*928`（16:9横版）
+
+#### 废弃模型（不要再用）
+- Gemini 3 Pro Image / nano-banana-pro：额度用完，废弃
+- wanx2.1-t2i-turbo：中文字渲染差，废弃
+- 即梦AI / Evolink：已废弃
 
 ### 生财有术（知识星球）
 - Group ID: 1824528822
