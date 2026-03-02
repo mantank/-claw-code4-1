@@ -72,7 +72,17 @@
 分配完把该条目 status 改为 "done"，并记录分配时间和去向。
 无pending条目跳过。
 
-## 任务5：读避坑记录（每次新任务前）
+## 任务5：003健康监控（每次心跳检查）
+
+检查003（@linglingsan_003_bot）是否在正常工作：
+1. 用 `sessions_list(kinds=["agent"], activeMinutes=60)` 查003的session
+2. 如果003有活跃session → 跳过
+3. 如果003无活跃session且有未完成任务 → 发消息唤醒003（通过Telegram直接@它）并通知旭
+4. 如果003报错 → 记录错误到 `team-inbox/pitfalls.md`，通知旭
+
+003当前长期任务：见 `/root/.openclaw-003/workspace/STANDING-ORDERS.md`
+
+## 任务6：读避坑记录（每次新任务前）
 涉及以下操作前，先查 `/root/.openclaw/workspace/team-inbox/pitfalls.md`：
 - 安装新技能
 - 触发003/002任务
