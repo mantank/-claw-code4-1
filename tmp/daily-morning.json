@@ -1,0 +1,360 @@
+[
+  {
+    "object": "block",
+    "type": "heading_1",
+    "heading_1": {
+      "rich_text": [{ "type": "text", "text": { "content": "📊 AI日报 | 2026-03-04" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "divider",
+    "divider": {}
+  },
+  {
+    "object": "block",
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [{ "type": "text", "text": { "content": "🚀 模型速报" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "GPT-5.3 Instant（OpenAI）" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "OpenAI更新最常用的即时模型，宣称更少"cringe"、搜索结果上下文更丰富、语言处理更自然流畅。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "Neowin", "link": { "url": "https://www.neowin.net/news/openai-releases-gpt-53-instant-a-model-thats-supposed-to-be-less-cringe/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "Nano Banana 2（Google Gemini 3 Flash Image）" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "Google向所有用户开放Pro级AI图像功能：最高4K分辨率、最多5角色一致性、14对象保真度，并接入Gemini实时信息生成精准图像，原本付费功能现全免费。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "PetaPixel", "link": { "url": "https://petapixel.com/2026/03/03/google-rolls-out-pro-ai-image-features-for-everyone-in-nano-banana-2-update/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "Claude 记忆功能更新（Anthropic）" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "Anthropic向免费用户开放记忆功能，并新增从ChatGPT、Gemini等平台一键导入对话数据的迁移工具，主动抢夺竞品用户。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "The Verge / BusinessStory", "link": { "url": "https://www.businessstory.org/2026/03/02/anthropic-enhances-claudes-memory-to-appeal-to-ai-switchers/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "Grok 4.20 Beta 2（xAI）" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "xAI发布Grok 4.20第二个Beta版，在原有四Agent协作架构基础上改进指令跟随准确率、减少幻觉，视觉生成能力同步升级。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "EONMSK", "link": { "url": "https://www.eonmsk.com/2026/03/03/xai-released-grok-4-20-beta-2/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "divider",
+    "divider": {}
+  },
+  {
+    "object": "block",
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [{ "type": "text", "text": { "content": "🛠️ AI工具 & 应用" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "Apple MacBook Air M5" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "苹果今日发布M5版MacBook Air，16核Neural Engine专为大型生成模型优化，Apple Intelligence推理速度全面提升，是目前最强AI笔记本。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "Apple Newsroom", "link": { "url": "https://www.apple.com/newsroom/2026/03/apple-introduces-the-new-macbook-air-with-m5/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "Meta AI 购物研究功能" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "Meta正在美国测试AI购物推荐功能，对话式产品搜索+图文卡片展示，直接对标ChatGPT和Gemini的购物体验。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "Bloomberg", "link": { "url": "https://www.bloomberg.com/news/articles/2026-03-03/meta-tests-ai-shopping-research-tool-to-rival-chatgpt-gemini" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "Claude Code Voice Mode" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "Anthropic为命令行编程工具Claude Code推出语音交互界面，开发者可以用说话代替打字来驱动AI写代码，正在分阶段灰度发布。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：WebProNews（页面暂不可直接访问）" } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "divider",
+    "divider": {}
+  },
+  {
+    "object": "block",
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [{ "type": "text", "text": { "content": "👀 博主精读" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "@sama（Sam Altman）" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "公开承认OpenAI与五角大楼的AI军事合同"仓促且草率"，在X上发文道歉并宣布修订合同、补充安全条款——这是AI头部公司与军方关系的罕见公开博弈。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "The Guardian", "link": { "url": "https://www.theguardian.com/technology/2026/mar/03/openai-pentagon-ceo-sam-altman-chatgpt" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "@karpathy（Andrej Karpathy）" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "对OpenClaw的评价聚焦在"它能实现什么"而非技术架构，体现了他一贯关注AI实用能力而非底层路线的思路；vibe coding概念持续爆火，相关创业公司年化营收已达20亿美元。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "Winbuzzer", "link": { "url": "https://winbuzzer.com/2026/03/03/openclaw-overtakes-react-githubs-most-starred-project-xcxwbn/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "divider",
+    "divider": {}
+  },
+  {
+    "object": "block",
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [{ "type": "text", "text": { "content": "🔧 MCP & Agent Skills 精选" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "OpenClaw — GitHub历史最星项目" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "开源AI Agent框架突破250,000 GitHub星，正式超越React成为GitHub有史以来最受欢迎的软件项目，支持50+渠道集成、5700+社区技能，14天内增长190,000星创历史记录。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "Winbuzzer", "link": { "url": "https://winbuzzer.com/2026/03/03/openclaw-overtakes-react-githubs-most-starred-project-xcxwbn/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "CloudZero Claude Code Plugin" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "将云成本智能直接嵌入Claude Code工作流，开发者在写代码时即可实时看到AI API费用追踪，帮助团队控制AI开发成本。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [
+        { "type": "text", "text": { "content": "来源：" } },
+        { "type": "text", "text": { "content": "AIJourn", "link": { "url": "https://aijourn.com/cloudzero-launches-claude-code-plugin-putting-ai-native-cost-intelligence-inside-engineering-workflows/" } } }
+      ]
+    }
+  },
+  {
+    "object": "block",
+    "type": "divider",
+    "divider": {}
+  },
+  {
+    "object": "block",
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [{ "type": "text", "text": { "content": "💡 今日选题" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "选题1：Nano Banana 2 免费了——AI图像生成正在变成"水电"" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "切入点：Google把原本付费的Pro级图像功能全部免费开放，和当年宽带提速降费一样，AI图像生成正在"公用事业化"。用普通用户视角教大家怎么玩，最高4K+5角色一致性，适合做公众号配图、小红书封面。" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "heading_3",
+    "heading_3": {
+      "rich_text": [{ "type": "text", "text": { "content": "选题2：OpenAI主动道歉了，但AI与军事的边界还没说清楚" } }]
+    }
+  },
+  {
+    "object": "block",
+    "type": "paragraph",
+    "paragraph": {
+      "rich_text": [{ "type": "text", "text": { "content": "切入点：Sam Altman罕见公开承认"仓促且草率"，背后是AI公司军事化路线的深层争议。从"AI应不应该参军"的角度切入，探讨AI公司与政府/军方的关系走向，引发读者思考和讨论。" } }]
+    }
+  }
+]

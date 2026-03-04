@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI没让工程师更轻松，它让整个行业开始恐慌</title>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Noto+Sans+SC:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* ===========================================
+           THEME — Techy Dark, Neon Accent
+           =========================================== */
+        :root {
+            --bg:       #060a14;
+            --bg2:      #0d1525;
+            --card:     rgba(255,255,255,0.04);
+            --border:   rgba(0,220,255,0.14);
+
+            --fg:       #dff0f8;
+            --fg2:      #7090a8;
+            --muted:    #36526a;
+
+            --cyan:     #00dcff;
+            --blue:     #2979ff;
+            --red:      #ff3d6e;
+            --orange:   #ff8c42;
+            --glow:     rgba(0,220,255,0.18);
+
+            --mono:     'JetBrains Mono', monospace;
+            --sans: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', '微软雅黑', sans-serif;
+            --pad:      clamp(2.5rem,6vw,5rem);
+            --expo:     cubic-bezier(0.16,1,0.3,1);
+        }
+
+        *, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+
+        html {
+            scroll-snap-type: y mandatory;
+            overflow-y: scroll;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--sans);
+            background: var(--bg);
+            color: var(--fg);
+            overflow-x: hidden;
+        }
+
+        /* grid overlay */
+        body::before {
+            content:'';
+            position:fixed; inset:0;
+            background-image:
+                linear-gradient(rgba(0,220,255,.022) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0,220,255,.022) 1px, transparent 1px);
+            background-size: 56px 56px;
+            pointer-events:none;
+            z-index:0;
+        }
+
+        /* ===========================================
+           SLIDE BASE
+           =========================================== */
+        .slide {
+            min-height: 100vh;
+            padding: var(--pad);
+            scroll-snap-align: start;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        /* ambient glow blob */
+        .slide::after {
+            content:'';
+            position:absolute;
+            width:700px; height:700px;
+            border-radius:50%;
+            background:radial-gradient(circle, var(--glow) 0%, transparent 68%);
+            pointer-events:none;
+        }
+        .slide:nth-child(odd)::after  { top:-250px; right:-250px; }
+        .slide:nth-child(even)::after { bottom:-250px; left:-250px; }
+
+        /* ===========================================
+           ANIMATIONS
+           =========================================== */
+        .r, .rl, .rs {
+            opacity:0;
+            transition: opacity .65s var(--expo), transform .65s var(--expo);
+        }
+        .r  { transform: translateY(26px); }
+        .rl { transform: translateX(-36px); }
+        .rs { transform: scale(.9); }
+
+        .slide.on .r  { opacity:1; transform:translateY(0); }
+        .slide.on .rl { opacity:1; transform:translateX(0); }
+        .slide.on .rs { opacity:1; transform:scale(1); }
+
+        .d1{transition-delay:.08s!important}
+        .d2{transition-delay:.20s!important}
+        .d3{transition-delay:.34s!important}
+        .d4{transition-delay:.48s!important}
+        .d5{transition-delay:.62s!important}
+        .d6{transition-delay:.76s!important}
+
+        /* ===========================================
+           TYPOGRAPHY
+           =========================================== */
+        .tag {
+            font-family:var(--mono);
+            font-size:.68rem;
+            letter-spacing:.18em;
+            text-transform:uppercase;
+            color:var(--cyan);
+            margin-bottom:.9rem;
+        }
+
+        h1 {
+            font-size:clamp(2.2rem,5vw,4rem);
+            font-weight:900;
+            line-height:1.1;
+            letter-spacing:-.025em;
+        }
+        h2 {
+            font-size:clamp(1.7rem,3.2vw,2.6rem);
+            font-weight:900;
+            line-height:1.15;
+            letter-spacing:-.02em;
+        }
+        h3 { font-size:clamp(1rem,1.8vw,1.35rem); font-weight:700; color:var(--cyan); }
+
+        p {
+            font-size:clamp(.95rem,1.5vw,1.15rem);
+            line-height:1.8;
+            color:var(--fg2);
+            max-width:660px;
+        }
+        .big { font-size:clamp(1.1rem,2vw,1.5rem); line-height:1.65; color:var(--fg); max-width:740px; }
+
+        .c  { color:var(--cyan); }
+        .r2 { color:var(--red); }
+        .o  { color:var(--orange); }
+
+        /* quote */
+        .qt {
+            border-left:3px solid var(--cyan);
+            padding:.9rem 1.4rem;
+            background:var(--card);
+            border-radius:0 8px 8px 0;
+            max-width:680px;
+            margin:1.2rem 0;
+        }
+        .qt .en {
+            font-family:var(--mono);
+            font-size:.88rem;
+            color:var(--cyan);
+            margin-bottom:.4rem;
+            line-height:1.6;
+        }
+        .qt .zh { font-size:.98rem; color:var(--fg2); }
+
+        /* highlight line */
+        .hl {
+            font-size:clamp(1.1rem,1.9vw,1.5rem);
+            font-weight:700;
+            color:var(--cyan);
+            padding:1.1rem 1.4rem;
+            border:1px solid var(--border);
+            border-radius:10px;
+            background:var(--card);
+            box-shadow:0 0 28px rgba(0,220,255,.07);
+            margin-top:1.4rem;
+            max-width:740px;
+        }
+
+        /* stat cards */
+        .stats { display:flex; gap:1.2rem; flex-wrap:wrap; margin-top:1.4rem; }
+        .stat {
+            background:var(--card);
+            border:1px solid var(--border);
+            border-radius:10px;
+            padding:1.1rem 1.5rem;
+            min-width:150px;
+        }
+        .stat .n {
+            font-family:var(--mono);
+            font-size:1.9rem;
+            font-weight:700;
+            color:var(--cyan);
+            display:block;
+            text-shadow:0 0 18px var(--glow);
+        }
+        .stat .d { font-size:.8rem; color:var(--muted); margin-top:.2rem; }
+
+        /* compare */
+        .cmp { display:flex; gap:1.5rem; flex-wrap:wrap; margin-top:1.4rem; }
+        .cmpcard {
+            flex:1; min-width:220px;
+            background:var(--card);
+            border:1px solid var(--border);
+            border-radius:10px;
+            padding:1.3rem 1.5rem;
+        }
+        .cmpcard.bad  { border-color:rgba(255,61,110,.22); }
+        .cmpcard.good { border-color:rgba(0,220,255,.3); }
+        .cmpcard .yr  {
+            font-family:var(--mono);
+            font-size:.7rem;
+            letter-spacing:.1em;
+            text-transform:uppercase;
+            margin-bottom:.6rem;
+        }
+        .cmpcard.bad  .yr { color:var(--red); }
+        .cmpcard.good .yr { color:var(--cyan); }
+        .cmpcard p { font-size:.97rem; color:var(--fg); max-width:100%; }
+
+        /* steps */
+        .steps { display:flex; flex-direction:column; gap:.9rem; margin-top:1.3rem; max-width:700px; }
+        .step {
+            display:flex; align-items:flex-start; gap:1.2rem;
+            background:var(--card);
+            border:1px solid var(--border);
+            border-radius:10px;
+            padding:1.1rem 1.4rem;
+        }
+        .snum {
+            font-family:var(--mono);
+            font-size:1.4rem;
+            font-weight:700;
+            color:var(--cyan);
+            opacity:.45;
+            line-height:1;
+            flex-shrink:0;
+            padding-top:3px;
+        }
+        .step h4 { font-weight:700; font-size:.98rem; margin-bottom:.25rem; }
+        .step p  { font-size:.87rem; color:var(--muted); max-width:100%; }
+
+        /* ===========================================
+           COVER SPECIFIC
+           =========================================== */
+        .cover {
+            background:
+                radial-gradient(ellipse at 70% 25%, rgba(41,121,255,.14) 0%, transparent 55%),
+                radial-gradient(ellipse at 20% 85%, rgba(0,220,255,.09) 0%, transparent 50%),
+                var(--bg);
+        }
+        .cover h1 {
+            background:linear-gradient(135deg,#fff 35%,var(--cyan) 100%);
+            -webkit-background-clip:text;
+            -webkit-text-fill-color:transparent;
+            background-clip:text;
+        }
+        .byline {
+            font-family:var(--mono);
+            font-size:.8rem;
+            color:var(--muted);
+            margin-top:2.2rem;
+            letter-spacing:.1em;
+        }
+
+        /* scan line on cover */
+        .scan {
+            position:absolute; left:0; right:0;
+            height:1px;
+            background:linear-gradient(90deg,transparent,var(--cyan),transparent);
+            opacity:.25;
+            animation:scan 5s linear infinite;
+        }
+        @keyframes scan {
+            0%   { top:0;    opacity:.2; }
+            50%  { opacity:.5; }
+            100% { top:100%; opacity:.2; }
+        }
+
+        /* ===========================================
+           PROGRESS + NAV DOTS
+           =========================================== */
+        .pbar {
+            position:fixed; top:0; left:0;
+            height:2px;
+            background:linear-gradient(90deg,var(--blue),var(--cyan));
+            box-shadow:0 0 8px var(--glow);
+            z-index:200;
+            width:0;
+            transition:width .25s ease;
+        }
+        .dots {
+            position:fixed; right:1.4rem; top:50%;
+            transform:translateY(-50%);
+            display:flex; flex-direction:column; gap:.55rem;
+            z-index:200;
+        }
+        .dot {
+            width:6px; height:6px;
+            border-radius:50%;
+            background:var(--muted);
+            cursor:pointer;
+            border:none;
+            transition:all .28s ease;
+        }
+        .dot.on {
+            background:var(--cyan);
+            box-shadow:0 0 8px var(--glow);
+            height:18px;
+            border-radius:3px;
+        }
+
+        /* slide number */
+        .sn {
+            position:absolute; bottom:1.4rem; right:2.4rem;
+            font-family:var(--mono); font-size:.65rem;
+            color:var(--muted); letter-spacing:.1em;
+        }
+
+        /* hint */
+        .hint {
+            position:fixed; bottom:1rem; left:50%;
+            transform:translateX(-50%);
+            font-family:var(--mono); font-size:.6rem;
+            color:var(--muted); letter-spacing:.12em;
+            z-index:200; opacity:.45;
+        }
+
+        @media(max-width:768px) {
+            .dots,.hint{display:none;}
+            .cmp,.stats{flex-direction:column;}
+        }
+        @media(prefers-reduced-motion:reduce) {
+            .r,.rl,.rs{transition:opacity .3s ease; transform:none;}
+            .scan{animation:none;}
+        }
+    </style>
+</head>
+<body>
+
+<div class="pbar" id="pb"></div>
+<nav class="dots" id="dots"></nav>
+<div class="hint">← → 空格 切换 · 滚动也可以</div>
+
+
+<!-- ========== SLIDE 1 · COVER ========== -->
+<section class="slide cover" data-i="0">
+    <div class="scan"></div>
+    <div class="tag r d1">深夜开发者 LND · 2026.03</div>
+    <h1 class="r d2">
+        AI 没让工程师更轻松<br>
+        <span style="font-size:.7em; opacity:.85;">它让整个行业</span><br>
+        <span class="c">开始恐慌</span>
+    </h1>
+    <p class="r d3" style="margin-top:1.4rem; max-width:560px;">
+        Bloomberg 和 Fortune 同一周报道同一个主题——<br>
+        生产力恐慌（Productivity Panic）正在席卷技术圈。
+    </p>
+    <div class="byline r d4">// BLOOMBERG · FORTUNE · 2026.02</div>
+    <div class="sn">01 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 2 · 开场 ========== -->
+<section class="slide" data-i="1">
+    <div class="tag r d1">CONTEXT · 背景</div>
+    <h2 class="r d2">上周发生了什么</h2>
+    <p class="r d3" style="margin-top:1rem;">
+        盯着屏幕看了五分钟，确认自己没看错。
+    </p>
+    <div class="stats r d4">
+        <div class="stat">
+            <span class="n">Bloomberg</span>
+            <div class="d">2026.02.26 报道</div>
+        </div>
+        <div class="stat">
+            <span class="n">Fortune</span>
+            <div class="d">同周报道</div>
+        </div>
+        <div class="stat">
+            <span class="n">同一主题</span>
+            <div class="d">生产力恐慌</div>
+        </div>
+    </div>
+    <div class="hl r d5">
+        AI 编程工具答应让软件开发更轻松。<br>
+        结果它引发了一场<span class="r2">不惜一切代价去卷的军备竞赛</span>。
+    </div>
+    <div class="sn">02 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 3 · 35% ========== -->
+<section class="slide" data-i="2">
+    <div class="tag r d1">KEY DATA · 关键数据</div>
+    <h2 class="r d2">Cursor 说了一个数字</h2>
+    <p class="r d3" style="margin-top:1rem;">
+        2026年2月，Cursor 官宣 Cloud Agents：<br>
+        AI 有了自己的专属虚拟机，独立接任务、自测、自修 bug、自交 PR。
+    </p>
+    <div class="stats r d4">
+        <div class="stat">
+            <span class="n" style="font-size:2.8rem;">35%</span>
+            <div class="d">Cursor 内部 PR 由 Agent 独立完成</div>
+        </div>
+        <div class="stat">
+            <span class="n">独立完成</span>
+            <div class="d">不是辅助，是自主完成</div>
+        </div>
+    </div>
+    <div class="hl r d5">
+        一家做 AI 编程工具的公司，<br>自己内部<span class="c">三分之一的代码</span>已经是 AI 写的。
+    </div>
+    <div class="sn">03 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 4 · 生产力恐慌 ========== -->
+<section class="slide" data-i="3">
+    <div class="tag r d1">INSIGHT · 核心判断</div>
+    <h2 class="r d2">"生产力恐慌"<br>是什么意思？</h2>
+    <p class="r d3" style="margin-top:1rem;">
+        不是失业恐慌。是另一种恐慌——
+    </p>
+    <div class="cmp r d4">
+        <div class="cmpcard bad">
+            <div class="yr">旧担心</div>
+            <p>AI 会不会抢我的工作？<br>我会不会被裁？</p>
+        </div>
+        <div class="cmpcard good">
+            <div class="yr">新担心（现在）</div>
+            <p>如果我不用 AI，我还能跟上吗？<br>如果我用了，我的角色变成什么？</p>
+        </div>
+    </div>
+    <div class="hl r d5" style="color:var(--red);">
+        报道里反复出现一个词：<span class="c">AI 监工（AI Monitor）</span><br>
+        以后的工作 = 盯着 AI 干活 + 检查输出 + 处理 AI 做不了的那 20%
+    </div>
+    <div class="sn">04 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 5 · 换了一种累法 ========== -->
+<section class="slide" data-i="4">
+    <div class="tag r d1">REALITY CHECK · 现实</div>
+    <h2 class="r d2">听起来轻松？<br><span class="r2">不。</span></h2>
+    <p class="r d3" style="margin-top:1rem; max-width:640px;">
+        AI 的速度是你的十倍。<br>
+        它一天能提十次代码改动，你要全看完，要判断对不对，要在对的地方踩刹车。
+    </p>
+    <div class="qt r d4">
+        <div class="en">"Programming is becoming unrecognizable." — Karpathy</div>
+        <div class="zh">编程，正在变得认不出来了。</div>
+    </div>
+    <div class="hl r d5">
+        这不是解放，<span class="r2">这是换了一种累法。</span>
+    </div>
+    <div class="sn">05 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 6 · 年底消失 ========== -->
+<section class="slide" data-i="5">
+    <div class="tag r d1">FORECAST · 预判</div>
+    <h2 class="r d2">Claude Code 创始人<br>说了什么</h2>
+    <p class="r d3" style="margin-top:1rem; max-width:640px;">
+        软件工程师，可能在今年年底之前消失。
+    </p>
+    <p class="r d4" style="margin-top:.8rem; max-width:640px;">
+        不是说工程师职业消失——<br>
+        而是说我们现在理解的"软件工程师"这个角色定义，<br>
+        <strong style="color:var(--fg);">会在年底前变得认不出来。</strong>
+    </p>
+    <div class="hl r d5">
+        Vibe Coding 一周年。你说 AI 写的那个阶段，已经是上一个阶段了。<br>
+        现在的 Agent：<span class="c">自己接任务，自己跑，自己交差，你来验收。</span>
+    </div>
+    <div class="sn">06 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 7 · 机会 vs 威胁 ========== -->
+<section class="slide" data-i="6">
+    <div class="tag r d1">OPPORTUNITY · 机会</div>
+    <h2 class="r d2">对你来说<br>是机会还是威胁？</h2>
+    <div class="cmp r d3" style="margin-top:1.2rem;">
+        <div class="cmpcard bad">
+            <div class="yr">职场打工人</div>
+            <p>考核标准变了。<br>
+            需要学会：管好 AI · 做正确判断 · 识别 AI 的错误<br>
+            <span style="color:var(--muted); font-size:.9rem;">这些能力，没人专门教过你。</span></p>
+        </div>
+        <div class="cmpcard good">
+            <div class="yr">独立创业者 / 副业探索者</div>
+            <p style="color:var(--cyan);">过去十年最大的机会窗口。</p>
+            <p style="margin-top:.5rem;">一个人 + Agent = 小团队的产出<br>
+            不需要融资，不需要招人，不需要办公室。</p>
+        </div>
+    </div>
+    <div class="sn">07 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 8 · 3件事 ========== -->
+<section class="slide" data-i="7">
+    <div class="tag r d1">ACTION PLAN · 行动</div>
+    <h2 class="r d2">普通人<br>现在该做什么</h2>
+    <div class="steps">
+        <div class="step r d3">
+            <div class="snum">01</div>
+            <div>
+                <h4>至少亲自用一次 Agent 模式</h4>
+                <p>Claude Code、Cursor——感受它出错时你怎么反应，手感比读一百篇文章管用</p>
+            </div>
+        </div>
+        <div class="step r d4">
+            <div class="snum">02</div>
+            <div>
+                <h4>保住你最核心的判断力</h4>
+                <p>什么值得做、用户为什么喜欢、哪里会出问题——这是 AI 现在还真没有的</p>
+            </div>
+        </div>
+        <div class="step r d5">
+            <div class="snum">03</div>
+            <div>
+                <h4>接受角色变化，不要抵触</h4>
+                <p>"AI监工"≈ 产品经理：你不亲自写，但你得知道对不对。越早接受越早找到新位置</p>
+            </div>
+        </div>
+    </div>
+    <div class="sn">08 / 09</div>
+</section>
+
+
+<!-- ========== SLIDE 9 · 结尾 ========== -->
+<section class="slide" data-i="8" style="background:radial-gradient(ellipse at 50% 55%,rgba(0,220,255,.07) 0%,transparent 60%),var(--bg);">
+    <div class="tag r d1">深夜开发者 LND</div>
+    <h1 class="r d2" style="font-size:clamp(1.8rem,4vw,3.2rem); max-width:780px; line-height:1.2;">
+        凡是你能坐在屏幕前做的工作，<br>
+        Agent 都在往那个方向走。
+    </h1>
+    <div class="big r d3" style="margin-top:1.5rem; color:var(--fg2);">
+        生产力恐慌，不是程序员的专利。<br>
+        它只是从程序员这里，最先开始而已。
+    </div>
+    <div class="hl r d4" style="margin-top:1.8rem; font-size:clamp(1rem,1.7vw,1.3rem); color:var(--fg2);">
+        关注「深夜开发者LND」<br>
+        <span class="c">我先踩坑，你少走弯路。</span>
+    </div>
+    <div class="sn">09 / 09</div>
+</section>
+
+
+<script>
+    /* ===========================================
+       SLIDE CONTROLLER
+       Keyboard / scroll / touch / nav dots / progress
+       =========================================== */
+    class Deck {
+        constructor() {
+            this.slides = [...document.querySelectorAll('.slide')];
+            this.cur = 0;
+            this.pb  = document.getElementById('pb');
+            this.dotsEl = document.getElementById('dots');
+            this._buildDots();
+            this._bindKeys();
+            this._bindTouch();
+            this._observe();
+            setTimeout(() => this.slides[0].classList.add('on'), 80);
+        }
+
+        _buildDots() {
+            this.slides.forEach((_, i) => {
+                const b = document.createElement('button');
+                b.className = 'dot' + (i === 0 ? ' on' : '');
+                b.setAttribute('aria-label', `幻灯片 ${i+1}`);
+                b.onclick = () => this.go(i);
+                this.dotsEl.appendChild(b);
+            });
+        }
+
+        _bindKeys() {
+            document.addEventListener('keydown', e => {
+                if (['ArrowRight','ArrowDown',' '].includes(e.key)) { e.preventDefault(); this.go(this.cur+1); }
+                if (['ArrowLeft','ArrowUp'].includes(e.key))        { e.preventDefault(); this.go(this.cur-1); }
+            });
+        }
+
+        _bindTouch() {
+            let sy = 0;
+            document.addEventListener('touchstart', e => { sy = e.touches[0].clientY; }, { passive:true });
+            document.addEventListener('touchend',   e => {
+                const d = sy - e.changedTouches[0].clientY;
+                if (Math.abs(d) > 45) this.go(this.cur + (d > 0 ? 1 : -1));
+            }, { passive:true });
+        }
+
+        _observe() {
+            const io = new IntersectionObserver(entries => {
+                entries.forEach(en => {
+                    if (en.isIntersecting) {
+                        en.target.classList.add('on');
+                        this.cur = +en.target.dataset.i;
+                        this._sync();
+                    }
+                });
+            }, { threshold: .5 });
+            this.slides.forEach(s => io.observe(s));
+        }
+
+        go(i) {
+            if (i < 0 || i >= this.slides.length) return;
+            this.slides[i].scrollIntoView({ behavior:'smooth' });
+        }
+
+        _sync() {
+            const pct = this.cur / (this.slides.length - 1) * 100;
+            this.pb.style.width = pct + '%';
+            this.dotsEl.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('on', i === this.cur));
+        }
+    }
+
+    new Deck();
+</script>
+</body>
+</html>

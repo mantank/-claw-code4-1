@@ -1,5 +1,11 @@
 # 内容运营 — 公众号/小红书/写作
 
+## 公众号配图规范（2026-03-04 旭指定）
+- **唯一指定 skill：`nanobanana-ppt-skills`**（4种风格：白板马克笔/渐变毛玻璃/矢量插画/手绘涂鸦）
+- 废弃删除：nano-banana-ppt、sketch-illustration、nano-banana-pro
+- 封面尺寸：1664×928（16:9），模型：qwen-image-max
+- 002 SOUL.md 和 001 rules.md 均已写入此规则
+
 ## 品牌
 - 公众号：深夜开发者LND
 - 知识库：深夜开发者的知识库（飞书）

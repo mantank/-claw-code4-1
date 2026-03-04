@@ -45,3 +45,9 @@
 - 理解错了再干，浪费时间还要返工
 - 流程：想清楚 → 告诉旭要干什么 → 等确认 → 再执行
 - 特别是涉及：新建服务/端口、迁移任务、改配置文件 这类操作
+
+## 003 模型变更（2026-03-04）
+- 旧模型：dashscope/qwen3.5-plus
+- 新模型：openrouter/minimax/minimax-m2.5（MiniMax M2.5）
+- Fallback：openrouter/claude-sonnet-4-6 → dashscope/qwen-plus
+- 配置文件：/root/.openclaw-003/openclaw.json + /root/.openclaw-003/agents/main/agent/models.json

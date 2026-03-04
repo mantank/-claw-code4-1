@@ -40,3 +40,14 @@
 - 改provider配置后，同步检查所有agent的fallback别名
 - 装skill前先读README确认：有无外部API依赖、是否收费、有无真实案例
 - 装新cron前先 `crontab -l` 确认清空旧的
+
+## 🖼️ 公众号配图
+- 公众号文章配图永远用 `nanobanana-ppt-skills`，4种风格：白板马克笔/渐变毛玻璃/矢量插画/手绘涂鸦
+- 每次生成前必须先推荐风格供旭选择，不得直接生成
+- 禁止用 nano-banana-ppt、nano-banana-pro、sketch-illustration、Gemini 图片 API
+- 封面尺寸：1664*928（16:9），API: qwen-image-max
+
+## 📋 任务下发规范（2026-03-04 旭要求）
+- 每次让002执行任务，必须在 sessions_send 里写清楚：①做什么 ②用哪个文件 ③输出到哪里 ④完成后汇报给谁
+- 不能只发一句"去做XXX"——002不会自己猜上下文
+- 001知道的背景信息，也要主动告诉002，不能假设002知道
