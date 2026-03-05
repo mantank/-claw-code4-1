@@ -109,7 +109,7 @@ curl -X POST "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-gen
 ### 生财有术（知识星球）
 - Group ID: 1824528822
 - API: https://api.zsxq.com/v2/groups/1824528822/topics
-- Cookie: zsxq_access_token=5902DC7A-7001-4CA7-B8B5-55BD1C00884B_B12E75520B50E663
+- Cookie: zsxq_access_token=434B93C2-1873-4F1B-BB5C-A503ADE0760F_B12E75520B50E663
 - 精华帖: scope=digests
 - 最新帖: scope=all
 - Cookie过期: 2026年底
