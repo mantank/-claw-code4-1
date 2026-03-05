@@ -51,3 +51,15 @@
 - 每次让002执行任务，必须在 sessions_send 里写清楚：①做什么 ②用哪个文件 ③输出到哪里 ④完成后汇报给谁
 - 不能只发一句"去做XXX"——002不会自己猜上下文
 - 001知道的背景信息，也要主动告诉002，不能假设002知道
+
+## 🔌 API响应错误判断（2026-03-05 新增）
+- Grok API 正常响应中含 `"error": null` 字段，不代表出错
+- 脚本中**禁止**用 `if 'error' in d` 判断，会把 null 误判为错误
+- **正确写法**：`if d.get('error'):` 只在 error 有真实值时才报错
+- 同样适用于其他可能返回 `"error": null` 的 API（参考: grok-x-leaders.sh 修复）
+
+## 铁律13：Grok API error字段判断用 d.get('error') 不用 'error' in d（2026-03-05）
+- **错误写法**：`if 'error' in d:` → Grok正常响应有 `"error": null`，null也会触发
+- **正确写法**：`if d.get('error'):` → null/空值不触发，只有真实错误才报错
+- **覆盖范围**：所有调用Grok API的脚本（grok-x-leaders.sh已修，grok-x-trends.sh已修）
+- **同类问题**：其他API也可能有相同模式，凡用 `if 'xxx' in response_dict` 判断错误的都要检查

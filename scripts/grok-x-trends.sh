@@ -24,7 +24,7 @@ RESPONSE=$(HTTPS_PROXY="$PROXY" HTTP_PROXY="$PROXY" \
 echo "$RESPONSE" | python3 -c "
 import json, sys
 d = json.loads(sys.stdin.read())
-if 'error' in d:
+if d.get('error'):
     print('ERROR:', d['error'])
     sys.exit(1)
 for item in d.get('output', []):

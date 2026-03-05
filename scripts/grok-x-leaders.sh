@@ -23,7 +23,7 @@ import json, sys
 raw = sys.stdin.read()
 try:
     d = json.loads(raw)
-    if 'error' in d:
+    if d.get('error'):
         print('ERROR:', json.dumps(d['error'], ensure_ascii=False))
         sys.exit(1)
     for item in d.get('output', []):
@@ -31,6 +31,9 @@ try:
             for c in item.get('content', []):
                 if c.get('type') == 'output_text':
                     print(c['text'])
+except json.JSONDecodeError:
+    print(f'PROXY/NETWORK ERROR: {raw[:200]}')
+    sys.exit(1)
 except Exception as e:
     print(f'PARSE ERROR: {e}')
     print('RAW:', raw[:300])

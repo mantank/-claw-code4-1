@@ -91,3 +91,9 @@
 - **修复**：删掉proxy字段，用doctor修复后重启
 - **Grok走代理的正确方式**：Mihomo是系统级代理，不需要在provider里配，全局流量自动走
 - **教训**：改provider配置只能改 baseUrl / apiKey / api / models 这几个字段，不能随便加字段
+
+### 2026-03-05 Grok API响应含error:null被误判为错误
+- 现象：grok-x-leaders.sh 每次返回 "ERROR: null"，X大佬动态cron连续报错6+次
+- 根因：脚本用 `if 'error' in d` 判断，Grok API正常响应中有 `"error": null` 字段，null也被触发
+- 修复：改为 `if d.get('error'):` 只在error有真实值时报错
+- 影响：X大佬动态-午间/晚间两个cron，同类脚本需检查此模式

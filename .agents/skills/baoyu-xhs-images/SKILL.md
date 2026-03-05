@@ -61,6 +61,7 @@ Style × Layout can be freely combined. Example: `--style notion --layout dense`
 | `notion` | Minimalist hand-drawn line art, intellectual |
 | `chalkboard` | Colorful chalk on black board, educational |
 | `study-notes` | Realistic handwritten photo style, blue pen + red annotations + yellow highlighter |
+| `doodle-infographic` | Sketchnote hand-drawn infographic, Morandi pastel fills, ink outlines, paper texture, data-viz meets visual notes |
 
 Detailed style definitions: `references/presets/<style>.md`
 
@@ -93,6 +94,7 @@ Detailed layout definitions: `references/elements/canvas.md`
 | Knowledge, concept, productivity, SaaS | `notion` | dense/list |
 | Education, tutorial, learning, teaching, classroom | `chalkboard` | balanced/dense |
 | Notes, handwritten, study guide, knowledge, realistic, photo | `study-notes` | dense/list/mindmap |
+| Architecture, data chart, infographic, system diagram, Sketchnote, AI agent, OpenClaw, tool overview, doodle | `doodle-infographic` | dense/mindmap/list/flow |
 
 ## Outline Strategies
 
@@ -448,6 +450,7 @@ Files:
 | notion | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ |
 | chalkboard | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓ | ✓✓ | ✓✓ | ✓ |
 | study-notes | ✗ | ✓ | ✓✓ | ✓✓ | ✓ | ✓ | ✓✓ | ✓ |
+| doodle-infographic | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓✓ | ✓ |
 
 ## References
 
