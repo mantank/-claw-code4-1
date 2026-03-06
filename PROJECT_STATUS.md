@@ -1,7 +1,7 @@
 # PROJECT_STATUS.md — 当前项目状态
 
 > 所有Agent共享。每次重要进展后更新。
-> 最后更新：2026-03-04 23:22（001心跳更新）
+> 最后更新：2026-03-05 23:01（001心跳更新）
 
 ---
 
@@ -11,11 +11,19 @@
 - **路径A（长期）**：公众号/小红书 → 私信引流 → OpenClaw Agent World网站 → 付费社群
 - **路径B（短期）**：闲鱼 ¥99 远程部署 → 赚第一笔钱 + 积累案例
 
-### 网站规划
-- 名称：OpenClaw Agent World（暂定）
-- 参考：https://www.waytoagi.com/zh（结构布局）+ sanwan.ai（技能包一键复制）
-- 技术方案：v0搭框架 → Claude Code + Codex CLI 填充优化
-- 核心板块：每日精选 + 技能商店 + 行业套装 + 用户案例 + 教程
+### 网站规划（PRD v0.1 完成 2026-03-05）
+- 名称：OpenClaw 中文站 / 小龙虾
+- 域名：**xiaolongxia.app**（✅ 已注册，Cloudflare $11.18/年）
+- PRD文档：docs/prd-openclaw-cn.md（v0.1 完成）
+- 定位：国内用户获取OpenClaw玩法的中文第一入口
+- 目标用户：国内非技术用户（看不到GitHub/Discord的人）
+- v1范围：首页 + 技能商店（30-50个技能卡片）+ 入门教程（5-8篇）
+- 参考：WaytoAGI（结构布局）+ sanwan.ai（技能包一键复制）
+- 技术方案：Astro/Next.js + Tailwind + Markdown + Vercel/Cloudflare
+- 目标：4周内上线
+- 下一步：旭用Claude Code搭框架（已开始）
+- shared-context层已建立：THESIS.md + FEEDBACK-LOG.md + CONTENT-PIPELINE.md
+- 公众号流水线Cron已创建：每日14:30自动触发（ID: abe80e53）
 
 ---
 
@@ -73,8 +81,8 @@
 | 公众号选题推送（旧版）| aa62b1e0 | 9:00 | ✅正常 |
 | 选题情报-新版 | 0d8c3469 | 9:30 | ✅新建，跑一周对比 |
 | 生财有术推送 | bcbc6376 | 19:00 | ✅正常 |
-| X大佬动态-午间 | aa8e717f | 11:00 | ⚠️超时error |
-| X大佬动态-晚间 | bf1bfd8f | 19:00 | ⚠️超时error |
+| X大佬动态-午间 | aa8e717f | 11:00 | ✅已修复（加--to + --best-effort-deliver） |
+| X大佬动态-晚间 | bf1bfd8f | 19:00 | ✅已修复 |
 
 ### 搜索工具（Agent Reach，2026-03-04）
 - ✅ Twitter/X（xreach CLI + Cookie）
@@ -93,8 +101,16 @@
 
 ---
 
-## ✅ 最近完成（2026-03-04）
+## ✅ 最近完成（2026-03-05）
 
+- 网站PRD初稿完成（docs/prd-openclaw-cn.md）
+- 域名确定 xiaolongxia.app
+- DeepSeek V4文章已进公众号草稿箱（封面：水晶鲸鱼渐变毛玻璃版）
+- X大佬动态cron修复（加 --to telegram + --best-effort-deliver）
+- Grok API error:null误判bug修复（grok-x-trends.sh + rules.md）
+- 003生态情报库8分类全部完成
+
+### 2026-03-04
 - 发布「生产力恐慌」文章（公众号草稿箱）
 - Agent Reach 安装（7/12渠道可用）
 - Twitter/X Cookie配置（xreach可用）
@@ -109,16 +125,14 @@
 
 ---
 
-## 📅 明天待办（2026-03-05）
+## 📅 明天待办（2026-03-06）
 
-详见 `memory/2026-03-05-todo.md`
-
-**必做：**
-1. 闲鱼冷启动（低价商品出成交）
-2. 闲鱼正式商品发布（¥99部署+教程）
+**网站开发：**
+1. 旭注册 xiaolongxia.app 域名（Cloudflare）
+2. Claude Code 搭建网站框架（基于PRD）
+3. 003开始采集种子内容（OpenClaw教程/技能/案例翻译）
 
 **待旭确认：**
-- 网站名字
 - Codex CLI登录
 - Antigravity Google账号验证
 

@@ -13,8 +13,10 @@ Before doing anything else:
 1. Read `SESSION-STATE.md` — 这是你的工作记忆热缓存，最优先
 2. Read `SOUL.md` — this is who you are
 3. Read `USER.md` — this is who you're helping
-4. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
-5. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
+4. Read `shared-context/THESIS.md` — 当前战略方向（全员对齐）
+5. Read `shared-context/FEEDBACK-LOG.md` — 跨Agent通用修正（避免重复犯错）
+6. Read `memory/YYYY-MM-DD.md` (today + yesterday) for recent context
+7. **If in MAIN SESSION** (direct chat with your human): Also read `MEMORY.md`
 
 ## WAL协议（先写后答）
 
