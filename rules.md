@@ -63,3 +63,24 @@
 - **正确写法**：`if d.get('error'):` → null/空值不触发，只有真实错误才报错
 - **覆盖范围**：所有调用Grok API的脚本（grok-x-leaders.sh已修，grok-x-trends.sh已修）
 - **同类问题**：其他API也可能有相同模式，凡用 `if 'xxx' in response_dict` 判断错误的都要检查
+
+## 铁律13：Astro/前端项目push前必须视觉验证（2026-03-06）
+- build通过 ≠ 样式正确
+- push前必须 npm run dev 本地预览，或截图确认关键页面渲染效果
+- Tailwind prose类必须确认 @tailwindcss/typography 已安装
+
+## 铁律14：三剑客不可用时必须告知旭（2026-03-06）
+- root环境下 claude --dangerously-skip-permissions 被禁，三剑客不可用
+- 遇到此情况：立刻告知旭，说明替代方案，不能闷头自己做
+- 格式："三剑客在root环境不可用，我直接用工具实现，你确认吗？"
+
+## 规则N+1：push前必须本地视觉验证（来自坑13，2026-03-06）
+- `npm run build` 通过 ≠ 样式正确
+- 有任何UI改动，必须 `npm run dev` 本地预览，手机模拟器确认排版
+- 凡涉及 Tailwind prose / Typography，先确认 `@tailwindcss/typography` 已安装
+- 顺序：本地预览 → 旭确认 → push，不能跳过中间步骤
+
+## 规则N+2：三剑客root限制（来自坑13，2026-03-06）
+- `claude --dangerously-skip-permissions` 在root环境被禁止
+- 三剑客在服务器上实际不可用，001自行实现时要明确告知旭，不能闷头干
+- 替代方案：旭在Mac本地跑Claude Code / 001用write+edit工具直接实现

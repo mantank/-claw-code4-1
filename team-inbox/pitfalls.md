@@ -97,3 +97,10 @@
 - 根因：脚本用 `if 'error' in d` 判断，Grok API正常响应中有 `"error": null` 字段，null也被触发
 - 修复：改为 `if d.get('error'):` 只在error有真实值时报错
 - 影响：X大佬动态-午间/晚间两个cron，同类脚本需检查此模式
+
+## 坑13：Astro详情页push前未检查Tailwind Typography（2026-03-06）
+- **现象**：教程详情页Markdown内容渲染成纯文本，##标题直接显示为##文字，列表无缩进
+- **根因**：Tailwind prose类依赖 @tailwindcss/typography 插件，项目未安装，导致样式全挂
+- **修复**：push前必须 npm run dev 本地预览确认样式，不能只靠 npm run build 通过
+- **教训**：build通过 ≠ 样式正确，一定要视觉验证
+- **附**：三剑客在root环境不可用，001自行实现任务时要主动告知旭，不能闷头干
