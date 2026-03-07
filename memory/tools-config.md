@@ -78,3 +78,7 @@ curl -s "https://open.feishu.cn/open-apis/docx/v1/documents/${DOC_TOKEN}/raw_con
 - grok-x-trends.sh：调用grok-4-1-fast + x_search
 - 每次搜7次X，返回5个带链接的真实热点
 - 每次约$0.01-0.05
+
+## 旭的飞书信息（2026-03-07）
+- 飞书open_id: ou_ce000d8e929fdcce3ccc5a8b51dd1523
+- 001飞书channel已通，Telegram+飞书双通道同时在线

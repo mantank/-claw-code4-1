@@ -39,8 +39,16 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 
 - ~~API Key: AIzaSyB3GsuTddVoxP5rGYce0F1285JjN3gHRYU~~
 - 额度用完，不再可用
-- 图片生成改用万相2.6 / Qwen-Image-Max
-- 对话模型走OpenRouter（待配置）
+
+### Google Gemini API（新，有效期至 2026-05-10）✅ 已接入
+- API Key: AIzaSyDHiKNnvz71qzDIzk-I5ZVdyAwb2vuRxqo
+- 赠送额度：$370
+- 到期：2026-05-10
+- 已接入模型：gemini-2.0-flash-exp-image-generation（图片生成）、gemini-2.5-flash（对话）
+- Provider名称：google
+- 接口：https://generativelanguage.googleapis.com/v1beta/openai/
+- 图片生成调用：POST /v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=...
+- 旧key（AIzaSyBK5emN_3ZeEWh-ebFf_I-mD9H69UXWJIo）无效，不要用
 
 ### Notion
 

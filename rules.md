@@ -95,3 +95,9 @@
 - wiki URL末尾token直接当 doc_token 用
 - `GET /open-apis/docx/v1/documents/{token}/raw_content` 返回纯文本
 - 不需要SPA渲染、不需要curl爬、不需要转换token
+
+
+## 🚨 系统配置变更必须先确认（2026-03-07 旭要求）
+- 修改 openclaw.json、channel配置、provider配置 → **先说方案，等旭说可以再动**
+- 聊聊能不能做 ≠ 去做，不要把探讨当成授权
+- 违反此规则 = 擅自动了旭的系统
