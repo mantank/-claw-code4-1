@@ -139,6 +139,7 @@ curl -X POST "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-gen
 - systemd服务: mihomo.service（已enable，开机自启）
 - 用途: 绕过Cloudflare/xAI对机房IP的封锁
 - 续订链接: https://bava8u2znaj6bdzzjnfb.wgetcloud.online/link/1600b449-67c9-365f-916d-eedf0ab4dbe3
+- 上次续费: 2026-03-07（下次到期日期待确认）
 
 ### OpenRouter
 - API Key: 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

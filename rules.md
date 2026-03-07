@@ -84,3 +84,14 @@
 - `claude --dangerously-skip-permissions` 在root环境被禁止
 - 三剑客在服务器上实际不可用，001自行实现时要明确告知旭，不能闷头干
 - 替代方案：旭在Mac本地跑Claude Code / 001用write+edit工具直接实现
+
+## 飞书API规则（2026-03-06）
+
+**R-FEISHU-01：docx块批量写入每批不超过15个**
+- 超过约20块时接口报 `99992402 field validation failed`
+- 解决：拆成多批次，每批 ≤ 15 个块
+
+**R-FEISHU-02：飞书wiki文章直接用docx API读取**
+- wiki URL末尾token直接当 doc_token 用
+- `GET /open-apis/docx/v1/documents/{token}/raw_content` 返回纯文本
+- 不需要SPA渲染、不需要curl爬、不需要转换token

@@ -104,3 +104,13 @@
 - **修复**：push前必须 npm run dev 本地预览确认样式，不能只靠 npm run build 通过
 - **教训**：build通过 ≠ 样式正确，一定要视觉验证
 - **附**：三剑客在root环境不可用，001自行实现任务时要主动告知旭，不能闷头干
+
+## 坑14：飞书docx块批量写入报99992402（2026-03-06）
+- **现象**：`children` 里超过约20个块时，接口报 `field validation failed`
+- **修复**：拆成多批次写入，每批不超过15个块
+- **注意**：空text块（content=""）不会触发，原因未明，保险起见每批控制块数
+
+## 坑15：飞书wiki文章可直接用docx API读取（2026-03-06，经验非坑）
+- wiki URL末尾token（如 `LeoIw1sOmimgy0ksVqDcqxf3nDc`）直接作为 doc_token 传入
+- `GET /open-apis/docx/v1/documents/{wiki_node_token}/raw_content` 直接返回纯文本
+- **不需要**先获取 obj_token、不需要SPA渲染、不需要curl爬取
