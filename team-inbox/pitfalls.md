@@ -114,3 +114,9 @@
 - wiki URL末尾token（如 `LeoIw1sOmimgy0ksVqDcqxf3nDc`）直接作为 doc_token 传入
 - `GET /open-apis/docx/v1/documents/{wiki_node_token}/raw_content` 直接返回纯文本
 - **不需要**先获取 obj_token、不需要SPA渲染、不需要curl爬取
+
+## 坑16：003发文件漏掉action参数（2026-03-07）
+- 现象：003调用message工具发文件，提示失败，实际是参数不完整
+- 根因：003(Gemini模型)调用message工具时漏传 action="send"
+- 修复：message工具必须带 action="send"，filePath用绝对路径
+- 影响：003所有文件/消息发送操作
