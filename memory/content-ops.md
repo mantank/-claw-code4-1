@@ -1,10 +1,8 @@
 # 内容运营 — 公众号/小红书/写作
 
-## 公众号配图规范（2026-03-04 旭指定）
-- **唯一指定 skill：`nanobanana-ppt-skills`**（4种风格：白板马克笔/渐变毛玻璃/矢量插画/手绘涂鸦）
-- 废弃删除：nano-banana-ppt、sketch-illustration、nano-banana-pro
+## 公众号配图规范
+- **配图skill：`nanobanana-ppt-skills`**（白板马克笔/渐变毛玻璃/矢量插画/手绘涂鸦）
 - 封面尺寸：1664×928（16:9），模型：qwen-image-max
-- 002 SOUL.md 和 001 rules.md 均已写入此规则
 
 ## 品牌
 - 公众号：深夜开发者LND
@@ -44,65 +42,25 @@
 - 新号前7天日更拿流量扶持
 
 ## 图片生成
-- **主力：万相2.6（wan2.6-t2i）**，其他全废弃
-- 小红书信息图：Lovart Nano Banana Pro（中文渲染清晰）
-- AI生图通病：中文字体渲染差，最佳方案 AI底图+Canva叠文字
-- 封面图：AI生图到不了直接当封面水平
+- **主力：qwen-image-max**（中文文字首选）
+- 小红书封面：1104×1472（3:4竖版）
+- 公众号封面：1664×928（16:9横版）
 
-## 文章进度
-- 已发布：第1-10篇 + 第13篇
-- 第11篇草稿（Seedance 2.0）等老大补真实体验
-- 第12篇草稿（Vibe Coding入门）
-- 第13篇大纲存Notion（日报系统搭建教程）
-- 小红书日更计划（2/27-3/5）7天，Day1已发布
+## 内容方向（2026-03-06 旭锁定）
+- 聚焦OpenClaw实战，不做AI乱炖
+- 三条主线：部署配置 / 场景应用 / 技能玩法
+- 标准：必须来自真实经历
+- 草稿箱 = 已发布（旭确认，不再催发布）
+- 已发布近20篇，流量待提升
 
 ## 002写作定位
-- 002写作能力到顶，只能"照规则填空"
-- 002新定位：信息采集+结构化输出
-- 写作归001或旭自己
-- 内容链路：热词→选题→大纲→初稿→标题3选→首图→@001润色→旭发布
+- 002：信息采集+结构化输出+流水线执行
+- 写作润色归001
+- 流水线cron每日14:30自动跑（选题→大纲→初稿→配图→通知旭）
 
-## 选题储备
-
-### 【待写】普通人用 OpenClaw 做行业调研
-- 灵感来源：激波之影《用OpenClaw做行业调研，效率甩开同行10倍》
-- 角度：他写的是技术派玩法，我们写普通人版——不懂代码、不懂爬虫，照样能用
-- 核心差异化：真实踩坑过程（日报bug、cron路径问题、A2A折腾）才是内容，不是教程
-- 参考原文：https://mp.weixin.qq.com/s/l8No9UB7iZhA5hzH7-5Tyw
-- 记录时间：2026-03-01
-
-## 小红书自动发布（已验证可用）
-
-### 核心方案：xiaohongshu-mcp（服务器本地运行）
-- 二进制路径：`/root/xiaohongshu-mcp/xiaohongshu-mcp-linux-amd64`
-- 服务地址：`http://localhost:18060`
-- systemd服务：开机自启（已验证 2026-03-01）
-- 登录状态：已登录（扫码一次永久有效，失效需重新登录）
-
-### 发布接口
-```bash
-curl -X POST http://localhost:18060/api/v1/publish \
-  -H 'Content-Type: application/json' \
-  -d '{"title":"标题","content":"正文 #话题标签","images":["图片URL1","图片URL2"]}'
-```
-
-### 关键注意事项
-- ⚠️ images 字段必须有值（不能空数组），且必须是**公开可访问的URL**，不能用本地路径
-- 图片流程：渲染 card_*.png → 上传图床拿URL → 填入images数组发布
-- 发布成功返回：`{"success":true,"data":{"status":"发布完成"}}`
-- 接口超时120秒，正常发布耗时约30-60秒
-
-### 登录状态检查
-```bash
-python3 ~/.openclaw/workspace/skills/xiaohongshu-mcp/scripts/xhs_client.py status
-```
-返回 `✅ Logged in as: xxx` 即正常
-
-### 完整发布链路
-1. 用 Auto-Redbook-Skills 渲染 Markdown → card_*.png
-2. 上传图片到图床（如 sm.ms 或阿里云OSS）拿 URL
-3. 调 publish 接口发布
-
-### 验证记录
-- 2026-03-01 测试成功，帖子已发布到小红书
-- 链接：https://www.xiaohongshu.com/explore/699e8edd000000001a029dab
+## 小红书自动发布
+- 服务：xiaohongshu-mcp，`http://localhost:18060`，systemd开机自启
+- 发布：`POST /api/v1/publish`，images必须是公开URL（不能本地路径）
+- 登录检查：`python3 ~/.openclaw/workspace/skills/xiaohongshu-mcp/scripts/xhs_client.py status`
+- 链路：渲染card图 → 上传图床 → 调publish接口
+- 已验证可用（2026-03-01）
