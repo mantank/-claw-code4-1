@@ -82,36 +82,29 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 适合：白板风、信息图、公众号配图
 - 效果远超万相2.6的中文文字渲染
 
-### 图片生成（双轨制，2026-03-01 更新）
+### 图片生成（2026-03-11 切换到Google Gemini）
 
-#### 主力1：Qwen-Image-Max（有中文文字需求时首选）
-- **模型**: `qwen-image-max`
-- **优势**: 中文文字渲染清晰、多行排版、真实感强、AI痕迹低
-- **API Key**: sk-3e086717facd4d88a573260d127a15b0
-- **接口**: POST https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation
-- **价格**: ¥0.04/张（qwen-image-plus），Max价格待确认
-- **调用示例**:
+#### 主力：Nano Banana 2（Google Gemini，$370额度内）
+- **模型ID**: `gemini-3.1-flash-image-preview`
+- **Display Name**: Nano Banana 2
+- **API Key**: AIzaSyDHiKNnvz71qzDIzk-I5ZVdyAwb2vuRxqo
+- **接口**: 通过OpenClaw google provider，或直接调用：
 ```bash
-curl -X POST "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation" \
-  -H "Authorization: Bearer sk-3e086717facd4d88a573260d127a15b0" \
-  -H "Content-Type: application/json" \
-  -d '{
-    "model": "qwen-image-max",
-    "input": {"messages": [{"role": "user", "content": [{"text": "你的prompt"}]}]},
-    "parameters": {
-      "negative_prompt": "低分辨率，低画质，文字模糊，扭曲",
-      "watermark": false,
-      "size": "1104*1472"
-    }
-  }'
+curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent" \
+  -H 'Content-Type: application/json' \
+  -H 'X-goog-api-key: AIzaSyDHiKNnvz71qzDIzk-I5ZVdyAwb2vuRxqo' \
+  -X POST \
+  -d '{"contents": [{"parts": [{"text": "你的prompt"}]}]}'
 ```
-- **尺寸选项**: 1664\*928（16:9）/ 1472\*1104（4:3）/ 1328\*1328（1:1）/ 1104\*1472（3:4）
-- **小红书封面**: size用 `1104*1472`（3:4竖版）
-- **公众号封面**: size用 `1664*928`（16:9横版）
+- **额度**: $370，到2026-05-10
+- **备选**: `gemini-2.0-flash-exp-image-generation`（已在001配置中）
 
-#### 废弃模型（不要再用）
-- Gemini 3 Pro Image / nano-banana-pro：额度用完，废弃
-- wanx2.1-t2i-turbo：中文字渲染差，废弃
+#### Qwen图片生成（暂停，额度用完）
+- `qwen-image-max` — DashScope额度耗尽，暂不充值
+- 有中文文字需求时可考虑后续恢复
+
+#### 废弃模型
+- wanx2.1-t2i-turbo：中文字渲染差
 - 即梦AI / Evolink：已废弃
 
 ### 生财有术（知识星球）

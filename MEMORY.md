@@ -26,7 +26,9 @@
 - 公众号流水线每日14:30自动跑，草稿箱=已发布
 - OpenClaw 2026.3.7 待升级（飞书群组prompt修复+PDF工具）
 - 007新上线（Mac本地+飞书管家），001保持纯Telegram
-- 001模型已升级Claude Opus 4.6（旭$200包月）
+- 001模型：Claude Max $100/月 5倍量，3/11续费，额度留给001主力用
+- 002/003模型：3/11切换到Google Gemini 3.1 Flash Lite（google/gemini-3.1-flash-lite-preview），走$370 Gemini额度
+- 002原embedded模式auth文件已删，现在走普通agent模式跑Gemini
 - Gemini API新key $370额度至2026-05-10
 
 ## 规则

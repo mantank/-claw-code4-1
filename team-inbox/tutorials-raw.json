@@ -1,0 +1,574 @@
+[
+  {
+    "level": "入门",
+    "title": "OpenClaw 官方快速开始指南",
+    "description": "官方权威安装手册，三步完成 Gateway 网关部署与基础配对。",
+    "duration": "10 分钟",
+    "outcome": "能成功启动网关并连接第一个聊天渠道（如WhatsApp/Telegram）。",
+    "href": "https://docs.openclaw.ai/zh-CN",
+    "source": "OpenClaw Docs",
+    "quality": 3
+  },
+  {
+    "level": "入门",
+    "title": "Windows 系统一键部署保姆级教程",
+    "description": "针对 Windows 用户的图形化引导，涵盖 Node.js 环境及一键脚本使用。",
+    "duration": "15 分钟",
+    "outcome": "在 Windows 电脑上完成 OpenClaw 的完整初始化与运行环境配置。",
+    "href": "https://www.cpolar.com/blog/gained-230k-stars-the-2026-legendary-project-openclaw-with-one-click-deployment-on-windows-will-enable-you-to-get-started-in-just-30-minutes",
+    "source": "Cpolar Blog",
+    "quality": 2
+  },
+  {
+    "level": "入门",
+    "title": "ClawBox 硬件开箱即用指南 (2026)",
+    "description": "专为 NVIDIA Jetson 硬件定制的部署手册，实现 100% 本地化且 24/7 在线。",
+    "duration": "5 分钟",
+    "outcome": "能在不依赖云端 API 的情况下，建立一个完全私有的硬件 AI 助手。",
+    "href": "https://gist.github.com/yalexx/0586e67edafbd9aa316a04ce6f6ff849",
+    "source": "Github Gist",
+    "quality": 3
+  },
+  {
+    "level": "入门",
+    "title": "OpenClaw 核心概念与名称演进史",
+    "description": "理清 Clawdbot、Moltbot 到 OpenClaw 的关系及常用斜杠命令用法。",
+    "duration": "5 分钟",
+    "outcome": "能熟练使用 /status、/model 等基础命令管理 AI 助手状态。",
+    "href": "https://www.runoob.com/ai-agent/openclaw-clawdbot-tutorial.html",
+    "source": "菜鸟教程",
+    "quality": 1
+  },
+  {
+    "level": "入门",
+    "title": "入门 | OpenClaw 101：7天掌握 AI 私人助理",
+    "description": "适合中国用户的 7 天速成路径，从国内 API 接入到飞书/企业微信机器人上线。",
+    "duration": "1 周",
+    "outcome": "从零建立一个能 24 小时代替自己整理邮件、监控社媒的数字员工。",
+    "href": "https://github.com/mengjian-github/openclaw101",
+    "source": "mengjian-github",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "进阶",
+    "title": "7天掌握 OpenClaw：从安装到定制 Skill",
+    "description": "DataWhale 出品的结构化课程，包含工作空间配置与记忆系统深度设置。",
+    "duration": "1 周",
+    "outcome": "能通过修改 SOUL.md 和 USER.md 打造具有特定人格的助手。",
+    "href": "https://github.com/datawhalechina/openclaw-tutorial",
+    "source": "DataWhale",
+    "quality": 3
+  },
+  {
+    "level": "进阶",
+    "title": "人剑合一：OpenClaw 人格养成骨架手册",
+    "description": "深度解析 5 个核心配置文件的协同逻辑，尤其是 SOUL 与 MEMORY 的设计。",
+    "duration": "30 分钟",
+    "outcome": "能利用 Schema 校验机制通过 openclaw doctor 优化 Agent 的底层决策质量。",
+    "href": "https://zhuanlan.zhihu.com/p/2005252288558674437",
+    "source": "知乎专栏",
+    "quality": 3
+  },
+  {
+    "level": "进阶",
+    "title": "Skills 实战：使用 ClawHub 扩展你的龙虾能力",
+    "description": "教授如何从 13,000+ 社区技能中筛选并使用 clawhub CLI 进行一键安装。",
+    "duration": "20 分钟",
+    "outcome": "能独立安装 Web 搜索、文件处理等 3 个核心业务技能。",
+    "href": "https://clawhub.ai",
+    "source": "ClawHub",
+    "quality": 3
+  },
+  {
+    "level": "进阶",
+    "title": "OpenClaw 工程主线：源码与架构剖析",
+    "description": "深入 Gateway 控制平面、通道适配器及路由算法的原理级教程。",
+    "duration": "120 分钟",
+    "outcome": "能看懂 OpenClaw 运行链路并解决高级配置层面的连接故障。",
+    "href": "https://github.com/yeuxuan/openclaw-docs",
+    "source": "Yeuxuan Github",
+    "quality": 3
+  },
+  {
+    "level": "进阶",
+    "title": "自动化工作流：Cron 定时任务与 Heartbeat 配置",
+    "description": "教授如何让助手 24 小时主动运行，执行定时推送与任务检查。",
+    "duration": "30 分钟",
+    "outcome": "能编写第一个定时执行的 AI 日报推送任务。",
+    "href": "https://github.com/datawhalechina/openclaw-tutorial",
+    "source": "DataWhale",
+    "quality": 2
+  },
+  {
+    "level": "进阶",
+    "title": "多角色分工：飞书/钉钉多部门 Agent 路由配置",
+    "description": "通过 bindings 字段实现按群 ID 路由，不同部门助理在同一个 Bot 中按需切换。",
+    "duration": "20 分钟",
+    "outcome": "完成企业内部垂直化多机器人服务体系的搭建与流量精细化分发。",
+    "href": "https://gist.github.com/smallnest/c5c13482740fd179e40070e620f66a52",
+    "source": "Github Gist",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "进阶",
+    "title": "行动派规划：Ship-Learn-Next 循环学习法",
+    "description": "利用 Rep 功能将学习目标强制转为具体的作品产出，拒绝「无效学习」。",
+    "duration": "30 分钟",
+    "outcome": "建立一套由 Agent 驱动的「交付→学习→迭代」作品化快速成长系统。",
+    "href": "https://zhuanlan.zhihu.com/p/2003169634615055391",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "远程办公黑科技：一句话找回办公室文件",
+    "description": "利用 OpenClaw 执行权限跨越内网搜寻特定文件并发送至手机。",
+    "duration": "20 分钟",
+    "outcome": "能身在室外通过飞书/Telegram 让家里电脑发送指定文件。",
+    "href": "https://www.cpolar.com/blog/gained-230k-stars-the-2026-legendary-project-openclaw-with-one-click-deployment-on-windows-will-enable-you-to-get-started-in-just-30-minutes",
+    "source": "Cpolar Blog",
+    "quality": 3
+  },
+  {
+    "level": "实战",
+    "title": "超级个体：一个顶一个团队的 70+ 实战案例",
+    "description": "涵盖财务报销、内容创作、代码修复等 70 多个开箱即用的工作流。",
+    "duration": "60 分钟",
+    "outcome": "能直接复刻一套针对个人自媒体或外包开发的自动化流程。",
+    "href": "https://github.com/xianyu110/awesome-openclaw-tutorial",
+    "source": "Xianyu110 Github",
+    "quality": 3
+  },
+  {
+    "level": "实战",
+    "title": "一人公司：基于 OpenClaw 的公众号全自动运营流",
+    "description": "从选题监控到日更 6 篇的完整组织架构配置，涵盖采集、精排与审稿。",
+    "duration": "45 分钟",
+    "outcome": "实现在不经深度人工干预下维持高频次、高质量的自媒体内容分发控制。",
+    "href": "https://sanwan.ai",
+    "source": "龙虾三万养成记",
+    "quality": 3,
+    "batch": 2
+  },
+  {
+    "level": "实战",
+    "title": "慢雾科技：OpenClaw 智能体零信任架构加固指南",
+    "description": "针对高权限 Agent 的攻击面收窄实战，包含行为层红线定义与权限最小化。",
+    "duration": "40 分钟",
+    "outcome": "让 Agent 在执行高危 Bash 命令前自动触发阻断，确保私有化部署的安全边界。",
+    "href": "https://github.com/slowmist/openclaw-security-practice-guide",
+    "source": "SlowMist",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "实战",
+    "title": "168 个可复制场景：中文最佳用例大全 (2026)",
+    "description": "涵盖 A 股财报追踪、多渠道客服、小宇宙播客摘要等 168 个真实用例。",
+    "duration": "60 分钟",
+    "outcome": "能根据关键词迅速定位并复刻适配国内工具链（飞书/钉钉等）的专属 Agent。",
+    "href": "https://github.com/AlexAnys/awesome-openclaw-usecases-zh",
+    "source": "Chinese Use Cases",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "硬件联动：Ulanzi TC001 像素时钟状态显示实战",
+    "description": "利用 IoT 插件将 Agent 的任务进度与报错状态推送到桌面像素屏显示。",
+    "duration": "20 分钟",
+    "outcome": "实现具身化的 AI 提醒，Agent 处理完复杂任务后会自动在屏幕闪烁成功图标。",
+    "href": "https://github.com/lubeda/EsphoMaTrix",
+    "source": "EsphoMaTrix Plugin",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "AI 漫剧全流程：从单图生成到分镜视频制作",
+    "description": "集成 Seedance 2.0 实现「一图提主角-脚本扩充-分镜生成」的一站式工作流。",
+    "duration": "45 分钟",
+    "outcome": "能在一个 Agent 频道中通过自然语言指令快速产出高一致性的商业级 AI 漫剧。",
+    "href": "https://zhuanlan.zhihu.com/p/2011832169308391153",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "零基础视频流：OpenClaw + Remotion 自动化成片",
+    "description": "无需人工剪辑，利用 Skill 驱动 React 渲染框架从数据源直接生成短视频。",
+    "duration": "30 分钟",
+    "outcome": "实现「文案-音频-渲染-导出」的全自动闭环（单片成本仅一毛钱）。",
+    "href": "https://zhuanlan.zhihu.com/p/2006112392375996793",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "智能家居：Home Assistant 深度集成控制中心",
+    "description": "打通 OpenClaw 与米家/HomeKit 实体，实现真正的全屋语音自动化管理。",
+    "duration": "30 分钟",
+    "outcome": "能在聊天界面直接触发 HA 自动化，并根据家居状态让 Agent 给出环境建议。",
+    "href": "https://github.com/techartdev/OpenClawHomeAssistantIntegration",
+    "source": "Home Assistant",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "进阶",
+    "title": "2026 模型分工攻略：高推理 vs 高性价比模型组合",
+    "description": "根据任务性质动态切换 GPT-5 与 Gemini Flash，实现效果与成本的最优平衡。",
+    "duration": "10 分钟",
+    "outcome": "学会配置 Agent 路由逻辑，在 7x24 运行时有效降低 API 费用 60% 以上。",
+    "href": "https://github.com/cogine-ai/awesome-openclaw-zh",
+    "source": "Chinese Practices",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "企业级巡检：OpenClaw 实例 24h 自动化安防审计",
+    "description": "基于慢雾脚本实现的夜间自动异常监控，确保 API Key 无风险暴露。",
+    "duration": "15 分钟",
+    "outcome": "建立每晚准时推送的「安全绿灯报告」，提升多节点部署的运维安全度。",
+    "href": "https://github.com/slowmist/openclaw-security-practice-guide",
+    "source": "SlowMist",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "自媒体内容工厂：基于 Discord 的三 Agent 协作流",
+    "description": "选题、文案、设计三个角色各司其职，在专用频道中实现指令式内容量产。",
+    "duration": "40 分钟",
+    "outcome": "能通过同一个入口调度多位专业助手，实现 15 分钟产出一套完整小红书图文内容。",
+    "href": "https://github.com/cogine-ai/awesome-openclaw-zh",
+    "source": "Content Factory",
+    "quality": 3,
+    "batch": 11
+  }
+]
+  {
+    "level": "进阶",
+    "title": "企业级巡检：OpenClaw 实例 24h 自动化安防审计",
+    "description": "基于慢雾脚本实现的夜间自动异常监控，确保 API Key 无风险暴露。",
+    "duration": "15 分钟",
+    "outcome": "建立每晚准时推送的「安全绿灯报告」，提升多节点部署的运维安全度。",
+    "href": "https://github.com/slowmist/openclaw-security-practice-guide",
+    "source": "SlowMist",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "自媒体内容工厂：基于 Discord 的三 Agent 协作流",
+    "description": "选题、文案、设计三个角色各司其职，在专用频道中实现指令式内容量产。",
+    "duration": "40 分钟",
+    "outcome": "能通过同一个入口调度多位专业助手，实现 15 分钟产出一套完整小红书图文内容。",
+    "href": "https://github.com/cogine-ai/awesome-openclaw-zh",
+    "source": "Content Factory",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "入门",
+    "title": "腾讯云秒级部署 OpenClaw 及主流 IM 接入教程",
+    "description": "基于腾讯云 Lighthouse 镜像一键安装并连接企业微信、钉钉和飞书。",
+    "duration": "10 分钟",
+    "outcome": "在公网 VPS 上完成 OpenClaw 的初始化，并绑定首个中国社交平台入口。",
+    "href": "https://zhuanlan.zhihu.com/p/2000936273733514988",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 12
+  },
+  {
+    "level": "进阶",
+    "title": "OpenClaw 零信任架构安全加固实践",
+    "description": "从行为黑名单到权限收窄，系统性提升 Agent 在高权限环境下的生存能力。",
+    "duration": "30 分钟",
+    "outcome": "实现针对提示词注入和恶意插件调用的「思想钢印」级自动拦截保护。",
+    "href": "https://github.com/slowmist/openclaw-security-practice-guide/blob/main/docs/OpenClaw%E6%9E%81%E7%AE%80%E5%AE%89%E5%85%A8%E5%AE%9E%E8%B7%B5%E6%8C%87%E5%8D%97.md",
+    "source": "SlowMist Github",
+    "quality": 3,
+    "batch": 12
+  },
+  {
+    "level": "实战",
+    "title": "OpenClaw × Seedance：飞书一键生视频全闭环",
+    "description": "利用 Seedance 2.0 模型实现商业级视频内容的一致性生成与自动化发布。",
+    "duration": "45 分钟",
+    "outcome": "能在飞书对话框通过简单 Prompt 驱动 Agent 产出分镜连贯的 AI 短片。",
+    "href": "https://zhuanlan.zhihu.com/p/2005739411795645153",
+    "source": "火山引擎实战",
+    "quality": 3,
+    "batch": 12
+  },
+  {
+    "level": "实战",
+    "title": "智能硬件联动：像素时钟 Ulanzi 实时看板配置",
+    "description": "将 OpenClaw 的任务成功/报错状态实时同步至桌面像素显示屏。",
+    "duration": "20 分钟",
+    "outcome": "打造沉浸式「具身智能」办公环境，无需看手机即可获知后台 Agent 工作状态。",
+    "href": "https://github.com/lubeda/EsphoMaTrix",
+    "source": "EsphoMaTrix Plugin",
+    "quality": 3,
+    "batch": 12
+  }
+  {
+    "level": "实战",
+    "title": "具身智能：OpenClaw × VisionClaw 智能眼镜联动",
+    "description": "通过 Meta Ray-Ban 眼镜实时回传第一视角，Gemini 指导 Agent 执行动作。",
+    "duration": "60 分钟",
+    "outcome": "实现「眼睛看、嘴巴说、Agent 做」的具身化交互，如：看着冰箱让 AI 加入购物清单。",
+    "href": "https://github.com/sseanliu/VisionClaw",
+    "source": "SSEANLIU Github",
+    "quality": 3,
+    "batch": 13
+  },
+  {
+    "level": "进阶",
+    "title": "Home Assistant 深度融合：Assist API 极简控制",
+    "description": "利用 homeassistant-assist 技能，将自然语言指令直达 HA 内置 NLU。",
+    "duration": "20 分钟",
+    "outcome": "能通过 OpenClaw 实现区域感知的家电控制，比传统实体 ID 匹配快 2 倍且更省 Token。",
+    "href": "https://github.com/DevelopmentCats/homeassistant-assist",
+    "source": "DevelopmentCats",
+    "quality": 3,
+    "batch": 13
+  },
+  {
+    "level": "实战",
+    "title": "全场景智能家居：OpenClaw IoT 环境感知技能",
+    "description": "集成米家、HomeKit 及 MQTT 协议，让 AI 实时响应物理环境变化。",
+    "duration": "45 分钟",
+    "outcome": "建立一套「传感器触发 -> Agent 分析 -> 动作执行」的闭环家庭自动化工作流。",
+    "href": "https://github.com/topics/mihome",
+    "source": "Github Topics",
+    "quality": 2,
+    "batch": 13
+  },
+  {
+    "level": "入门",
+    "title": "5 分钟上手：OpenClaw 云端白嫖部署攻略",
+    "description": "利用 Google Colab 或 Railway 零成本拉起网关，快速体验核心功能。",
+    "duration": "5 分钟",
+    "outcome": "不需要本地硬件即可拥有一个 24h 在线的 AI 助手，最快速度跑通第一个工作流。",
+    "href": "https://zhuanlan.zhihu.com/p/2004949782918104344",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 13
+  }
+  {
+    "level": "进阶",
+    "title": "多 Agent 隔离与身份路由配置指南",
+    "description": "通过 bindings 与独立 workspace 建立多角色分工体系，避免数据与记忆混淆。",
+    "duration": "30 分钟",
+    "outcome": "能在一个 Gateway 下运行财务、内容、运维等多个不同人格的专业 Agent。",
+    "href": "https://zhuanlan.zhihu.com/p/2007421802360612433",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "进阶",
+    "title": "Docker Sandbox：Agent 安全执行加固方案",
+    "description": "配置 agents.defaults.sandbox 开启容器化沙箱，实现高权限命令的物理隔离。",
+    "duration": "20 分钟",
+    "outcome": "确保 Agent 执行危险操作时（如 Prompt Injection）宿主机文件系统不受影响。",
+    "href": "https://gist.github.com/smallnest/c5c13482740fd179e40070e620f66a52",
+    "source": "GitHub Gist",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "实战",
+    "title": "企业级监控：基于 OpenClaw 的多 Agent 运维矩阵",
+    "description": "让 8 个子智能体各司其职，处理日志分析、自动排障与安防审计闭环。",
+    "duration": "50 分钟",
+    "outcome": "建立一套「自动扫描-风险识别-自动修复-报告推送」的无人值守运维生产线。",
+    "href": "https://zhuanlan.zhihu.com/p/2006906353336218607",
+    "source": "知乎技术解析",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "实战",
+    "title": "多智能体内容工厂：全自动小红书/公众号流水线",
+    "description": "在 Discord 中编排研究、写作、设计三个智能体，实现 15 分钟一套成稿。",
+    "duration": "40 分钟",
+    "outcome": "能通过简单指令驱动多个 Agent 协作产出高质量配图文案，大幅提升内容产效率。",
+    "href": "https://github.com/AlexAnys/opencrew",
+    "source": "OpenCrew GitHub",
+    "quality": 3,
+    "batch": 10
+  }
+  {
+    "level": "进阶",
+    "title": "CVE-2026-25253 防范：OpenClaw 安全硬化实战",
+    "description": "针对一键远程代码执行漏洞的深度加固，涵盖 WebSocket 源校验与 Token 认证。",
+    "duration": "15 分钟",
+    "outcome": "能通过 openclaw security audit 闭环修复网格暴露风险，确保网关不被未授权接管。",
+    "href": "https://github.com/openclaw/openclaw/discussions/25720",
+    "source": "OpenClaw 社区",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "实战",
+    "title": "智能体思想钢印：植入 Zero-Trust 安全实践指南",
+    "description": "慢雾科技出品，将安全规则作为「长期记忆」喂给 Agent，实现行为层自动拦截。",
+    "duration": "20 分钟",
+    "outcome": "让 Agent 在执行高危 Bash 命令前自主触发红线阻断，防御供应链投毒与命令注入。",
+    "href": "https://github.com/slowmist/openclaw-security-practice-guide",
+    "source": "SlowMist Github",
+    "quality": 3,
+    "batch": 11
+  }
+  {
+    "level": "入门",
+    "title": "OpenClaw 101：7 天掌握你的 AI 私人助理",
+    "description": "由社区整理的系统化学习路径，每天一个主题，从安装到自动化闭环。",
+    "duration": "1 周",
+    "outcome": "能从零建立一个 24/7 在线、具备多渠道沟通能力的私人 AI 助手。",
+    "href": "https://openclaw101.dev",
+    "source": "OpenClaw 101",
+    "quality": 3,
+    "batch": 12
+  }
+  {
+    "level": "实战",
+    "title": "具身智能：OpenClaw × Ulanzi TC001 像素屏联动",
+    "description": "利用 EsphoMaTrix 插件将 Agent 的运行状态与通知推送到桌面像素屏。",
+    "duration": "30 分钟",
+    "outcome": "实现物理层面的任务反馈，让 AI 助手具备实体化「状态指示灯」。",
+    "href": "https://github.com/lubeda/EsphoMaTrix",
+    "source": "GitHub",
+    "quality": 3,
+    "batch": 13
+  }
+  {
+    "level": "实战",
+    "title": "AI 漫剧全流程：从单图生成到分镜视频",
+    "description": "集成 Seedance 2.0 实现「模型提主角-脚本扩充-分镜生成」的一站式工作流。",
+    "duration": "45 分钟",
+    "outcome": "能在一个 Agent 频道中通过自然语言指令快速产出高一致性的商业级 AI 漫剧。",
+    "href": "https://zhuanlan.zhihu.com/p/2011832169308391153",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 14
+  }
+  {
+    "level": "实战",
+    "title": "零基础视频流：OpenClaw + Remotion 自动化成片",
+    "description": "无需人工剪辑，利用 Skill 驱动 React 渲染框架从数据源直接生成短视频。",
+    "duration": "30 分钟",
+    "outcome": "实现「文案-音频-渲染-导出」的全自动闭环（单片成本仅一毛钱）。",
+    "href": "https://zhuanlan.zhihu.com/p/2006112392375996793",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 14
+  }
+  {
+    "level": "进阶",
+    "title": "多 Agent 隔离与身份路由配置指南",
+    "description": "通过 bindings 与独立 workspace 建立多角色分工体系，避免数据与记忆混流。",
+    "duration": "30 分钟",
+    "outcome": "能在一个 Gateway 下运行财务、内容、运维等多个不同人格的专业 Agent。",
+    "href": "https://zhuanlan.zhihu.com/p/2007421802360612433",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "进阶",
+    "title": "Docker Sandbox：Agent 安全执行加固方案",
+    "description": "配置 agents.defaults.sandbox 开启容器化沙箱，实现高权限命令的物理隔离。",
+    "duration": "20 分钟",
+    "outcome": "确保 Agent 执行危险操作时（如命令注入）宿主机文件系统不受任何破坏性影响。",
+    "href": "https://gist.github.com/smallnest/c5c13482740fd179e40070e620f66a52",
+    "source": "GitHub Gist",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "实战",
+    "title": "企业级监控：基于 OpenClaw 的多 Agent 运维矩阵",
+    "description": "让 8 个子智能体各司其职，处理日志分析、自动排障与安防审计闭环。",
+    "duration": "50 分钟",
+    "outcome": "建立一套「自动扫描-风险识别-自动修复-推送报告」的无人值守运维生产线。",
+    "href": "https://zhuanlan.zhihu.com/p/2006906353336218607",
+    "source": "知乎技术解析",
+    "quality": 3,
+    "batch": 10
+  },
+  {
+    "level": "实战",
+    "title": "智能体思想钢印：植入 Zero-Trust 安全实践指南",
+    "description": "慢雾科技出品，将安全规则作为「长期记忆」喂给 Agent，实现行为层自检。",
+    "duration": "20 分钟",
+    "outcome": "让 Agent 在执行高危 Bash 命令前自主触发红线阻断，防御供应链投毒攻击。",
+    "href": "https://github.com/slowmist/openclaw-security-practice-guide",
+    "source": "SlowMist Github",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "进阶",
+    "title": "CVE-2026-25253 防范：OpenClaw 安全硬化 checklist",
+    "description": "针对一键远程代码执行漏洞的深度加固，涵盖跨站请求与 Token 验证。",
+    "duration": "15 分钟",
+    "outcome": "能通过 openclaw security audit 闭环修复网格暴露风险，确保网关管理权安全。",
+    "href": "https://github.com/openclaw/openclaw/discussions/25720",
+    "source": "OpenClaw 社区",
+    "quality": 3,
+    "batch": 11
+  },
+  {
+    "level": "入门",
+    "title": "hello-claw：首个体系化 OpenClaw 中文开源教程",
+    "description": "DataWhale 发起的零基础领养指南，涵盖从环境搭建到第一个 Skill 调用的全过程。",
+    "duration": "15 分钟",
+    "outcome": "快速完成国内网络环境优化下的 OpenClaw 部署并跑通首个 AI 工作流场景。",
+    "href": "https://github.com/datawhalechina/hello-claw",
+    "source": "DataWhale",
+    "quality": 3,
+    "batch": 12
+  },
+  {
+    "level": "实战",
+    "title": "具身智能：OpenClaw × Ulanzi TC001 像素屏联动",
+    "description": "利用 IoT 插件将 Agent 的运行进度、消息通知实时同步至桌面像素显示器。",
+    "duration": "30 分钟",
+    "outcome": "打造沉浸式「具身化」办公反馈环境，实现 24h 后台任务状态的无感监控。",
+    "href": "https://github.com/lubeda/EsphoMaTrix",
+    "source": "GitHub",
+    "quality": 3,
+    "batch": 13
+  },
+  {
+    "level": "实战",
+    "title": "AI 漫剧全流程：从单图生成到分镜视频剪辑",
+    "description": "集成 Seedance 2.0 实现「一图提主角-脚本扩充-分镜生成」的一站式成片流。",
+    "duration": "45 分钟",
+    "outcome": "能在飞书/Discord 入口通过自然语言指令快速产出高一致性的商业级 AI 漫剧短视频。",
+    "href": "https://zhuanlan.zhihu.com/p/2011832169308391153",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 14
+  },
+  {
+    "level": "实战",
+    "title": "零基础视频号：OpenClaw + Remotion 自动化成片",
+    "description": "配合 React 渲染框架 15 分钟生成 60s 短视频，告别剪映/PR 等重度软件。",
+    "duration": "30 分钟",
+    "outcome": "实现「选题-配音-渲染-导出」全自动流水线，每条视频制作成本仅需一毛钱。",
+    "href": "https://zhuanlan.zhihu.com/p/2006112392375996793",
+    "source": "知乎实战",
+    "quality": 3,
+    "batch": 14
+  }
