@@ -85,20 +85,46 @@ date -u -d '+8 hours' '+%H:%M %Y-%m-%d'
 分配完把该条目 status 改为 "done"，并记录分配时间和去向。
 无pending条目跳过。
 
-## 任务5：003健康监控（每次心跳检查，重要！）
+## 任务5：全员监工（每次心跳必查，旭要求）
 
-检查003（@linglingsan_003_bot）是否在正常工作：
-1. 用 `sessions_list(kinds=["agent"], activeMinutes=30)` 查003的session
-2. 如果003有活跃session → 检查最新消息，记录进度到当日日记
-3. 如果003无活跃session → 立刻用 `sessions_send(sessionKey="agent:003:main")` 唤醒003，让它继续下一个未完成的分类
-4. 如果003报错 → 记录错误到 `team-inbox/pitfalls.md`
+001作为监工，每30分钟检查002/003/004有没有在干活。停了就推，不行就让重做。
 
-003当前长期任务：OpenClaw生态玩法情报库（8个分类采集）
-- 已完成：money ✅、content ✅
-- 进行中：coding
-- 未开始：agents、enterprise、tutorials、ecosystem、creative
+### 002监控
+检查002状态：
+1. `sessions_list(kinds=["agent"], activeMinutes=30)` 查002有没有活跃session
+2. 有活跃session → 记录进度
+3. 无活跃session → 立刻发任务：
+   ```
+   sessions_send("agent:002:main", "002继续干活：
+   - 检查 /root/.openclaw-002/workspace/pipeline/ 有没有待发布的文章
+   - 如果有 → 确认封面图 → 推草稿箱
+   - 没有 → 根据今日热点写一篇新文章
+   完成后用脚本发消息给旭汇报")
+   ```
 
-**不要让003闲着，今晚跑一整夜。**
+### 003监控
+003当前长期任务：OpenClaw生态玩法情报库（8个分类）
+1. 查003有没有活跃session
+2. 无活跃 → 发任务让003继续下一个未完成分类
+3. 分类进度追踪（更新这里）：
+   - 全部8个分类已完成 ✅（2026-03-12）
+   - 现在任务：持续更新，监控新动态
+
+### 004监控
+004当前任务：xiaolongxia.app场景案例库
+1. 查004有没有活跃session
+2. 无活跃 → 发任务：
+   ```
+   sessions_send("agent:004:main", "004读任务队列.md，继续下一个未完成的案例，
+   完成后推仓库，然后用脚本发消息给旭汇报")
+   ```
+3. 检查 /root/.openclaw-004/workspace/任务队列.md 进度是否有推进
+
+### 汇报要求
+- 要求各Agent每完成一项任务主动发消息给旭（telegram:8526440826）
+- 如果发现某Agent停了超过2个心跳周期（1小时）没动，记录到 team-inbox/pitfalls.md
+
+**旭睡觉时也要监工，不能停。**
 
 ## 任务6：踩坑→铁律转化（每次心跳检查）
 

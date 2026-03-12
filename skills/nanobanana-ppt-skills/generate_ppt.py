@@ -14,7 +14,7 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any, Dict, List, Optional
 
-# dotenv not needed - API key is hardcoded for qwen-image-max
+# dotenv not needed - API key is hardcoded for Nano Banana 2 (gemini-3.1-flash-image-preview)
 
 
 # =============================================================================
@@ -35,7 +35,7 @@ TEMPLATE_END_MARKER = "## "
 # =============================================================================
 
 def find_and_load_env() -> bool:
-    """No-op: API key is built-in for qwen-image-max."""
+    """No-op: API key is built-in for Nano Banana 2 (gemini-3.1-flash-image-preview)."""
     return True
 
 
@@ -131,7 +131,6 @@ Container material must be frosted glass with blur effect:
 # =============================================================================
 
 QWEN_API_KEY = "sk-3e086717facd4d88a573260d127a15b0"
-QWEN_URL = "https://dashscope.aliyuncs.com/api/v1/services/aigc/multimodal-generation/generation"
 
 # 分辨率映射（16:9）
 RESOLUTION_MAP = {
@@ -147,17 +146,17 @@ def generate_slide(
     resolution: str = DEFAULT_RESOLUTION,
 ) -> Optional[str]:
     """
-    Generate a single PPT slide image using qwen-image-max API.
+    Generate a single PPT slide image using Nano Banana 2 (gemini-3.1-flash-image-preview) API.
     ¥0.04/张，替代 Gemini。
     """
     import urllib.request
     import urllib.error
 
     size = RESOLUTION_MAP.get(resolution, "1664*936")
-    print(f"  生成第 {slide_number} 页 (qwen-image-max, {size})...")
+    print(f"  生成第 {slide_number} 页 (Nano Banana 2 (gemini-3.1-flash-image-preview), {size})...")
 
     payload = {
-        "model": "qwen-image-max",
+        "model": "Nano Banana 2 (gemini-3.1-flash-image-preview)",
         "input": {
             "messages": [{"role": "user", "content": [{"text": prompt}]}]
         },

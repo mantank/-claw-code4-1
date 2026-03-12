@@ -45,7 +45,7 @@
 - 公众号文章配图永远用 `nanobanana-ppt-skills`，4种风格：白板马克笔/渐变毛玻璃/矢量插画/手绘涂鸦
 - 每次生成前必须先推荐风格供旭选择，不得直接生成
 - 禁止用 nano-banana-ppt、nano-banana-pro、sketch-illustration、Gemini 图片 API
-- 封面尺寸：1664*928（16:9），API: qwen-image-max
+- 封面尺寸：1664*928（16:9），API: gemini-3.1-flash-image-preview（Nano Banana 2）
 
 ## 📋 任务下发规范（2026-03-04 旭要求）
 - 每次让002执行任务，必须在 sessions_send 里写清楚：①做什么 ②用哪个文件 ③输出到哪里 ④完成后汇报给谁
@@ -124,3 +124,8 @@
 - ✅ `2026-03-09-深度思考总结.md`
 - 旭存到本地后看不懂英文文件名，不知道是什么内容
 - 这个问题已经被提醒过，必须改正
+
+## openclaw.json 配置修改规则（2026-03-12 踩坑）
+- 改模型：写 `agents.defaults.model.primary`，不要在顶层加 `"model"` 键
+- 顶层加不认识的键会导致Gateway启动报错崩溃
+- 改完配置先 `openclaw status` 验证，不要直接重启

@@ -11,7 +11,7 @@
 ### 1b. 小红书封面/内容图用 Qwen-Image-Max 手绘涂鸦风
 - 日期：2026-03-06
 - 触发：旭否定了Auto-Redbook渲染的HTML卡片（"太垃圾了"），确认Qwen-Image-Max的doodle-infographic风格OK
-- 规则：小红书图片用 qwen-image-max 模型 + sketchnote doodle infographic 风格生成，不用HTML渲染技能
+- 规则：小红书图片用 gemini-3.1-flash-image-preview（Nano Banana 2） 模型 + sketchnote doodle infographic 风格生成，不用HTML渲染技能
 - 日期：2026-03-04
 - 触发：旭多次否定水彩/日系/卡通风格
 - 规则：生成前先推荐风格让旭选，不得直接生成
