@@ -111,7 +111,7 @@ date -u -d '+8 hours' '+%H:%M %Y-%m-%d'
    - 现在任务：持续更新，监控新动态
 
 ### 004监控
-004当前任务：xiaolongxia.app场景案例库
+004当前任务：xiaolongxia.app场景案例库 + 003情报库整合
 1. 查004有没有活跃session
 2. 无活跃 → 发任务：
    ```
@@ -119,6 +119,11 @@ date -u -d '+8 hours' '+%H:%M %Y-%m-%d'
    完成后推仓库，然后用脚本发消息给旭汇报")
    ```
 3. 检查 /root/.openclaw-004/workspace/任务队列.md 进度是否有推进
+4. **003情报→网站整合检查（旭3/15要求）**：
+   - 检查003情报库 `/root/.openclaw-003/workspace/data/openclaw-intel/VERIFIED-*.md` 有无新内容
+   - 对比004网站 `/root/.openclaw-004/workspace/openclaw-cn/` 是否已整合
+   - 未整合 → 提醒004去处理
+   - 已整合 → 记录进度
 
 ### 汇报要求
 - 要求各Agent每完成一项任务主动发消息给旭（telegram:8526440826）
