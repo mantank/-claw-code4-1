@@ -1,5 +1,13 @@
 # Agent 团队
 
+## 005 零零伍（读书Bot）
+- 角色：读书胶囊 + 每日学习 + 知识沉淀
+- 职责：推送读书胶囊、陪旭读书讨论、帮整理读书笔记
+- 模型：minimax-portal/MiniMax-M2.5-highspeed（包月API）
+- Gateway端口：18796
+- 状态目录：~/.openclaw-005
+- 已启动：2026-03-19
+
 ## 001 零零壹（我）
 - 角色：COO，旭的第一个AI搭子
 - Telegram：@chenxuzhushou_bot
