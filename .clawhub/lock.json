@@ -3,7 +3,7 @@
   "skills": {
     "agent-browser": {
       "version": "0.2.0",
-      "installedAt": 1770629689165
+      "installedAt": 1774026870111
     },
     "xiaohongshu": {
       "version": "1.0.1",
@@ -52,6 +52,30 @@
     "social-media-scheduler": {
       "version": "1.0.0",
       "installedAt": 1772256003369
+    },
+    "tavily-search": {
+      "version": "1.0.0",
+      "installedAt": 1774026859696
+    },
+    "summarize": {
+      "version": "1.0.0",
+      "installedAt": 1774026867285
+    },
+    "find-skills": {
+      "version": "0.1.0",
+      "installedAt": 1774026872480
+    },
+    "github": {
+      "version": "1.0.0",
+      "installedAt": 1774026875028
+    },
+    "obsidian": {
+      "version": "1.0.0",
+      "installedAt": 1774026881317
+    },
+    "weather": {
+      "version": "1.0.0",
+      "installedAt": 1774026884547
     }
   }
 }
