@@ -24,3 +24,20 @@
 
 ## 废弃工具
 - Gemini旧key额度用完 / 即梦AI / Evolink旧key / 万相2.1
+
+## 微信公众号读取
+- 脚本：`/tmp/wechat_fetch.py`
+- 方法：Python urllib直接请求 + 正则提取 id="js_content" 区域
+- 不需要登录、不需要API Key、不需要Cookie
+- User-Agent要真实浏览器
+- 命令：`python3 /tmp/wechat_fetch.py "https://mp.weixin.qq.com/s/xxx"`
+- 抓取速度：约2-3秒一篇
+
+## 输出格式控制（output-formatter.py）
+旭可以直接说"输出成Excel/PPT/PDF"，我自动调用脚本生成。
+- 脚本：`/root/.openclaw/workspace/scripts/output-formatter.py`
+- Excel：`python3 output-formatter.py excel "标题" "内容(|分隔)"`
+- PPT：`python3 output-formatter.py pptx "标题" "内容"`
+- PDF：`python3 output-formatter.py pdf "标题" "内容"`
+- 旭说"做成飞书卡片" → 我整理成结构化内容后发飞书
+- 已安装：openpyxl, python-pptx, pandas, reportlab, python-docx

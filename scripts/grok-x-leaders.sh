@@ -13,7 +13,7 @@ RESPONSE=$(HTTPS_PROXY="$PROXY" HTTP_PROXY="$PROXY" \
   -d '{
     "model": "grok-4-1-fast-reasoning",
     "stream": false,
-    "input": [{"role": "user", "content": "Search X for the latest posts (past 12 hours) from these AI thought leaders: @karpathy (Andrej Karpathy), @DrJimFan (Jim Fan/NVIDIA), @emollick (Ethan Mollick), @ylecun (Yann LeCun), @AndrewYNg (Andrew Ng), @sama (Sam Altman), @swyx (swyx), @mattshumer_ (Matt Shumer), @skirano (Simon Willison). For each person who posted in the last 12 hours: 1) Their name 2) One-sentence Chinese summary of their most valuable post 3) The exact post URL 4) Why it matters to indie developers (one line, Chinese). Skip anyone who did not post. Output in Chinese, formatted as a clean numbered list."}],
+    "input": [{"role": "user", "content": "Search X for the latest posts (past 24 hours) from these AI thought leaders: @karpathy (Andrej Karpathy), @DrJimFan (Jim Fan/NVIDIA), @emollick (Ethan Mollick), @ylecun (Yann LeCun), @AndrewYNg (Andrew Ng), @sama (Sam Altman), @swyx (swyx), @mattshumer_ (Matt Shumer), @skirano (Simon Willison), @levelsio. For each person who posted in the last 24 hours: 1) Their name and handle 2) Full post content in Chinese (at least 3-5 sentences, include key details, quotes, data points) 3) The exact post URL (MUST include the full URL like https://x.com/username/status/123456) 4) Why it matters to indie developers (2-3 sentences in Chinese). Skip anyone who did not post. Format each result as:\n\n【@username】\n原文链接: https://x.com/xxx/status/xxx\n正文: (详细中文摘要，至少3-5句话)\n对独立开发者的意义: (2-3句话)\n\nOutput all in Chinese."}],
     "tools": [{"type": "x_search"}]
   }' 2>&1)
 
