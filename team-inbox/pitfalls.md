@@ -76,6 +76,13 @@
 - Skill: feishu-doc（读文档）/ feishu-doc-writer（写文档）
 - ⚠️ 这是第N次犯同样的错误，写进铁律不得再犯
 
+### 2026-03-22 isolated session冷启动导致cron timeout
+- **现象**：生财有术cron timeout 60s、30s均失败
+- **根因**：isolated session冷启动慢，极简单的消息任务也跑不完60秒
+- **解决**：该任务改为 `sessionTarget: "main"`，timeout 10s 足够
+- **教训**：极简单cron任务不要用isolated，main session更合适
+- **影响**：生财有术cron
+
 ### 2026-03-19 003和004长时间无响应
 - **现象**：heartbeat多次检测到003、004连续7小时以上无活动，发送任务也超时
 - **根因**：Agent进程可能已停止或gateway连接异常；003/004缺乏常规心跳任务维持活跃
