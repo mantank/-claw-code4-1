@@ -44,7 +44,7 @@ Skills are shared. Your setup is yours. Keeping them apart means you can update 
 - API Key: AIzaSyDHiKNnvz71qzDIzk-I5ZVdyAwb2vuRxqo
 - 赠送额度：$370
 - 到期：2026-05-10
-- 已接入模型：gemini-2.0-flash-exp-image-generation（图片生成）、gemini-2.5-flash（对话）
+- 已接入模型：gemini-3-pro-image-preview（图片生成，2026.3.22内置）、gemini-2.5-flash（对话）
 - Provider名称：google
 - 接口：https://generativelanguage.googleapis.com/v1beta/openai/
 - 图片生成调用：POST /v1beta/models/gemini-2.0-flash-exp-image-generation:generateContent?key=...
@@ -82,13 +82,16 @@ Add whatever helps you do your job. This is your cheat sheet.
 - 适合：白板风、信息图、公众号配图
 - 效果远超万相2.6的中文文字渲染
 
-### 图片生成（2026-03-11 切换到Google Gemini）
+### 图片生成（2026-03-23 更新）
 
-#### 主力：Nano Banana 2（Google Gemini，$370额度内）
-- **模型ID**: `gemini-3.1-flash-image-preview`
-- **Display Name**: Nano Banana 2
+#### 主力：Gemini 3 Pro Image（OpenClaw 内置）
+- **模型ID**: `google/gemini-3-pro-image-preview`
+- **配置**: `agents.defaults.imageGenerationModel.primary`（已写入 openclaw.json）
+- **说明**: 2026.3.22 起统一走内置 image_generate，不再用旧 nano-banana-pro skill
+
+#### 备选：直接调用 Gemini API
 - **API Key**: AIzaSyDHiKNnvz71qzDIzk-I5ZVdyAwb2vuRxqo
-- **接口**: 通过OpenClaw google provider，或直接调用：
+- **额度**: $370，到2026-05-10
 ```bash
 curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-image-preview:generateContent" \
   -H 'Content-Type: application/json' \
@@ -96,12 +99,6 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-i
   -X POST \
   -d '{"contents": [{"parts": [{"text": "你的prompt"}]}]}'
 ```
-- **额度**: $370，到2026-05-10
-- **备选**: `gemini-2.0-flash-exp-image-generation`（已在001配置中）
-
-#### Qwen图片生成（暂停，额度用完）
-- `qwen-image-max` — DashScope额度耗尽，暂不充值
-- 有中文文字需求时可考虑后续恢复
 
 #### 废弃模型
 - wanx2.1-t2i-turbo：中文字渲染差
