@@ -5,7 +5,7 @@
 GROK_API="https://api.x.ai/v1/chat/completions"
 GROK_KEY="xai-4YPImuiPnmESoKUHoKBbX7Mp1yX1IojfdBpSghrrA9ApexIkIaHgBZBFrhhnnsDFn5xQPPnEBQ9HObuG"
 PROXY="http://127.0.0.1:7890"
-BRAVE_KEY="BSAn1nnA-SX7LvL6KzI-S6w8O7bX8EV2b5NJxMqKt9o"
+BRAVE_KEY="BSA61abs6MtSz8nRiSdAGqiKxuI1zwn"
 
 echo "=== BRIEFING_START ==="
 echo "DATE: $(TZ='Asia/Shanghai' date '+%Y-%m-%d %H:%M')"
@@ -22,7 +22,7 @@ curl -s "https://api.search.brave.com/res/v1/web/search" \
   --data-urlencode "q=AI工具 新发布 2026 OpenClaw DeepSeek Claude Cursor" \
   --data-urlencode "count=5" \
   --data-urlencode "freshness=pd" \
-  --data-urlencode "search_lang=zh" 2>/dev/null | python3 -c "
+  --data-urlencode "search_lang=zh-hans" 2>/dev/null | gzip -dc | python3 -c "
 import sys,json
 try:
     d=json.load(sys.stdin)
@@ -47,7 +47,7 @@ curl -s "https://api.search.brave.com/res/v1/web/search" \
   --data-urlencode "q=OpenClaw 小龙虾 AI Agent 独立开发 副业" \
   --data-urlencode "count=5" \
   --data-urlencode "freshness=pd" \
-  --data-urlencode "search_lang=zh" 2>/dev/null | python3 -c "
+  --data-urlencode "search_lang=zh-hans" 2>/dev/null | gzip -dc | python3 -c "
 import sys,json
 try:
     d=json.load(sys.stdin)
@@ -72,7 +72,7 @@ curl -s "https://api.search.brave.com/res/v1/web/search" \
   -G \
   --data-urlencode "q=数字生命卡兹克 OR 宝玉xp OR 归藏 AI OpenClaw 公众号" \
   --data-urlencode "count=5" \
-  --data-urlencode "freshness=pw" 2>/dev/null | python3 -c "
+  --data-urlencode "freshness=pw" 2>/dev/null | gzip -dc | python3 -c "
 import sys,json
 try:
     d=json.load(sys.stdin)
