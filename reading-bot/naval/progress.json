@@ -1,13 +1,38 @@
 {
   "book": "纳瓦尔宝典 (The Almanack of Naval Ravikant)",
   "total_capsules": 25,
-  "current_day": 14,
+  "current_day": 16,
   "started": true,
   "start_date": "2026-03-17",
   "reviews": [
     {
       "day": 12,
       "review_day": 14,
+      "asked": true
+    },
+    {
+      "day": 13,
+      "review_day": 15,
+      "asked": true
+    },
+    {
+      "day": 11,
+      "review_day": 15,
+      "asked": true
+    },
+    {
+      "day": 8,
+      "review_day": 15,
+      "asked": true
+    },
+    {
+      "day": 14,
+      "review_day": 16,
+      "asked": true
+    },
+    {
+      "day": 9,
+      "review_day": 16,
       "asked": true
     }
   ],

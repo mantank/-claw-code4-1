@@ -146,6 +146,11 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-i
 - 计费: 按实际 token 用量，Sonnet 4.6 约 $3/$15 per M token (in/out)
 - 用量查看: https://openrouter.ai/activity
 
+### 技能安装命令变更（2026.3.22起）
+- 旧命令：`clawhub install <skill>` ❌ 已废弃
+- 新命令：`openclaw skills install <skill>` ✅
+- 注意：nano-banana-pro 已移除，改用内置 gemini 图片生成
+
 ### 飞书
 - App ID: cli_a908765086b85bc6
 - App Secret: 4HZ5OiOueIU1PYCy59T48fpYvomTWELl
