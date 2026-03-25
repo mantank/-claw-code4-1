@@ -154,3 +154,9 @@
 - 002/003/004 在11:48全员无活跃session
 - 可能是定时任务未触发或session已过期
 - 需要确认：这些Agent的cron任务有没有正常注册
+
+### 2026-03-25 流水线Cron重复发送任务通知给002
+- 现象：09:00 cron触发时，重复向002发送任务通知，导致002回复"已在09:00完成，无需重复"
+- 根因：cron触发后既向002发任务，又被main agent session处理（main session也是heartbeat触发），导致同一任务被处理两次
+- 解决：cron触发后，main session不应再重复处理同一任务；或cron通过sessions_send定向发给002，而不是通过heartbeat main session处理
+- 影响：002收到重复通知，进入等待循环
