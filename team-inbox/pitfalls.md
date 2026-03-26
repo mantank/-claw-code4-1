@@ -160,3 +160,10 @@
 - 根因：cron触发后既向002发任务，又被main agent session处理（main session也是heartbeat触发），导致同一任务被处理两次
 - 解决：cron触发后，main session不应再重复处理同一任务；或cron通过sessions_send定向发给002，而不是通过heartbeat main session处理
 - 影响：002收到重复通知，进入等待循环
+
+### 坑19：sessions_send路由超时（持续性）
+- 发生时间：2026-03-26
+- 影响：002/003均反映消息超时未送达，但目标agent实际在线（心跳正常）
+- 原因：sessions_send本身有路由延迟/丢包机制，不是目标agent挂了
+- 应对：改用共享文件 relay 机制（写文件到对方workspace，agent心跳时主动读）
+- 优先级：中（不影响任务执行，但agent间通信不可靠）

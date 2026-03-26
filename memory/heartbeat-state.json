@@ -1,11 +1,11 @@
 {
   "lastChecks": {
-    "version": 1774062000,
+    "version": 1774458409,
     "pitfalls": 1774062000,
     "skills": 1774062000,
-    "scheduleReminder": 1774092605,
-    "agentMonitor": 1774112477,
+    "scheduleReminder": 1774458409,
+    "agentMonitor": 1774458409,
     "memoryCleanup": 1773597720
   },
-  "notes": "01:01 周日。睡眠时间，全员静默。版本ALREADY_NOTIFIED。"
+  "notes": "01:05 周四。睡眠时间，全员静默。版本2026.3.24新版本待通知旭。002/003/004唤醒超时（已知问题，坑19）。"
 }
