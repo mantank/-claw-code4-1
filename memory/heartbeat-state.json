@@ -3,9 +3,8 @@
     "version": 1774750270,
     "pitfalls": 1774062000,
     "skills": 1774062000,
-    "scheduleReminder": 1774750270,
-    "agentMonitor": 1774750270,
-    "memoryCleanup": 1773597720
+    "scheduleReminder": 1774923000,
+    "agentMonitor": 1774930380
   },
-  "notes": "10:52 周五。002已完成B版草稿箱推送（media_id: rh5JTgXJ29Ai4E1Fb8Y2zzQx6oJ1VLP1QjtCghRnPSHQTLnwRctceRN0EDvXsGTU）。草稿箱38篇。旭在白班（物业），等旭选版本。003/004静默运行中。"
+  "notes": "12:12 周二。Cron全绿（生财有术11:30 ✅已修复）。002 idle约3h，正常待命。003/004维护模式。14:30 pipeline不存在（只有9点/19点两档）。"
 }
