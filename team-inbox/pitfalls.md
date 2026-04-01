@@ -161,6 +161,12 @@
 - 解决：cron触发后，main session不应再重复处理同一任务；或cron通过sessions_send定向发给002，而不是通过heartbeat main session处理
 - 影响：002收到重复通知，进入等待循环
 
+### 坑20：生财有术Cookie失效（2026-04-01）
+- 现象：API返回401 Unauthorized，Cookie过期
+- 影响：生财有术精华帖推送Cron失效
+- 解决：旭需重新登录获取新Cookie（zsxq_access_token）
+- 优先级：高（影响每日推送）
+
 ### 坑19：sessions_send路由超时（持续性）
 - 发生时间：2026-03-26
 - 影响：002/003均反映消息超时未送达，但目标agent实际在线（心跳正常）
@@ -185,4 +191,24 @@
 - **解决**：需换模型或重建002的验证流程，所有推送必须附带pipeline文件截图
 - **影响**：当前进行中，14:47 sessions_send超时未响应
 - **状态**：已通知旭，等旭处理
+
+
+### 2026-04-01 sessions_send到主session超时
+- 现象：cron和001用sessions_send往agent:main:main发消息都timeout，但Telegram路由正常
+- 根因：可能是主session处于心跳poll状态，无法及时响应sessions_send
+- 解决：待排查，可能需要通过不同channel路由或检查主session状态
+- 影响：002→001/旭的通知链路中断
+
+
+## 2026-04-01 通信问题：sessions_send持续超时
+
+- 问题：向002发送消息时，sessions_send持续gateway timeout（32秒）
+- 影响：无法实时推送任务，claw-code文章打回无法及时通知
+- 尝试的解决方案：
+  - sessions_send → 超时
+  - Telegram bot @linglinger_002_bot → "chat not found" (400)
+- 临时方案：写文件给002，cron驱动002下次启动时读取
+  - 写文件：/root/.openclaw-002/workspace/pipeline/brief.md（更新）
+  - 期望：002下次cron/session时读取
+- 根本解决：待查，可能是gateway绑定问题（lan vs localhost）
 
