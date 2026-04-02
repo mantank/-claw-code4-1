@@ -1,0 +1,13 @@
+{
+  "session_id": "1775141264-pggjae",
+  "started_at": "2026-04-02T14:47:44Z",
+  "model": "unknown",
+  "turns": 14,
+  "usage": {"input_tokens": 0, "output_tokens": 0, "total_tokens": 0},
+  "context": {"used_percent": 0},
+  "compactions": 0,
+  "files_modified": [],
+  "tasks_completed": [],
+  "upgrade_modules_completed": [],
+  "last_active": "2026-04-02T14:47:44Z"
+}

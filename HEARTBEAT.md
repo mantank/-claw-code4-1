@@ -35,6 +35,13 @@ date -u -d '+8 hours' '+%H:%M %Y-%m-%d'
 - 今天有踩坑未记录？→ 补写到memory/今日日记
 - PROJECT_STATUS.md是否超过3天未更新？→ 主动更新
 - 连续2次心跳没有实质产出？→ 主动找一件事干
+- **Cost追踪**：调用 `session_status`，解析 input/output tokens，写入 `memory/cost-log.md`（格式见cost-log文件）
+  - 如果当日第一条记录，需要加表头 `| 时间 | 输入 | 输出 | 累计输入 | 累计输出 | 备注 |`
+  - 累计值从上条记录续接
+- **Compaction检查**：调用 `session_status`，解析 context 百分比
+  - 读 `memory/compaction-log.md` 尾行作为基准
+  - 如果 context > 80% → 写入警告行
+  - 如果 compactions 次数增加 → 记录 compaction 触发事件
 
 如果有可以主动做的事，去做，做完后简报通知旭。
 如果没有，跳过这个任务。
@@ -140,3 +147,45 @@ date -u -d '+8 hours' '+%H:%M %Y-%m-%d'
 5. 完成后在当日日记记录："铁律更新：新增X条到rules.md"
 
 无新条目跳过。
+
+## 任务7：claw-code自我升级（每心跳推进一个模块）
+
+**当前状态：第三阶段 3.2完成，3.3待做（自监控仪表盘）**
+
+读 `upgrade-proposals/001-clawcode-patterns.md` 获取当前状态。
+
+### 第三阶段任务
+| 序号 | 主题 | 内容 |
+|------|------|------|
+| 3.1 | Quality Gate | Basic/Standard/Strict 三级操作授权 |
+| 3.2 | Streaming协议 | 6步事件流标准 |
+| 3.3 | 自监控仪表盘 | 整合 cost+compaction+workspace 报告 |
+| 3.4 | 记忆互斥系统 | 跨session去重记录 |
+| 3.5 | 工具/命令路由 | 基于意图的智能路由 |
+
+### 执行协议
+1. 找到当前状态（第三阶段当前序号）
+2. 读取相关源码（repos/claw-code-parity/src/对应文件）
+3. 分析设计模式，转化为OpenClaw可落地的改进
+4. 执行升级（改文件、配置、SKILL等）
+5. 验证改动有效
+6. 更新 `001-clawcode-patterns.md` 状态
+7. 发送汇报到 Telegram
+
+### 汇报发送方式
+```bash
+curl -s -X POST "https://api.telegram.org/bot8560860105:AAHvzn2r1z73KCEIRYIoOrIEUHIPEGvaA0o/sendMessage" \
+  -d "chat_id=8526440826" \
+  -d "text=【001自我升级汇报】主题: xxx
+
+✅ 学到什么：xxx
+✅ 改了哪里：xxx
+✅ 验证结果：xxx
+📊 进度：第三阶段 N/5
+🚀 下次心跳：xxx" 2>&1 | grep -q '"ok":true' && echo '发送成功'
+```
+
+### 自我进化判断标准
+- 阶段二完成（10个模块全升级）→ ✅ 已达成
+- 阶段三完成 → 进行中
+- 阶段四完成 → 自我进化达成

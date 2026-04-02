@@ -1,11 +1,11 @@
 {
   "lastChecks": {
-    "version": 1774996800,
-    "cron": 1774996800,
+    "version": 1775066400,
+    "cron": 1775066400,
     "pitfalls": 1774062000,
-    "skills": 1774996800,
+    "skills": 1775066400,
     "scheduleReminder": 1774923000,
-    "agentMonitor": 1774996800
+    "agentMonitor": 1775066400
   },
-  "notes": "07:38 周三。Crons全绿。002/003/004全idle（旭白班）。版本ALREADY_NOTIFIED，同意等4/8升级。无异常。"
+  "notes": "01:40 周四。002/003/004全idle（深夜）。版本新：2026.4.1，NEW_VERSION但深夜不通知。明日上班后通知旭。"
 }

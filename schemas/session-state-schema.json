@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "OpenClaw Session State",
+  "description": "Structured session state schema inspired by claw-code session_store.py",
+  "type": "object",
+  "required": ["session_id", "started_at", "model", "turns"],
+  "properties": {
+    "session_id": {
+      "type": "string",
+      "description": "Unique session identifier"
+    },
+    "started_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Session start time (ISO 8601)"
+    },
+    "model": {
+      "type": "string",
+      "description": "Primary model used in this session"
+    },
+    "turns": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Number of conversation turns in this session"
+    },
+    "usage": {
+      "type": "object",
+      "properties": {
+        "input_tokens": {"type": "integer"},
+        "output_tokens": {"type": "integer"},
+        "total_tokens": {"type": "integer"}
+      }
+    },
+    "context": {
+      "type": "object",
+      "properties": {
+        "used_percent": {"type": "integer", "minimum": 0, "maximum": 100},
+        "used_k": {"type": "string"},
+        "limit_k": {"type": "string"}
+      }
+    },
+    "compactions": {
+      "type": "integer",
+      "description": "Number of context compactions performed"
+    },
+    "files_modified": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "List of files modified during this session"
+    },
+    "tasks_completed": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "Tasks completed during this session"
+    },
+    "upgrade_modules_completed": {
+      "type": "array",
+      "items": {"type": "string"},
+      "description": "claw-code upgrade modules completed (e.g. 2.1, 2.2)"
+    },
+    "last_active": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last activity timestamp"
+    }
+  }
+}
