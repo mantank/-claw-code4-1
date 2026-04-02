@@ -150,27 +150,18 @@ date -u -d '+8 hours' '+%H:%M %Y-%m-%d'
 
 ## 任务7：claw-code自我升级（每心跳推进一个模块）
 
-**当前状态：第三阶段 3.2完成，3.3待做（自监控仪表盘）**
+**当前状态：全部4个阶段已完成 ✅（Phase1 ✅ Phase2 ✅ Phase3 ✅ Phase4 ✅）**
 
 读 `upgrade-proposals/001-clawcode-patterns.md` 获取当前状态。
 
-### 第三阶段任务
+### 第四阶段任务（已完成）
 | 序号 | 主题 | 内容 |
 |------|------|------|
-| 3.1 | Quality Gate | Basic/Standard/Strict 三级操作授权 |
-| 3.2 | Streaming协议 | 6步事件流标准 |
-| 3.3 | 自监控仪表盘 | 整合 cost+compaction+workspace 报告 |
-| 3.4 | 记忆互斥系统 | 跨session去重记录 |
-| 3.5 | 工具/命令路由 | 基于意图的智能路由 |
-
-### 执行协议
-1. 找到当前状态（第三阶段当前序号）
-2. 读取相关源码（repos/claw-code-parity/src/对应文件）
-3. 分析设计模式，转化为OpenClaw可落地的改进
-4. 执行升级（改文件、配置、SKILL等）
-5. 验证改动有效
-6. 更新 `001-clawcode-patterns.md` 状态
-7. 发送汇报到 Telegram
+| 4.1 | 自我调参 | self-tuning.sh — Context/Token双阈值 |
+| 4.2 | 自我诊断 | self-diagnosis.sh — 全面健康检查 |
+| 4.3 | 自我扩展 | self-extend.sh — Skill缺失自动检测 |
+| 4.4 | 自我升级 | self-upgrade.sh — 版本检测+升级建议 |
+| 4.5 | 进化日志 | evolution-log.sh — 结构化改进记录 |
 
 ### 汇报发送方式
 ```bash
