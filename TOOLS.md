@@ -107,7 +107,7 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-i
 ### 生财有术（知识星球）
 - Group ID: 1824528822
 - API: https://api.zsxq.com/v2/groups/1824528822/topics
-- Cookie: zsxq_access_token=434B93C2-1873-4F1B-BB5C-A503ADE0760F_B12E75520B50E663
+- Cookie: zsxq_access_token=9DED7F62-5A95-4E52-9FE5-F44270AB368A_B12E75520B50E663
 - 精华帖: scope=digests
 - 最新帖: scope=all
 - Cookie过期: 2026年底

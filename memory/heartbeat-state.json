@@ -1,11 +1,11 @@
 {
   "lastChecks": {
     "version": 1775066400,
-    "cron": 1775066400,
+    "cron": 1775206800,
     "pitfalls": 1774062000,
     "skills": 1775066400,
-    "scheduleReminder": 1774923000,
-    "agentMonitor": 1775066400
+    "scheduleReminder": 1775206800,
+    "agentMonitor": 1775211240
   },
-  "notes": "01:40 周四。002/003/004全idle（深夜）。版本新：2026.4.1，NEW_VERSION但深夜不通知。明日上班后通知旭。"
+  "notes": "18:14 周五。002已2小时无活动→spawn新任务。004完成003情报整合✅。cron全正常。"
 }
