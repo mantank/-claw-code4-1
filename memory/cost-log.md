@@ -37,3 +37,10 @@
 2026-04-03 23:14 | 514k | 2.7k | 393.7k | 3.8k | 心跳，context 49%⚠️(30min内从26%飙升至49%)，compaction 0，sessions.json=4MB
 2026-04-03 23:44 | 170k | 2.1k | 393.7k | 3.8k | 心跳，context 26%，compaction 0，Cron OK，所有系统正常
 2026-04-04 00:44 | 78k | 383 | 393.7k | 3.8k | 心跳，context 24%，compaction 0，旭睡眠中，002/003/004 idle
+2026-04-04 01:44 | 39 | 61 | 393.7k | 3.8k | 心跳，context 24%，compaction 0，旭睡眠，002/003/004 idle
+2026-04-04 02:14 | 274k | 1.4k | 393.7k | 3.8k | 心跳，context 35%（↑11%注意），compaction 0，旭睡眠，team全idle
+2026-04-04 02:44 | 107k | 699 | 393.7k | 3.8k | 心跳，context 25%（↓从35%回落），compaction 0，旭睡眠，全员idle
+2026-04-04 05:44 | 39 | 211 | 393.7k | 3.8k | 心跳，context 24%，compaction 0，003维护模式，002/004 idle
+2026-04-04 07:14 | 82k | 880 | 393.7k | 3.8k | 心跳，context 25%，compaction 0，002活性(05:25)，004活性(05:30)，cron全ok
+2026-04-04 07:44 | 172k | 1.3k | 393.7k | 3.8k | 心跳，context 26%，compaction 0
+2026-04-04 13:44 | ~100k | ~1k | ~393.8k | ~3.8k | 心跳，移除pipeline×2，Telegram告警发旭，003/004无活跃，context 27%，compaction 0
