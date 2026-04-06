@@ -7,7 +7,7 @@ COUNT="${1:-10}"
 SCOPE="${2:-digests}"
 COOKIE="zsxq_access_token=9DED7F62-5A95-4E52-9FE5-F44270AB368A_B12E75520B50E663"
 
-API="https://api.zsxq.com/v2/groups/1824528822/topics?scope=${SCOPE}&count=${COUNT}&end_time=9999999999999"
+API="https://api.zsxq.com/v2/groups/1824528822/topics?scope=${SCOPE}&count=${COUNT}"
 
 raw=$(curl -s "$API" \
   -H "Cookie: $COOKIE" \
