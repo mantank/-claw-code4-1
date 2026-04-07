@@ -42,6 +42,24 @@
       "zip_url": "https://lightmake.site/api/v1/download?slug=weather",
       "source": "skillhub",
       "version": "1.0.0"
+    },
+    "news-aggregator": {
+      "name": "News Aggregator",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=news-aggregator",
+      "source": "skillhub",
+      "version": "1.0.3"
+    },
+    "agent-browser-clawdbot": {
+      "name": "Agent Browser",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=agent-browser-clawdbot",
+      "source": "skillhub",
+      "version": "0.1.0"
+    },
+    "openclaw-github-assistant": {
+      "name": "OpenClaw GitHub Assistant",
+      "zip_url": "https://lightmake.site/api/v1/download?slug=openclaw-github-assistant",
+      "source": "skillhub",
+      "version": "2.0.1"
     }
   }
 }

@@ -27,7 +27,7 @@
     },
     "openclaw-github-assistant": {
       "version": "2.0.1",
-      "installedAt": 1770936858246
+      "installedAt": 1775552152719
     },
     "cursor-agent": {
       "version": "2.1.0",
@@ -76,6 +76,14 @@
     "weather": {
       "version": "1.0.0",
       "installedAt": 1774230638973
+    },
+    "news-aggregator": {
+      "version": "1.0.3",
+      "installedAt": 1775552119472
+    },
+    "agent-browser-clawdbot": {
+      "version": "0.1.0",
+      "installedAt": 1775552148922
     }
   }
 }

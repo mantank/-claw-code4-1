@@ -1,7 +1,7 @@
 # PROJECT_STATUS.md — 当前项目状态
 
 > 所有Agent共享。每次重要进展后更新。
-> 最后更新：2026-04-03 17:44（004完成003情报整合，002今日文章+1篇）
+> 最后更新：2026-04-07 18:26（004完成 VERIFIED-5/7/9 差异补齐并修复历史构建）
 
 ---
 
@@ -33,8 +33,10 @@
 ## 📊 本周进展（2026-04-01 更新）
 
 ### 004 - xiaolongxia.app 场景库
-- **案例数：416个**（2026-04-01）✅，542 pages
-- 情报整合：003 VERIFIED-9/10（security+version）已于4/1 15:45整合到dist ✅
+- **当前规模：443 cases / 573 pages**（2026-04-07）✅
+- 情报整合：004 已补齐 2026-04-06 新增 VERIFIED-5 / VERIFIED-7 / VERIFIED-9 差异项（commit `09a6713`）
+- 本轮新增落地：企业办公（医疗报销/预约挂号/找文件、WHOOP接入、批量取消垃圾邮件）、工具生态（Exa搜索/Discord控制/Obsidian自动化）、安全风控（工信部预警/券商限制/1Password/MoltMatch）
+- 站点稳定性：已批量迁移旧案例 frontmatter 到现行 schema，历史构建错误修复，build 恢复通过 ✅
 - 新素材源已开辟（Simplified.com/Kanerika/Medium/xugj520.cn/openclaw.rocks）
 - **卡点**：SEO提交Google/Baidu站长工具需旭手动操作（无OAuth凭据）
 
