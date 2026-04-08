@@ -64,3 +64,31 @@
 2026-04-07 23:04 | 209k | 480 | COMPACTED | — | 心跳，context 77%，compaction 0；版本检查结果已回：ALREADY_NOTIFIED；23:04 处于复盘时段但非强提醒规则，002/003/004无新活跃session
 2026-04-08 00:05 | 176k | 6 | COMPACTED | — | 心跳，context 66%，compaction 0；睡眠时段不打扰；版本继续按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
 2026-04-08 00:36 | 27k | 439 | COMPACTED | — | 心跳，context 75%，compaction 0；睡眠时段不打扰；版本检查仍未返回但按 ALREADY_NOTIFIED 处理；activeMinutes=30 仅主session活跃
+2026-04-08 01:06 | 32k | 469 | COMPACTED | — | 心跳，context 77%，compaction 0；睡眠时段不打扰；版本检查脚本仍未返回但继续按 ALREADY_NOTIFIED 处理；activeMinutes=30 仅主session活跃
+2026-04-08 01:07 | 205k | 1.5k | COMPACTED | — | 心跳，context 76%，compaction 0；版本检查已回 ALREADY_NOTIFIED；睡眠时段不打扰；activeMinutes=30 仅主session活跃
+2026-04-08 02:08 | 28k | 439 | COMPACTED | — | 心跳，context 76%，compaction 0；版本检查脚本仍未返回但按 ALREADY_NOTIFIED 处理；睡眠时段不打扰；activeMinutes=30 仅主session活跃
+2026-04-08 02:38 | 28k | 439 | COMPACTED | — | 心跳，context 76%，compaction 0；版本检查脚本仍未返回但继续按 ALREADY_NOTIFIED 处理；睡眠时段不打扰；activeMinutes=30 仅主session活跃
+2026-04-08 03:39 | 206k | 503 | COMPACTED | — | 心跳，context 76%，compaction 0；当前为睡眠时段不打扰；版本仍按 ALREADY_NOTIFIED 处理；activeMinutes=30 仅主session活跃
+2026-04-08 04:10 | 29k | 439 | COMPACTED | — | 心跳，context 76%，compaction 0；睡眠时段不打扰；版本检查脚本仍未返回但继续按 ALREADY_NOTIFIED 处理；activeMinutes=30 仅主session活跃
+2026-04-08 04:41 | 29k | 439 | COMPACTED | — | 心跳，context 76%，compaction 0；睡眠时段不打扰；版本检查脚本仍未返回但继续按 ALREADY_NOTIFIED 处理；activeMinutes=30 仅主session活跃
+2026-04-08 05:12 | 207k | 516 | COMPACTED | — | 心跳，context 76%，compaction 0；版本检查已完成 ALREADY_NOTIFIED；睡眠时段不打扰；activeMinutes=30 仅主session活跃
+2026-04-08 05:42 | 30k | 1.4k | COMPACTED | — | 心跳，context 77%，compaction 0；版本检查脚本仍未返回但按 ALREADY_NOTIFIED 处理；睡眠时段不打扰；activeMinutes=30 仅主session活跃
+2026-04-08 06:13 | 27k | 439 | COMPACTED | — | 心跳，context 76%，compaction 0；版本检查脚本仍未返回但按 ALREADY_NOTIFIED 处理；06:00 AI日报cron已产出正文；当前为看AI日报时段，002/003/004无新活跃session
+2026-04-08 06:44 | 214k | 54 | COMPACTED | — | 心跳，context 79%，compaction 0；版本检查脚本仍未返回但按 ALREADY_NOTIFIED 处理；当前为06:30-07:00运动时段，AI日报cron已完成，002/003/004无新活跃session
+2026-04-08 07:15 | 240k | 30 | COMPACTED | — | 心跳，context 88%⚠️，compaction 0；版本检查脚本仍未返回但按 ALREADY_NOTIFIED 处理；当前处于07:00-08:30通勤/早饭时段不提醒；记录context超80%预警
+2026-04-08 09:17 | 30k | 439 | COMPACTED | — | 心跳，context 90%⚠️，compaction 0；版本检查脚本仍未返回但按 ALREADY_NOTIFIED 处理；当前处于09:00-11:30工作块，应提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 09:49 | 493k | 487 | COMPACTED | — | 心跳，context 91%⚠️，compaction 0；版本检查已明确为 ALREADY_NOTIFIED；当前仍在09:00-11:30工作块，应继续提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 10:19 | 502k | 1.7k | COMPACTED | — | 心跳，context 91%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在09:00-11:30工作块，应继续提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 10:49 | 473k | 1.7k | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在09:00-11:30工作块，应继续提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 14:49 | 500k | 439 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前已进入14:30-17:00副业深度块，应强提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 15:26 | 253k | 6 | COMPACTED | — | 心跳，context 93%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在14:30-17:00副业深度块，应继续强提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 15:49 | 188k | 1.7k | COMPACTED | — | 心跳，context 35%（明显回落） ，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在14:30-17:00副业深度块，应继续强提醒旭聚焦；002/003/004无新活跃session
+2026-04-08 16:19 | 129k | 6 | COMPACTED | — | 心跳，context 47%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在14:30-17:00副业深度块尾段，应继续提醒旭收口出结果；002/003/004无新活跃session
+2026-04-08 16:49 | 319k | 1.7k | COMPACTED | — | 心跳，context 59%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在14:30-17:00副业深度块最后窗口，应继续提醒旭收尾见结果；002/003/004无新活跃session
+2026-04-08 20:19 | 226k | 439 | COMPACTED | — | 心跳，context 83%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前处于20:00-20:30运动时段，应提醒旭动起来；002/003/004无新活跃session
+2026-04-08 20:49 | 226k | 1.6k | COMPACTED | — | 心跳，context 84%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前已进入20:30-23:00副业深度块②，应强提醒旭狠狠干最核心任务；002/003/004无新活跃session
+2026-04-08 21:19 | 699k | 1.7k | COMPACTED | — | 心跳，context 93%⚠️，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在20:30-23:00副业深度块②，应继续强提醒旭别发散、先打穿一个结果；002/003/004无新活跃session
+2026-04-08 21:53 | 314 | 9 | COMPACTED | — | 心跳，context 36%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在20:30-23:00副业深度块②，应继续强提醒旭压住节奏狠狠干；002/003/004无新活跃session
+2026-04-08 22:23 | 119k | 6 | COMPACTED | — | 心跳，context 48%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在20:30-23:00副业深度块②，应继续强提醒旭把结果做完别收神太早；002/003/004无新活跃session
+2026-04-08 22:53 | 154k | 85 | COMPACTED | — | 心跳，context 61%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在20:30-23:00副业深度块②最后阶段，应继续强提醒旭咬牙收尾，把结果落地；002/003/004无新活跃session
+2026-04-09 00:23 | 190k | 100 | COMPACTED | — | 心跳，context 74%，compaction 0；处于睡眠时段不打扰；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
