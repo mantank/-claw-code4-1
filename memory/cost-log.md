@@ -92,3 +92,9 @@
 2026-04-08 22:23 | 119k | 6 | COMPACTED | — | 心跳，context 48%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在20:30-23:00副业深度块②，应继续强提醒旭把结果做完别收神太早；002/003/004无新活跃session
 2026-04-08 22:53 | 154k | 85 | COMPACTED | — | 心跳，context 61%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前仍在20:30-23:00副业深度块②最后阶段，应继续强提醒旭咬牙收尾，把结果落地；002/003/004无新活跃session
 2026-04-09 00:23 | 190k | 100 | COMPACTED | — | 心跳，context 74%，compaction 0；处于睡眠时段不打扰；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
+2026-04-09 04:53 | 229k | 439 | COMPACTED | — | 心跳，context 85%⚠️，compaction 0；处于睡眠时段不打扰；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
+2026-04-09 06:53 | 203k | 16 | COMPACTED | — | 心跳，context 75%，compaction 0；版本按 ALREADY_NOTIFIED 处理；当前处于06:30-07:00运动时段，应提醒旭动起来；002/003/004无新活跃session
+2026-04-09 07:53 | 481k | 439 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；当前处于07:00-08:30通勤/早饭时段不提醒；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
+2026-04-09 09:23 | 479k | 439 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；当前处于09:00-11:30工作块，应提醒旭聚焦；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
+2026-04-09 09:53 | 251k | 26 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；当前仍在09:00-11:30工作块，应继续提醒旭聚焦别发散；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
+2026-04-09 10:23 | 687k | 1.6k | COMPACTED | — | 心跳，context 91%⚠️，compaction 0；当前仍在09:00-11:30工作块，应继续提醒旭聚焦并收出口；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
