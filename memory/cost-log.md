@@ -98,3 +98,4 @@
 2026-04-09 09:23 | 479k | 439 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；当前处于09:00-11:30工作块，应提醒旭聚焦；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
 2026-04-09 09:53 | 251k | 26 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；当前仍在09:00-11:30工作块，应继续提醒旭聚焦别发散；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
 2026-04-09 10:23 | 687k | 1.6k | COMPACTED | — | 心跳，context 91%⚠️，compaction 0；当前仍在09:00-11:30工作块，应继续提醒旭聚焦并收出口；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
+2026-04-10 03:48 | 66k | 998 | COMPACTED | — | 心跳，context 25%，compaction 0；版本 2026.4.9 已通知；002活跃并完成积压推送，003/004凌晨有实质推进

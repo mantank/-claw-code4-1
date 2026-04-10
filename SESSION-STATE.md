@@ -30,6 +30,7 @@
 - 2026-04-04 06:00 AI日报cron执行：已按24小时铁律复核。Brave今天可用，但OpenAI/Anthropic/Google官方源里能确认落在24小时窗口内且有明确日期的条目极少；最终仅保留 Google 4月1日月报、Anthropic 3月31日澳洲MOU、OpenClaw 4月2日18:30 release、以及 GitHub API 抓到的近30天高增长项目。严格不凑数，不自行外发，只返回可投递文本。
 - 2026-04-05 06:00 AI日报cron执行：按“只返回文本、不自行外发”原则执行；本轮可核验的24小时内条目主要来自 Taipei Times 2026-04-05 的 OpenClaw 评论文章、GitCode转载的 OpenClaw v2026.4.1（文内写明 2026-04-02）、Google 官方 Gemma 4 博文（Brave显示 Apr 02 / 1 day ago，勉强在窗内）以及 GitHub API 热榜快照。OpenAI/Anthropic 未检出落在 24h 内且证据链够硬的新官方条目。另发现用户指定 Notion 日报数据库 303453f1-8074-8130-9096-c99bd40be6c0 对当前 integration 返回 object_not_found；可用兜底库仍是 bf0b46f590d943089e758c61c0a7b0e7。
 - 2026-04-06 06:00 AI日报cron执行：继续按“只返回文本、不自行外发”原则执行。Brave 可搜但 24h 内硬证据极少；复核后 OpenAI/Anthropic/Google 官方源均未找到落在 2026-04-05~2026-04-06 窗口且可直接核验的新增条目，按铁律全部剔除。最终仅保留 OpenClaw 2026.4.1 release（来源页可读到正文，但发布时间超窗时仍不纳入“24H核心新闻”）与 GitHub API 近30天高增长项目快照，整期日报需按“宁缺毋滥”输出极简版；Notion 仍使用备用库 bf0b46f590d943089e758c61c0a7b0e7。
+- 2026-04-10 11:30 生财有术-每日精华推送cron执行：已用知识星球API抓取最新精华帖并筛选近7天内容；本轮最相关的是 OpenClaw装机切服务赚到首单5000、小红书NotebookLM原创课件3月变现1.1w、YouTube长视频低时长变现/入门相关帖子。按系统要求仅返回可投递文本，不自行发Telegram。
 
 ## 当前文章进度（2026-03-12 09:13）
 - **标题：** 雇了4个AI员工，我用这3条铁律防它们失控
