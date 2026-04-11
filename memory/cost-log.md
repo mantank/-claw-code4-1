@@ -99,3 +99,9 @@
 2026-04-09 09:53 | 251k | 26 | COMPACTED | — | 心跳，context 92%⚠️，compaction 0；当前仍在09:00-11:30工作块，应继续提醒旭聚焦别发散；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
 2026-04-09 10:23 | 687k | 1.6k | COMPACTED | — | 心跳，context 91%⚠️，compaction 0；当前仍在09:00-11:30工作块，应继续提醒旭聚焦并收出口；版本按 ALREADY_NOTIFIED 处理；002/003/004无新活跃session
 2026-04-10 03:48 | 66k | 998 | COMPACTED | — | 心跳，context 25%，compaction 0；版本 2026.4.9 已通知；002活跃并完成积压推送，003/004凌晨有实质推进
+2026-04-11 22:07 | 23k | 232 | COMPACTED | — | 心跳，context 12%，compaction 0；版本 ALREADY_NOTIFIED；业务cron未注册，002/003/004近30分钟无活跃session
+2026-04-11 22:38 | 36k | 6 | COMPACTED | — | 心跳，context 30%，compaction 0；版本 ALREADY_NOTIFIED；业务cron仍未注册，002/003/004近30分钟无活跃session
+2026-04-11 23:09 | 72k | 6 | COMPACTED | — | 心跳，context 48%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-11 23:40 | 108k | 6 | COMPACTED | — | 心跳，context 66%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 00:10 | 167k | 6 | COMPACTED | — | 心跳，context 84%⚠️，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 00:42 | 180k | 6 | COMPACTED | — | 心跳，context 102%⚠️，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session

@@ -1,0 +1,193 @@
+生成今日AI日报并发送到 Telegram 和 Notion。
+
+## 执行步骤
+1. 生成日报内容（见下方格式要求）
+2. 用 message 工具发送到 Telegram（channel=telegram, target=8526440826）
+3. 调用 Notion API 存入 Notion 日报数据库
+
+## 扩源与筛选规则（2026-04-11 版）
+
+### 一、新增搜索渠道（与原有4组关键词并行）
+
+在原有 Brave Search 关键词基础上，**必须增加以下5组搜索**，每组取前5个结果（去重后）：
+
+1. 视频生成模型 
+ (Runway OR Pika OR Luma OR Kling OR Haiper) AI 更新 今天 
+ 同时搜索 site:runwayml.com/blog after:昨天日期 和 site:pika.art/news after:昨天日期
+
+2. 图片/设计模型 
+ (Midjourney OR Stable Diffusion OR Flux OR Ideogram OR Leonardo) 新功能 今天 
+ 同时搜索 site:stability.ai/news after:昨天日期 和 site:midjourney.com/announcements after:昨天日期
+
+3. AI 行业动态（融资/政策/观点） 
+ AI 融资 轮 今天 和 AI 政策 法规 2026年4月 
+ 以及 TechCrunch AI 新闻 today 和 VentureBeat AI today（可加 site: 限定）
+
+4. **RSS 聚合信源**（如果可用） 
+ 抓取以下 RSS 的最新3条： 
+ - TechCrunch AI: https://techcrunch.com/category/artificial-intelligence/feed/ 
+ - VentureBeat AI: https://venturebeat.com/category/ai/feed/ 
+ 提取标题、发布日期、链接，作为候选资讯。
+
+5. Reddit 热点 
+ site:reddit.com/r/singularity after:昨天日期 和 site:reddit.com/r/localllama after:昨天日期，取热度前3的帖子。
+
+### 二、信息筛选优先级（从高到低）
+
+按以下顺序保留资讯，数量不足时可向下兼容：
+
+1. **官方发布**（OpenAI/Anthropic/Google 官方 blog，Runway/Pika/Stability 官方公告） 
+2. **知名媒体独家**（TechCrunch、VentureBeat、The Information、Reuters AI） 
+3. **GitHub 热榜项目**（近7天有 push 且 star > 1000） 
+4. **垂直领域头部产品更新**（如 Midjourney 新版本、Kling 新功能） 
+5. **社区高赞讨论**（Reddit 热度 > 500 且非重复内容） 
+6. **融资与政策新闻**（需来自可信媒体或政府官网）
+
+**以下内容直接丢弃**： 
+- 来源为 medium.com、substack.com、quora.com、personal blog 且无明确日期 
+- SEO 垃圾站（如 aiheadlines.com、aitoday.net 等无权威性站点） 
+- 内容与过去48小时内已收录的资讯高度重复（由模型判断）
+
+### 三、时效性与日期验证（严格执行）
+
+- 每条资讯必须从来源页面提取 **明确发布日期（YYYY-MM-DD）**。 
+- 若页面内无结构化日期，但有“昨天”“X hours ago”且可推算为 ≤24 小时，可保留并标注 `[推算日期]`。 
+- 若无法获得任何日期信息，**丢弃该条**。 
+- 对于 RSS 条目，直接使用 <pubDate> 字段，若缺失则丢弃。 
+- 输出时每条资讯后必须跟随 `📅 YYYY-MM-DD`（或 `📅 [推算] YYYY-MM-DD`）。
+
+### 四、板块完整性要求（强制）
+
+最终日报必须包含以下 **7 个板块**，每个板块至少有一条内容（若无有效信息，写“今日无更新”但保留标题）：
+
+1. 🚀 核心大事件（模型与平台） 
+2. 🛠️ 生产力与自动化应用 
+3. 🐙 GitHub每日热榜 
+4. 🦾 OpenClaw & 开发者风向 
+5. 🔍 五、今天 Show HN 上有没有个人开发者/小团队做的产品进了首页？做的什么、解决什么问题？
+6. ⚡ 六、如果我今天只有 2 小时做副业项目，基于今天的数据，我应该做什么？
+7. 🧪 七、今天的数据里有没有什么适合做一个「周末项目」验证的点子？
+
+**注意**： 
+- 视频/图片模型更新、融资政策新闻，优先归入“核心大事件”。 
+- 垂直工具（如 Runway、Midjourney）的具体功能更新，若不属于大模型发布，可放入“生产力与自动化应用”。 
+- Q1/Q2/Q3 必须基于当天真实 HN / Show HN / GitHub / Product Hunt / 评论热度信号，不准凭空编。 
+- 每个板块内的条目按重要性降序排列。
+
+### 五、Q1 / Q2 / Q3 生成规则（新增）
+
+#### Q1: 今天 Show HN 上有没有 solo founder 做的产品进了首页？做的什么、解决什么问题？
+- 必须搜索当天 Show HN 首页 / 近24小时高赞 Show HN / HN 评论热度。
+- 优先挑 solo founder 或 small team 项目；如果无法明确 solo，则可写 small team，但要说明。
+- 输出：
+  - Signal: 🟢/🟡/🔴（HN Show · HN Comments · Product Hunt）
+  - 2-3 个项目，每个包含：项目名、得分/评论、作者、做的什么、解决什么问题
+  - 末尾必须有 `Takeaway:` 总结，提炼可复制模式
+
+#### Q2: 如果我今天只有 2 小时做 side project，基于今天的数据，我应该做什么？
+- 必须结合当天 HN / GitHub / Product Hunt 的交叉信号。
+- 输出一个最小可执行方向，不要给 3 个，要给 **1 个最值得做的**。
+- 必须包含：
+  - Signal: 🟢/🟡/🔴（HN · GitHub · Product Hunt）
+  - 推荐行动是什么
+  - 依据是什么（至少 2-3 条数据支撑）
+  - 2小时版本具体做什么
+  - 可行性高/中/低
+  - 末尾必须有 `Takeaway:`
+
+#### Q3: 今天的数据里有没有什么适合做一个「周末项目」验证的 idea？
+- 基于当天 HN / GitHub / Product Hunt / Show HN 数据，给 1-3 个周末项目点子。
+- 每个 idea 要写：灵感来源、做什么、为什么值得试、简单变现方向。
+- 最后必须明确推荐一个最低成本、最快验证的 idea。
+- 末尾必须有 `Takeaway:`
+
+### 六、今日行动建议生成规则
+
+基于本日报前 **6 个板块** 的真实信息，生成三条行动建议：
+
+- **普通用户**：推荐一个今天更新的、可上手试用的工具或功能，并给出一句话使用场景。 
+- **创作者/开发者**：推荐一个今天热榜上的开源项目或平台更新，建议一个可复现的实验或集成方式。 
+- **深度实践者**：结合 OpenClaw 或其他 agent 框架的更新，给出一个具体的配置修改或 workflow 优化建议。 
+
+若当日信息不足，则写“今日无足够信息生成行动建议”，但必须保留该板块标题。
+
+### 七、输出前自检清单（模型内部执行）
+
+生成最终文本后，请逐项确认：
+
+- [ ] 7个板块标题全部出现 
+- [ ] 每条资讯都有 📅 日期标记（Q1/Q2/Q3 可用当天热度/分数/评论替代，但必须有真实来源） 
+- [ ] 每个板块末尾都加了 `Takeaway:` 
+- [ ] 没有使用“据报道”“约”“可能”等模糊词 
+- [ ] GitHub 热榜项目标注了“近7日新增星数”或“总星数（累计）” 
+- [ ] 没有来自 medium/substack/quora 的资讯 
+- [ ] 行动建议与当日内容直接相关 
+
+若任一检查未通过，请修正后再输出。
+
+## GitHub热榜
+用 curl 调用 GitHub API 获取近30天高增长项目：
+curl -s "https://api.github.com/search/repositories?q=created:>$(date -d '30 days ago' +%Y-%m-%d)+stars:>500&sort=stars&order=desc&per_page=20" -H "Accept: application/vnd.github.v3+json" -H "User-Agent: Mozilla/5.0"
+
+## 发送格式（Telegram）
+# 📬 AI日报·严选24H｜{今天日期}
+💡 导语：[50字以内，总结今天这几条新闻背后的共同趋势]
+---
+### 🚀 一、核心大事件（模型与平台）
+1️⃣ [标题]（📅 发布日期）
+📰 资讯直击：[客观描述，必须有今天日期]
+💡 解读与价值：[犀利点评，为什么重要，50-80字]
+🔗 [来源名](URL)
+Takeaway: [一句总结这个板块最值得记住的判断]
+---
+### 🛠️ 二、生产力与自动化应用
+[1-2条]
+Takeaway: [一句总结]
+---
+### 🐙 三、GitHub每日热榜
+[1-3条]
+Takeaway: [一句总结]
+---
+### 🦾 四、OpenClaw & 开发者风向
+[1-2条]
+Takeaway: [一句总结]
+---
+### 🔍 五、今天 Show HN 上有没有个人开发者/小团队做的产品进了首页？做的什么、解决什么问题？
+Signal: 🟢/🟡/🔴 (HN Show · HN Comments · Product Hunt)
+[结构化回答]
+Takeaway: [一句总结]
+---
+### ⚡ 六、如果我今天只有 2 小时做副业项目，基于今天的数据，我应该做什么？
+Signal: 🟢/🟡/🔴 (HN · GitHub · Product Hunt)
+[结构化回答]
+Takeaway: [一句总结]
+---
+### 🧪 七、今天的数据里有没有什么适合做一个「周末项目」验证的点子？
+Signal: 🟢/🟡/🔴 (HN · GitHub · Product Hunt)
+[1-3个 ideas]
+Takeaway: [一句总结]
+---
+### 🎯 八、今日行动建议
+* 🔧 普通用户：[具体建议]
+* ✍️ 创作者/独立站长：[具体建议]
+* 🛠️ 开发者：[具体建议]
+Takeaway: [一句总结]
+
+## Notion 排版要求
+日报发送 Telegram 后，立即用 Notion API 存一份。
+
+**Notion 页面排版规范：**
+- 页面标题：📬 AI日报·严选24H｜YYYY-MM-DD（Heading 1）
+- 导语段落：加粗「💡 导语：」开头
+- 板块标题：Heading 2
+- 帖子标题：加粗标题，保留 Signal / Takeaway / 链接
+- 标签文字：📰 💡 🔗 等 emoji 保留
+- 分隔线：---
+- 链接：Notion自动识别超链接
+
+## 严格限制
+1. 禁用废话开头
+2. 必须附带真实链接
+3. 每条解读至少2-3句话
+4. Telegram 和 Notion 都要发
+5. Q1/Q2/Q3 不准空谈，必须有当天真实数据支撑
