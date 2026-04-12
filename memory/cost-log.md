@@ -105,3 +105,17 @@
 2026-04-11 23:40 | 108k | 6 | COMPACTED | — | 心跳，context 66%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
 2026-04-12 00:10 | 167k | 6 | COMPACTED | — | 心跳，context 84%⚠️，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
 2026-04-12 00:42 | 180k | 6 | COMPACTED | — | 心跳，context 102%⚠️，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 01:53 | 123 | 9 | COMPACTED | — | 心跳，context 120%🚨，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 02:24 | 46k | 6 | COMPACTED | — | 心跳，context 35%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 02:55 | 84k | 6 | COMPACTED | — | 心跳，context 54%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 03:26 | 123k | 6 | COMPACTED | — | 心跳，context 74%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 03:57 | 184k | 6 | COMPACTED | — | 心跳，context 93%⚠️，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 04:28 | 225k | 6 | COMPACTED | — | 心跳，context 112%🚨，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 04:59 | 48k | 6 | COMPACTED | — | 心跳，context 36%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 05:30 | 80k | 6 | COMPACTED | — | 心跳，context 52%，compaction 0；版本 ALREADY_NOTIFIED；业务cron依旧未注册，002/003/004近30分钟无活跃session
+2026-04-12 06:01 | 112k | 6 | COMPACTED | — | 心跳，context 68%，compaction 0；版本 ALREADY_NOTIFIED；06:00 AI日报cron已启动运行，但002/003/004近30分钟无活跃session
+2026-04-12 06:32 | 169k | 6 | COMPACTED | — | 心跳，context 86%⚠️，compaction 0；版本 ALREADY_NOTIFIED；AI日报正文已产出，但002/003/004近30分钟无活跃session
+2026-04-12 07:03 | 181k | 6 | COMPACTED | — | 心跳，context 103%🚨，compaction 0；版本 ALREADY_NOTIFIED；业务cron shell 仍未恢复，002/003/004近30分钟无活跃session
+2026-04-12 07:34 | 238k | 6 | COMPACTED | — | 心跳，context 119%🚨，compaction 0；版本 ALREADY_NOTIFIED；业务cron shell 仍未恢复，002/003/004近30分钟无活跃session
+2026-04-12 08:05 | 42k | 6 | COMPACTED | — | 心跳，context 33%，compaction 0；版本 ALREADY_NOTIFIED；业务cron shell 仍未恢复，002/003/004近30分钟无活跃session
+2026-04-12 08:35 | 75k | 6 | COMPACTED | — | 心跳，context 50%，compaction 0；版本 ALREADY_NOTIFIED；业务cron shell 仍未恢复，002/003/004近30分钟无活跃session
