@@ -1,0 +1,148 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import SkillCard from "../../components/SkillCard.astro";
+import { SITE_CONFIG } from "../../config";
+import {
+  marketplaceHighlights,
+  onboardingSteps,
+  topSkills,
+} from "../../data/site-content";
+---
+
+<BaseLayout
+  title="技能商店"
+  description="像逛应用商店一样浏览 OpenClaw 技能，按场景查看、复制安装命令，并快速找到对应教程。"
+>
+  <section class="section-shell pt-8 sm:pt-10 lg:pt-14">
+    <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_360px]">
+      <div class="space-y-6">
+        <span class="eyebrow">技能商店</span>
+        <h1 class="section-title max-w-4xl text-balance">
+          先按场景找技能，再决定要不要做复杂配置
+        </h1>
+        <p class="section-subtitle max-w-3xl text-pretty">
+          所有卡片都保留一键复制命令入口，并优先用中文解释这个技能能帮你做什么。
+          手机端适合快速挑选，平板端适合横向比较，PC 端适合边看边安装。
+        </p>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          <div class="metric-card">
+            <div class="text-2xl font-semibold text-slate-950">{topSkills.length}</div>
+            <div class="mt-1 text-sm font-medium text-slate-700">当前示例技能</div>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              先围绕最高频的种子场景整理一批可直接上手的能力。
+            </p>
+          </div>
+          <div class="metric-card">
+            <div class="text-2xl font-semibold text-slate-950">{SITE_CONFIG.skillCategories.length}</div>
+            <div class="mt-1 text-sm font-medium text-slate-700">场景分类</div>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              优先按业务理解，不要求用户先理解技术概念。
+            </p>
+          </div>
+          <div class="metric-card">
+            <div class="text-2xl font-semibold text-slate-950">1 tap</div>
+            <div class="mt-1 text-sm font-medium text-slate-700">复制命令</div>
+            <p class="mt-2 text-sm leading-6 text-slate-500">
+              每张卡片都提供安装命令，不再让用户手动敲长串命令。
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <aside class="soft-card p-6 sm:p-7">
+        <span class="eyebrow">商店原则</span>
+        <h2 class="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
+          当前版本优先解决“装好了然后呢”
+        </h2>
+        <ul class="mt-5 space-y-3">
+          {marketplaceHighlights.map((item) => (
+            <li class="rounded-[20px] border border-white/70 bg-white/88 px-4 py-4 text-sm leading-6 text-slate-600">
+              {item}
+            </li>
+          ))}
+        </ul>
+        <a href="/tutorials" class="primary-button mt-6 w-full">
+          去看安装教程
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div class="soft-card p-6 sm:p-8">
+      <div class="max-w-2xl">
+        <span class="eyebrow">按分类浏览</span>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+          先按你最熟悉的业务语言进入
+        </h2>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {SITE_CONFIG.skillCategories.map((category) => (
+          <div class="rounded-[24px] border border-white/70 bg-white/88 p-5">
+            <div class="text-3xl">{category.emoji}</div>
+            <h3 class="mt-4 text-lg font-semibold text-slate-950">
+              {category.name}
+            </h3>
+            <p class="mt-2 text-sm leading-6 text-slate-600">
+              {category.description}
+            </p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell pt-0" id="skill-list">
+    <div class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
+      <div class="max-w-2xl">
+        <span class="eyebrow">技能列表</span>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+          当前优先整理高频使用场景
+        </h2>
+        <p class="mt-3 text-base leading-7 text-slate-600 sm:text-lg">
+          先用稳定、高频、容易理解的技能填满首页和商店，再逐步补充更复杂的行业方案。
+        </p>
+      </div>
+      <a href="/tutorials" class="inline-link">
+        先学安装路径
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+      {topSkills.map((skill) => (
+        <SkillCard {...skill} />
+      ))}
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div class="surface-card p-6 sm:p-8 lg:p-10">
+      <div class="max-w-2xl">
+        <span class="eyebrow">安装流程</span>
+        <h2 class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl">
+          建议按这个顺序完成第一次安装
+        </h2>
+      </div>
+
+      <div class="mt-8 grid gap-4 lg:grid-cols-3">
+        {onboardingSteps.map((step, index) => (
+          <a
+            href={step.href}
+            class="rounded-[24px] border border-slate-100 bg-slate-50/70 p-5 transition hover:border-brand-200 hover:bg-white"
+          >
+            <div class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-brand-50 text-sm font-semibold text-brand-700">
+              0{index + 1}
+            </div>
+            <h3 class="mt-4 text-xl font-semibold text-slate-950">{step.title}</h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              {step.description}
+            </p>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+</BaseLayout>

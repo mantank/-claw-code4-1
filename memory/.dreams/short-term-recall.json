@@ -1,0 +1,382 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-22T03:37:05.344Z",
+  "entries": {
+    "memory:memory/2026-04-05.md:1:50": {
+      "key": "memory:memory/2026-04-05.md:1:50",
+      "path": "memory/2026-04-05.md",
+      "startLine": 1,
+      "endLine": 50,
+      "source": "memory",
+      "snippet": "# 2026-04-05 日记 ## 00:44 - 复盘Cron 00:00成功运行（status:ok） - 版本：2026.4.2 ALREADY_NOTIFIED - Cron状态：日报✅/生财✅/复盘✅ - 002/003/004静默（周日睡眠时间） - 旭10:16指令（002改辅助模式）仍待回复 # 2026-04-05 日记 ## 01:14 心跳 - 版本：2026.4.2 ALREADY_NOTIFIED - 01:14 AM，睡觉时间，不打扰旭 - 002/003/004静默（Cron正常） - Context ~25% ## 01:14 心跳 - 版本：2026.4.2 ALREADY_NOTIFIED - 01:14 AM睡觉时间，不打扰 - Cron正常，无紧急事项 # 2026-04-05 日记 ## 00:00 - 复盘Cron ✅（04-04 24点执行） ## 00:44 - 版本：2026.4.2 ALREADY_NOTIFIED - Cron：日报✅(6am 04-04)→下次04-05 06:00，生财✅(11:30 04-04)→下次04-05 11:30，复盘✅刚跑完 - 002/003/004全部静默 ## 02:44 - 版本：2026.4.2 ALREADY_NOTIFIED - Cron：3个正常✅ - 002/003/004静默（深夜，符合预期） ## 03:14 - 版本：2026.4.2 ALREADY_NOTIFIED - 002/003/004全部静默（深夜，符合预期） # 2026-04-05 日记",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.5008620768785477,
+      "maxScore": 0.5008620768785477,
+      "firstRecalledAt": "2026-04-21T02:30:46.070Z",
+      "lastRecalledAt": "2026-04-21T02:30:46.070Z",
+      "queryHashes": [
+        "e3950ca5dcdb"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "2026.4.2",
+        "already-notified",
+        "002/003/004静默",
+        "04-04",
+        "下次04-05",
+        "002/003/004全部静默",
+        "日记",
+        "cron"
+      ]
+    },
+    "memory:memory/2026-04-04.md:30:62": {
+      "key": "memory:memory/2026-04-04.md:30:62",
+      "path": "memory/2026-04-04.md",
+      "startLine": 30,
+      "endLine": 62,
+      "source": "memory",
+      "snippet": "- Context ~26%，Compaction 0 - 002活性：刚活跃(00:15 GMT+8)，封面方案已推送旭，待确认 - 003/004：周末作息，09:00开始，不在岗符合预期 - 时间：周六上午碎片学习时段，不打扰旭 ## 08:44 心跳 - 版本：2026.4.2 ALREADY_NOTIFIED - Context ~26%，Compaction 0 - 002：最后活动~00:30 GMT+8，距今8h，可能已结束当天任务（周末） - 003/004：周末作息，未上线，符合预期 - Cron：AI日报✅，公众号推送✅（8am完成） - 时间段：周六08:44，学习/娱乐时段，不提醒 ## 09:14 心跳 - 版本：2026.4.2 ALREADY_NOTIFIED - 002：sessions_send超时（gateway timeout），重复问题，已记录 - 003/004：周末作息，不在岗符合预期 - 时间：周六09:14，碎片学习时段，不打扰旭 - 注意：sessions_send到002超时问题（第2次，2026-04-04） ## 09:44 心跳 - 版本：2026.4.2 ALREADY_NOTIFIED - Context ~26%，Compaction 0 - 002活性：最后活动09:17（27min前），仍在30min窗口内，正常 - 003/004：周末作息，09:00-11:30碎片自由时间，未上线符合预期 - 时间：周六上午碎片时段，不打扰旭 ## 10:44 心跳 - 版本：2026.4.2 ALREADY_N",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.49641483724117275,
+      "maxScore": 0.49641483724117275,
+      "firstRecalledAt": "2026-04-21T02:30:46.070Z",
+      "lastRecalledAt": "2026-04-21T02:30:46.070Z",
+      "queryHashes": [
+        "e3950ca5dcdb"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "gateway",
+        "003/004",
+        "2026.4.2",
+        "already-notified",
+        "学习/娱乐时段",
+        "sessions-send超时",
+        "sessions-send到002超时问题",
+        "00-11"
+      ]
+    },
+    "memory:memory/2026-04-01.md:138:172": {
+      "key": "memory:memory/2026-04-01.md:138:172",
+      "path": "memory/2026-04-01.md",
+      "startLine": 138,
+      "endLine": 172,
+      "source": "memory",
+      "snippet": "- 002：Telegram session最后活动约09:14，当前无30分钟活跃session - 生财有术Cookie已失效（401），已通知旭更新 - 坑20：生财有术Cookie失效，记录到pitfalls.md - 003/004：无活跃session，旭白班时间正常 - 无pending技能 ## 11:07 心跳记录 - 版本：ALREADY_NOTIFIED ✅ - 002产出：claw-code文章已完成推送草稿箱（oh-my-codex描述已核实，准确✅） - oh-my-codex(OmX)：https://github.com/Yeachan-Heo/oh-my-codex，GitHub README亲自提及，真实 - 003/004：sessions_list未见30分钟活跃session，旭白班时间，正常 - 坑记录：无新增 - 无pending技能 - 草稿箱：53篇（002新推claw-code篇） ## 10:07 心跳记录 - 版本：2026.3.28 latest ✅（ALREADY_NOTIFIED，等4/8升级） - Cron：上次检查全部ok - 002：Telegram session活跃，上一条消息09:14（大纲审核请求），已回复（口头打回+正确方向） - 002研究结果：claw-code只有Python版可用（git clone），Rust版未发布，无curl/pip安装 - brief.md已更正：安装教程方向改为趋势预测向，干货改为OpenClaw实操 - 003/004：sessions_list未见60分钟内活",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9611223399639128,
+      "maxScore": 0.49334375560283655,
+      "firstRecalledAt": "2026-04-21T02:30:46.070Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "e3950ca5dcdb",
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "记录到pitfalls.md",
+        "003/004",
+        "already-notified",
+        "claw-code文章已完成推送草稿箱",
+        "oh-my-codex描述已核实",
+        "oh-my-codex",
+        "sessions-list未见30分钟活跃session",
+        "002新推claw-code篇"
+      ]
+    },
+    "memory:memory/2026-04-01.md:194:221": {
+      "key": "memory:memory/2026-04-01.md:194:221",
+      "path": "memory/2026-04-01.md",
+      "startLine": 194,
+      "endLine": 221,
+      "source": "memory",
+      "snippet": "- 002：最后活动12:39（约58分钟前），Telegram session正常但已不活跃 - 生财有术Cookie：已通过Telegram通知旭更新（sessions_send成功✅） - KPI文件：已更新到4月现状 ✅ - 003/004：无60分钟活跃session（正常） - 无pending技能，坑记录无新增 ## 13:07 心跳记录 - 版本：ALREADY_NOTIFIED ✅ - 002：最后活动12:39（28分钟前），Telegram session正常 - 新任务：安全科普文大纲已出（outline.md 12:38），标题《OpenClaw被仿冒了》，干货sha256sum+GPG校验 ✅ - 审核意见：方向approve，工信部来源无法核实，建议旭确认或模糊化 - 生财有术Cookie仍失效（401），旭尚未更新 - Cron状态：待确认（11:30cron失效，需排查） - 坑记录：无新增 ## 12:37 心跳记录 - 版本：ALREADY_NOTIFIED ✅ - 002：无30分钟活跃session。最后活动约09:14 Telegram - 流水线：claw-code文章已于10:22产出于pipeline，10:37确认推送草稿箱 ✅ - 003/004：无活跃session（旭白班时间，正常） - 无pending技能，坑记录无新增 - 生财有术Cookie已失效（坑20），待旭更新 ## 19:10 心跳记录 - 版本：ALREADY_NOTIFIED ✅（等4/8升级） - Cron：6档全部ok ✅ - 002今日产出",
+      "recallCount": 2,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.9550677120685577,
+      "maxScore": 0.49329264461994166,
+      "firstRecalledAt": "2026-04-21T02:30:46.070Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "e3950ca5dcdb",
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-21",
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "sessions-send成功",
+        "003/004",
+        "already-notified",
+        "outline.md",
+        "claw-code文章已于10",
+        "等4/8升级",
+        "最后",
+        "活动"
+      ]
+    },
+    "memory:memory/2026-04-03.md:1:40": {
+      "key": "memory:memory/2026-04-03.md:1:40",
+      "path": "memory/2026-04-03.md",
+      "startLine": 1,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "# 2026-04-03 日记 ## 今日状态 - 北京时间01:19新session开始（凌晨） ## 00:00 复盘提醒 - 日课十二条+三问提醒已发送给旭 - 等待旭回复复盘内容 ## 02:19 心跳检查 - version: ALREADY_NOTIFIED（无更新） - 002/003/004: 全部idle（凌晨2点，正常） - 00:00复盘提醒已发送，待旭回复 - 旭睡眠时间，不打扰 - ✅ HEARTBEAT_OK ## 06:49 心跳 - 版本：4.2 可更新（ALREADY_NOTTED→重新发通知给旭） - 4.2变更：Exec YOLO默认开启（旭之前的exec审批问题原生解决）+ TaskFlow持久化+ xAI/Firecrawl路径迁移 - Context: 25%（健康） - Cost: 日志文件待更新 - 002: idle，最后活跃昨晚21:04北京时，今日文章未开始 - 003: 维护模式 - 004: session stale但文件无今日更新 - 旭: 早7点，白班时间，不主动推送 ## 07:19 心跳检查 - version: ALREADY_NOTIFIED（4.2已通知） - Context: 37%（76k/205k，较快增长注意监控） - Cost: 391k tokens（心跳） - 团队：002/003/004全部idle（早7点，002通常14:30开始） - 日程：7-8:30通勤/早饭，不提醒 - ✅ HEARTBEAT_OK ## 08:19 心跳 - 昨晚复盘提醒已发（00:00），旭未回",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4925008207559585,
+      "maxScore": 0.4925008207559585,
+      "firstRecalledAt": "2026-04-21T02:30:46.070Z",
+      "lastRecalledAt": "2026-04-21T02:30:46.070Z",
+      "queryHashes": [
+        "e3950ca5dcdb"
+      ],
+      "recallDays": [
+        "2026-04-21"
+      ],
+      "conceptTags": [
+        "already-notified",
+        "002/003/004",
+        "heartbeat-ok",
+        "4.2",
+        "already-notted",
+        "4.2变更",
+        "xai/firecrawl路径迁移",
+        "4.2已通知"
+      ]
+    },
+    "memory:memory/2026-04-01.md:215:233": {
+      "key": "memory:memory/2026-04-01.md:215:233",
+      "path": "memory/2026-04-01.md",
+      "startLine": 215,
+      "endLine": 233,
+      "source": "memory",
+      "snippet": "- 生财有术Cookie已失效（坑20），待旭更新 ## 19:10 心跳记录 - 版本：ALREADY_NOTIFIED ✅（等4/8升级） - Cron：6档全部ok ✅ - 002今日产出3篇：1bit-llm(早) + claw-code(午) + feishu-openclaw(19:09刚推) ✅ - feishu-openclaw推草稿箱成功，Media ID: rh5JTgXJ29Ai4E1Fb8Y2z2VoVjjDtgLvBQngJa_onwg - Telegram通知旭：feishu-openclaw推送成功（但token缺失，curl返回404） - 003/004：sessions_list未见30分钟活跃session，旭白班/夜班交接时间，正常 - pending技能：无 - 坑记录：无新增 - 003情报→004网站整合：待检查 - 生财有术Cookie：仍失效，等旭更新 ## 0041 心跳记录 - 版本: 已通知(3.31) - 002/003/004: 最近活动4/1 15:41-19:11，无新活动，正常休眠状态 - 旭: 刚复盘完，准备入睡",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4722230285406112,
+      "maxScore": 0.4722230285406112,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "already-notified",
+        "等4/8升级",
+        "1bit-llm",
+        "claw-code",
+        "feishu-openclaw",
+        "feishu-openclaw推草稿箱成功",
+        "feishu-openclaw推送成功",
+        "003/004"
+      ]
+    },
+    "memory:memory/2026-04-02.md:50:92": {
+      "key": "memory:memory/2026-04-02.md:50:92",
+      "path": "memory/2026-04-02.md",
+      "startLine": 50,
+      "endLine": 92,
+      "source": "memory",
+      "snippet": "- tools-filter：工具前缀过滤设计+验证脚本 - workspace-scanner：工作区自动扫描脚本 - hooks-system：6点Hook规范定义 - tool-registry：工具注册表报告 - execution-registry：多工具并发执行方案 - system-check：系统环境检测 - session-init：会话初始化报告 - cost-tracker（集成在HEARTBEAT中） - compaction-advisor（集成在HEARTBEAT中） **脚本（7个）：** - compaction-advisor.sh - tools-filter-check.sh - workspace-scan.sh - session-migrator.sh - tool-registry-report.sh - system-check.sh - scripts/hooks/pre-tool-check.js **Schema（2个）：** - schemas/session-state-schema.json - hooks规范（SKILL.md内） ### 升级进度 - 第二阶段：10/10 ✅ - 第三阶段：0/5（刚启动） - 路线图：upgrade-proposals/001-clawcode-patterns.md ## 待旭手动操作 1. ✅ exec审批：已解决 2. **Brave Search API Key**：更新（当前token失效421） 3. **生财有术Cookie**：重新登录获取（当前失效401",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.46772693097591395,
+      "maxScore": 0.46772693097591395,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "tools-filter",
+        "workspace-scanner",
+        "hooks-system",
+        "tool-registry",
+        "execution-registry",
+        "system-check",
+        "session-init",
+        "cost-tracker"
+      ]
+    },
+    "memory:memory/2026-04-06.md:98:138": {
+      "key": "memory:memory/2026-04-06.md:98:138",
+      "path": "memory/2026-04-06.md",
+      "startLine": 98,
+      "endLine": 138,
+      "source": "memory",
+      "snippet": "- 时间：周一12:14，午餐时段(11:30-14:30)，不打扰旭 ## 12:44 心跳（周一） - 版本：2026.4.5 ALREADY_NOTIFIED - Context ~35%，Compaction 0 - Cron：日报✅/复盘✅，生财⚠️（持续error 1h+，cookie可能再次失效） - 002/003/004静默 - 时间：周一12:44，午餐时段，不打扰旭 ## 13:14 心跳（周一） - 版本：2026.4.5 ALREADY_NOTIFIED - Context ~37%，Compaction 0 - 002/003/004全部静默 - 时间：周一13:14，午餐时段(11:30-14:30)，不打扰旭 ## 13:44 心跳（周一） - 版本：2026.4.5 ALREADY_NOTIFIED - Context ~36%，Compaction 0 - Cron：日报✅/复盘✅，生财⚠️（error，脚本bug已修复✅） - 🔧 生财有术bug修复：API不再接受end_time=9999999999999，已移除该参数，脚本测试通过 - 002/003/004静默 - 时间：周一13:44，午休/副业前时段，不打扰旭 ## 14:14 心跳（周一） - 版本：2026.4.5 ALREADY_NOTIFIED - Context ~39%，Compaction 0 - Cron：日报✅/复盘✅，生财⚠️（session aborted，非API失败，实际推送已成功发送） - 生财4/7 20:00有418拉新活动启动，重要！",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4661301404237747,
+      "maxScore": 0.4661301404237747,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "30-14",
+        "2026.4.5",
+        "already-notified",
+        "002/003/004静默",
+        "002/003/004全部静默",
+        "api不再接受end-time",
+        "午休/副业前时段",
+        "生财4/7"
+      ]
+    },
+    "memory:memory/2026-04-03.md:119:155": {
+      "key": "memory:memory/2026-04-03.md:119:155",
+      "path": "memory/2026-04-03.md",
+      "startLine": 119,
+      "endLine": 155,
+      "source": "memory",
+      "snippet": "- 生财有术Cookie：仍失效（401），需重新获取 - PROJECT_STATUS：003情报库完成+004整合完成，待更新 ## 20:14 心跳 - 时间：20:14，副业前过渡期（19:30-20:30），不提醒 - 版本：2026.4.2 ✅ - Context: 约16%，健康 ✅ - Cron：均正常 ✅ - Cost：已写入日志 - 002：19:00场次未发新文（outline 19:02才完成，正文未写）→ 已推动写情报系统正文 - 003：最后活跃约16:00，Intel库4/1后无更新 → 已唤醒 - 004：最后活跃约18:00（003情报整合），已唤醒 - 今日已发：上午场1篇（ai-habit），草稿箱58篇待发 - 生财有术Cookie：仍失效（401） ## 20:45 心跳 - 版本：OpenClaw 2026.4.2，ALREADY_NOTIFIED - 002活性正常(20:45:50)，003/004 idle >2h，已推送唤醒(超时，属正常) - Context 16%，Compaction 0 - 时间提醒：副业深度块② (20:30-23:00) 已发送 ## 21:14 心跳 - 版本：2026.4.2 OK，ALREADY_NOTIFIED - Cron：AI日报6点✅、公众号8点✅、9点✅、7点✅，生财有术idle(cookie坏) - 团队：002✅(20:40)、003✅(20:41)、004✅(20:45) 均活性正常 - Context 25%，Compaction 0 - Cost已记录 ## 21:",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4607733339071273,
+      "maxScore": 0.4607733339071273,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "project-status",
+        "30-20",
+        "2026.4.2",
+        "intel库4/1后无更新",
+        "ai-habit",
+        "already-notified",
+        "003/004",
+        "30-23"
+      ]
+    },
+    "memory:memory/2026-04-11.md:1:8": {
+      "key": "memory:memory/2026-04-11.md:1:8",
+      "path": "memory/2026-04-11.md",
+      "startLine": 1,
+      "endLine": 8,
+      "source": "memory",
+      "snippet": "# 2026-04-11 - 11:30 生财有术-每日精华推送cron执行：已抓取最新10条精华帖并按近7天筛选；本轮最相关的是 OpenClaw装机服务切到企业AI定制并成交5000、小红书用NotebookLM做原创课件3月变现1.1w、YouTube长视频低时长打法月入6000刀。按系统要求仅返回发给 Telegram(8526440826) 的文本，不自行外发。 - 22:07 心跳：版本检查 ALREADY_NOTIFIED；当前处于20:30-23:00副业深度块，不按规则主动提醒；002/003/004 在近30分钟内无活跃session；004网站最新commit b85f47c，已整合到 VERIFIED-10/7/9 4月10日增量；cron列表仅剩系统自启与git备份，AI日报/生财等业务cron未注册。 - 22:38 心跳：版本检查仍为 ALREADY_NOTIFIED；002/003/004 近30分钟依旧无活跃session；业务cron仍未注册，异常状态未恢复。 - 23:09 心跳：版本检查仍为 ALREADY_NOTIFIED；当前进入23:00-23:30复盘时段，不按规则提醒；业务cron依旧未注册，002/003/004 近30分钟继续无活跃session。 - 23:40 心跳：版本检查仍为 ALREADY_NOTIFIED；当前处于23:30-24:00准备睡觉时段，不提醒；业务cron依旧未注册，002/003/004 近30分钟仍无活跃session。",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4567406982183456,
+      "maxScore": 0.4567406982183456,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "备份",
+        "生财有术-每日精华推送cron执行",
+        "小红书用notebooklm做原创课件3月变现1.1w",
+        "already-notified",
+        "30-23",
+        "002/003/004",
+        "verified-10/7/9",
+        "ai日报/生财等业务cron未注册"
+      ]
+    },
+    "memory:memory/2026-04-02.md:86:116": {
+      "key": "memory:memory/2026-04-02.md:86:116",
+      "path": "memory/2026-04-02.md",
+      "startLine": 86,
+      "endLine": 116,
+      "source": "memory",
+      "snippet": "- Context: 53%（上次30%，升级消耗大token） - Cost: 4.7M tokens（升级消耗巨大） - 002: 待命，今日文章已全部完成（2篇），pipeline清空 - 003/004: 维护模式，正常 - 第三阶段完成 3.1 Quality Gate + 3.2 Streaming协议 ## 23:05 第三阶段 3.3 完成 - 产出：scripts/self-dashboard.sh（整合 system-check + compaction-advisor + workspace-scan + API key 检查） - 每日运行：可单独运行或集成到 HEARTBEAT - 第三阶段进度：3/5（3.1✅ 3.2✅ 3.3✅ 3.4⬜ 3.5⬜） ## 23:08 第三阶段 3.4+3.5 完成 - 3.4 记忆互斥系统：scripts/memory-mutex/ (lock.sh + unlock.sh + dedup.sh + DESIGN.md) - 3.5 工具/命令路由：scripts/intent-router.sh + DESIGN.md - 第三阶段 5/5 全部完成！🎉 ### Phase3 完整产出清单 ✅ 3.1 Quality Gate（三级分级授权） ✅ 3.2 Streaming协议 ✅ 3.3 自监控仪表盘（self-dashboard.sh） ✅ 3.4 记忆互斥系统（memory-mutex/） ✅ 3.5 工具/命令路由（intent-router.sh） ## 23:11 第四阶段全部完成 cla",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.455618280172348,
+      "maxScore": 0.455618280172348,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "router",
+        "4.7m",
+        "003/004",
+        "3.1",
+        "3.2",
+        "3.3",
+        "scripts/self-dashboard.sh",
+        "system-check"
+      ]
+    },
+    "memory:memory/2026-04-02.md:113:138": {
+      "key": "memory:memory/2026-04-02.md:113:138",
+      "path": "memory/2026-04-02.md",
+      "startLine": 113,
+      "endLine": 138,
+      "source": "memory",
+      "snippet": "✅ 4.1 自我调参：scripts/self-tuning.sh（Context/Token双阈值监控） ✅ 4.2 自我诊断：scripts/self-diagnosis.sh（Gateway+Session+API+磁盘+内存） ✅ 4.3 自我扩展：scripts/self-extend.sh（Skill缺失自动检测） ✅ 4.4 自我升级：scripts/self-upgrade.sh（版本检测+升级建议） ✅ 4.5 进化日志：scripts/evolution-log.sh（每次改进结构化记录） ### claw-code路线图完成状态 ✅ 阶段一：理解核心架构 ✅ 阶段二：单模块深度攻关（10/10） ✅ 阶段三：架构级升级（5/5） ✅ 阶段四：自我进化能力（5/5） 🎉 全部完成！ ## 23:42 心跳检查 - version: ALREADY_NOTIFIED（无更新） - Context: 13%（健康） - 团队：002 idle（今日文章完成），003维护，004 stale session（实际文件更新32h前） - 旭23:30后睡觉时间，不提醒 - ✅ HEARTBEAT_OK ## 00:49 心跳（4/3） - version: ALREADY_NOTIFIED（无更新） - Context: 24%（健康） - 团队：002/003/004均idle，旭睡觉中 - ✅ HEARTBEAT_OK",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.4537258386611938,
+      "maxScore": 0.4537258386611938,
+      "firstRecalledAt": "2026-04-22T03:37:05.344Z",
+      "lastRecalledAt": "2026-04-22T03:37:05.344Z",
+      "queryHashes": [
+        "cb27790f9825"
+      ],
+      "recallDays": [
+        "2026-04-22"
+      ],
+      "conceptTags": [
+        "gateway",
+        "4.1",
+        "scripts/self-tuning.sh",
+        "context/token双阈值监控",
+        "4.2",
+        "scripts/self-diagnosis.sh",
+        "4.3",
+        "scripts/self-extend.sh"
+      ]
+    }
+  }
+}

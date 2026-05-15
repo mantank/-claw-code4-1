@@ -1,0 +1,93 @@
+Title: Latest News & Announcements | Runway AI
+
+URL Source: http://runwayml.com/blog
+
+Markdown Content:
+# Latest News & Announcements | Runway AI
+
+[](http://runwayml.com/)
+
+*   [Research](http://runwayml.com/research)
+*   [Product](http://runwayml.com/product)
+*   [Resources](http://runwayml.com/studios)
+*   [Solutions](http://runwayml.com/solutions)
+*   [Company](http://runwayml.com/about)
+
+[Enterprise Sales](http://runwayml.com/enterprise#inquiry-form)[Log in](https://app.runwayml.com/login)[Try Runway](https://app.runwayml.com/)
+
+![Image 1](https://d3phaj0sisr2ct.cloudfront.net/site/images/rectangle-bg.png)
+
+Now through Monday, get 50% off when you upgrade to any plan with RUNWAY50. [See terms](http://runwayml.com/code-terms).
+
+[Try Now](https://app.runwayml.com/?utm_source=header&utm_medium=banner&utm_campaign=promo50)
+
+##### [Upload in progress... Your video file is being uploaded. The currently loaded video is the source file.](http://runwayml.com/research/introducing-runway-gwm-1)[Research Demo Day Introducing GWM-1 Runway Research / December 11, 2025](http://runwayml.com/research/introducing-runway-gwm-1)
+
+[Learn More](http://runwayml.com/research/introducing-runway-gwm-1)
+
+All news
+
+[![Image 2: Runway Expands Collaboration with NYU Tisch School of the Arts](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/runway-nyu-tisch.jpg) Runway Expands Collaboration with NYU Tisch School of the Arts Runway / April 10, 2026](http://runwayml.com/news/runway-expands-collaboration-with-nyu-tisch-school-of-the-arts)[![Image 3: Introducing Runway Fund](https://d3phaj0sisr2ct.cloudfront.net/site/assets/runwayfund_announcement_1920x1080.webp) Introducing Runway Fund Alejandro Matamala Ortiz / March 31, 2026](http://runwayml.com/news/introducing-runway-fund)[![Image 4: Introducing Runway Builders](https://d3phaj0sisr2ct.cloudfront.net/site/assets/runwaybuilders_announcement_1920x1080.webp) Introducing Runway Builders Michelle Kwon / March 31, 2026](http://runwayml.com/news/introducing-runway-builders)[![Image 5: Building Interactive AI Characters Responsibly](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/avatar-ethics-thumb.png) Building Interactive AI Characters Responsibly Conner McDowell / March 12, 2026](http://runwayml.com/news/building-interactive-ai-characters-responsibly)[![Image 6: Introducing Runway Labs](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/rw-labs-announcement-thumb-02.jpg) Introducing Runway Labs Runway / March 11, 2026](http://runwayml.com/news/introducing-runway-labs)[![Image 7: Introducing Runway Characters](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/characters-hero-og.png) Introducing Runway Characters Runway / March 9, 2026](http://runwayml.com/news/introducing-runway-characters)[![Image 8: New Leaders to Support Our Next Phase of Growth](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/rw-post-thumb-01.png) New Leaders to Support Our Next Phase of Growth Runway / February 26, 2026](http://runwayml.com/news/new-leaders-to-support-next-phase-of-growth)[![Image 9: New Funding to Scale World Simulation](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/series-e-thumb-02.png) New Funding to Scale World Simulation Cristóbal Valenzuela / February 10, 2026](http://runwayml.com/news/runway-series-e-funding)[![Image 10: Runway Advances Video Generation and World Models With NVIDIA Rubin Platform](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/rw_nvidia_blog.png) Runway Advances Video Generation and World Models With NVIDIA Rubin Platform Runway / January 5, 2026](http://runwayml.com/news/runway-partners-with-nvidia)[![Image 11: Runway and IMAX® Partner on Exclusive Presentation of the 2025 AI Film Festival](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/imax-aiff-exp.jpg) Runway and IMAX® Partner on Exclusive Presentation of the 2025 AI Film Festival Runway / July 28, 2025](http://runwayml.com/news/runway-imax-aiff-presentation)[![Image 12: Parsons School of Design Develops New Course Powered by Runway](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/parsons-post.jpg) Parsons School of Design Develops New Course Powered by Runway Runway / June 26, 2025](http://runwayml.com/news/parsons-school-design-develops-new-course-powered-by-runway)[![Image 13: Runway Partners with AMC Networks Across Marketing and TV Development](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/amc-post-thumbnail-2.jpg) Runway Partners with AMC Networks Across Marketing and TV Development Runway / June 4, 2025](http://runwayml.com/news/runway-amc-partnership)[![Image 14: Introducing the Gen-4 Image API](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/gen4/post-gen4api-card-05.jpg) Introducing the Gen-4 Image API Runway / May 16, 2025](http://runwayml.com/news/introducing-runway-api-for-gen-4-images)[![Image 15: Runway and Fabula Unveil Production Partnership](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/rw-fabula-post-card-v1.png) Runway and Fabula Unveil Production Partnership Runway / April 14, 2025](http://runwayml.com/news/runway-fabula-partnership)[![Image 16: Runway Inks First-Look Development Deal with Harmony Korine’s EDGLRD](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/rw-edgrld-post-card-v1.png) Runway Inks First-Look Development Deal with Harmony Korine’s EDGLRD Runway / April 10, 2025](http://runwayml.com/news/runway-edglrd-deal)[![Image 17: Harmony Korine Joins Runway’s 2025 AI Film Festival Jurors](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/harmony-blog-preview.webp) Harmony Korine Joins Runway’s 2025 AI Film Festival Jurors Runway / April 7, 2025](http://runwayml.com/news/harmony-korine-joins-aiff-2025-jurors)[![Image 18: Towards a new media ecosystem with world simulators](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/post-thumbnail-00455.jpg) Towards a new media ecosystem with world simulators Cristóbal Valenzuela / April 3, 2025](http://runwayml.com/news/runway-series-d-funding)[![Image 19: Gaspar Noé Joins Runway’s 2025 AI Film Festival Jurors](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/post-thumb2087328519.png) Gaspar Noé Joins Runway’s 2025 AI Film Festival Jurors Runway / March 17, 2025](http://runwayml.com/news/gaspar-noe-joins-aiff-2025-jurors)[![Image 20: Runway Launches Global Talent Network](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/rw-talent-network-thumb-v1.png) Runway Launches Global Talent Network Runway / December 18, 2024](http://runwayml.com/news/runway-launches-global-talent-network)[![Image 21: NYU Tisch Graduate Program brings Runway tools to the Martin Scorsese Virtual Production Center](https://d3phaj0sisr2ct.cloudfront.net/site/content/images/NYU+mice.jpg) NYU Tisch Graduate Program brings Runway tools to the Martin Scorsese Virtual Production Center Runway / December 16, 2024](http://runwayml.com/news/nyu-tisch-runway-scorsese-virtual-production-center)[![Image 22: Runway launches Student Ambassador Program](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/ambassador-program-card.png) Runway launches Student Ambassador Program Runway / December 12, 2024](http://runwayml.com/news/runway-launches-student-ambassador-program)[![Image 23: Runway launches fund to provide artists resources to make one hundred films](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/hff-post-thumbnail.jpg) Runway launches fund to provide artists resources to make one hundred films Cristóbal Valenzuela / September 26, 2024](http://runwayml.com/news/hundred-film-fund)[![Image 24: Runway Partners with Lionsgate](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/rw-post-thumbnail-001.jpg) Runway Partners with Lionsgate Runway / September 18, 2024](http://runwayml.com/news/runway-partners-with-lionsgate)[![Image 25: Introducing the Runway API for Gen-3 Alpha Turbo](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/APIpost.jpg) Introducing the Runway API for Gen-3 Alpha Turbo Runway / September 16, 2024](http://runwayml.com/news/introducing-the-runway-api)[![Image 26: Exploring the Future of Filmmaking: Runway’s programming partnership with Tribeca Festival 2024](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/1.webp) Exploring the Future of Filmmaking: Runway’s programming partnership with Tribeca Festival 2024 Runway / May 10, 2024](http://runwayml.com/news/runway-partners-with-tribeca-festival)[![Image 27: Partnering with Musixmatch to enhance the experience of music worldwide](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/2.webp) Partnering with Musixmatch to enhance the experience of music worldwide Runway / March 21, 2024](http://runwayml.com/news/runway-partners-with-musixmatch)[![Image 28: Partnering with Media.Monks to expand creative horizons](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/3-v1.jpg) Partnering with Media.Monks to expand creative horizons Runway / March 20, 2024](http://runwayml.com/news/partnering-with-media-monks)[![Image 29: Runway partners with Getty Images to build enterprise ready AI tools](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/4.webp) Runway partners with Getty Images to build enterprise ready AI tools Runway / December 4, 2023](http://runwayml.com/news/runway-partners-with-getty-images)[![Image 30: Introducing the Runway Acceleration Program](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/5.webp) Introducing the Runway Acceleration Program Anastasis Germanidis / October 16, 2023](http://runwayml.com/news/introducing-acceleration-program)[![Image 31: Runway partners with Canva](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/6.webp) Runway partners with Canva Cristóbal Valenzuela / October 4, 2023](http://runwayml.com/news/runway-partners-with-canva)[![Image 32: Breaking down "After Light" by directing duo Vallée Duhamel](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/7.webp) Breaking down "After Light" by directing duo Vallée Duhamel Sophia Jennings / August 22, 2023](http://runwayml.com/news/vallee-duhamel)[![Image 33: Runway raises $141 million to continue building the future of creativity](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/8.webp) Runway raises $141 million to continue building the future of creativity Cristóbal Valenzuela / June 29, 2023](http://runwayml.com/news/runway-raises-141-million-to-continue-building-the-future-of-creativity)[![Image 34: Scaling our in-house research infrastructure with AWS](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/runwayxaws.jpg) Scaling our in-house research infrastructure with AWS Cristóbal Valenzuela / March 22, 2023](http://runwayml.com/news/scaling-our-in-house-research-infrastructure-with-aws)[![Image 35: Runway raises $50M Series C](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/10.webp) Runway raises $50M Series C Cristóbal Valenzuela / December 5, 2022](http://runwayml.com/news/runway-raises-50-series-c)[![Image 36: Runway raises $35M Series B](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/11.webp) Runway raises $35M Series B Cristóbal Valenzuela / December 15, 2021](http://runwayml.com/news/runway-raises-35-series-b)[![Image 37: Runway raises $8.5M Series A](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/12.webp) Runway raises $8.5M Series A Cristóbal Valenzuela / December 16, 2020](http://runwayml.com/news/runway-raises-8-5m-series-a)[![Image 38: Building impossible things](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/14.webp) Building impossible things Cristóbal Valenzuela / December 10, 2020](http://runwayml.com/news/building-impossible-things)[![Image 39: Machine Learning En Plein Air: Building accessible tools for artists](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/15.webp) Machine Learning En Plein Air: Building accessible tools for artists Cristóbal Valenzuela / May 28, 2018](http://runwayml.com/news/machine-learning-en-plein-air-building-accessible-tools-for-artists)
+
+Discover more
+
+[![Image 40: Runway Partners with Lionsgate](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/rw-post-thumbnail-001.jpg) News Runway Partners with Lionsgate](http://runwayml.com/news/runway-partners-with-lionsgate)[![Image 41: How “House of David” Used Runway to Become Amazon’s Latest Hit Series](https://d3phaj0sisr2ct.cloudfront.net/site/images/customers/house-of-david/rw-cust-story-01.png) Customer Stories How “House of David” Used Runway to Become Amazon’s Latest Hit Series](http://runwayml.com/customers/how-house-of-david-used-runway-to-become-amazons-latest-hit-series)[![Image 42: Exploring the Future of Filmmaking: Runway’s programming partnership with Tribeca Festival 2024](https://d3phaj0sisr2ct.cloudfront.net/site/images/news/1.webp) News Exploring the Future of Filmmaking: Runway’s programming partnership with Tribeca Festival 2024](http://runwayml.com/news/runway-partners-with-tribeca-festival)
+
+Product
+
+*   [Explore Examples](http://runwayml.com/explore)
+*   [Characters](http://runwayml.com/product/characters)
+*   [GWM-1](http://runwayml.com/research/introducing-runway-gwm-1)
+*   [General World Models](http://runwayml.com/research/introducing-general-world-models)
+*   [Robotics SDK](http://runwayml.com/research/introducing-runway-gwm-1#robotics-section)
+*   [Gen-4.5](http://runwayml.com/research/introducing-runway-gen-4.5)
+*   [Aleph](http://runwayml.com/research/introducing-runway-aleph)
+*   [Act-Two](http://runwayml.com/research/introducing-act-one)
+*   [API](http://runwayml.com/api)
+
+Initiatives
+
+*   [AI Summit 2026 ↗](https://summit.runwayml.com/)
+*   [Studios](http://runwayml.com/studios)
+*   [AI Festival ↗](https://aiff.runwayml.com/)
+*   [Gen:48](https://gen48.runwayml.com/)
+*   [Academy ↗](https://academy.runwayml.com/)
+*   [Resources](http://runwayml.com/resources)
+*   [Creative Partners Program](http://runwayml.com/creative-partners-program)
+*   [Runway Builders](http://runwayml.com/product/builders)
+
+Company
+
+*   [Our Research](http://runwayml.com/research)
+*   [Publications](http://runwayml.com/research/publications)
+*   [Careers](http://runwayml.com/careers)
+*   [About Us](http://runwayml.com/about)
+*   [Customer Stories](http://runwayml.com/customers)
+*   [News](http://runwayml.com/news)
+*   [Talent Network ↗](https://talent.runwayml.com/)
+*   [Safety](http://runwayml.com/safety)
+
+Get Started
+
+*   [For Enterprises](http://runwayml.com/enterprise)
+*   [For Education](http://runwayml.com/educators)
+*   [Login](https://app.runwayml.com/login)
+*   [Pricing](http://runwayml.com/pricing)
+*   [Help Center ↗](https://help.runwayml.com/hc/en-us)
+*   [Data Security](http://runwayml.com/data-security)
+*   [Changelog](http://runwayml.com/changelog)
+
+Connect
+
+*   [Press](mailto:press@runwayml.com)
+*   [Partnerships](mailto:partnerships@runwayml.com)
+*   [Brand Guidelines](http://runwayml.com/brand-guidelines)
+*   [Meetups ↗](https://academy.runwayml.com/meetups)
+*   [Twitter ↗](https://twitter.com/runwayml)
+*   [Instagram ↗](https://instagram.com/runwayapp)
+*   [YouTube ↗](https://youtube.com/runwayml)
+*   [Discord ↗](http://discord.gg/invite/runwayml)
+
+© 2026 Runway AI, Inc. / [Terms of Use](http://runwayml.com/terms-of-use) / [Privacy Policy](http://runwayml.com/privacy-policy) / [California Notices](http://runwayml.com/privacy-policy#residents-of-california) / Your Privacy Choices
+
+[Code of Conduct](http://runwayml.com/coc) / [System Status](https://status.runwayml.com/)

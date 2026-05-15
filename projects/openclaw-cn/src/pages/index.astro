@@ -1,0 +1,401 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import SkillCard from "../components/SkillCard.astro";
+import { SITE_CONFIG } from "../config";
+import {
+  caseStudies,
+  featuredResources,
+  onboardingSteps,
+  siteMetrics,
+  topSkills,
+  tutorialTracks,
+} from "../data/site-content";
+---
+
+<BaseLayout
+  description="OpenClaw 中文站首页，聚合技能、教程与真实案例，帮助中文用户快速找到最适合自己的使用场景。"
+>
+  <section class="section-shell pt-8 sm:pt-10 lg:pt-14">
+    <div
+      class="grid gap-6 lg:grid-cols-[minmax(0,1.05fr)_minmax(320px,420px)] lg:items-stretch"
+    >
+      <div class="space-y-8">
+        <span
+          class="eyebrow font-pixel bg-slate-900 border-none !text-slate-300 tracking-[0.2em] shadow-[2px_2px_0_#e53e3e]"
+        >
+          {">_"} START_HERE
+        </span>
+
+        <div class="space-y-5">
+          <h1 class="section-title max-w-4xl text-balance">
+            探索 AI 的
+            <span
+              class="text-brand-600 font-pixel tracking-widest bg-brand-50 px-3 py-1 rounded inline-block border border-brand-200 shadow-[4px_4px_0_#fed7d7] mt-2"
+              >无限可能</span
+            >
+            <span
+              class="inline-block animate-bounce text-6xl ml-2 delay-150"
+              style="animation-duration: 2s;">🦞</span
+            >
+          </h1>
+          <p class="section-subtitle max-w-3xl text-pretty font-medium">
+            这里不讲复杂技术概念，直接把实用技能、教程和场景案例整理成一条可执行的最短路径。发现最实用的
+            OpenClaw 玩法！
+          </p>
+        </div>
+
+        <div class="flex flex-col gap-3 sm:flex-row">
+          <a href="/tutorials" class="primary-button">
+            先看新手教程
+            <span aria-hidden="true">→</span>
+          </a>
+          <a href="/skills" class="secondary-button">
+            浏览技能商店
+            <span aria-hidden="true">→</span>
+          </a>
+        </div>
+
+        <div class="grid gap-3 sm:grid-cols-3">
+          {
+            siteMetrics.map((metric) => (
+              <div class="metric-card">
+                <div class="text-2xl font-semibold tracking-tight text-slate-950">
+                  {metric.value}
+                </div>
+                <div class="mt-1 text-sm font-medium text-slate-700">
+                  {metric.label}
+                </div>
+                <p class="mt-2 text-sm leading-6 text-slate-500">
+                  {metric.description}
+                </p>
+              </div>
+            ))
+          }
+        </div>
+      </div>
+
+      <aside
+        class="terminal-panel h-full relative group shadow-[12px_12px_0_rgba(15,23,42,0.1)]"
+      >
+        <div
+          class="flex items-center justify-between gap-3 mb-4 pb-4 border-b border-slate-800"
+        >
+          <div class="flex items-center gap-2 font-pixel text-brand-500">
+            <span class="w-3 h-3 rounded-full bg-red-500"></span>
+            <span class="w-3 h-3 rounded-full bg-yellow-500"></span>
+            <span class="w-3 h-3 rounded-full bg-green-500"></span>
+          </div>
+          <span
+            class="text-[10px] uppercase tracking-[0.24em] text-slate-500 font-pixel"
+          >
+            bash - 120x40
+          </span>
+        </div>
+
+        <div class="mt-6 space-y-3">
+          {
+            topSkills.slice(0, 3).map((skill) => (
+              <div class="terminal-row">
+                <span class="mt-0.5 font-mono text-brand-300">$</span>
+                <div class="min-w-0">
+                  <div class="truncate font-mono text-sm text-brand-100">
+                    {skill.installCommand}
+                  </div>
+                  <div class="mt-1 text-xs text-slate-400">
+                    {skill.name} · {skill.category}
+                  </div>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+
+        <div class="mt-6 space-y-3">
+          {
+            onboardingSteps.map((step, index) => (
+              <a
+                href={step.href}
+                class="block rounded-[22px] border border-slate-800 bg-slate-900/70 px-4 py-4 transition hover:border-brand-500/40 hover:bg-slate-900"
+              >
+                <div class="flex items-start gap-3">
+                  <span class="inline-flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-brand-500/15 text-sm font-semibold text-brand-300">
+                    0{index + 1}
+                  </span>
+                  <div>
+                    <div class="text-sm font-semibold text-white">
+                      {step.title}
+                    </div>
+                    <p class="mt-1 text-sm leading-6 text-slate-400">
+                      {step.description}
+                    </p>
+                  </div>
+                </div>
+              </a>
+            ))
+          }
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div
+      class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+    >
+      <div class="max-w-2xl">
+        <span class="eyebrow font-pixel bg-white border border-slate-200">
+          TODAY_PICKS
+        </span>
+        <h2
+          class="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl"
+        >
+          先看最值得点开的内容
+        </h2>
+        <p
+          class="mt-3 text-base leading-7 text-slate-600 sm:text-lg font-medium"
+        >
+          先解决“能做什么”和“怎么开始”两个问题，再决定要不要继续深挖。
+        </p>
+      </div>
+      <a href="/tutorials" class="inline-link">
+        查看完整教程路径
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="mt-8 grid gap-4 md:grid-cols-2 xl:grid-cols-3">
+      {
+        featuredResources.map((item) => (
+          <a
+            href={item.href}
+            class="surface-card flex h-full flex-col p-6 sm:p-7"
+          >
+            <span class="tag-pill tag-brand">{item.tag}</span>
+            <h3 class="mt-5 text-xl font-semibold tracking-tight text-slate-950">
+              {item.title}
+            </h3>
+            <p class="mt-3 flex-grow text-sm leading-7 text-slate-600">
+              {item.description}
+            </p>
+            <div class="mt-5 flex items-center justify-between gap-3 border-t border-slate-100 pt-4 text-sm text-slate-500">
+              <span>{item.meta}</span>
+              <span class="inline-link">
+                继续阅读
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div class="soft-card p-6 sm:p-8">
+      <div
+        class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+      >
+        <div class="max-w-2xl">
+          <span class="eyebrow">场景速查</span>
+          <h2
+            class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl"
+          >
+            不想逐页找，就按使用场景进入
+          </h2>
+        </div>
+        <p class="max-w-xl text-sm leading-7 text-slate-600 sm:text-base">
+          内容创作、电商运营、办公提效、开发工具这些高频入口，优先为手机和平板浏览做了卡片化布局。
+        </p>
+      </div>
+
+      <div class="mt-8 grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+        {
+          SITE_CONFIG.skillCategories.map((category) => (
+            <a
+              href="/skills"
+              class="rounded-[24px] border border-white/70 bg-white/88 p-5 transition hover:border-brand-200 hover:bg-white"
+            >
+              <div class="text-3xl">{category.emoji}</div>
+              <h3 class="mt-4 text-lg font-semibold text-slate-950">
+                {category.name}
+              </h3>
+              <p class="mt-2 text-sm leading-6 text-slate-600">
+                {category.description}
+              </p>
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </section>
+
+  <section class="section-shell pt-0" id="skills-grid">
+    <div class="grid gap-6 xl:grid-cols-[minmax(0,1fr)_320px]">
+      <div>
+        <span class="eyebrow">热门技能</span>
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl"
+        >
+          先从最容易跑通结果的技能开始
+        </h2>
+        <div class="mt-8 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          {topSkills.slice(0, 6).map((skill) => <SkillCard {...skill} />)}
+        </div>
+      </div>
+
+      <aside class="soft-card p-6 sm:p-7">
+        <span class="eyebrow">上手建议</span>
+        <h3 class="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
+          先复制一个技能，再回头补教程
+        </h3>
+        <p class="mt-3 text-sm leading-7 text-slate-600">
+          对大多数非技术用户来说，先看到结果比先理解原理更重要。优先挑一个与你业务最接近的技能，把链路跑通。
+        </p>
+        <ul class="mt-6 space-y-3">
+          <li class="soft-card p-4 text-sm leading-6 text-slate-600">
+            先选难度为 1 星的技能，减少第一次配置阻力。
+          </li>
+          <li class="soft-card p-4 text-sm leading-6 text-slate-600">
+            复制安装命令后，直接去教程页对照验证是否安装成功。
+          </li>
+          <li class="soft-card p-4 text-sm leading-6 text-slate-600">
+            平板端适合通读教程，手机端适合快速复制命令和看步骤。
+          </li>
+        </ul>
+        <a href="/skills" class="primary-button mt-6 w-full">
+          打开完整技能列表
+        </a>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div
+      class="flex flex-col gap-4 md:flex-row md:items-end md:justify-between"
+    >
+      <div class="max-w-2xl">
+        <span class="eyebrow">学习路径</span>
+        <h2
+          class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl"
+        >
+          按阶段学习，不用一开始就碰复杂工作流
+        </h2>
+      </div>
+      <a href="/tutorials" class="inline-link">
+        进入教程中心
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    <div class="mt-8 grid gap-5 lg:grid-cols-3">
+      {
+        tutorialTracks.map((track) => (
+          <a
+            href="/tutorials"
+            class="surface-card flex h-full flex-col p-6 sm:p-7"
+          >
+            <div class="flex items-center justify-between gap-3">
+              <span class="tag-pill tag-gray">{track.level}</span>
+              <span class="text-2xl">{track.icon}</span>
+            </div>
+            <h3 class="mt-5 text-2xl font-semibold tracking-tight text-slate-950">
+              {track.title}
+            </h3>
+            <p class="mt-3 text-sm leading-7 text-slate-600">
+              {track.description}
+            </p>
+            <div class="mt-5 space-y-3 border-t border-slate-100 pt-4">
+              {track.items.map((item) => (
+                <div class="flex items-start justify-between gap-3 text-sm">
+                  <div>
+                    <div class="font-medium text-slate-800">{item.title}</div>
+                    <div class="mt-1 text-slate-500">{item.duration}</div>
+                  </div>
+                  <span class="text-brand-700">→</span>
+                </div>
+              ))}
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div class="max-w-2xl">
+      <span class="eyebrow">真实案例</span>
+      <h2
+        class="mt-4 text-3xl font-semibold tracking-tight text-slate-950 sm:text-4xl"
+      >
+        先看别人怎么用，再决定你要从哪条线开始
+      </h2>
+      <p class="mt-3 text-base leading-7 text-slate-600 sm:text-lg">
+        真实故事最能帮助新用户判断价值。这里保留了最接近国内用户场景的三类案例。
+      </p>
+    </div>
+
+    <div class="mt-8 grid gap-5 lg:grid-cols-3">
+      {
+        caseStudies.map((item) => (
+          <a
+            href={item.href}
+            class="surface-card flex h-full flex-col p-6 sm:p-7"
+          >
+            <div class="flex items-start justify-between gap-4">
+              <div>
+                <span class="tag-pill tag-gray">{item.tag}</span>
+                <h3 class="mt-4 text-2xl font-semibold tracking-tight text-slate-950">
+                  {item.title}
+                </h3>
+              </div>
+              <div class="inline-flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-50 text-sm font-semibold text-brand-700">
+                {item.initials}
+              </div>
+            </div>
+            <p class="mt-3 text-sm font-medium text-brand-700">
+              {item.subtitle}
+            </p>
+            <p class="mt-4 flex-grow text-sm leading-7 text-slate-600">
+              {item.description}
+            </p>
+            <div class="mt-5 flex items-center justify-between gap-3 border-t border-slate-100 pt-4 text-sm">
+              <span class="text-slate-500">{item.metric}</span>
+              <span class="inline-link">
+                看路径
+                <span aria-hidden="true">→</span>
+              </span>
+            </div>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
+  <section class="section-shell pt-0">
+    <div
+      class="surface-card overflow-hidden bg-slate-950 px-6 py-10 text-center text-white sm:px-10 sm:py-14 lg:px-16"
+    >
+      <span class="eyebrow border-slate-700 bg-slate-900 text-brand-300">
+        Ready
+      </span>
+      <h2 class="mt-5 text-3xl font-semibold tracking-tight sm:text-4xl">
+        准备好跑通你的第一个 OpenClaw 场景了吗？
+      </h2>
+      <p
+        class="mx-auto mt-4 max-w-2xl text-base leading-7 text-slate-300 sm:text-lg"
+      >
+        从新手教程开始，或者直接挑一个技能复制命令。手机上快速浏览，平板上通读步骤，PC
+        上完成实际配置。
+      </p>
+      <div class="mt-8 flex flex-col justify-center gap-3 sm:flex-row">
+        <a href="/tutorials" class="primary-button"> 开始学习</a>
+        <a
+          href="/skills"
+          class="secondary-button border-slate-700 bg-slate-900 text-white hover:border-brand-400 hover:text-brand-200"
+        >
+          查看技能
+        </a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

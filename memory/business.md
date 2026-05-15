@@ -19,7 +19,7 @@
 - 引流现状：公众号文章→微信加好友（已有3人转化）
 
 ## 生财有术
-- Group ID: 1824528822，Cookie有效期到2026年底
+- Group ID: 1824528822，2026-04-22 已确认 API 路线继续使用 `zsxq_access_token`，网页端另保留 `__user_token.v3` 作为备用
 - 精华帖: scope=digests，最新帖: scope=all
 - 每日19:00自动推送（cron）
 - scys.com板块menuId：中标539 / 超级标2634453 / 亦仁1985685

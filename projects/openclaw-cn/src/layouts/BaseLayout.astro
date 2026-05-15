@@ -1,0 +1,98 @@
+---
+import { SITE_CONFIG } from "../config";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import { en } from "../i18n/en";
+import Analytics from "@vercel/analytics/astro";
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const { title = SITE_CONFIG.title, description = SITE_CONFIG.description } =
+  Astro.props;
+
+const fullTitle =
+  title === SITE_CONFIG.title ? title : `${title} - ${SITE_CONFIG.title}`;
+const canonicalURL = Astro.site
+  ? new URL(Astro.url.pathname, Astro.site)
+  : Astro.url;
+---
+
+<!DOCTYPE html>
+<html lang={SITE_CONFIG.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#e53e3e" />
+    <link rel="canonical" href={canonicalURL.toString()} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:url" content={canonicalURL.toString()} />
+    <title>{fullTitle}</title>
+  </head>
+  <body class="relative flex min-h-screen flex-col font-sans">
+    <a
+      href="#main-content"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-slate-950 focus:px-4 focus:py-2 focus:text-sm focus:text-white"
+    >
+      跳到正文
+    </a>
+    <Header />
+    <main id="main-content" class="flex flex-1 flex-col pb-16">
+      <slot />
+    </main>
+    <Footer />
+    <Analytics />
+
+    <script define:vars={{ enDict: en }}>
+      // i18n 客户端切换
+      const STORAGE_KEY = 'openclaw-lang';
+
+      function applyLang(lang) {
+        const isEn = lang === 'en';
+        // 切换所有带 data-i18n 属性的元素
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (isEn && enDict[key] !== undefined) {
+            el.setAttribute('data-zh-text', el.getAttribute('data-zh-text') || el.textContent.trim());
+            el.textContent = enDict[key];
+          } else {
+            const zhText = el.getAttribute('data-zh-text');
+            if (zhText) el.textContent = zhText;
+          }
+        });
+        // 切换按钮文字
+        const btn = document.getElementById('lang-switch-btn');
+        if (btn) btn.textContent = isEn ? '中文' : 'EN';
+        // 更新 html lang
+        document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+        localStorage.setItem(STORAGE_KEY, lang);
+      }
+
+      window.toggleLang = function () {
+        const current = localStorage.getItem(STORAGE_KEY) || 'zh';
+        applyLang(current === 'zh' ? 'en' : 'zh');
+      };
+
+      // 页面加载时恢复语言
+      document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'en') applyLang('en');
+      });
+    </script>
+  </body>
+</html>

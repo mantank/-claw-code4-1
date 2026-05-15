@@ -1,0 +1,138 @@
+---
+interface Props {
+  name: string;
+  nameEn: string;
+  description: string;
+  category: string;
+  difficulty: 1 | 2 | 3;
+  installCommand?: string;
+  href?: string;
+  highlights?: string[];
+}
+
+const {
+  name,
+  nameEn,
+  description,
+  category,
+  difficulty,
+  installCommand,
+  href = "#",
+  highlights = [],
+} = Astro.props;
+
+const difficultyStars = Array(3)
+  .fill(0)
+  .map((_, i) => (i < difficulty ? "★" : "☆"))
+  .join("");
+
+const difficultyLabels = {
+  1: "零基础可上手",
+  2: "需要少量配置",
+  3: "适合进阶用户",
+} as const;
+---
+
+<article class="surface-card flex h-full flex-col p-6 sm:p-7">
+  <div class="flex items-start justify-between gap-4">
+    <div class="min-w-0">
+      <h3 class="text-xl font-semibold tracking-tight text-slate-950">
+        {name}
+      </h3>
+      <div class="mt-1 truncate font-mono text-sm text-slate-500">
+        {nameEn}
+      </div>
+    </div>
+    <span class="tag-pill tag-gray shrink-0">{category}</span>
+  </div>
+
+  <p class="mt-5 flex-grow text-sm leading-7 text-slate-600 sm:text-[0.95rem]">
+    {description}
+  </p>
+
+  {
+    highlights.length > 0 && (
+      <ul class="mt-5 flex flex-wrap gap-2">
+        {highlights.map((highlight) => (
+          <li class="tag-pill tag-brand">{highlight}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  <div class="mt-6 space-y-4 border-t border-slate-100 pt-5">
+    <div class="flex items-center justify-between gap-3 text-sm">
+      <div class="min-w-0">
+        <div class="font-medium text-slate-500">难度等级</div>
+        <div class="mt-1 flex items-center gap-2">
+          <span class="font-mono tracking-[0.18em] text-brand-600">
+            {difficultyStars}
+          </span>
+          <span class="text-slate-600">{difficultyLabels[difficulty]}</span>
+        </div>
+      </div>
+      <a href={href} class="inline-link shrink-0">
+        查看路径
+        <span aria-hidden="true">→</span>
+      </a>
+    </div>
+
+    {
+      installCommand && (
+        <div class="rounded-xl bg-slate-950 p-4 text-brand-100 shadow-[inset_0_2px_10px_rgba(0,0,0,0.5)] border-2 border-slate-700 mt-2 relative overflow-hidden group/target">
+          <div class="mb-3 text-xs uppercase tracking-[0.2em] text-slate-500 flex items-center gap-2 font-pixel">
+            <span class="w-2 h-2 rounded-full bg-red-500" />
+            <span class="w-2 h-2 rounded-full bg-yellow-500" />
+            <span class="w-2 h-2 rounded-full bg-green-500" />
+            <span class="ml-2">INSTALL_CMD</span>
+          </div>
+          <div class="flex items-center justify-between gap-3">
+            <code class="min-w-0 flex-1 truncate font-mono text-sm group-hover/target:text-brand-300 transition-colors">
+              <span class="mr-2 text-slate-500 font-bold">$</span>
+              {installCommand}
+            </code>
+            <button
+              type="button"
+              class="copy-button shrink-0 uppercase bg-brand-600 text-white border-brand-700 shadow-[2px_2px_0_#9b2c2c] hover:translate-y-[2px] border hover:translate-x-[2px] hover:shadow-none transition-all rounded px-2 py-1 mx-2"
+              data-copy={installCommand}
+              data-copy-default="COPY"
+            >
+              COPY
+            </button>
+          </div>
+        </div>
+      )
+    }
+  </div>
+</article>
+
+<script>
+  if (!document.documentElement.dataset.skillCopyBound) {
+    document.documentElement.dataset.skillCopyBound = "true";
+
+    document.addEventListener("click", async (event) => {
+      const target =
+        event.target instanceof Element
+          ? event.target.closest("[data-copy]")
+          : null;
+
+      if (!(target instanceof HTMLButtonElement)) {
+        return;
+      }
+
+      const text = target.dataset.copy;
+
+      if (!text) {
+        return;
+      }
+
+      await navigator.clipboard.writeText(text);
+
+      const defaultLabel = target.dataset.copyDefault || "复制";
+      target.textContent = "已复制";
+      window.setTimeout(() => {
+        target.textContent = defaultLabel;
+      }, 1500);
+    });
+  }
+</script>

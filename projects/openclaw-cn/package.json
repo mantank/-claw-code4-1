@@ -1,0 +1,25 @@
+{
+  "name": "openclaw-cn",
+  "type": "module",
+  "version": "0.1.0",
+  "description": "OpenClaw 中文站 - 国内用户获取 OpenClaw 玩法、教程、技能和应用案例的第一入口",
+  "author": "零零壹 × 旭",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "check": "astro check",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.19",
+    "@tailwindcss/vite": "^4.2.1",
+    "@vercel/analytics": "^1.6.1",
+    "astro": "^5.17.1",
+    "tailwindcss": "^4.2.1"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "typescript": "^5.9.3"
+  }
+}

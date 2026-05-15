@@ -108,9 +108,10 @@ curl "https://generativelanguage.googleapis.com/v1beta/models/gemini-3.1-flash-i
 - Group ID: 1824528822
 - API: https://api.zsxq.com/v2/groups/1824528822/topics
 - Cookie: zsxq_access_token=9DED7F62-5A95-4E52-9FE5-F44270AB368A_B12E75520B50E663
+- 备用网页Cookie: __user_token.v3=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyIjpudWxsLCJ1c2VyX2lkIjo4MDU1NDYsIm5hbWUiOiLpmYjml60iLCJ4cV9pZCI6MjE3NDE4MCwibnVtYmVyIjo4NTc0OCwieHFfZ210X2V4cGlyZSI6MTgwODc0Njg3MiwieHFfZ210X3VwZGF0ZSI6MTc3NjI3MTU5OCwidG9rZW5fZXhwaXJlIjoxNzc3NDgxMTk4fQ.ioDz-0cpK3vm28YNmLm-5BJAHn0qHRmAB8WoGWdSSTY
 - 精华帖: scope=digests
 - 最新帖: scope=all
-- Cookie过期: 2026年底
+- Cookie更新时间: 2026-04-22
 
 ### 火山引擎（即梦AI）— ⚠️ 已废弃，不再使用
 

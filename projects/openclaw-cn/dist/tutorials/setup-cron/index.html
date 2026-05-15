@@ -1,0 +1,187 @@
+<!DOCTYPE html><html lang="zh-CN"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="让 AI 每天按时自动干活：发日报、提醒、整理信息，全自动不用你盯。"><meta name="generator" content="Astro v5.18.0"><meta name="theme-color" content="#e53e3e"><link rel="canonical" href="https://www.xiaolongxia.app/tutorials/setup-cron/"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet"><meta property="og:title" content="配置定时任务（Cron） - OpenClaw 中文站"><meta property="og:description" content="让 AI 每天按时自动干活：发日报、提醒、整理信息，全自动不用你盯。"><meta property="og:type" content="website"><meta property="og:locale" content="zh_CN"><meta property="og:url" content="https://www.xiaolongxia.app/tutorials/setup-cron/"><title>配置定时任务（Cron） - OpenClaw 中文站</title><link rel="stylesheet" href="/_astro/index.CrifH_1V.css"></head> <body class="relative flex min-h-screen flex-col font-sans"> <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-[60] focus:rounded-full focus:bg-slate-950 focus:px-4 focus:py-2 focus:text-sm focus:text-white">
+跳到正文
+</a> <header class="sticky top-0 z-50 glass-nav"> <nav class="page-shell"> <div class="flex min-h-[4.5rem] items-center justify-between gap-4 py-3"> <div class="flex items-center gap-4 sm:gap-8"> <a href="/" class="group flex items-center gap-3"> <div class="flex h-11 w-11 items-center justify-center rounded bg-slate-900 text-lg font-bold text-brand-500 shadow-[2px_2px_0_#9b2c2c] font-pixel transition group-hover:scale-105 border-2 border-slate-700"> &gt;_ </div> <div class="min-w-0"> <div class="text-base font-semibold tracking-tight text-slate-950 transition group-hover:text-brand-700 sm:text-xl font-pixel flex items-center gap-1">
+OpenClaw<span class="text-brand-500 text-2xl inline-block -translate-y-0.5">🦞</span> </div> <div class="hidden text-xs text-slate-500 sm:block font-mono tracking-wider">
+[COMMUNITY_ENTRYPOINT]
+</div> </div> </a> <div class="hidden md:flex md:items-center md:gap-1"> <a href="/" class="nav-link "> <span data-i18n="nav.home">首页</span> </a><a href="/skills" class="nav-link "> <span data-i18n="nav.skills">技能商店</span> </a><a href="/tutorials" class="nav-link "> <span data-i18n="nav.tutorials">教程中心</span> </a> </div> </div> <div class="hidden items-center gap-3 md:flex"> <!-- 语言切换按钮 --> <button id="lang-switch-btn" onclick="toggleLang()" title="切换语言 / Switch Language" class="inline-flex h-9 items-center justify-center rounded border-2 border-slate-700 bg-slate-900 px-3 text-xs font-bold text-slate-300 font-pixel tracking-wider shadow-[2px_2px_0_#e53e3e] transition hover:bg-slate-800 hover:text-brand-400 cursor-pointer">
+EN
+</button> <a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer" class="secondary-button hidden lg:inline-flex">
+GitHub
+</a> <a href="/tutorials" class="primary-button px-4 py-2"> <span data-i18n="nav.getStarted">开始上手</span> </a> </div> <div class="md:hidden flex items-center"> <button data-mobile-menu-button class="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-slate-200 bg-white text-slate-600 transition hover:border-brand-200 hover:text-brand-700" aria-label="打开菜单" aria-expanded="false" aria-controls="mobile-menu"> <svg data-menu-open-icon class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path> </svg> <svg data-menu-close-icon class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> </nav> <div id="mobile-menu" data-mobile-menu class="page-shell hidden md:hidden pb-4"> <div class="surface-card space-y-2 p-4"> <a href="/" class="block rounded-2xl px-4 py-3 text-base font-medium transition text-slate-700 hover:bg-slate-50 hover:text-brand-700"> <span data-i18n="nav.home">首页</span> </a><a href="/skills" class="block rounded-2xl px-4 py-3 text-base font-medium transition text-slate-700 hover:bg-slate-50 hover:text-brand-700"> <span data-i18n="nav.skills">技能商店</span> </a><a href="/tutorials" class="block rounded-2xl px-4 py-3 text-base font-medium transition text-slate-700 hover:bg-slate-50 hover:text-brand-700"> <span data-i18n="nav.tutorials">教程中心</span> </a> <div class="mt-3 grid gap-3 border-t border-slate-100 pt-4"> <button onclick="toggleLang()" class="secondary-button w-full text-center cursor-pointer"> <span id="lang-switch-btn-mobile">EN / 切换语言</span> </button> <a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer" class="secondary-button w-full"> <span data-i18n="nav.github">GitHub 社区</span> </a> <a href="/tutorials" class="primary-button w-full"> <span data-i18n="nav.getStartedLong">5 分钟开始上手</span> </a> </div> </div> </div> </header> <script type="module">const t=document.querySelector("[data-mobile-menu-button]"),n=document.querySelector("[data-mobile-menu]"),o=document.querySelector("[data-menu-open-icon]"),c=document.querySelector("[data-menu-close-icon]"),i=e=>{!t||!n||!o||!c||(t.setAttribute("aria-expanded",String(e)),n.classList.toggle("hidden",!e),o.classList.toggle("hidden",e),c.classList.toggle("hidden",!e))};t?.addEventListener("click",()=>{const e=t.getAttribute("aria-expanded")==="true";i(!e)});window.addEventListener("resize",()=>{window.innerWidth>=768&&i(!1)});</script> <main id="main-content" class="flex flex-1 flex-col pb-16">  <div class="mx-auto max-w-3xl px-4 py-10 sm:px-6 lg:px-8"> <!-- 返回按钮 --> <a href="/tutorials" class="inline-flex items-center gap-2 text-sm font-medium text-slate-500 transition hover:text-brand-600">
+← 返回教程列表
+</a> <!-- 文章头部 --> <div class="mt-8 border-b border-slate-100 pb-8"> <div class="flex flex-wrap items-center gap-3"> <span class="rounded-full px-3 py-1 text-xs font-semibold bg-amber-100 text-amber-700"> 进阶 </span> <span class="text-sm text-slate-400">⏱ 30 分钟</span> </div> <h1 class="mt-4 text-3xl font-bold tracking-tight text-slate-950 sm:text-4xl"> 配置定时任务（Cron） </h1> <p class="mt-3 text-base leading-7 text-slate-600">让 AI 每天按时自动干活：发日报、提醒、整理信息，全自动不用你盯。</p> <div class="mt-4 rounded-xl bg-brand-50 px-4 py-3 text-sm font-medium text-brand-700">
+🎯 学完后你能：建立一个每天早上自动推送 AI 日报的定时任务，真正实现「AI 自动上班」 </div> </div> <!-- 正文内容 --> <div class="prose prose-slate mt-8 max-w-none
+      prose-headings:font-semibold prose-headings:tracking-tight
+      prose-h2:text-xl prose-h2:mt-8 prose-h2:mb-4
+      prose-h3:text-base prose-h3:mt-6 prose-h3:mb-2
+      prose-p:leading-7 prose-p:text-slate-700
+      prose-code:rounded prose-code:bg-slate-100 prose-code:px-1.5 prose-code:py-0.5 prose-code:text-sm prose-code:text-brand-700 prose-code:font-mono
+      prose-pre:rounded-xl prose-pre:bg-slate-950 prose-pre:text-slate-100
+      prose-a:text-brand-600 prose-a:no-underline hover:prose-a:underline
+      prose-blockquote:border-l-brand-400 prose-blockquote:text-slate-600
+      prose-strong:text-slate-900
+      prose-li:text-slate-700
+      prose-hr:border-slate-200"> <h2 id="为什么要配置-cron">为什么要配置 Cron</h2>
+<p>没有 Cron，你的 AI 助手是「被动响应型」：你发消息，它才回复。</p>
+<p>有了 Cron，它变成「主动执行型」：</p>
+<ul>
+<li>每天早 6 点，自动整理行业动态发给你</li>
+<li>每天晚 10 点，自动生成当日复盘</li>
+<li>每周一上午，自动推送本周任务清单</li>
+<li>有工具版本更新，第一时间通知你</li>
+</ul>
+<p>这就是「AI 员工模式」的核心：<strong>你定规则，AI 自动上班。</strong></p>
+<hr>
+<h2 id="基础概念cron-表达式">基础概念：Cron 表达式</h2>
+<p>Cron 用 5 个数字描述「什么时候运行」：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>分钟 小时 日期 月份 星期</span></span>
+<span class="line"><span> *    *    *    *    *</span></span></code></pre>
+<p>常用示例：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>0 6 * * *        每天早上 6:00</span></span>
+<span class="line"><span>30 9 * * 1-5     工作日早上 9:30</span></span>
+<span class="line"><span>0 22 * * *       每天晚上 22:00</span></span>
+<span class="line"><span>*/30 * * * *     每 30 分钟一次</span></span>
+<span class="line"><span>0 9 * * 1        每周一早上 9:00</span></span></code></pre>
+<p>不懂没关系，下面都有现成的命令直接复制。</p>
+<hr>
+<h2 id="第一步创建你的第一个定时任务">第一步：创建你的第一个定时任务</h2>
+<p>最实用的入门任务：<strong>每天早上 7 点，让 AI 整理今日 AI 行业动态发给你</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --name</span><span style="color:#9ECBFF"> "AI日报"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --cron</span><span style="color:#9ECBFF"> "0 7 * * *"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --message</span><span style="color:#9ECBFF"> "请搜索今天的 AI 行业重要动态，整理成 3-5 条简报，每条包含事件、影响和你的评价，发送给我"</span></span></code></pre>
+<p>创建成功后会显示任务 ID，记下来方便后续管理。</p>
+<hr>
+<h2 id="第二步验证任务创建成功">第二步：验证任务创建成功</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> list</span></span></code></pre>
+<p>输出示例：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>ID          名称        计划          下次运行</span></span>
+<span class="line"><span>ab12cd34    AI日报      0 7 * * *     明天 07:00</span></span></code></pre>
+<hr>
+<h2 id="立刻试运行一次不用等到预定时间">立刻试运行一次（不用等到预定时间）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> run</span><span style="color:#9ECBFF"> ab12cd34</span></span></code></pre>
+<p>把 <code>ab12cd34</code> 换成你的任务 ID。几秒内就会执行并发送消息，验证效果。</p>
+<hr>
+<h2 id="实用场景模板">实用场景模板</h2>
+<p>直接复制，改一下名字就能用：</p>
+<h3 id="场景-1每日早报推荐新手先装这个">场景 1：每日早报（推荐新手先装这个）</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --name</span><span style="color:#9ECBFF"> "每日早报"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --cron</span><span style="color:#9ECBFF"> "0 8 * * *"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --message</span><span style="color:#9ECBFF"> "帮我整理：①今日 AI 行业重要动态 3 条；②今天适合写的公众号选题 2 个（带理由）；③一句今日激励。格式简洁，适合早上快速浏览"</span></span></code></pre>
+<h3 id="场景-2每日晚间复盘">场景 2：每日晚间复盘</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --name</span><span style="color:#9ECBFF"> "晚间复盘"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --cron</span><span style="color:#9ECBFF"> "0 22 * * *"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --message</span><span style="color:#9ECBFF"> "今天是 $(</span><span style="color:#B392F0">date</span><span style="color:#9ECBFF"> '+%Y年%m月%d日')。请帮我做今日复盘：①我今天做了什么（根据我们的对话记录）；②做得好的 1 件事；③明天最重要的 1 件事。格式简短有力"</span></span></code></pre>
+<h3 id="场景-3工作日提醒">场景 3：工作日提醒</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --name</span><span style="color:#9ECBFF"> "工作日午间提醒"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --cron</span><span style="color:#9ECBFF"> "0 12 * * 1-5"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --message</span><span style="color:#9ECBFF"> "现在是工作日午休时间。提醒我：①今天下午要完成什么；②有没有快到期的事项；③推荐一件下午可以做的小事"</span></span></code></pre>
+<h3 id="场景-4工具更新监控">场景 4：工具更新监控</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --name</span><span style="color:#9ECBFF"> "工具更新监控"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --every</span><span style="color:#9ECBFF"> "6h"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --message</span><span style="color:#9ECBFF"> "检查 OpenClaw、Claude Code、Cursor 是否有新版本更新，如果有新版本，告诉我更新了什么内容"</span></span></code></pre>
+<hr>
+<h2 id="管理定时任务">管理定时任务</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 查看所有任务</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> list</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 立即运行某个任务</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> run</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">任务I</span><span style="color:#E1E4E8">D</span><span style="color:#F97583">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 暂停任务（不删除）</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> disable</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">任务I</span><span style="color:#E1E4E8">D</span><span style="color:#F97583">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 重新启用</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> enable</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">任务I</span><span style="color:#E1E4E8">D</span><span style="color:#F97583">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 删除任务</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> rm</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">任务I</span><span style="color:#E1E4E8">D</span><span style="color:#F97583">></span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 查看运行历史</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> runs</span><span style="color:#F97583"> &#x3C;</span><span style="color:#9ECBFF">任务I</span><span style="color:#E1E4E8">D</span><span style="color:#F97583">></span></span></code></pre>
+<hr>
+<h2 id="进阶用---every-代替-cron-表达式">进阶：用 <code>--every</code> 代替 Cron 表达式</h2>
+<p>嫌 Cron 表达式麻烦？用 <code>--every</code> 更直觉：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#6A737D"># 每 30 分钟运行</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> --name</span><span style="color:#9ECBFF"> "心跳检查"</span><span style="color:#79B8FF"> --every</span><span style="color:#9ECBFF"> "30m"</span><span style="color:#79B8FF"> --message</span><span style="color:#9ECBFF"> "..."</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 每 2 小时运行</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> --name</span><span style="color:#9ECBFF"> "定期汇报"</span><span style="color:#79B8FF"> --every</span><span style="color:#9ECBFF"> "2h"</span><span style="color:#79B8FF"> --message</span><span style="color:#9ECBFF"> "..."</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#6A737D"># 每天运行（等同于 0 0 * * *）</span></span>
+<span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> --name</span><span style="color:#9ECBFF"> "日结"</span><span style="color:#79B8FF"> --every</span><span style="color:#9ECBFF"> "1d"</span><span style="color:#79B8FF"> --message</span><span style="color:#9ECBFF"> "..."</span></span></code></pre>
+<hr>
+<h2 id="常见问题">常见问题</h2>
+<p><strong>Q：到时间了但没收到消息</strong></p>
+<ol>
+<li>检查 Gateway 是否在运行：<code>openclaw gateway status</code></li>
+<li>检查任务是否 enabled：<code>openclaw cron list</code></li>
+<li>手动运行看报不报错：<code>openclaw cron run &#x3C;任务ID></code></li>
+</ol>
+<p><strong>Q：想让任务在特定时区运行</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="bash"><code><span class="line"><span style="color:#B392F0">openclaw</span><span style="color:#9ECBFF"> cron</span><span style="color:#9ECBFF"> add</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --name</span><span style="color:#9ECBFF"> "早报"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --cron</span><span style="color:#9ECBFF"> "0 8 * * *"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --tz</span><span style="color:#9ECBFF"> "Asia/Shanghai"</span><span style="color:#79B8FF"> \</span></span>
+<span class="line"><span style="color:#79B8FF">  --message</span><span style="color:#9ECBFF"> "..."</span></span></code></pre>
+<p><strong>Q：任务运行了但 AI 回答质量差</strong></p>
+<p>把 <code>--message</code> 里的提示词写得更具体，说清楚：要什么格式、多少字、什么风格。</p>
+<p><strong>Q：怎么让 Cron 任务的内容更聪明</strong></p>
+<p>在 <code>HEARTBEAT.md</code> 文件里写好定时任务的规则和上下文，AI 运行时会自动读取，输出质量会好很多。</p>
+<hr>
+<h2 id="下一步">下一步</h2>
+<ul>
+<li>多建几个定时任务，找到最适合你日程的节奏</li>
+<li>试试 <a href="/tutorials">多 Agent 协作</a>，让不同的 AI 助手分工合作</li>
+</ul> </div> <!-- 底部导航 --> <div class="mt-12 border-t border-slate-100 pt-8"> <a href="/tutorials" class="inline-flex items-center gap-2 rounded-full bg-slate-100 px-5 py-2.5 text-sm font-medium text-slate-700 transition hover:bg-slate-200">
+← 返回教程列表
+</a> </div> </div>  </main> <footer class="border-t border-white/70 py-10 sm:py-12"> <div class="page-shell"> <div class="surface-card px-6 py-8 sm:px-8 lg:px-10"> <div class="grid gap-10 lg:grid-cols-[minmax(0,1.2fr)_0.8fr_0.8fr]"> <div class="space-y-5"> <div> <h3 class="text-2xl font-semibold tracking-tight text-slate-950"> OpenClaw 中文站 </h3> <p class="mt-3 max-w-xl text-sm leading-7 text-slate-600 sm:text-base"> 国内用户获取 OpenClaw 玩法、教程、技能和应用案例的第一入口 </p> </div> <div class="flex flex-wrap gap-2"> <span class="chip">PC 端适配</span> <span class="chip">平板端适配</span> <span class="chip">移动端适配</span> </div> </div> <div> <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+快速入口
+</h3> <ul class="mt-4 space-y-3"> <li> <a href="/" class="text-sm text-slate-600 transition hover:text-brand-700"> 首页 </a> </li><li> <a href="/skills" class="text-sm text-slate-600 transition hover:text-brand-700"> 技能商店 </a> </li><li> <a href="/tutorials" class="text-sm text-slate-600 transition hover:text-brand-700"> 教程中心 </a> </li> </ul> </div> <div> <h3 class="text-sm font-semibold uppercase tracking-[0.24em] text-slate-500">
+社区与支持
+</h3> <div class="mt-4 space-y-4 text-sm text-slate-600"> <p>
+微信社群：社区微信群筹备中 </p> <a href="https://github.com/openclaw" target="_blank" rel="noopener noreferrer" class="inline-link">
+查看 GitHub 社区
+<span aria-hidden="true">→</span> </a> </div> </div> </div> <div class="mt-8 flex flex-col gap-3 border-t border-slate-100 pt-6 text-sm text-slate-500 md:flex-row md:items-center md:justify-between"> <p>
+© 2026 OpenClaw 中文站 · 由 零零壹 × 旭 制作
+</p> <p>非 OpenClaw 官方网站，仅做中文社区整理与本地化。</p> </div> </div> </div> </footer> <vercel-analytics data-props="{}" data-params="{&#34;slug&#34;:&#34;setup-cron&#34;}" data-pathname="/tutorials/setup-cron/"></vercel-analytics> <script type="module">var f="@vercel/analytics",l="1.6.1",w=()=>{window.va||(window.va=function(...r){(window.vaq=window.vaq||[]).push(r)})};function d(){return typeof window<"u"}function u(){try{const e="production"}catch{}return"production"}function v(e="auto"){if(e==="auto"){window.vam=u();return}window.vam=e}function m(){return(d()?window.vam:u())||"production"}function c(){return m()==="development"}function b(e,r){if(!e||!r)return e;let n=e;try{const t=Object.entries(r);for(const[a,i]of t)if(!Array.isArray(i)){const o=s(i);o.test(n)&&(n=n.replace(o,`/[${a}]`))}for(const[a,i]of t)if(Array.isArray(i)){const o=s(i.join("/"));o.test(n)&&(n=n.replace(o,`/[...${a}]`))}return n}catch{return e}}function s(e){return new RegExp(`/${h(e)}(?=[/?#]|$)`)}function h(e){return e.replace(/[.*+?^${}()|[\]\\]/g,"\\$&")}function y(e){return e.scriptSrc?e.scriptSrc:c()?"https://va.vercel-scripts.com/v1/script.debug.js":e.basePath?`${e.basePath}/insights/script.js`:"/_vercel/insights/script.js"}function g(e={debug:!0}){var r;if(!d())return;v(e.mode),w(),e.beforeSend&&((r=window.va)==null||r.call(window,"beforeSend",e.beforeSend));const n=y(e);if(document.head.querySelector(`script[src*="${n}"]`))return;const t=document.createElement("script");t.src=n,t.defer=!0,t.dataset.sdkn=f+(e.framework?`/${e.framework}`:""),t.dataset.sdkv=l,e.disableAutoTrack&&(t.dataset.disableAutoTrack="1"),e.endpoint?t.dataset.endpoint=e.endpoint:e.basePath&&(t.dataset.endpoint=`${e.basePath}/insights`),e.dsn&&(t.dataset.dsn=e.dsn),t.onerror=()=>{const a=c()?"Please check if any ad blockers are enabled and try again.":"Be sure to enable Web Analytics for your project and deploy again. See https://vercel.com/docs/analytics/quickstart for more information.";console.log(`[Vercel Web Analytics] Failed to load script from ${n}. ${a}`)},c()&&e.debug===!1&&(t.dataset.debug="false"),document.head.appendChild(t)}function p({route:e,path:r}){var n;(n=window.va)==null||n.call(window,"pageview",{route:e,path:r})}function k(){try{return}catch{}}customElements.define("vercel-analytics",class extends HTMLElement{constructor(){super();try{const r=JSON.parse(this.dataset.props??"{}"),n=JSON.parse(this.dataset.params??"{}");g({...r,disableAutoTrack:!0,framework:"astro",basePath:k(),beforeSend:window.webAnalyticsBeforeSend});const t=this.dataset.pathname;p({route:b(t??"",n),path:t})}catch(r){throw new Error(`Failed to parse WebAnalytics properties: ${r}`)}}});</script> <script>(function(){const enDict = {"nav.home":"Home","nav.skills":"Skills","nav.tutorials":"Tutorials","nav.getStarted":"Get Started","nav.getStartedLong":"Start in 5 min","nav.github":"GitHub Community","nav.langBtn":"EN","home.badge":"START_HERE","home.title.before":"Explore the","home.title.highlight":"AI Possibilities","home.subtitle":"No complex tech jargon — just practical skills, tutorials, and real-world examples organized into the shortest executable path.","home.metric1.value":"30+","home.metric1.label":"Skill Directions","home.metric1.desc":"Covering content creation, e-commerce, office automation, and developer tools.","home.metric2.value":"3","home.metric2.label":"Core Entry Pages","home.metric2.desc":"Home, Skills Store, and Tutorials Center form the current MVP main path.","home.metric3.value":"5 min","home.metric3.label":"Suggested Start Time","home.metric3.desc":"Check the beginner tutorial first, copy a command, then run your first workflow.","home.todayPicks":"TODAY_PICKS","home.todayPicksTitle":"Start with the most worth-opening content","home.todayPicksSubtitle":"Answer \"what can it do\" and \"how do I start\" before going deeper.","home.viewTutorials":"View full tutorial path →","home.scenesSection":"场景速查","home.scenesTitle":"Jump straight to your use case","home.scenesSubtitle":"Content creation, e-commerce, office efficiency, developer tools — card-optimized for mobile and tablet browsing.","home.hotSkills":"Hot Skills","home.hotSkillsTitle":"Start with skills that produce results fastest","home.viewAll":"View All →","home.learningPath":"Learning Path","home.learningPathTitle":"Learn in stages — no need to tackle complex workflows right away","home.enterTutorials":"Enter Tutorial Center →","home.cases":"Real Cases","home.casesTitle":"See how others use it before choosing your path","home.casesSubtitle":"Real stories help new users assess value. These cases are closest to everyday use scenarios.","home.ctaTitle":"Ready to run your first OpenClaw workflow?","home.ctaSubtitle":"Start with a beginner tutorial or pick a skill and copy the install command.","home.ctaBtn":"Start with Tutorials","home.ctaSecondary":"Browse Skills","skills.badge":"Skills Store","skills.title":"Find skills by use case, then decide on configuration","skills.subtitle":"Every card has a one-click copy command. Mobile for quick browsing, tablet for side-by-side comparison, PC for install.","skills.allCategories":"All","tutorials.badge":"Tutorials","tutorials.title":"From first install to building your own workflow","tutorials.subtitle":"All tutorials assume zero technical background. We prioritize solving 'can't read English docs' and 'don't know what to do next.'"};
+
+      // i18n 客户端切换
+      const STORAGE_KEY = 'openclaw-lang';
+
+      function applyLang(lang) {
+        const isEn = lang === 'en';
+        // 切换所有带 data-i18n 属性的元素
+        document.querySelectorAll('[data-i18n]').forEach((el) => {
+          const key = el.getAttribute('data-i18n');
+          if (isEn && enDict[key] !== undefined) {
+            el.setAttribute('data-zh-text', el.getAttribute('data-zh-text') || el.textContent.trim());
+            el.textContent = enDict[key];
+          } else {
+            const zhText = el.getAttribute('data-zh-text');
+            if (zhText) el.textContent = zhText;
+          }
+        });
+        // 切换按钮文字
+        const btn = document.getElementById('lang-switch-btn');
+        if (btn) btn.textContent = isEn ? '中文' : 'EN';
+        // 更新 html lang
+        document.documentElement.lang = isEn ? 'en' : 'zh-CN';
+        localStorage.setItem(STORAGE_KEY, lang);
+      }
+
+      window.toggleLang = function () {
+        const current = localStorage.getItem(STORAGE_KEY) || 'zh';
+        applyLang(current === 'zh' ? 'en' : 'zh');
+      };
+
+      // 页面加载时恢复语言
+      document.addEventListener('DOMContentLoaded', () => {
+        const saved = localStorage.getItem(STORAGE_KEY);
+        if (saved === 'en') applyLang('en');
+      });
+    })();</script> </body> </html>

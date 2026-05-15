@@ -1,0 +1,579 @@
+Title: Commits · openclaw/openclaw
+
+URL Source: http://github.com/openclaw/openclaw/commits/main
+
+Markdown Content:
+# Commits · openclaw/openclaw · GitHub
+
+[Skip to content](http://github.com/openclaw/openclaw/commits/main#start-of-content)
+## Navigation Menu
+
+Toggle navigation
+
+[](http://github.com/)
+
+[Sign in](http://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fopenclaw%2Fopenclaw%2Fcommits%2Fmain)
+
+Appearance settings
+
+*   
+Platform
+
+    *   
+AI CODE CREATION
+        *   [GitHub Copilot Write better code with AI](https://github.com/features/copilot)
+        *   [GitHub Spark Build and deploy intelligent apps](https://github.com/features/spark)
+        *   [GitHub Models Manage and compare prompts](https://github.com/features/models)
+        *   [MCP Registry New Integrate external tools](https://github.com/mcp)
+
+    *   
+DEVELOPER WORKFLOWS
+        *   [Actions Automate any workflow](https://github.com/features/actions)
+        *   [Codespaces Instant dev environments](https://github.com/features/codespaces)
+        *   [Issues Plan and track work](https://github.com/features/issues)
+        *   [Code Review Manage code changes](https://github.com/features/code-review)
+
+    *   
+APPLICATION SECURITY
+        *   [GitHub Advanced Security Find and fix vulnerabilities](https://github.com/security/advanced-security)
+        *   [Code security Secure your code as you build](https://github.com/security/advanced-security/code-security)
+        *   [Secret protection Stop leaks before they start](https://github.com/security/advanced-security/secret-protection)
+
+    *   
+EXPLORE
+        *   [Why GitHub](https://github.com/why-github)
+        *   [Documentation](https://docs.github.com/)
+        *   [Blog](https://github.blog/)
+        *   [Changelog](https://github.blog/changelog)
+        *   [Marketplace](https://github.com/marketplace)
+
+[View all features](https://github.com/features)
+
+*   
+Solutions
+
+    *   
+BY COMPANY SIZE
+        *   [Enterprises](https://github.com/enterprise)
+        *   [Small and medium teams](https://github.com/team)
+        *   [Startups](https://github.com/enterprise/startups)
+        *   [Nonprofits](https://github.com/solutions/industry/nonprofits)
+
+    *   
+BY USE CASE
+        *   [App Modernization](https://github.com/solutions/use-case/app-modernization)
+        *   [DevSecOps](https://github.com/solutions/use-case/devsecops)
+        *   [DevOps](https://github.com/solutions/use-case/devops)
+        *   [CI/CD](https://github.com/solutions/use-case/ci-cd)
+        *   [View all use cases](https://github.com/solutions/use-case)
+
+    *   
+BY INDUSTRY
+        *   [Healthcare](https://github.com/solutions/industry/healthcare)
+        *   [Financial services](https://github.com/solutions/industry/financial-services)
+        *   [Manufacturing](https://github.com/solutions/industry/manufacturing)
+        *   [Government](https://github.com/solutions/industry/government)
+        *   [View all industries](https://github.com/solutions/industry)
+
+[View all solutions](https://github.com/solutions)
+
+*   
+Resources
+
+    *   
+EXPLORE BY TOPIC
+        *   [AI](https://github.com/resources/articles?topic=ai)
+        *   [Software Development](https://github.com/resources/articles?topic=software-development)
+        *   [DevOps](https://github.com/resources/articles?topic=devops)
+        *   [Security](https://github.com/resources/articles?topic=security)
+        *   [View all topics](https://github.com/resources/articles)
+
+    *   
+EXPLORE BY TYPE
+        *   [Customer stories](https://github.com/customer-stories)
+        *   [Events & webinars](https://github.com/resources/events)
+        *   [Ebooks & reports](https://github.com/resources/whitepapers)
+        *   [Business insights](https://github.com/solutions/executive-insights)
+        *   [GitHub Skills](https://skills.github.com/)
+
+    *   
+SUPPORT & SERVICES
+        *   [Documentation](https://docs.github.com/)
+        *   [Customer support](https://support.github.com/)
+        *   [Community forum](https://github.com/orgs/community/discussions)
+        *   [Trust center](https://github.com/trust-center)
+        *   [Partners](https://github.com/partners)
+
+[View all resources](https://github.com/resources)
+
+*   
+Open Source
+
+    *   
+COMMUNITY
+        *   [GitHub Sponsors Fund open source developers](https://github.com/sponsors)
+
+    *   
+PROGRAMS
+        *   [Security Lab](https://securitylab.github.com/)
+        *   [Maintainer Community](https://maintainers.github.com/)
+        *   [Accelerator](https://github.com/accelerator)
+        *   [GitHub Stars](https://stars.github.com/)
+        *   [Archive Program](https://archiveprogram.github.com/)
+
+    *   
+REPOSITORIES
+        *   [Topics](https://github.com/topics)
+        *   [Trending](https://github.com/trending)
+        *   [Collections](https://github.com/collections)
+
+*   
+Enterprise
+
+    *   
+ENTERPRISE SOLUTIONS
+        *   [Enterprise platform AI-powered developer platform](https://github.com/enterprise)
+
+    *   
+AVAILABLE ADD-ONS
+        *   [GitHub Advanced Security Enterprise-grade security features](https://github.com/security/advanced-security)
+        *   [Copilot for Business Enterprise-grade AI features](https://github.com/features/copilot/copilot-business)
+        *   [Premium Support Enterprise-grade 24/7 support](https://github.com/premium-support)
+
+*   [Pricing](https://github.com/pricing)
+
+Search or jump to...
+
+# Search code, repositories, users, issues, pull requests...
+
+ Search  
+
+Clear
+
+[Search syntax tips](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax)
+
+# Provide feedback
+
+We read every piece of feedback, and take your input very seriously.
+
+- [x] Include my email address so I can be contacted 
+
+ Cancel  Submit feedback 
+
+# Saved searches
+
+## Use saved searches to filter your results more quickly
+
+Name 
+
+Query 
+
+To see all available qualifiers, see our [documentation](https://docs.github.com/search-github/github-code-search/understanding-github-code-search-syntax).
+
+ Cancel  Create saved search 
+
+[Sign in](http://github.com/login?return_to=https%3A%2F%2Fgithub.com%2Fopenclaw%2Fopenclaw%2Fcommits%2Fmain)
+
+[Sign up](http://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F%3Cuser-name%3E%2F%3Crepo-name%3E%2Fcommits%2Fshow&source=header-repo&source_repo=openclaw%2Fopenclaw)
+
+Appearance settings
+
+Resetting focus
+
+You signed in with another tab or window. [Reload](http://github.com/openclaw/openclaw/commits/main) to refresh your session.You signed out in another tab or window. [Reload](http://github.com/openclaw/openclaw/commits/main) to refresh your session.You switched accounts on another tab or window. [Reload](http://github.com/openclaw/openclaw/commits/main) to refresh your session.Dismiss alert
+
+{{ message }}
+
+[openclaw](http://github.com/openclaw)/**[openclaw](http://github.com/openclaw/openclaw)**Public
+
+*   [Sponsor](http://github.com/sponsors/openclaw)
+*   [Notifications](http://github.com/login?return_to=%2Fopenclaw%2Fopenclaw)You must be signed in to change notification settings
+*   [Fork 73.2k](http://github.com/login?return_to=%2Fopenclaw%2Fopenclaw)
+*   [Star 359k](http://github.com/login?return_to=%2Fopenclaw%2Fopenclaw) 
+
+*   [Code](http://github.com/openclaw/openclaw)
+*   [Issues 5k+](http://github.com/openclaw/openclaw/issues)
+*   [Pull requests 5k+](http://github.com/openclaw/openclaw/pulls)
+*   [Actions](http://github.com/openclaw/openclaw/actions)
+*   [Security and quality 510](http://github.com/openclaw/openclaw/security)
+*   [Insights](http://github.com/openclaw/openclaw/pulse)
+
+Additional navigation options
+
+*   [Code](http://github.com/openclaw/openclaw)
+*   [Issues](http://github.com/openclaw/openclaw/issues)
+*   [Pull requests](http://github.com/openclaw/openclaw/pulls)
+*   [Actions](http://github.com/openclaw/openclaw/actions)
+*   [Security and quality](http://github.com/openclaw/openclaw/security)
+*   [Insights](http://github.com/openclaw/openclaw/pulse)
+
+# Commits
+
+## Branch selector
+
+main
+
+## User selector
+
+All users
+
+## Datepicker
+
+All time
+
+## Commit History
+
+### Commits on Apr 17, 2026
+
+*   #### [fix(exec-approvals): escape control characters in display sanitizers (](http://github.com/openclaw/openclaw/commit/503b748a8ee1f5b10bc683128bc19fd470d84247 "fix(exec-approvals): escape control characters in display sanitizers (#68198)
+
+* fix(exec-approvals): escape control characters in display sanitizers
+
+* docs(changelog): add exec approval control-char display sanitizer entry
+
+* fix(exec-approvals): redact before escape, cover U+2028/U+2029 in display sanitizers
+
+* fix(exec-approvals): strip invisibles before redaction and align forwarder test
+
+* fix(exec-approvals): cover Zs bypass and preserve multi-line context on obfuscated secrets
+
+* fix(exec-approvals): compare redaction outputs by content, not length
+
+* fix(exec-approvals): suppress raw command on bypass; cover non-ASCII Zs in macOS sanitizer
+
+* fix(exec-approvals): use position-bitmap bypass detection and bound input size
+
+* style(exec-approvals): satisfy oxlint no-new-array-single-argument and SwiftFormat
+
+* fix(exec-approvals): iterate by code point and redact before truncating")[#68198](https://github.com/openclaw/openclaw/pull/68198)[)](http://github.com/openclaw/openclaw/commit/503b748a8ee1f5b10bc683128bc19fd470d84247 "fix(exec-approvals): escape control characters in display sanitizers (#68198)
+
+* fix(exec-approvals): escape control characters in display sanitizers
+
+* docs(changelog): add exec approval control-char display sanitizer entry
+
+* fix(exec-approvals): redact before escape, cover U+2028/U+2029 in display sanitizers
+
+* fix(exec-approvals): strip invisibles before redaction and align forwarder test
+
+* fix(exec-approvals): cover Zs bypass and preserve multi-line context on obfuscated secrets
+
+* fix(exec-approvals): compare redaction outputs by content, not length
+
+* fix(exec-approvals): suppress raw command on bypass; cover non-ASCII Zs in macOS sanitizer
+
+* fix(exec-approvals): use position-bitmap bypass detection and bound input size
+
+* style(exec-approvals): satisfy oxlint no-new-array-single-argument and SwiftFormat
+
+* fix(exec-approvals): iterate by code point and redact before truncating")
+
+Show description for 503b748  [![Image 3: drobison00](https://avatars.githubusercontent.com/u/5256797?v=4&size=32)](http://github.com/drobison00)[drobison00](http://github.com/openclaw/openclaw/commits?author=drobison00) authored Apr 17, 2026· 14 / 41      Verified [503b748](http://github.com/openclaw/openclaw/commit/503b748a8ee1f5b10bc683128bc19fd470d84247)Copy full SHA for 503b748  [](http://github.com/openclaw/openclaw/tree/503b748a8ee1f5b10bc683128bc19fd470d84247)   More actions  
+*   #### [test: keep brave web search metadata light](http://github.com/openclaw/openclaw/commit/cad1d04491755cde1d12af2c868a21915d521718 "test: keep brave web search metadata light
+
+Move Brave test helper exposure out of the provider artifact and
+keep schema/config metadata free of runtime shared imports.")
+
+Show description for cad1d04  [![Image 4: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 35 / 45       [cad1d04](http://github.com/openclaw/openclaw/commit/cad1d04491755cde1d12af2c868a21915d521718)Copy full SHA for cad1d04  [](http://github.com/openclaw/openclaw/tree/cad1d04491755cde1d12af2c868a21915d521718)   More actions  
+*   #### [test: lazy-load duckduckgo web search runtime](http://github.com/openclaw/openclaw/commit/c9dfb190016bf6077cd0713f781ea4a2dc3a9fe9 "test: lazy-load duckduckgo web search runtime
+
+Keep DuckDuckGo provider metadata on the contract path and defer
+client plus runtime argument helpers until search execution.")
+
+Show description for c9dfb19  [![Image 5: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 35 / 45       [c9dfb19](http://github.com/openclaw/openclaw/commit/c9dfb190016bf6077cd0713f781ea4a2dc3a9fe9)Copy full SHA for c9dfb19  [](http://github.com/openclaw/openclaw/tree/c9dfb190016bf6077cd0713f781ea4a2dc3a9fe9)   More actions  
+*   #### [test: lazy-load moonshot web search runtime](http://github.com/openclaw/openclaw/commit/5d6041de81abc9b5fc2183d35285417108759743 "test: lazy-load moonshot web search runtime
+
+Keep Kimi web-search provider metadata light and move setup,
+execution, cache, and test helpers behind a runtime seam.")
+
+Show description for 5d6041d  [![Image 6: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 35 / 45      Verified [5d6041d](http://github.com/openclaw/openclaw/commit/5d6041de81abc9b5fc2183d35285417108759743)Copy full SHA for 5d6041d  [](http://github.com/openclaw/openclaw/tree/5d6041de81abc9b5fc2183d35285417108759743)   More actions  
+*   #### [test(boundary): allow contract public-surface helpers](http://github.com/openclaw/openclaw/commit/647c56ef66eb223fca9504dfd5ab8ac886bc6ae5 "test(boundary): allow contract public-surface helpers")  [![Image 7: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 33 / 42      Verified [647c56e](http://github.com/openclaw/openclaw/commit/647c56ef66eb223fca9504dfd5ab8ac886bc6ae5)Copy full SHA for 647c56e  [](http://github.com/openclaw/openclaw/tree/647c56ef66eb223fca9504dfd5ab8ac886bc6ae5)   More actions  
+*   #### [test: lazy-load xai web search runtime](http://github.com/openclaw/openclaw/commit/1da928211b4e851c76838f0a218bba51e8f57a87 "test: lazy-load xai web search runtime
+
+Keep xAI web-search provider registration metadata-light and move
+setup, execution, cache, and test helpers behind runtime seams.")
+
+Show description for 1da9282  [![Image 8: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 33 / 45      Verified [1da9282](http://github.com/openclaw/openclaw/commit/1da928211b4e851c76838f0a218bba51e8f57a87)Copy full SHA for 1da9282  [](http://github.com/openclaw/openclaw/tree/1da928211b4e851c76838f0a218bba51e8f57a87)   More actions  
+*   #### [fix(plugins): keep contract vitest registries on public surfaces](http://github.com/openclaw/openclaw/commit/141c7f8eaa7a0f6a9714c2680a651d5ecffffe47 "fix(plugins): keep contract vitest registries on public surfaces")  [![Image 9: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 31 / 42      Verified [141c7f8](http://github.com/openclaw/openclaw/commit/141c7f8eaa7a0f6a9714c2680a651d5ecffffe47)Copy full SHA for 141c7f8  [](http://github.com/openclaw/openclaw/tree/141c7f8eaa7a0f6a9714c2680a651d5ecffffe47)   More actions  
+*   #### [fix(test): preserve new module exports in mocks](http://github.com/openclaw/openclaw/commit/d834d270df1418bafe34067d1d239aef36256d96 "fix(test): preserve new module exports in mocks")  [![Image 10: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 30 / 42      Verified [d834d27](http://github.com/openclaw/openclaw/commit/d834d270df1418bafe34067d1d239aef36256d96)Copy full SHA for d834d27  [](http://github.com/openclaw/openclaw/tree/d834d270df1418bafe34067d1d239aef36256d96)   More actions  
+*   #### [test: lazy-load Tavily web search runtime](http://github.com/openclaw/openclaw/commit/8a0977f405750a7103abccfc089d4cee9d85bd28 "test: lazy-load Tavily web search runtime
+
+Keep Tavily provider registration on the lightweight contract path and
+defer runtime client loading until generic search execution.")
+
+Show description for 8a0977f  [![Image 11: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 34 / 48      Verified [8a0977f](http://github.com/openclaw/openclaw/commit/8a0977f405750a7103abccfc089d4cee9d85bd28)Copy full SHA for 8a0977f  [](http://github.com/openclaw/openclaw/tree/8a0977f405750a7103abccfc089d4cee9d85bd28)   More actions  
+*   #### [test: lazy-load Perplexity web search runtime](http://github.com/openclaw/openclaw/commit/c86beb237e8c97972654f7f6f504d8367c8b2f51 "test: lazy-load Perplexity web search runtime
+
+Keep the Perplexity web-search public provider artifact metadata-only and move
+execution, cache, HTTP, and runtime helper tests behind a lazy runtime seam.
+This keeps bundled web-search contract checks from loading runtime-only code.")
+
+Show description for c86beb2  [![Image 12: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 0 / 1      Verified [c86beb2](http://github.com/openclaw/openclaw/commit/c86beb237e8c97972654f7f6f504d8367c8b2f51)Copy full SHA for c86beb2  [](http://github.com/openclaw/openclaw/tree/c86beb237e8c97972654f7f6f504d8367c8b2f51)   More actions  
+*   #### [test: narrow web search contract runtime loads](http://github.com/openclaw/openclaw/commit/2482e70fb8c091cdf9be088c20f8af97d1597679 "test: narrow web search contract runtime loads
+
+Honor targeted includes in the contracts Vitest lane and compare bundled
+web-search fast-path artifacts against plugin-owned runtime artifacts instead
+of loading whole plugin entries. Split Google and Firecrawl runtime-only work
+behind lazy seams so provider registration stays metadata-light.
+
+Also keep Perplexity contract metadata aligned by sharing its runtime transport
+resolution with the contract artifact.")
+
+Show description for 2482e70  [![Image 13: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 0 / 1      Verified [2482e70](http://github.com/openclaw/openclaw/commit/2482e70fb8c091cdf9be088c20f8af97d1597679)Copy full SHA for 2482e70  [](http://github.com/openclaw/openclaw/tree/2482e70fb8c091cdf9be088c20f8af97d1597679)   More actions  
+*   #### [test(plugins): break google contract helper cycles](http://github.com/openclaw/openclaw/commit/c03f97f954112bb1ae52a3e886d651feb231ad79 "test(plugins): break google contract helper cycles")  [![Image 14: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 33 / 47      Verified [c03f97f](http://github.com/openclaw/openclaw/commit/c03f97f954112bb1ae52a3e886d651feb231ad79)Copy full SHA for c03f97f  [](http://github.com/openclaw/openclaw/tree/c03f97f954112bb1ae52a3e886d651feb231ad79)   More actions  
+*   #### [test(plugins): trim contract helper runtime boot](http://github.com/openclaw/openclaw/commit/8b5030447a4463b9ff3a2f8ba8ac8d5cae1f64ac "test(plugins): trim contract helper runtime boot")  [![Image 15: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [8b50304](http://github.com/openclaw/openclaw/commit/8b5030447a4463b9ff3a2f8ba8ac8d5cae1f64ac)Copy full SHA for 8b50304  [](http://github.com/openclaw/openclaw/tree/8b5030447a4463b9ff3a2f8ba8ac8d5cae1f64ac)   More actions  
+*   #### [test(plugins): fast-path bundled provider contract loads](http://github.com/openclaw/openclaw/commit/48c4a026dd659fb2864e01b426b52d344a529425 "test(plugins): fast-path bundled provider contract loads")  [![Image 16: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [48c4a02](http://github.com/openclaw/openclaw/commit/48c4a026dd659fb2864e01b426b52d344a529425)Copy full SHA for 48c4a02  [](http://github.com/openclaw/openclaw/tree/48c4a026dd659fb2864e01b426b52d344a529425)   More actions  
+*   #### [test(plugins): trim tts summarization contract boot](http://github.com/openclaw/openclaw/commit/420b1da82fa4e913bcc9404f75d2c81ee4abfdaa "test(plugins): trim tts summarization contract boot")  [![Image 17: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [420b1da](http://github.com/openclaw/openclaw/commit/420b1da82fa4e913bcc9404f75d2c81ee4abfdaa)Copy full SHA for 420b1da  [](http://github.com/openclaw/openclaw/tree/420b1da82fa4e913bcc9404f75d2c81ee4abfdaa)   More actions  
+*   #### [test(plugins): fast-path bundled setup web providers](http://github.com/openclaw/openclaw/commit/afdbf4891417fb5e89f7be21c8cf6a24e90ddd12 "test(plugins): fast-path bundled setup web providers")  [![Image 18: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [afdbf48](http://github.com/openclaw/openclaw/commit/afdbf4891417fb5e89f7be21c8cf6a24e90ddd12)Copy full SHA for afdbf48  [](http://github.com/openclaw/openclaw/tree/afdbf4891417fb5e89f7be21c8cf6a24e90ddd12)   More actions  
+*   #### [test(plugins): trim contract registry runtime fanout](http://github.com/openclaw/openclaw/commit/c0b8250f4f91f72ceb427f1b3f3a4a1d08a5e2f4 "test(plugins): trim contract registry runtime fanout")  [![Image 19: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [c0b8250](http://github.com/openclaw/openclaw/commit/c0b8250f4f91f72ceb427f1b3f3a4a1d08a5e2f4)Copy full SHA for c0b8250  [](http://github.com/openclaw/openclaw/tree/c0b8250f4f91f72ceb427f1b3f3a4a1d08a5e2f4)   More actions  
+*   #### [test(plugins): avoid runtime loads for id-only registry checks](http://github.com/openclaw/openclaw/commit/d89cee878738e5e28e067402716b6dae461e3ac3 "test(plugins): avoid runtime loads for id-only registry checks")  [![Image 20: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [d89cee8](http://github.com/openclaw/openclaw/commit/d89cee878738e5e28e067402716b6dae461e3ac3)Copy full SHA for d89cee8  [](http://github.com/openclaw/openclaw/tree/d89cee878738e5e28e067402716b6dae461e3ac3)   More actions  
+*   #### [test(plugins): trim tts contract mock startup](http://github.com/openclaw/openclaw/commit/815e2fc5290112111b80cc768104827a4f1afaf5 "test(plugins): trim tts contract mock startup")  [![Image 21: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [815e2fc](http://github.com/openclaw/openclaw/commit/815e2fc5290112111b80cc768104827a4f1afaf5)Copy full SHA for 815e2fc  [](http://github.com/openclaw/openclaw/tree/815e2fc5290112111b80cc768104827a4f1afaf5)   More actions  
+*   #### [test(plugins): speed up tts contract helper boot](http://github.com/openclaw/openclaw/commit/18b45e63f25f4da89dd21b4a14a10aa875db209d "test(plugins): speed up tts contract helper boot")  [![Image 22: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [18b45e6](http://github.com/openclaw/openclaw/commit/18b45e63f25f4da89dd21b4a14a10aa875db209d)Copy full SHA for 18b45e6  [](http://github.com/openclaw/openclaw/tree/18b45e63f25f4da89dd21b4a14a10aa875db209d)   More actions  
+*   #### [test(plugins): keep loader contracts inventory-backed](http://github.com/openclaw/openclaw/commit/855c7cf989a94f611fffb72c757c77ad3957326a "test(plugins): keep loader contracts inventory-backed")  [![Image 23: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [855c7cf](http://github.com/openclaw/openclaw/commit/855c7cf989a94f611fffb72c757c77ad3957326a)Copy full SHA for 855c7cf  [](http://github.com/openclaw/openclaw/tree/855c7cf989a94f611fffb72c757c77ad3957326a)   More actions  
+*   #### [test(plugins): avoid per-test discovery reloads](http://github.com/openclaw/openclaw/commit/78f0fb660c10b7acda01411837a1ce0967dd6911 "test(plugins): avoid per-test discovery reloads")  [![Image 24: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [78f0fb6](http://github.com/openclaw/openclaw/commit/78f0fb660c10b7acda01411837a1ce0967dd6911)Copy full SHA for 78f0fb6  [](http://github.com/openclaw/openclaw/tree/78f0fb660c10b7acda01411837a1ce0967dd6911)   More actions  
+*   #### [fix(auth): restore cli bootstrap split on rebase](http://github.com/openclaw/openclaw/commit/30895f7135a6546fb6222171a82a58047d64aa63 "fix(auth): restore cli bootstrap split on rebase")  [![Image 25: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 34 / 46      Verified [30895f7](http://github.com/openclaw/openclaw/commit/30895f7135a6546fb6222171a82a58047d64aa63)Copy full SHA for 30895f7  [](http://github.com/openclaw/openclaw/tree/30895f7135a6546fb6222171a82a58047d64aa63)   More actions  
+*   #### [test(auth): align cli overlay coverage after rebase](http://github.com/openclaw/openclaw/commit/76812401caa0bc59c63753313dcb75be11ae9055 "test(auth): align cli overlay coverage after rebase")  [![Image 26: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [7681240](http://github.com/openclaw/openclaw/commit/76812401caa0bc59c63753313dcb75be11ae9055)Copy full SHA for 7681240  [](http://github.com/openclaw/openclaw/tree/76812401caa0bc59c63753313dcb75be11ae9055)   More actions  
+*   #### [test(auth): add codex oauth red-blue coverage](http://github.com/openclaw/openclaw/commit/5edf876a5e08eb57ac9a17e91ec2bfe0a46f7a9e "test(auth): add codex oauth red-blue coverage")  [![Image 27: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 0 / 1      Verified [5edf876](http://github.com/openclaw/openclaw/commit/5edf876a5e08eb57ac9a17e91ec2bfe0a46f7a9e)Copy full SHA for 5edf876  [](http://github.com/openclaw/openclaw/tree/5edf876a5e08eb57ac9a17e91ec2bfe0a46f7a9e)   More actions  
+*   #### [refactor(auth): polish external oauth bootstrap flow](http://github.com/openclaw/openclaw/commit/1e7c7dd02fafd6e6dab98619edbce0759cc68aaf "refactor(auth): polish external oauth bootstrap flow")  [![Image 28: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 34 / 42      Verified [1e7c7dd](http://github.com/openclaw/openclaw/commit/1e7c7dd02fafd6e6dab98619edbce0759cc68aaf)Copy full SHA for 1e7c7dd  [](http://github.com/openclaw/openclaw/tree/1e7c7dd02fafd6e6dab98619edbce0759cc68aaf)   More actions  
+*   #### [refactor(auth): tighten external oauth bootstrap policy](http://github.com/openclaw/openclaw/commit/f61712437fb865577d76bcd95d5973f6967da93b "refactor(auth): tighten external oauth bootstrap policy")  [![Image 29: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 34 / 42      Verified [f617124](http://github.com/openclaw/openclaw/commit/f61712437fb865577d76bcd95d5973f6967da93b)Copy full SHA for f617124  [](http://github.com/openclaw/openclaw/tree/f61712437fb865577d76bcd95d5973f6967da93b)   More actions  
+*   #### [fix(gateway): require read scope for assistant media (](http://github.com/openclaw/openclaw/commit/99ef3a63c58440d53f8e45ad861b846032fcb036 "fix(gateway): require read scope for assistant media (#68175)
+
+* fix(gateway): enforce assistant media scopes
+
+* changelog: require read scope for assistant media (#68175)
+
+* skip scope enforcement for auth.mode=none
+
+Exclude method \"none\" from the identity-bearing scope gate so
+gateway.auth.mode=none deployments are not regressed by the new
+operator.read check.
+
+---------
+
+Co-authored-by: Devin Robison <drobison@nvidia.com>")[#68175](https://github.com/openclaw/openclaw/pull/68175)[)](http://github.com/openclaw/openclaw/commit/99ef3a63c58440d53f8e45ad861b846032fcb036 "fix(gateway): require read scope for assistant media (#68175)
+
+* fix(gateway): enforce assistant media scopes
+
+* changelog: require read scope for assistant media (#68175)
+
+* skip scope enforcement for auth.mode=none
+
+Exclude method \"none\" from the identity-bearing scope gate so
+gateway.auth.mode=none deployments are not regressed by the new
+operator.read check.
+
+---------
+
+Co-authored-by: Devin Robison <drobison@nvidia.com>")
+
+Show description for 99ef3a6  ![Image 30: eleqtrizit](https://avatars.githubusercontent.com/u/31522568?v=4&size=32)![Image 31: drobison00](https://avatars.githubusercontent.com/u/5256797?v=4&size=32) [eleqtrizit](http://github.com/openclaw/openclaw/commits?author=eleqtrizit) and[drobison00](http://github.com/openclaw/openclaw/commits?author=drobison00) authored Apr 17, 2026· 34 / 42      Verified [99ef3a6](http://github.com/openclaw/openclaw/commit/99ef3a63c58440d53f8e45ad861b846032fcb036)Copy full SHA for 99ef3a6  [](http://github.com/openclaw/openclaw/tree/99ef3a63c58440d53f8e45ad861b846032fcb036)   More actions  
+*   #### [test: type runtime auth overlay mock](http://github.com/openclaw/openclaw/commit/af0f7e1bc7a51925cecdea0882929bb1c9c0e6b3 "test: type runtime auth overlay mock")  [![Image 32: steipete](https://avatars.githubusercontent.com/u/58493?v=4&size=32)](http://github.com/steipete)[steipete](http://github.com/openclaw/openclaw/commits?author=steipete) committed Apr 17, 2026· 33 / 42      Verified [af0f7e1](http://github.com/openclaw/openclaw/commit/af0f7e1bc7a51925cecdea0882929bb1c9c0e6b3)Copy full SHA for af0f7e1  [](http://github.com/openclaw/openclaw/tree/af0f7e1bc7a51925cecdea0882929bb1c9c0e6b3)   More actions  
+*   #### [test: stub channel migration setup surfaces](http://github.com/openclaw/openclaw/commit/8742e8fae3b7199dd69da9f0627752da4951e282 "test: stub channel migration setup surfaces")  [![Image 33: steipete](https://avatars.githubusercontent.com/u/58493?v=4&size=32)](http://github.com/steipete)[steipete](http://github.com/openclaw/openclaw/commits?author=steipete) committed Apr 17, 2026· 0 / 1      Verified [8742e8f](http://github.com/openclaw/openclaw/commit/8742e8fae3b7199dd69da9f0627752da4951e282)Copy full SHA for 8742e8f  [](http://github.com/openclaw/openclaw/tree/8742e8fae3b7199dd69da9f0627752da4951e282)   More actions  
+*   #### [test: trim agent test hot spots](http://github.com/openclaw/openclaw/commit/8dde0acbaed960dd296f754ed1eb40e1d6b745f7 "test: trim agent test hot spots")  [![Image 34: steipete](https://avatars.githubusercontent.com/u/58493?v=4&size=32)](http://github.com/steipete)[steipete](http://github.com/openclaw/openclaw/commits?author=steipete) committed Apr 17, 2026· 0 / 1      Verified [8dde0ac](http://github.com/openclaw/openclaw/commit/8dde0acbaed960dd296f754ed1eb40e1d6b745f7)Copy full SHA for 8dde0ac  [](http://github.com/openclaw/openclaw/tree/8dde0acbaed960dd296f754ed1eb40e1d6b745f7)   More actions  
+*   #### [refactor(auth): drop legacy external cli oauth sync path](http://github.com/openclaw/openclaw/commit/ff55cd5c1622f487261e1192ba763e08ccfaec1b "refactor(auth): drop legacy external cli oauth sync path")  [![Image 35: vincentkoc](https://avatars.githubusercontent.com/u/25068?v=4&size=32)](http://github.com/vincentkoc)[vincentkoc](http://github.com/openclaw/openclaw/commits?author=vincentkoc) committed Apr 17, 2026· 30 / 42      Verified [ff55cd5](http://github.com/openclaw/openclaw/commit/ff55cd5c1622f487261e1192ba763e08ccfaec1b)Copy full SHA for ff55cd5  [](http://github.com/openclaw/openclaw/tree/ff55cd5c1622f487261e1192ba763e08ccfaec1b)   More actions  
+*   #### [fix(agents): filter bundled tools through final policy (](http://github.com/openclaw/openclaw/commit/0e7a992d3f3155199c1acc2dd9a53c5b3a4d3ada "fix(agents): filter bundled tools through final policy (#68195)
+
+* fix(agents): filter bundled tools through final policy
+
+* changelog: filter bundled tools through final policy (#68195)
+
+* forward agentId into compaction tool-policy filter
+
+Pass effectiveSkillAgentId to applyFinalEffectiveToolPolicy in the
+compaction path so per-agent tool policies apply to bundled tools
+during compaction the same way they do during normal runs.
+
+* scope final tool-policy filter to bundled tools only
+
+Running the full tool-policy pipeline on the merged core + bundled tool list
+re-filters core tools whose plugin WeakMap metadata no longer survives the
+normalize/hook wrappers applied by createOpenClawCodingTools(). Narrow the
+helper to only the newly-appended bundled MCP/LSP tools so plugin-provided
+core tools keep matching group:plugins and plugin-id allowlist entries.
+
+* harden authorization signals on final tool policy
+
+- message.action gateway handler now server-derives senderIsOwner from the
+  authenticated gateway client scopes (ADMIN_SCOPE on client.connect.scopes)
+  and ignores any senderIsOwner value on the wire, so a non-admin scoped
+  caller cannot spoof owner status to unlock owner-only channel actions or
+  owner-only tool policy. Schema keeps the field optional for wire compat
+  but documents that it is ignored.
+
+- applyFinalEffectiveToolPolicy now cross-checks caller-provided groupId
+  against the session-derived group context resolved from sessionKey (and
+  spawnedBy). When they disagree, the caller groupId plus its adjacent
+  groupChannel/groupSpace are dropped and a warn is emitted, so a caller
+  that fabricates a different group id cannot reach a more permissive
+  group-scoped tool policy during the final bundled-tool filter. Added a
+  JSDoc trust invariant on the helper input describing the required
+  server-verified identity contract.
+
+* align compact agentId resolution with core tools
+
+Drop the explicit agentId on applyFinalEffectiveToolPolicy during
+compaction. The core tool set produced just above via
+createOpenClawCodingTools(...) also omits agentId, so resolveEffectiveToolPolicy
+falls back to resolveAgentIdFromSessionKey(sessionKey) in both places.
+Passing effectiveSkillAgentId only to the final filter made the two
+policy lookups diverge on legacy/non-agent session keys where the
+sessionKey path resolves to main but effectiveSkillAgentId follows the
+configured default-agent path, which could deny or allow bundled tools
+under a different per-agent policy than the already-created core tools.
+
+* tighten trusted propagation for owner and group signals
+
+- message.action gateway handler: full-operator callers (shared-secret
+  bearer or operator.admin scope) now propagate the request-provided
+  senderIsOwner through to channel action handlers instead of having it
+  hard-coded off. Previously the hardened path force-derived ownership
+  from ADMIN_SCOPE alone, which broke owner-gated actions when the
+  trusted runtime forwards them via the least-privilege gateway path
+  (callGatewayLeastPrivilege requests only the method scope, so even
+  legitimate owner senders were downgraded to senderIsOwner=false).
+  Narrowly-scoped callers (e.g. operator.write-only) still have the wire
+  value forced to false so a non-admin caller cannot assert ownership.
+
+- applyFinalEffectiveToolPolicy: fail-closed when the session key and
+  spawnedBy encode no group context. Previously the helper only dropped
+  a caller-provided groupId that conflicted with a non-empty set of
+  session-derived group ids, which left an accept-caller fallback open
+  when the session had no group context at all (direct/cron/subagent
+  session keys). An attacker who could run without a group-bound session
+  could then supply an arbitrary groupId and reach a more permissive
+  group-scoped tool policy. Now: no session-derived group context plus
+  any caller-provided groupId drops the caller value and warns.
+
+* suppress unavailable-core-tool warnings in bundled-only pass
+
+applyToolPolicyPipeline infers its coreToolNames reference set from the
+tools array it is filtering. The bundled-only second pass only sees the
+MCP/LSP subset, so normal core allowlist entries (for example
+tools.allow: ['read', 'exec']) would look \"unknown\" during this pass
+and emit misleading warnings even when the config is valid for the full
+effective tool set — polluting logs and potentially evicting real
+diagnostics from the shared warning cache. Set
+suppressUnavailableCoreToolWarning on every step of this pass so known
+core-tool allowlist entries stay silent; genuinely unknown entries
+still surface through the otherEntries warning path.")[#68195](https://github.com/openclaw/openclaw/pull/68195)[)](http://github.com/openclaw/openclaw/commit/0e7a992d3f3155199c1acc2dd9a53c5b3a4d3ada "fix(agents): filter bundled tools through final policy (#68195)
+
+* fix(agents): filter bundled tools through final policy
+
+* changelog: filter bundled tools through final policy (#68195)
+
+* forward agentId into compaction tool-policy filter
+
+Pass effectiveSkillAgentId to applyFinalEffectiveToolPolicy in the
+compaction path so per-agent tool policies apply to bundled tools
+during compaction the same way they do during normal runs.
+
+* scope final tool-policy filter to bundled tools only
+
+Running the full tool-policy pipeline on the merged core + bundled tool list
+re-filters core tools whose plugin WeakMap metadata no longer survives the
+normalize/hook wrappers applied by createOpenClawCodingTools(). Narrow the
+helper to only the newly-appended bundled MCP/LSP tools so plugin-provided
+core tools keep matching group:plugins and plugin-id allowlist entries.
+
+* harden authorization signals on final tool policy
+
+- message.action gateway handler now server-derives senderIsOwner from the
+  authenticated gateway client scopes (ADMIN_SCOPE on client.connect.scopes)
+  and ignores any senderIsOwner value on the wire, so a non-admin scoped
+  caller cannot spoof owner status to unlock owner-only channel actions or
+  owner-only tool policy. Schema keeps the field optional for wire compat
+  but documents that it is ignored.
+
+- applyFinalEffectiveToolPolicy now cross-checks caller-provided groupId
+  against the session-derived group context resolved from sessionKey (and
+  spawnedBy). When they disagree, the caller groupId plus its adjacent
+  groupChannel/groupSpace are dropped and a warn is emitted, so a caller
+  that fabricates a different group id cannot reach a more permissive
+  group-scoped tool policy during the final bundled-tool filter. Added a
+  JSDoc trust invariant on the helper input describing the required
+  server-verified identity contract.
+
+* align compact agentId resolution with core tools
+
+Drop the explicit agentId on applyFinalEffectiveToolPolicy during
+compaction. The core tool set produced just above via
+createOpenClawCodingTools(...) also omits agentId, so resolveEffectiveToolPolicy
+falls back to resolveAgentIdFromSessionKey(sessionKey) in both places.
+Passing effectiveSkillAgentId only to the final filter made the two
+policy lookups diverge on legacy/non-agent session keys where the
+sessionKey path resolves to main but effectiveSkillAgentId follows the
+configured default-agent path, which could deny or allow bundled tools
+under a different per-agent policy than the already-created core tools.
+
+* tighten trusted propagation for owner and group signals
+
+- message.action gateway handler: full-operator callers (shared-secret
+  bearer or operator.admin scope) now propagate the request-provided
+  senderIsOwner through to channel action handlers instead of having it
+  hard-coded off. Previously the hardened path force-derived ownership
+  from ADMIN_SCOPE alone, which broke owner-gated actions when the
+  trusted runtime forwards them via the least-privilege gateway path
+  (callGatewayLeastPrivilege requests only the method scope, so even
+  legitimate owner senders were downgraded to senderIsOwner=false).
+  Narrowly-scoped callers (e.g. operator.write-only) still have the wire
+  value forced to false so a non-admin caller cannot assert ownership.
+
+- applyFinalEffectiveToolPolicy: fail-closed when the session key and
+  spawnedBy encode no group context. Previously the helper only dropped
+  a caller-provided groupId that conflicted with a non-empty set of
+  session-derived group ids, which left an accept-caller fallback open
+  when the session had no group context at all (direct/cron/subagent
+  session keys). An attacker who could run without a group-bound session
+  could then supply an arbitrary groupId and reach a more permissive
+  group-scoped tool policy. Now: no session-derived group context plus
+  any caller-provided groupId drops the caller value and warns.
+
+* suppress unavailable-core-tool warnings in bundled-only pass
+
+applyToolPolicyPipeline infers its coreToolNames reference set from the
+tools array it is filtering. The bundled-only second pass only sees the
+MCP/LSP subset, so normal core allowlist entries (for example
+tools.allow: ['read', 'exec']) would look \"unknown\" during this pass
+and emit misleading warnings even when the config is valid for the full
+effective tool set — polluting logs and potentially evicting real
+diagnostics from the shared warning cache. Set
+suppressUnavailableCoreToolWarning on every step of this pass so known
+core-tool allowlist entries stay silent; genuinely unknown entries
+still surface through the otherEntries warning path.")
+
+Show description for 0e7a992  [![Image 36: drobison00](https://avatars.githubusercontent.com/u/5256797?v=4&size=32)](http://github.com/drobison00)[drobison00](http://github.com/openclaw/openclaw/commits?author=drobison00) authored Apr 17, 2026· 31 / 42      Verified [0e7a992](http://github.com/openclaw/openclaw/commit/0e7a992d3f3155199c1acc2dd9a53c5b3a4d3ada)Copy full SHA for 0e7a992  [](http://github.com/openclaw/openclaw/tree/0e7a992d3f3155199c1acc2dd9a53c5b3a4d3ada)   More actions  
+*   #### [test: avoid bundled session normalizer fallback](http://github.com/openclaw/openclaw/commit/77e588ebc303dec232dc440f655d2a731ca2bf91 "test: avoid bundled session normalizer fallback
+
+Keep explicit session-key normalization on loaded channel plugins so
+unknown provider contexts pass through without cold-loading bundled channel
+runtimes. This preserves active plugin behavior and removes the slow
+unknown-provider test path.")
+
+Show description for 77e588e  [![Image 37: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 37 / 47      Verified [77e588e](http://github.com/openclaw/openclaw/commit/77e588ebc303dec232dc440f655d2a731ca2bf91)Copy full SHA for 77e588e  [](http://github.com/openclaw/openclaw/tree/77e588ebc303dec232dc440f655d2a731ca2bf91)   More actions  
+*   #### [test: speed legacy state migration discovery](http://github.com/openclaw/openclaw/commit/5ae059db16c690841c63151424135cb6659dbbf0 "test: speed legacy state migration discovery
+
+Keep bundled legacy migration discovery on narrow setup-entry surfaces so
+state-migration tests and doctor cold paths avoid unrelated channel runtime
+loads. Add targeted setup feature metadata, narrow Telegram/WhatsApp legacy
+contracts, and a path-only pairing SDK helper.")
+
+Show description for 5ae059d  [![Image 38: gumadeiras](https://avatars.githubusercontent.com/u/5599352?v=4&size=32)](http://github.com/gumadeiras)[gumadeiras](http://github.com/openclaw/openclaw/commits?author=gumadeiras) committed Apr 17, 2026· 0 / 1      Verified [5ae059d](http://github.com/openclaw/openclaw/commit/5ae059db16c690841c63151424135cb6659dbbf0)Copy full SHA for 5ae059d  [](http://github.com/openclaw/openclaw/tree/5ae059db16c690841c63151424135cb6659dbbf0)   More actions  
+
+[Previous](http://github.com/openclaw/openclaw/commits/main)[Next](http://github.com/openclaw/openclaw/commits/main?after=503b748a8ee1f5b10bc683128bc19fd470d84247+34)
+
+## Footer
+
+[](https://github.com/) © 2026 GitHub,Inc. 
+
+### Footer navigation
+
+*   [Terms](https://docs.github.com/site-policy/github-terms/github-terms-of-service)
+*   [Privacy](https://docs.github.com/site-policy/privacy-policies/github-privacy-statement)
+*   [Security](https://github.com/security)
+*   [Status](https://www.githubstatus.com/)
+*   [Community](https://github.community/)
+*   [Docs](https://docs.github.com/)
+*   [Contact](https://support.github.com/?tags=dotcom-footer)
+*    Manage cookies 
+*    Do not share my personal information 
+
+ You can’t perform that action at this time.

@@ -1,0 +1,45 @@
+{
+  "$ref": "#/definitions/tutorials",
+  "definitions": {
+    "tutorials": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "duration": {
+          "type": "string"
+        },
+        "difficulty": {
+          "type": "string",
+          "enum": [
+            "入门",
+            "进阶",
+            "实战"
+          ]
+        },
+        "outcome": {
+          "type": "string"
+        },
+        "order": {
+          "type": "number"
+        },
+        "$schema": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "title",
+        "description",
+        "duration",
+        "difficulty",
+        "outcome"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "$schema": "http://json-schema.org/draft-07/schema#"
+}

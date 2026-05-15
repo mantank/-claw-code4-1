@@ -5,13 +5,34 @@
 
 COUNT="${1:-10}"
 SCOPE="${2:-digests}"
-COOKIE="zsxq_access_token=9DED7F62-5A95-4E52-9FE5-F44270AB368A_B12E75520B50E663"
+TOOLS_MD="/root/.openclaw/workspace/TOOLS.md"
+
+get_cookie_from_tools() {
+  python3 - <<'PY'
+import re
+path = '/root/.openclaw/workspace/TOOLS.md'
+text = open(path, 'r', encoding='utf-8').read()
+m = re.search(r'### 生财有术（知识星球）.*?- Cookie: ([^\n]+)', text, re.S)
+print(m.group(1).strip() if m else '')
+PY
+}
+
+COOKIE="${SCYS_COOKIE:-}"
+if [ -z "$COOKIE" ]; then
+  COOKIE="$(get_cookie_from_tools)"
+fi
+
+if [ -z "$COOKIE" ]; then
+  echo "❌ 未找到生财 Cookie，请设置环境变量 SCYS_COOKIE 或更新 TOOLS.md"
+  exit 1
+fi
 
 API="https://api.zsxq.com/v2/groups/1824528822/topics?scope=${SCOPE}&count=${COUNT}"
 
 raw=$(curl -s "$API" \
   -H "Cookie: $COOKIE" \
-  -H "User-Agent: Mozilla/5.0")
+  -H "User-Agent: Mozilla/5.0" \
+  -H "Accept: application/json, text/plain, */*")
 
 echo "$raw" | python3 -c "
 import json, sys, re, html
